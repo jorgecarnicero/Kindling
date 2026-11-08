@@ -36,6 +36,9 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+# Python tooling (.venv ignores itself)
+__pycache__/
+
 # Claude Code personal settings
 .claude/settings.local.json
 
