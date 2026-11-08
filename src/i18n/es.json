@@ -1,9 +1,17 @@
 {
+  "common": {
+    "back": "Atrás"
+  },
+  "welcome": {
+    "slogan": "Toda buena charla empieza pequeña.",
+    "hint": "Toca play, elige un ambiente y a conversar.",
+    "play": "Jugar"
+  },
   "home": {
     "tagline": "Elige un ambiente, recibe un tema y mantén viva la conversación.",
     "start": "Empezar",
-    "startCount_one": "Empezar · {{count}} tema",
-    "startCount_other": "Empezar · {{count}} temas",
+    "startCount_one": "Empezar con {{count}} tema",
+    "startCount_other": "Empezar con {{count}} temas",
     "noTopics": "Todavía no hay temas para esta combinación. Prueba otra profundidad o categoría.",
     "surprise": "Sorpréndeme",
     "favorites": "Favoritos",
@@ -63,6 +71,11 @@
   },
   "settings": {
     "title": "Ajustes",
+    "sectionAppearance": "Aspecto",
+    "appearanceAuto": "Auto",
+    "appearanceDay": "Día",
+    "appearanceNight": "Noche",
+    "appearanceHint": "Auto sigue a tu teléfono: de día con luz, de noche con fogata.",
     "sectionPlay": "Juego",
     "tapToPause": "Tocar la tarjeta para pausar",
     "tapToPauseHint": "El botón Pausar siempre funciona.",

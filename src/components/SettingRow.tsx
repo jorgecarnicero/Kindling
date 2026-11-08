@@ -1,23 +1,19 @@
 import { ReactNode } from 'react';
 import { Pressable, StyleSheet, Switch, Text, View } from 'react-native';
 import { useTheme } from '@/theme';
+import { PressableSticker, Sticker } from './Sticker';
 
+/** A titled group of rows on one sticker. */
 export function SettingSection({ title, children }: { title: string; children: ReactNode }) {
-  const { colors, spacing, radius } = useTheme();
+  const { colors, fonts, spacing, radius } = useTheme();
   return (
     <View style={{ gap: spacing.sm }}>
-      <Text style={[styles.sectionTitle, { color: colors.accent }]}>{title.toUpperCase()}</Text>
-      <View
-        style={{
-          backgroundColor: colors.surface,
-          borderColor: colors.border,
-          borderWidth: 1,
-          borderRadius: radius.md,
-          paddingHorizontal: spacing.md,
-        }}
-      >
+      <Text accessibilityRole="header" style={[styles.sectionTitle, { color: colors.text, fontFamily: fonts.display }]}>
+        {title}
+      </Text>
+      <Sticker bg={colors.surface} radius={radius.lg} faceStyle={{ paddingHorizontal: spacing.md }}>
         {children}
-      </View>
+      </Sticker>
     </View>
   );
 }
@@ -26,7 +22,7 @@ type ToggleProps = { label: string; hint?: string; value: boolean; onChange: (v:
 
 /** A whole-row toggle: tapping the label flips it too (bigger touch target). */
 export function ToggleRow({ label, hint, value, onChange }: ToggleProps) {
-  const { colors, spacing, fontSize } = useTheme();
+  const { colors, fonts, spacing, fontSize } = useTheme();
   return (
     <Pressable
       onPress={() => onChange(!value)}
@@ -37,14 +33,17 @@ export function ToggleRow({ label, hint, value, onChange }: ToggleProps) {
       style={[styles.row, { paddingVertical: spacing.md, gap: spacing.md }]}
     >
       <View style={styles.grow}>
-        <Text style={{ color: colors.text, fontSize: fontSize.body }}>{label}</Text>
-        {hint ? <Text style={{ color: colors.textMuted, fontSize: 14, marginTop: 2 }}>{hint}</Text> : null}
+        <Text style={{ color: colors.text, fontFamily: fonts.bodyBold, fontSize: fontSize.body }}>{label}</Text>
+        {hint ? (
+          <Text style={{ color: colors.textMuted, fontFamily: fonts.body, fontSize: 14, marginTop: 2, lineHeight: 19 }}>{hint}</Text>
+        ) : null}
       </View>
       <Switch
         value={value}
         onValueChange={onChange}
-        trackColor={{ true: colors.accent, false: colors.border }}
+        trackColor={{ true: colors.accent, false: colors.background }}
         thumbColor={colors.switchThumb}
+        ios_backgroundColor={colors.background}
         accessibilityElementsHidden
         importantForAccessibility="no"
       />
@@ -60,31 +59,37 @@ type ChoiceProps<T extends string> = {
   onChange: (v: T) => void;
 };
 
-/** Segmented control for a small set of choices. */
+/** A row of sticker buttons; the chosen one is pressed flat and filled. */
 export function ChoiceRow<T extends string>({ label, options, value, onChange }: ChoiceProps<T>) {
-  const { colors, spacing, radius, fontSize } = useTheme();
+  const { colors, fonts, spacing, radius, sticker } = useTheme();
   return (
-    <View style={{ paddingVertical: spacing.md, gap: spacing.sm }}>
-      {label ? <Text style={{ color: colors.text, fontSize: fontSize.body }}>{label}</Text> : null}
-      <View
-        accessibilityRole="radiogroup"
-        style={[styles.segments, { borderColor: colors.border, borderRadius: radius.pill }]}
-      >
+    <View style={{ paddingVertical: spacing.sm, gap: spacing.sm }}>
+      {label ? <Text style={{ color: colors.text, fontFamily: fonts.bodyBold, fontSize: 17 }}>{label}</Text> : null}
+      <View accessibilityRole="radiogroup" style={[styles.row, { gap: spacing.sm }]}>
         {options.map((o) => {
           const selected = o.value === value;
           return (
-            <Pressable
+            <PressableSticker
               key={o.value}
               onPress={() => onChange(o.value)}
+              selected={selected}
               accessibilityRole="radio"
               accessibilityState={{ selected }}
-              style={[
-                styles.segment,
-                { borderRadius: radius.pill, backgroundColor: selected ? colors.accent : 'transparent' },
-              ]}
+              accessibilityLabel={o.label}
+              bg={selected ? colors.selected : colors.surface}
+              radius={radius.md}
+              shadow={sticker.shadowSmall}
+              style={styles.grow}
+              faceStyle={styles.segment}
             >
-              <Text style={{ color: selected ? colors.onAccent : colors.text, fontWeight: '600' }}>{o.label}</Text>
-            </Pressable>
+              <Text
+                numberOfLines={1}
+                adjustsFontSizeToFit
+                style={{ color: selected ? colors.onSelected : colors.text, fontFamily: fonts.bodyBold, fontSize: 16 }}
+              >
+                {o.label}
+              </Text>
+            </PressableSticker>
           );
         })}
       </View>
@@ -94,13 +99,12 @@ export function ChoiceRow<T extends string>({ label, options, value, onChange }:
 
 export function Divider() {
   const { colors } = useTheme();
-  return <View style={{ height: StyleSheet.hairlineWidth, backgroundColor: colors.border }} />;
+  return <View style={{ height: 2, backgroundColor: colors.background, marginHorizontal: -4 }} />;
 }
 
 const styles = StyleSheet.create({
-  sectionTitle: { fontSize: 13, fontWeight: '700', letterSpacing: 1.2, marginLeft: 4 },
+  sectionTitle: { fontSize: 22, marginLeft: 2 },
   row: { flexDirection: 'row', alignItems: 'center' },
   grow: { flex: 1 },
-  segments: { flexDirection: 'row', borderWidth: 1, padding: 3 },
-  segment: { flex: 1, minHeight: 40, alignItems: 'center', justifyContent: 'center' },
+  segment: { minHeight: 46, paddingHorizontal: 6, alignItems: 'center', justifyContent: 'center' },
 });

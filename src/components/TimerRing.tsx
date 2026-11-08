@@ -15,14 +15,23 @@ import { useTheme } from '@/theme';
 
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
-type Props = { timer: TimerState; children: ReactNode; strokeWidth?: number };
+type Props = {
+  timer: TimerState;
+  children: ReactNode;
+  strokeWidth?: number;
+  /** Draining stroke color (defaults to the accent). */
+  color?: string;
+  /** The empty track behind it. */
+  trackColor?: string;
+};
 
 /**
  * A stroke tracing the card's rounded border that drains clockwise from the top centre.
  * Animates on the UI thread from the timer's wall-clock state; no ticking numbers.
  */
-export function TimerRing({ timer, children, strokeWidth = 6 }: Props) {
+export function TimerRing({ timer, children, strokeWidth = 8, color, trackColor }: Props) {
   const { colors, radius } = useTheme();
+  const gap = strokeWidth + 6;
   const [size, setSize] = useState({ w: 0, h: 0 });
   const progress = useSharedValue(1);
 
@@ -44,7 +53,7 @@ export function TimerRing({ timer, children, strokeWidth = 6 }: Props) {
   const inset = strokeWidth / 2;
   const w = size.w - strokeWidth;
   const h = size.h - strokeWidth;
-  const r = Math.max(0, Math.min(radius.lg + inset, w / 2, h / 2));
+  const r = Math.max(0, Math.min(radius.lg + gap - inset, w / 2, h / 2));
   const length = w > 0 && h > 0 ? 2 * (w - 2 * r) + 2 * (h - 2 * r) + 2 * Math.PI * r : 0;
   const d =
     length > 0
@@ -72,13 +81,13 @@ export function TimerRing({ timer, children, strokeWidth = 6 }: Props) {
   };
 
   return (
-    <View onLayout={onLayout} style={[styles.root, { padding: strokeWidth + 4 }]}>
+    <View onLayout={onLayout} style={[styles.root, { padding: gap }]}>
       {length > 0 ? (
         <Svg style={StyleSheet.absoluteFill} width={size.w} height={size.h} pointerEvents="none">
-          <Path d={d} stroke={colors.border} strokeWidth={strokeWidth} fill="none" />
+          <Path d={d} stroke={trackColor ?? colors.surface} strokeWidth={strokeWidth} fill="none" />
           <AnimatedPath
             d={d}
-            stroke={colors.accent}
+            stroke={color ?? colors.accent}
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             fill="none"

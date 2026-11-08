@@ -1,45 +1,45 @@
-import { Pressable, StyleSheet, Text } from 'react-native';
+import { Text } from 'react-native';
 import { useTheme } from '@/theme';
+import { PressableSticker } from './Sticker';
 
 type Props = {
   label: string;
   onPress: () => void;
-  variant?: 'primary' | 'secondary';
+  /** primary = ember accent, sunny = yellow/gold, secondary = sticker paper. */
+  variant?: 'primary' | 'sunny' | 'secondary';
   disabled?: boolean;
+  /** Bigger display type for the main call to action. */
+  big?: boolean;
+  accessibilityHint?: string;
 };
 
-export function Button({ label, onPress, variant = 'primary', disabled = false }: Props) {
-  const { colors, radius, fontSize } = useTheme();
-  const primary = variant === 'primary';
+export function Button({ label, onPress, variant = 'primary', disabled = false, big = false, accessibilityHint }: Props) {
+  const { colors, fonts, radius } = useTheme();
+  const bg = variant === 'primary' ? colors.accent : variant === 'sunny' ? colors.sunny : colors.surface;
+  const fg = variant === 'secondary' ? colors.text : colors.onColor;
   return (
-    <Pressable
-      accessibilityRole="button"
-      accessibilityState={{ disabled }}
+    <PressableSticker
       onPress={onPress}
       disabled={disabled}
-      style={({ pressed }) => [
-        styles.base,
-        {
-          borderRadius: radius.pill,
-          backgroundColor: primary ? colors.accent : colors.surface,
-          borderColor: primary ? colors.accent : colors.border,
-          opacity: disabled ? 0.4 : pressed ? 0.8 : 1,
-        },
-      ]}
+      accessibilityRole="button"
+      accessibilityState={{ disabled }}
+      accessibilityHint={accessibilityHint}
+      bg={bg}
+      radius={radius.md}
+      faceStyle={{ minHeight: big ? 58 : 52, paddingHorizontal: 18, alignItems: 'center', justifyContent: 'center' }}
     >
       <Text
+        numberOfLines={2}
+        adjustsFontSizeToFit
         style={{
-          color: primary ? colors.onAccent : colors.text,
-          fontSize: fontSize.body,
-          fontWeight: '600',
+          color: fg,
+          fontFamily: big || variant !== 'secondary' ? fonts.display : fonts.bodyBold,
+          fontSize: big ? 19 : 17,
+          textAlign: 'center',
         }}
       >
         {label}
       </Text>
-    </Pressable>
+    </PressableSticker>
   );
 }
-
-const styles = StyleSheet.create({
-  base: { minHeight: 52, paddingHorizontal: 24, alignItems: 'center', justifyContent: 'center', borderWidth: 1 },
-});

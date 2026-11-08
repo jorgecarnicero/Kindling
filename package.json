@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "main": "expo-router/entry",
   "dependencies": {
+    "@expo-google-fonts/bricolage-grotesque": "^0.4.1",
+    "@expo-google-fonts/figtree": "^0.4.1",
     "@react-native-async-storage/async-storage": "2.2.0",
     "expo": "~58.0.23",
     "expo-asset": "~58.0.20",
     "expo-audio": "~58.0.11",
     "expo-constants": "~58.0.15",
+    "expo-font": "~58.0.11",
     "expo-haptics": "~58.0.7",
     "expo-linking": "~58.0.16",
     "expo-localization": "~58.0.5",
     "expo-router": "~58.0.30",
+    "expo-splash-screen": "~58.0.13",
     "expo-status-bar": "~58.0.4",
     "expo-system-ui": "~58.0.7",
     "i18next": "^27.0.1",
@@ -27,6 +31,7 @@
     "zustand": "^5.1.0"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@testing-library/react-native": "^14.1.0",
     "@types/jest": "30.0.0",
     "@types/react": "~19.3.0",
@@ -43,11 +48,14 @@
     "test": "jest",
     "validate:topics": "uv run scripts/validate_topics.py",
     "add:topics": "uv run scripts/add_topics.py",
-    "make:chime": "uv run scripts/make_chime.py"
+    "make:chime": "uv run scripts/make_chime.py",
+    "make:icons": "node scripts/make_icons.mjs"
   },
   "jest": {
     "preset": "jest-expo",
-    "setupFiles": ["<rootDir>/jest.setup.ts"],
+    "setupFiles": [
+      "<rootDir>/jest.setup.ts"
+    ],
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1"
     }

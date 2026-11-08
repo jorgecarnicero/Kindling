@@ -4,7 +4,7 @@ import type { Topic } from '@/data/types';
 import { useAppLanguage } from '@/i18n';
 import { shareTopic } from '@/share/shareTopic';
 import { useFavorites } from '@/store/favorites';
-import { useTheme } from '@/theme';
+import { categoryColor, useTheme } from '@/theme';
 import { HeartIcon, ShareIcon } from './icons';
 
 const HIT = { top: 12, bottom: 12, left: 12, right: 12 };
@@ -23,7 +23,7 @@ export function FavoriteButton({ topic, size = 24 }: { topic: Topic; size?: numb
       accessibilityState={{ selected: saved }}
       style={({ pressed }) => ({ opacity: pressed ? 0.6 : 1 })}
     >
-      <HeartIcon size={size} color={colors.accent} filled={saved} />
+      <HeartIcon size={size} color={colors.text} filled={saved} fill={categoryColor.light_debate} />
     </Pressable>
   );
 }
@@ -40,7 +40,7 @@ export function ShareButton({ topic, size = 24 }: { topic: Topic; size?: number 
       accessibilityLabel={t('share.label')}
       style={({ pressed }) => ({ opacity: pressed ? 0.6 : 1 })}
     >
-      <ShareIcon size={size} color={colors.textMuted} />
+      <ShareIcon size={size} color={colors.text} />
     </Pressable>
   );
 }
@@ -49,7 +49,7 @@ export function ShareButton({ topic, size = 24 }: { topic: Topic; size?: number 
 export function CardCornerActions({ topic }: { topic: Topic }) {
   const { spacing } = useTheme();
   return (
-    <View pointerEvents="box-none" style={[styles.corners, { top: spacing.md, left: spacing.md, right: spacing.md }]}>
+    <View pointerEvents="box-none" style={[styles.corners, { top: spacing.md + 2, left: spacing.md + 2, right: spacing.md + 2 }]}>
       <FavoriteButton topic={topic} />
       <ShareButton topic={topic} />
     </View>

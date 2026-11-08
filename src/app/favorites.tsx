@@ -1,22 +1,26 @@
 import { useEffect, useState } from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { router } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/Button';
+import { FlameIcon } from '@/components/icons';
 import { Screen } from '@/components/Screen';
+import { ScreenHeader } from '@/components/ScreenHeader';
+import { Sticker } from '@/components/Sticker';
 import { FavoriteButton, ShareButton } from '@/components/TopicActions';
 import { topics } from '@/data/topics';
 import type { Topic } from '@/data/types';
 import { useAppLanguage } from '@/i18n';
 import { favoriteTopics, useFavorites, useFavoritesHydrated } from '@/store/favorites';
-import { useTheme } from '@/theme';
+import { categoryColor, useTheme } from '@/theme';
 
 export default function Favorites() {
   const { t } = useTranslation();
-  const { colors, spacing, radius, fontSize } = useTheme();
+  const { colors, fonts, spacing, radius } = useTheme();
+  const insets = useSafeAreaInsets();
   const lang = useAppLanguage();
   const ids = useFavorites((s) => s.ids);
-
   const hydrated = useFavoritesHydrated();
 
   // Rows are listed from a snapshot taken when the screen opens (once storage has loaded),
@@ -30,59 +34,64 @@ export default function Favorites() {
   if (!listed) return <View style={{ flex: 1, backgroundColor: colors.background }} />;
 
   if (listed.length === 0) {
-    return <Screen title={t('favorites.title')} subtitle={t('favorites.empty')} />;
+    return <Screen title={t('favorites.title')} message={t('favorites.empty')} />;
   }
 
   return (
-    <FlatList
-      style={{ backgroundColor: colors.background }}
-      contentContainerStyle={{ padding: spacing.lg, gap: spacing.md, paddingBottom: spacing.xxl }}
-      data={listed}
-      keyExtractor={(item) => item.id}
-      ListHeaderComponent={
-        <View style={{ marginBottom: spacing.sm }}>
-          <Button
-            label={t('favorites.play', { count: savedCount })}
-            onPress={() => router.push({ pathname: '/play', params: { source: 'favorites' } })}
-            disabled={savedCount === 0}
-          />
-        </View>
-      }
-      renderItem={({ item }) => {
-        const saved = ids.includes(item.id);
-        return (
-          <View
-            style={[
-              styles.row,
-              {
-                backgroundColor: colors.surface,
-                borderColor: colors.border,
-                borderRadius: radius.md,
-                padding: spacing.md,
-                gap: spacing.md,
-              },
-            ]}
-          >
-            <FavoriteButton topic={item} />
-            <View style={[styles.grow, { opacity: saved ? 1 : 0.5 }]}>
-              <Text style={[styles.eyebrow, { color: colors.accent }]}>
-                {`${t(`category.${item.category}`)} · ${t(`depth.${item.depth}`)}`.toUpperCase()}
-              </Text>
-              <Text style={{ color: colors.text, fontSize: fontSize.body, marginTop: 4 }}>{item.text[lang]}</Text>
-              {saved ? null : (
-                <Text style={{ color: colors.textMuted, fontSize: 13, marginTop: 4 }}>{t('favorites.unsavedHint')}</Text>
-              )}
-            </View>
-            <ShareButton topic={item} />
+    <View style={[styles.root, { backgroundColor: colors.background }]}>
+      <ScreenHeader title={t('favorites.title')} />
+      <FlatList
+        contentContainerStyle={{ padding: spacing.lg - 4, gap: spacing.md, paddingBottom: insets.bottom + spacing.xxl }}
+        data={listed}
+        keyExtractor={(item) => item.id}
+        ListHeaderComponent={
+          <View style={{ marginBottom: spacing.sm }}>
+            <Button
+              big
+              label={t('favorites.play', { count: savedCount })}
+              onPress={() => router.push({ pathname: '/play', params: { source: 'favorites' } })}
+              disabled={savedCount === 0}
+            />
           </View>
-        );
-      }}
-    />
+        }
+        renderItem={({ item }) => {
+          const saved = ids.includes(item.id);
+          return (
+            <Sticker
+              bg={colors.surface}
+              radius={radius.lg}
+              shadow={4}
+              faceStyle={[styles.row, { padding: spacing.md - 2, gap: spacing.md - 4 }]}
+            >
+              <FavoriteButton topic={item} />
+              <View style={[styles.grow, { opacity: saved ? 1 : 0.5 }]}>
+                <View style={styles.meta}>
+                  <FlameIcon size={14} color={categoryColor[item.category]} outline={colors.ink} />
+                  <Text style={{ color: colors.textMuted, fontFamily: fonts.bodyBold, fontSize: 13 }}>
+                    {t(`category.${item.category}`)}
+                  </Text>
+                </View>
+                <Text style={{ color: colors.text, fontFamily: fonts.bodySemi, fontSize: 17, lineHeight: 23, marginTop: 4 }}>
+                  {item.text[lang]}
+                </Text>
+                {saved ? null : (
+                  <Text style={{ color: colors.textMuted, fontFamily: fonts.body, fontSize: 13, marginTop: 4 }}>
+                    {t('favorites.unsavedHint')}
+                  </Text>
+                )}
+              </View>
+              <ShareButton topic={item} />
+            </Sticker>
+          );
+        }}
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  row: { flexDirection: 'row', alignItems: 'center', borderWidth: 1 },
+  root: { flex: 1 },
+  row: { flexDirection: 'row', alignItems: 'center' },
   grow: { flex: 1 },
-  eyebrow: { fontSize: 12, fontWeight: '700', letterSpacing: 1 },
+  meta: { flexDirection: 'row', alignItems: 'center', gap: 6 },
 });

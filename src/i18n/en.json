@@ -1,9 +1,17 @@
 {
+  "common": {
+    "back": "Back"
+  },
+  "welcome": {
+    "slogan": "Every good talk starts small.",
+    "hint": "Tap play, pick a vibe, start talking.",
+    "play": "Play"
+  },
   "home": {
     "tagline": "Pick a vibe, get a topic, keep the fire going.",
     "start": "Start",
-    "startCount_one": "Start · {{count}} topic",
-    "startCount_other": "Start · {{count}} topics",
+    "startCount_one": "Start with {{count}} topic",
+    "startCount_other": "Start with {{count}} topics",
     "noTopics": "No topics match yet. Try another depth or category.",
     "surprise": "Surprise me",
     "favorites": "Favorites",
@@ -63,6 +71,11 @@
   },
   "settings": {
     "title": "Settings",
+    "sectionAppearance": "Look",
+    "appearanceAuto": "Auto",
+    "appearanceDay": "Day",
+    "appearanceNight": "Night",
+    "appearanceHint": "Auto follows your phone: day by light, the campfire by night.",
     "sectionPlay": "Play",
     "tapToPause": "Tap card to pause",
     "tapToPauseHint": "The Pause button always works.",

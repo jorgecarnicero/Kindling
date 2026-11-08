@@ -5,8 +5,11 @@ import type { Lang } from '@/data/types';
 
 export type LanguagePref = 'system' | Lang;
 export type VibrationStrength = 'soft' | 'strong';
+/** Auto follows the phone's light/dark mode; Day = Matchbox, Night = Campfire. */
+export type Appearance = 'auto' | 'day' | 'night';
 
 export type Settings = {
+  appearance: Appearance;
   /** Tap the card to pause/resume (the Pause button always works). */
   tapToPause: boolean;
   sound: boolean;
@@ -18,6 +21,7 @@ export type Settings = {
 };
 
 export const DEFAULT_SETTINGS: Settings = {
+  appearance: 'auto',
   tapToPause: true,
   sound: true,
   vibration: true,

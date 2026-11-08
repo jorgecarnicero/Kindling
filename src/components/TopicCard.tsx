@@ -2,61 +2,67 @@ import { ReactNode } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
 import { useTheme } from '@/theme';
+import { Sticker } from './Sticker';
 
 type Props = {
-  eyebrow?: string;
   text: string;
   secondary?: string;
   /** Shown below the topic after time is added; fades in when it changes. */
   followUp?: string;
+  /** Background of the follow-up pill (a soft tint of the category color). */
+  followUpBg?: string;
   dimmed?: boolean;
-  /** Overlaid on the card's top corners (e.g. heart and share); not dimmed when paused. */
+  /** Overlaid on the card's top corners (heart and share); not dimmed when paused. */
   corners?: ReactNode;
   children?: ReactNode;
 };
 
-/** The one big card in the middle of the screen. */
-export function TopicCard({ eyebrow, text, secondary, followUp, dimmed, corners, children }: Props) {
-  const { colors, spacing, radius, fontSize } = useTheme();
+/** The one big sticker card in the middle of the screen. */
+export function TopicCard({ text, secondary, followUp, followUpBg, dimmed, corners, children }: Props) {
+  const { colors, fonts, spacing, radius } = useTheme();
+  const long = text.length > 90;
   return (
-    <View
-      style={[
-        styles.card,
-        {
-          backgroundColor: colors.surface,
-          borderColor: colors.border,
-          borderRadius: radius.lg,
-          padding: spacing.xl,
-          // Room for the corner icons so they never overlap the eyebrow on tall cards.
-          paddingTop: corners ? spacing.xxl + spacing.sm : spacing.xl,
-        },
-      ]}
+    <Sticker
+      bg={colors.surface}
+      radius={radius.lg}
+      shadow={6}
+      faceStyle={[styles.card, { padding: spacing.lg, paddingTop: corners ? 64 : spacing.lg }]}
     >
-      <View style={{ gap: spacing.md, opacity: dimmed ? 0.55 : 1 }}>
-        {eyebrow ? <Text style={[styles.eyebrow, { color: colors.accent }]}>{eyebrow.toUpperCase()}</Text> : null}
-        <Text style={[styles.text, { color: colors.text, fontSize: fontSize.title }]}>{text}</Text>
+      <View style={{ gap: spacing.md + 4, opacity: dimmed ? 0.5 : 1 }}>
+        <Text
+          style={{
+            color: colors.text,
+            fontFamily: fonts.display,
+            fontSize: long ? 26 : text.length > 50 ? 30 : 40,
+            lineHeight: long ? 30 : text.length > 50 ? 34 : 42,
+            letterSpacing: -0.6,
+            textAlign: 'center',
+          }}
+        >
+          {text}
+        </Text>
         {secondary ? (
-          <Text style={{ color: colors.textMuted, fontSize: fontSize.body, textAlign: 'center' }}>{secondary}</Text>
+          <Text style={{ color: colors.textMuted, fontFamily: fonts.bodySemi, fontSize: 17, textAlign: 'center' }}>{secondary}</Text>
         ) : null}
         {followUp ? (
-          <Animated.Text
+          <Animated.View
             key={followUp}
             entering={FadeIn.duration(500)}
-            style={[styles.followUp, { color: colors.accent, fontSize: fontSize.body + 3 }]}
+            style={[styles.followUp, { backgroundColor: followUpBg ?? colors.background }]}
           >
-            {followUp}
-          </Animated.Text>
+            <Text style={{ color: colors.onColor, fontFamily: fonts.bodyBold, fontSize: 17, lineHeight: 22, textAlign: 'center' }}>
+              {followUp}
+            </Text>
+          </Animated.View>
         ) : null}
         {children}
       </View>
       {corners}
-    </View>
+    </Sticker>
   );
 }
 
 const styles = StyleSheet.create({
-  card: { alignSelf: 'stretch', minHeight: 320, justifyContent: 'center', borderWidth: 1 },
-  eyebrow: { fontSize: 13, fontWeight: '700', letterSpacing: 1.2, textAlign: 'center' },
-  text: { fontWeight: '700', textAlign: 'center', lineHeight: 36 },
-  followUp: { fontWeight: '600', textAlign: 'center', marginTop: 8 },
+  card: { minHeight: 340, justifyContent: 'center' },
+  followUp: { alignSelf: 'center', maxWidth: 280, paddingHorizontal: 14, paddingVertical: 10, borderRadius: 12 },
 });
