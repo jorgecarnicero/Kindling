@@ -1,10 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/Button';
 import { TimerRing } from '@/components/TimerRing';
+import { CardCornerActions } from '@/components/TopicActions';
 import { TopicCard } from '@/components/TopicCard';
 import { QUESTION_DURATION_MS } from '@/config/dev';
+import { topics as allTopics } from '@/data/topics';
+import { favoriteTopics, useFavorites } from '@/store/favorites';
 import { followUpFor } from '@/deck/deck';
 import { useTimesUpFeedback } from '@/feedback/useTimesUpFeedback';
 import { useTimer } from '@/hooks/useTimer';
@@ -16,14 +20,19 @@ import { useTheme } from '@/theme';
 /** How long auto-advance waits at time's up before drawing the next card. */
 const AUTO_ADVANCE_MS = 5_000;
 
-// Draws from every topic until Home gets the category/depth picker.
+// `?source=favorites` plays only saved topics (read once when the screen opens).
+// Otherwise draws from every topic until Home gets the category/depth picker.
 export default function Play() {
   const { t } = useTranslation();
   const { colors, spacing, fontSize } = useTheme();
   const lang = useAppLanguage();
   const tapToPause = useSettings((s) => s.tapToPause);
   const autoAdvance = useSettings((s) => s.autoAdvance);
-  const deck = useTopicDeck({});
+  const { source } = useLocalSearchParams<{ source?: string }>();
+  const [pool] = useState(() =>
+    source === 'favorites' ? favoriteTopics(useFavorites.getState().ids, allTopics) : allTopics,
+  );
+  const deck = useTopicDeck({}, pool);
   const timesUp = useTimesUpFeedback();
   const timer = useTimer(QUESTION_DURATION_MS, { onDone: timesUp });
 
@@ -104,6 +113,7 @@ export default function Play() {
             text={topic.text[lang]}
             followUp={followUpFor(topic, lang, timer.extensions)}
             dimmed={paused}
+            corners={<CardCornerActions topic={topic} />}
           />
         </TimerRing>
       </Pressable>

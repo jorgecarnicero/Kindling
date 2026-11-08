@@ -25,7 +25,15 @@
   },
   "favorites": {
     "title": "Favoritos",
-    "empty": "Aquí aparecerán los temas que guardes."
+    "empty": "Toca el corazón de cualquier tarjeta para guardar un tema aquí y luego juega tus favoritos con otro grupo.",
+    "play": "Jugar favoritos ({{count}})",
+    "save": "Guardar en favoritos",
+    "remove": "Quitar de favoritos",
+    "unsavedHint": "Quitado · toca el corazón para conservarlo"
+  },
+  "share": {
+    "label": "Compartir tema",
+    "credit": "— desde Kindling"
   },
   "settings": {
     "title": "Ajustes",

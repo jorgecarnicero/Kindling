@@ -1,22 +1,29 @@
 import { Pressable, StyleSheet, Text } from 'react-native';
 import { useTheme } from '@/theme';
 
-type Props = { label: string; onPress: () => void; variant?: 'primary' | 'secondary' };
+type Props = {
+  label: string;
+  onPress: () => void;
+  variant?: 'primary' | 'secondary';
+  disabled?: boolean;
+};
 
-export function Button({ label, onPress, variant = 'primary' }: Props) {
+export function Button({ label, onPress, variant = 'primary', disabled = false }: Props) {
   const { colors, radius, fontSize } = useTheme();
   const primary = variant === 'primary';
   return (
     <Pressable
       accessibilityRole="button"
+      accessibilityState={{ disabled }}
       onPress={onPress}
+      disabled={disabled}
       style={({ pressed }) => [
         styles.base,
         {
           borderRadius: radius.pill,
           backgroundColor: primary ? colors.accent : colors.surface,
           borderColor: primary ? colors.accent : colors.border,
-          opacity: pressed ? 0.8 : 1,
+          opacity: disabled ? 0.4 : pressed ? 0.8 : 1,
         },
       ]}
     >
