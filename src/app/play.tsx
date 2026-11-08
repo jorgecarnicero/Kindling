@@ -1,22 +1,28 @@
-import { useMemo } from 'react';
+import { useEffect } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/Button';
 import { TimerRing } from '@/components/TimerRing';
 import { TopicCard } from '@/components/TopicCard';
 import { QUESTION_DURATION_MS } from '@/config/dev';
-import { categoryLabel, depthLabel } from '@/data/labels';
 import { followUpFor } from '@/deck/deck';
 import { useTimesUpFeedback } from '@/feedback/useTimesUpFeedback';
 import { useTimer } from '@/hooks/useTimer';
 import { useTopicDeck } from '@/hooks/useTopicDeck';
-import { deviceLanguage } from '@/i18n/deviceLanguage';
+import { useAppLanguage } from '@/i18n';
+import { useSettings } from '@/store/settings';
 import { useTheme } from '@/theme';
 
-// UI strings are English for now; they move to i18n (EN/ES) in step 5.
+/** How long auto-advance waits at time's up before drawing the next card. */
+const AUTO_ADVANCE_MS = 5_000;
+
 // Draws from every topic until Home gets the category/depth picker.
 export default function Play() {
+  const { t } = useTranslation();
   const { colors, spacing, fontSize } = useTheme();
-  const lang = useMemo(deviceLanguage, []);
+  const lang = useAppLanguage();
+  const tapToPause = useSettings((s) => s.tapToPause);
+  const autoAdvance = useSettings((s) => s.autoAdvance);
   const deck = useTopicDeck({});
   const timesUp = useTimesUpFeedback();
   const timer = useTimer(QUESTION_DURATION_MS, { onDone: timesUp });
@@ -26,13 +32,25 @@ export default function Play() {
     timer.reset();
   };
 
+  // Auto-advance: at time's up, move on after a few seconds unless someone adds time
+  // (which changes the status and cancels this).
+  const { status } = timer;
+  useEffect(() => {
+    if (!autoAdvance || status !== 'done') return;
+    const id = setTimeout(() => {
+      deck.next();
+      timer.reset();
+    }, AUTO_ADVANCE_MS);
+    return () => clearTimeout(id);
+  }, [autoAdvance, status, deck.next, timer.reset]);
+
   if (!deck.current) {
     return (
       <View style={[styles.root, { backgroundColor: colors.background, padding: spacing.lg, gap: spacing.lg }]}>
-        <TopicCard text="You've covered them all" secondary="Shuffle the same topics again, or bring in a new category." />
+        <TopicCard text={t('play.coveredTitle')} secondary={t('play.coveredBody')} />
         <View style={[styles.stretch, { gap: spacing.md }]}>
           <Button
-            label="Shuffle again"
+            label={t('play.shuffleAgain')}
             onPress={() => {
               deck.shuffleAgain();
               timer.reset();
@@ -41,7 +59,7 @@ export default function Play() {
           {deck.mixInOptions.map((c) => (
             <Button
               key={c}
-              label={`Mix in ${categoryLabel[c]}`}
+              label={t('play.mixIn', { category: t(`category.${c}`) })}
               variant="secondary"
               onPress={() => {
                 deck.addCategory(c);
@@ -55,25 +73,34 @@ export default function Play() {
   }
 
   const topic = deck.current;
-  const { status } = timer;
   const done = status === 'done';
   const paused = status === 'paused';
 
-  const hint = done ? "Time's up" : paused ? 'Paused · tap the card to resume' : 'Tap the card to pause';
+  const hint = done
+    ? autoAdvance
+      ? t('play.autoAdvance')
+      : t('play.timesUp')
+    : paused
+      ? tapToPause
+        ? t('play.pausedTap')
+        : t('play.paused')
+      : tapToPause
+        ? t('play.tapToPause')
+        : ' ';
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background, padding: spacing.lg, gap: spacing.lg }]}>
       <Pressable
         style={styles.stretch}
         onPress={timer.toggle}
-        disabled={done}
-        accessibilityRole="button"
+        disabled={done || !tapToPause}
+        accessibilityRole={tapToPause ? 'button' : undefined}
         accessibilityLabel={topic.text[lang]}
-        accessibilityHint={paused ? 'Resumes the timer' : 'Pauses the timer'}
+        accessibilityHint={tapToPause && !done ? (paused ? t('play.resumesHint') : t('play.pausesHint')) : undefined}
       >
         <TimerRing timer={timer.state}>
           <TopicCard
-            eyebrow={`${categoryLabel[topic.category]} · ${depthLabel[topic.depth]}`}
+            eyebrow={`${t(`category.${topic.category}`)} · ${t(`depth.${topic.depth}`)}`}
             text={topic.text[lang]}
             followUp={followUpFor(topic, lang, timer.extensions)}
             dimmed={paused}
@@ -87,6 +114,7 @@ export default function Play() {
           color: done ? colors.accent : colors.textMuted,
           fontSize: done ? fontSize.body + 3 : fontSize.body,
           fontWeight: done ? '700' : '400',
+          textAlign: 'center',
         }}
       >
         {hint}
@@ -96,19 +124,19 @@ export default function Play() {
         {done ? (
           <>
             <View style={styles.grow}>
-              <Button label="+1 min" onPress={timer.addMinute} />
+              <Button label={t('play.addMinute')} onPress={timer.addMinute} />
             </View>
             <View style={styles.grow}>
-              <Button label="Next" onPress={next} />
+              <Button label={t('play.next')} onPress={next} />
             </View>
           </>
         ) : (
           <>
             <View style={styles.grow}>
-              <Button label={paused ? 'Resume' : 'Pause'} variant="secondary" onPress={timer.toggle} />
+              <Button label={paused ? t('play.resume') : t('play.pause')} variant="secondary" onPress={timer.toggle} />
             </View>
             <View style={styles.grow}>
-              <Button label="Skip" variant="secondary" onPress={next} />
+              <Button label={t('play.skip')} variant="secondary" onPress={next} />
             </View>
           </>
         )}

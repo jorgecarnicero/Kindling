@@ -1,0 +1,65 @@
+{
+  "home": {
+    "tagline": "Pick a vibe, get a topic, keep the fire going.",
+    "start": "Start",
+    "favorites": "Favorites",
+    "settings": "Settings"
+  },
+  "play": {
+    "tapToPause": "Tap the card to pause",
+    "pausedTap": "Paused · tap the card to resume",
+    "paused": "Paused",
+    "timesUp": "Time's up",
+    "autoAdvance": "Next card in a few seconds · +1 min to keep talking",
+    "pause": "Pause",
+    "resume": "Resume",
+    "skip": "Skip",
+    "addMinute": "+1 min",
+    "next": "Next",
+    "resumesHint": "Resumes the timer",
+    "pausesHint": "Pauses the timer",
+    "coveredTitle": "You've covered them all",
+    "coveredBody": "Shuffle the same topics again, or bring in a new category.",
+    "shuffleAgain": "Shuffle again",
+    "mixIn": "Mix in {{category}}"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty": "Saved topics will appear here."
+  },
+  "settings": {
+    "title": "Settings",
+    "sectionPlay": "Play",
+    "tapToPause": "Tap card to pause",
+    "tapToPauseHint": "The Pause button always works.",
+    "autoAdvance": "Auto-advance",
+    "autoAdvanceHint": "At time's up, the next card comes after a few seconds unless someone taps +1 min. Good for parties.",
+    "sectionFeedback": "Time's up",
+    "sound": "Chime",
+    "soundHint": "Stays quiet when your phone is on silent or vibrate.",
+    "vibration": "Vibration",
+    "vibrationStrength": "Vibration strength",
+    "soft": "Soft",
+    "strong": "Strong",
+    "test": "Test time's up",
+    "sectionLanguage": "Language",
+    "languageSystem": "Phone",
+    "questionTime": "Each topic lasts 1 minute."
+  },
+  "category": {
+    "get_to_know": "Get to know you",
+    "deep_talk": "Deep talk",
+    "random_facts": "Random facts",
+    "stories": "Stories",
+    "would_you_rather": "Would you rather",
+    "light_debate": "Light debate",
+    "couples": "Couples",
+    "family": "Family and kids",
+    "team_building": "Team building"
+  },
+  "depth": {
+    "light": "Light",
+    "medium": "Medium",
+    "deep": "Deep"
+  }
+}

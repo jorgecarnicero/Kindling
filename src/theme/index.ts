@@ -18,6 +18,7 @@ export const lightColors = {
   accent: palette.ember,
   onAccent: palette.cream,
   border: '#EADFD0',
+  switchThumb: palette.creamRaised,
 };
 
 export type Colors = typeof lightColors;
@@ -30,6 +31,7 @@ export const darkColors: Colors = {
   accent: palette.emberSoft,
   onAccent: palette.charcoal,
   border: '#3A332D',
+  switchThumb: palette.cream,
 };
 
 export const spacing = { xs: 4, sm: 8, md: 16, lg: 24, xl: 32, xxl: 48 };

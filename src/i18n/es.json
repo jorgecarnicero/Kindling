@@ -1,0 +1,65 @@
+{
+  "home": {
+    "tagline": "Elige un ambiente, recibe un tema y mantén viva la conversación.",
+    "start": "Empezar",
+    "favorites": "Favoritos",
+    "settings": "Ajustes"
+  },
+  "play": {
+    "tapToPause": "Toca la tarjeta para pausar",
+    "pausedTap": "En pausa · toca la tarjeta para seguir",
+    "paused": "En pausa",
+    "timesUp": "Se acabó el tiempo",
+    "autoAdvance": "Siguiente tarjeta en unos segundos · +1 min para seguir hablando",
+    "pause": "Pausar",
+    "resume": "Seguir",
+    "skip": "Saltar",
+    "addMinute": "+1 min",
+    "next": "Siguiente",
+    "resumesHint": "Reanuda el temporizador",
+    "pausesHint": "Pausa el temporizador",
+    "coveredTitle": "Ya salieron todos",
+    "coveredBody": "Vuelve a mezclar los mismos temas o suma otra categoría.",
+    "shuffleAgain": "Mezclar de nuevo",
+    "mixIn": "Sumar {{category}}"
+  },
+  "favorites": {
+    "title": "Favoritos",
+    "empty": "Aquí aparecerán los temas que guardes."
+  },
+  "settings": {
+    "title": "Ajustes",
+    "sectionPlay": "Juego",
+    "tapToPause": "Tocar la tarjeta para pausar",
+    "tapToPauseHint": "El botón Pausar siempre funciona.",
+    "autoAdvance": "Avance automático",
+    "autoAdvanceHint": "Cuando se acaba el tiempo, la siguiente tarjeta llega en unos segundos, salvo que alguien toque +1 min. Ideal para fiestas.",
+    "sectionFeedback": "Fin del tiempo",
+    "sound": "Sonido",
+    "soundHint": "No suena si el teléfono está en silencio o en vibración.",
+    "vibration": "Vibración",
+    "vibrationStrength": "Intensidad de la vibración",
+    "soft": "Suave",
+    "strong": "Fuerte",
+    "test": "Probar fin del tiempo",
+    "sectionLanguage": "Idioma",
+    "languageSystem": "Teléfono",
+    "questionTime": "Cada tema dura 1 minuto."
+  },
+  "category": {
+    "get_to_know": "Conocerse",
+    "deep_talk": "Charla profunda",
+    "random_facts": "Datos curiosos",
+    "stories": "Historias",
+    "would_you_rather": "¿Qué prefieres?",
+    "light_debate": "Debate ligero",
+    "couples": "Parejas",
+    "family": "Familia y niños",
+    "team_building": "Trabajo en equipo"
+  },
+  "depth": {
+    "light": "Ligero",
+    "medium": "Medio",
+    "deep": "Profundo"
+  }
+}
