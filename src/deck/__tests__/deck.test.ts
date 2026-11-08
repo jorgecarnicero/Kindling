@@ -4,6 +4,7 @@ import {
   advance,
   createDeck,
   currentTopic,
+  followUpFor,
   isExhausted,
   mixIn,
   mixInOptions,
@@ -110,6 +111,27 @@ describe('when the deck runs out', () => {
     expect(ids).toEqual(['b1']);
     expect(ids.some((id) => seen.includes(id))).toBe(false);
     expect(mixInOptions(mixed, sample)).toEqual(['family']);
+  });
+});
+
+describe('followUpFor', () => {
+  const topic: Topic = {
+    ...t('f1', 'stories'),
+    followUps: { en: ['first', 'second'], es: ['primera', 'segunda'] },
+  };
+
+  it('shows nothing until time is added', () => {
+    expect(followUpFor(topic, 'en', 0)).toBeUndefined();
+  });
+
+  it('shows follow-ups in order, in the chosen language, then cycles', () => {
+    expect(followUpFor(topic, 'en', 1)).toBe('first');
+    expect(followUpFor(topic, 'es', 2)).toBe('segunda');
+    expect(followUpFor(topic, 'en', 3)).toBe('first');
+  });
+
+  it('handles topics without follow-ups', () => {
+    expect(followUpFor(t('f2', 'stories'), 'en', 1)).toBeUndefined();
   });
 });
 

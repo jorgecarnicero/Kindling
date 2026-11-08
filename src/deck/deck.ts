@@ -1,4 +1,14 @@
-import { CATEGORIES, type Category, type Depth, type Topic } from '@/data/types';
+import { CATEGORIES, type Category, type Depth, type Lang, type Topic } from '@/data/types';
+
+/**
+ * Follow-up to show after `extensions` "+1 min" taps: none before the first,
+ * then each follow-up in order, cycling if time keeps being added.
+ */
+export function followUpFor(topic: Topic, lang: Lang, extensions: number): string | undefined {
+  const list = topic.followUps?.[lang];
+  if (!list?.length || extensions <= 0) return undefined;
+  return list[(extensions - 1) % list.length];
+}
 
 /** Empty or missing list = no restriction ("Surprise me"). */
 export type DeckFilter = { categories?: Category[]; depths?: Depth[] };
