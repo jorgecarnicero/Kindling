@@ -33,7 +33,12 @@ Branch per step: `feat/...` for features, `fix/...` for bugs, merged into `main`
 - Language: follows the phone by default, with a manual EN/ES choice in Settings; keep i18n structured so new languages can be added later
 - Group size: not a Home filter in v1; kept only as topic metadata (may become a "Who's here?" option later)
 - Deck runs out: show a "You've covered them all" card with "Shuffle again" (same filter, repeats allowed) and "Mix in another category"; never repeat silently or widen the filter automatically
+- Timer ring traces the card's rounded border (approved over a circular ring)
+- Time's up: the card stays; the controls below swap to big "+1 min" and "Next" (no overlay)
+- Follow-up: shown below the original topic (accent color, fades in) after "+1 min"; the topic text stays
+- Swipes: none for now, buttons only (tap-to-pause still planned)
+- Chime: synthesized by our own script (license-free), soft two-note
 - Favorites: saving a topic is for reusing it with other people or groups later, so favorites must persist across sessions and be easy to play from
 
 ## Status
-Step 1 (scaffold) done. Step 2 (topic data + deck) in progress on `feat/topic-deck`: 30 topics approved by Jorge (the style to follow: "our family" phrasing is fine for Family; Random facts = true fact + open question); Play screen is a temporary review mode (EN + ES, all topics, Next only). Next: step 3, timer.
+Step 1 (scaffold) done. Step 2 (topic data + deck) in progress on `feat/topic-deck`: 30 topics approved by Jorge (the style to follow: "our family" phrasing is fine for Family; Random facts = true fact + open question); Play screen is a temporary review mode (EN + ES, all topics, Next only). Step 2 merged. Step 3 (timer) on `feat/timer`: pure timer in `src/timer/timer.ts` (wall-clock based, tested), `useTimer` hook, `TimerRing` drawn along the card's rounded border (Reanimated, ReduceMotion.Never on purpose). Next: step 4, the real play screen.
