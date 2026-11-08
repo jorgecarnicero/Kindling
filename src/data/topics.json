@@ -355,8 +355,8 @@
     "depth": "light",
     "groupSize": ["small", "party"],
     "text": {
-      "en": "What's the funniest thing that's ever happened in our family?",
-      "es": "¿Qué es lo más gracioso que ha pasado en nuestra familia?"
+      "en": "What's the funniest thing that's ever happened in your family?",
+      "es": "¿Qué es lo más gracioso que ha pasado en tu familia?"
     },
     "followUps": {
       "en": ["Who tells that story best?"],
@@ -369,8 +369,8 @@
     "depth": "light",
     "groupSize": ["small", "party"],
     "text": {
-      "en": "If our family were a superhero team, what would each person's power be?",
-      "es": "Si nuestra familia fuera un equipo de superhéroes, ¿qué poder tendría cada persona?"
+      "en": "If your family were a superhero team, what would each person's power be?",
+      "es": "Si tu familia fuera un equipo de superhéroes, ¿qué poder tendría cada persona?"
     },
     "followUps": {
       "en": ["And who would be the villain?"],
