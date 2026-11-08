@@ -35,7 +35,9 @@ export function ToggleRow({ label, hint, value, onChange }: ToggleProps) {
       <View style={styles.grow}>
         <Text style={{ color: colors.text, fontFamily: fonts.bodyBold, fontSize: fontSize.body }}>{label}</Text>
         {hint ? (
-          <Text style={{ color: colors.textMuted, fontFamily: fonts.body, fontSize: 14, marginTop: 2, lineHeight: 19 }}>{hint}</Text>
+          <Text style={{ color: colors.textMuted, fontFamily: fonts.body, fontSize: 14, marginTop: 2, lineHeight: 19 }}>
+            {hint}
+          </Text>
         ) : null}
       </View>
       <Switch
@@ -57,42 +59,56 @@ type ChoiceProps<T extends string> = {
   options: Option<T>[];
   value: T;
   onChange: (v: T) => void;
+  /** Wrap into rows of this many (default: all in one row). */
+  perRow?: number;
 };
 
-/** A row of sticker buttons; the chosen one is pressed flat and filled. */
-export function ChoiceRow<T extends string>({ label, options, value, onChange }: ChoiceProps<T>) {
+/** Sticker buttons; the chosen one is pressed flat and filled. */
+export function ChoiceRow<T extends string>({ label, options, value, onChange, perRow }: ChoiceProps<T>) {
   const { colors, fonts, spacing, radius, sticker } = useTheme();
+  const size = perRow ?? options.length;
+  const rows: Option<T>[][] = [];
+  for (let i = 0; i < options.length; i += size) rows.push(options.slice(i, i + size));
   return (
-    <View style={{ paddingVertical: spacing.sm, gap: spacing.sm }}>
+    <View accessibilityRole="radiogroup" style={{ paddingVertical: spacing.sm, gap: spacing.sm }}>
       {label ? <Text style={{ color: colors.text, fontFamily: fonts.bodyBold, fontSize: 17 }}>{label}</Text> : null}
-      <View accessibilityRole="radiogroup" style={[styles.row, { gap: spacing.sm }]}>
-        {options.map((o) => {
-          const selected = o.value === value;
-          return (
-            <PressableSticker
-              key={o.value}
-              onPress={() => onChange(o.value)}
-              selected={selected}
-              accessibilityRole="radio"
-              accessibilityState={{ selected }}
-              accessibilityLabel={o.label}
-              bg={selected ? colors.selected : colors.surface}
-              radius={radius.md}
-              shadow={sticker.shadowSmall}
-              style={styles.grow}
-              faceStyle={styles.segment}
-            >
-              <Text
-                numberOfLines={1}
-                adjustsFontSizeToFit
-                style={{ color: selected ? colors.onSelected : colors.text, fontFamily: fonts.bodyBold, fontSize: 16 }}
+      {rows.map((row, r) => (
+        <View key={r} style={[styles.row, { gap: spacing.sm }]}>
+          {row.map((o) => {
+            const selected = o.value === value;
+            return (
+              <PressableSticker
+                key={o.value}
+                onPress={() => onChange(o.value)}
+                selected={selected}
+                accessibilityRole="radio"
+                accessibilityState={{ selected }}
+                accessibilityLabel={o.label}
+                bg={selected ? colors.selected : colors.surface}
+                radius={radius.md}
+                shadow={sticker.shadowSmall}
+                style={styles.grow}
+                faceStyle={styles.segment}
               >
-                {o.label}
-              </Text>
-            </PressableSticker>
-          );
-        })}
-      </View>
+                <Text
+                  numberOfLines={1}
+                  adjustsFontSizeToFit
+                  style={{
+                    color: selected ? colors.onSelected : colors.text,
+                    fontFamily: fonts.bodyBold,
+                    fontSize: 16,
+                  }}
+                >
+                  {o.label}
+                </Text>
+              </PressableSticker>
+            );
+          })}
+          {row.length < size
+            ? Array.from({ length: size - row.length }, (_, i) => <View key={`pad${i}`} style={styles.grow} />)
+            : null}
+        </View>
+      ))}
     </View>
   );
 }

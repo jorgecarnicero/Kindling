@@ -62,6 +62,25 @@ describe('useTimer', () => {
     expect(onDone).toHaveBeenCalledTimes(3);
   });
 
+  it('timer off: stays idle and never fires, even after reset', async () => {
+    const onDone = jest.fn();
+    const { result } = await renderHook(() => useTimer(MIN, { onDone, enabled: false }));
+    expect(result.current.status).toBe('idle');
+    await advance(10 * MIN);
+    await act(async () => result.current.reset());
+    await advance(10 * MIN);
+    expect(result.current.status).toBe('idle');
+    expect(onDone).not.toHaveBeenCalled();
+  });
+
+  it('a zero duration is treated as off', async () => {
+    const onDone = jest.fn();
+    const { result } = await renderHook(() => useTimer(0, { onDone }));
+    await advance(MIN);
+    expect(result.current.status).toBe('idle');
+    expect(onDone).not.toHaveBeenCalled();
+  });
+
   it('uses the latest onDone callback', async () => {
     const first = jest.fn();
     const second = jest.fn();

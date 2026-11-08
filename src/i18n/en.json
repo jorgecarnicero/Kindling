@@ -50,6 +50,8 @@
     "skip": "Skip",
     "addMinute": "+1 min",
     "spark": "Need a spark?",
+    "deeper": "Go deeper",
+    "untimed": "No timer, no rush.",
     "next": "Next",
     "resumesHint": "Resumes the timer",
     "pausesHint": "Pauses the timer",
@@ -92,7 +94,12 @@
     "test": "Test time's up",
     "sectionLanguage": "Language",
     "languageSystem": "Phone",
-    "questionTime": "Each topic lasts 1 minute."
+    "sectionTimer": "Topic time",
+    "seconds": "{{count}} s",
+    "minutes": "{{count}} min",
+    "timerOff": "Off",
+    "timerHint": "How long each topic lasts before time's up. +1 min always adds a minute.",
+    "timerOffHint": "No timer, just cards. Tap Go deeper for a follow-up question."
   },
   "category": {
     "get_to_know": "Get to know you",

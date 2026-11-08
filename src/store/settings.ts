@@ -8,8 +8,14 @@ export type VibrationStrength = 'soft' | 'strong';
 /** Auto follows the phone's light/dark mode; Day = Matchbox, Night = Campfire. */
 export type Appearance = 'auto' | 'day' | 'night';
 
+/** Topic length choices in seconds; 0 = timer off (cards only). */
+export const TIMER_OPTIONS = [30, 60, 120, 180, 300, 0] as const;
+export type TimerSeconds = (typeof TIMER_OPTIONS)[number];
+
 export type Settings = {
   appearance: Appearance;
+  /** How long each topic lasts; 0 = no timer. */
+  timerSeconds: TimerSeconds;
   /** Tap the card to pause/resume (the Pause button always works). */
   tapToPause: boolean;
   sound: boolean;
@@ -22,6 +28,7 @@ export type Settings = {
 
 export const DEFAULT_SETTINGS: Settings = {
   appearance: 'auto',
+  timerSeconds: 60,
   tapToPause: true,
   sound: true,
   vibration: true,
@@ -49,7 +56,13 @@ export const useSettings = create<SettingsStore>()(
       // Persist only the data, never the functions.
       partialize: ({ update, resetAll, ...data }) => data,
       // Fill in any setting added after the user's last save.
-      merge: (saved, current) => ({ ...current, ...(saved as Partial<Settings>) }),
+      merge: (saved, current) => {
+        const merged = { ...current, ...(saved as Partial<Settings>) };
+        // Never trust an old or corrupted timer value.
+        if (!(TIMER_OPTIONS as readonly number[]).includes(merged.timerSeconds))
+          merged.timerSeconds = DEFAULT_SETTINGS.timerSeconds;
+        return merged;
+      },
     },
   ),
 );

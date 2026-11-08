@@ -11,13 +11,22 @@ import {
   toggle,
 } from '@/timer/timer';
 
-type Options = { autoStart?: boolean; onDone?: () => void };
+type Options = {
+  autoStart?: boolean;
+  onDone?: () => void;
+  /** false = timer off: stays idle, never fires onDone (cards-only mode). */
+  enabled?: boolean;
+};
 
 /** Countdown for one topic. Call `reset()` when a new card is drawn. */
-export function useTimer(durationMs: number = DEFAULT_DURATION_MS, { autoStart = true, onDone }: Options = {}) {
+export function useTimer(
+  durationMs: number = DEFAULT_DURATION_MS,
+  { autoStart = true, onDone, enabled = true }: Options = {},
+) {
+  const run = autoStart && enabled && durationMs > 0;
   const [state, setState] = useState(() => {
     const t = createTimer(durationMs);
-    return autoStart ? start(t, Date.now()) : t;
+    return run ? start(t, Date.now()) : t;
   });
 
   const onDoneRef = useRef(onDone);
@@ -54,7 +63,7 @@ export function useTimer(durationMs: number = DEFAULT_DURATION_MS, { autoStart =
     addMinute: useCallback(() => setState((s) => addTime(s, Date.now())), []),
     reset: useCallback(() => {
       const t = createTimer(durationMs);
-      setState(autoStart ? start(t, Date.now()) : t);
-    }, [durationMs, autoStart]),
+      setState(run ? start(t, Date.now()) : t);
+    }, [durationMs, run]),
   };
 }

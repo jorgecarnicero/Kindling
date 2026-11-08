@@ -50,6 +50,8 @@
     "skip": "Saltar",
     "addMinute": "+1 min",
     "spark": "¿Necesitas una chispa?",
+    "deeper": "Profundizar",
+    "untimed": "Sin temporizador, sin prisa.",
     "next": "Siguiente",
     "resumesHint": "Reanuda el temporizador",
     "pausesHint": "Pausa el temporizador",
@@ -92,7 +94,12 @@
     "test": "Probar fin del tiempo",
     "sectionLanguage": "Idioma",
     "languageSystem": "Teléfono",
-    "questionTime": "Cada tema dura 1 minuto."
+    "sectionTimer": "Tiempo por tema",
+    "seconds": "{{count}} s",
+    "minutes": "{{count}} min",
+    "timerOff": "Sin tiempo",
+    "timerHint": "Cuánto dura cada tema antes de que se acabe el tiempo. +1 min siempre suma un minuto.",
+    "timerOffHint": "Sin temporizador, solo tarjetas. Toca Profundizar para una pregunta extra."
   },
   "category": {
     "get_to_know": "Conocerse",

@@ -9,7 +9,7 @@ import { ScreenHeader } from '@/components/ScreenHeader';
 import { TimerRing } from '@/components/TimerRing';
 import { CardCornerActions } from '@/components/TopicActions';
 import { TopicCard } from '@/components/TopicCard';
-import { QUESTION_DURATION_MS } from '@/config/dev';
+import { questionDurationMs } from '@/config/dev';
 import { topics as allTopics } from '@/data/topics';
 import { followUpFor } from '@/deck/deck';
 import { parsePlayParams, type PlayParams } from '@/deck/playParams';
@@ -34,6 +34,10 @@ export default function Play() {
   const lang = useAppLanguage();
   const tapToPause = useSettings((s) => s.tapToPause);
   const autoAdvance = useSettings((s) => s.autoAdvance);
+  const timerSeconds = useSettings((s) => s.timerSeconds);
+  /** Timer off: cards only, "Go deeper" reveals follow-ups instead of +1 min. */
+  const untimed = timerSeconds === 0;
+  const [deeper, setDeeper] = useState(0);
   const params = useLocalSearchParams<PlayParams>();
   const [setup] = useState(() => {
     const { source, filter } = parsePlayParams(params);
@@ -42,11 +46,12 @@ export default function Play() {
   });
   const deck = useTopicDeck(setup.filter, setup.pool);
   const timesUp = useTimesUpFeedback();
-  const timer = useTimer(QUESTION_DURATION_MS, { onDone: timesUp });
+  const timer = useTimer(questionDurationMs(timerSeconds), { onDone: timesUp, enabled: !untimed });
 
   const next = () => {
     deck.next();
     timer.reset();
+    setDeeper(0);
   };
 
   // Auto-advance: at time's up, move on after a few seconds unless someone adds time
@@ -102,22 +107,40 @@ export default function Play() {
   const night = mode === 'night';
   const catColor = categoryColor[topic.category];
 
-  const hint = done
-    ? autoAdvance
-      ? t('play.autoAdvance')
-      : t('play.timesUp')
-    : paused
-      ? tapToPause
-        ? t('play.pausedTap')
-        : t('play.paused')
-      : tapToPause
-        ? t('play.tapToPause')
-        : ' ';
+  const hint = untimed
+    ? t('play.untimed')
+    : done
+      ? autoAdvance
+        ? t('play.autoAdvance')
+        : t('play.timesUp')
+      : paused
+        ? tapToPause
+          ? t('play.pausedTap')
+          : t('play.paused')
+        : tapToPause
+          ? t('play.tapToPause')
+          : ' ';
+
+  const card = (
+    <TopicCard
+      key={topic.id}
+      text={topic.text[lang]}
+      spark={topic.starter?.[lang]}
+      sparkLabel={t('play.spark')}
+      sparkColor={catColor}
+      followUp={followUpFor(topic, lang, untimed ? deeper : timer.extensions)}
+      followUpBg={night ? catColor : mix(catColor, '#FFFFFF', 0.55)}
+      dimmed={paused}
+      corners={<CardCornerActions topic={topic} />}
+    />
+  );
 
   const chip = (
     <View style={[styles.chip, { backgroundColor: pc.chip, borderColor: colors.ink }]}>
       <FlameIcon size={16} color={night ? colors.text : catColor} outline={colors.ink} />
-      <Text style={{ color: pc.chipText, fontFamily: fonts.bodyBold, fontSize: 14 }}>{t(`category.${topic.category}`)}</Text>
+      <Text style={{ color: pc.chipText, fontFamily: fonts.bodyBold, fontSize: 14 }}>
+        {t(`category.${topic.category}`)}
+      </Text>
     </View>
   );
 
@@ -126,28 +149,26 @@ export default function Play() {
       <ScreenHeader right={chip} />
 
       <View style={[styles.center, { paddingHorizontal: spacing.lg - 8 }]}>
-        <Pressable
-          style={styles.stretch}
-          onPress={timer.toggle}
-          disabled={done || !tapToPause}
-          accessibilityRole={tapToPause ? 'button' : undefined}
-          accessibilityLabel={topic.text[lang]}
-          accessibilityHint={tapToPause && !done ? (paused ? t('play.resumesHint') : t('play.pausesHint')) : undefined}
-        >
-          <TimerRing timer={timer.state} color={pc.ring} trackColor={pc.track}>
-            <TopicCard
-              key={topic.id}
-              text={topic.text[lang]}
-              spark={topic.starter?.[lang]}
-              sparkLabel={t('play.spark')}
-              sparkColor={catColor}
-              followUp={followUpFor(topic, lang, timer.extensions)}
-              followUpBg={night ? catColor : mix(catColor, '#FFFFFF', 0.55)}
-              dimmed={paused}
-              corners={<CardCornerActions topic={topic} />}
-            />
-          </TimerRing>
-        </Pressable>
+        {untimed ? (
+          <View accessibilityLabel={topic.text[lang]} style={styles.untimedFrame}>
+            {card}
+          </View>
+        ) : (
+          <Pressable
+            style={styles.stretch}
+            onPress={timer.toggle}
+            disabled={done || !tapToPause}
+            accessibilityRole={tapToPause ? 'button' : undefined}
+            accessibilityLabel={topic.text[lang]}
+            accessibilityHint={
+              tapToPause && !done ? (paused ? t('play.resumesHint') : t('play.pausesHint')) : undefined
+            }
+          >
+            <TimerRing timer={timer.state} color={pc.ring} trackColor={pc.track}>
+              {card}
+            </TimerRing>
+          </Pressable>
+        )}
       </View>
 
       <View style={[bottom, { gap: spacing.md }]}>
@@ -163,7 +184,16 @@ export default function Play() {
           {hint}
         </Text>
         <View style={[styles.controls, { gap: spacing.sm + 4 }]}>
-          {done ? (
+          {untimed ? (
+            <>
+              <View style={styles.grow}>
+                <Button big variant="sunny" label={t('play.deeper')} onPress={() => setDeeper((d) => d + 1)} />
+              </View>
+              <View style={styles.grow}>
+                <Button big variant="secondary" label={t('play.next')} onPress={next} />
+              </View>
+            </>
+          ) : done ? (
             <>
               <View style={styles.grow}>
                 <Button big variant="sunny" label={t('play.addMinute')} onPress={timer.addMinute} />
@@ -175,7 +205,12 @@ export default function Play() {
           ) : (
             <>
               <View style={styles.grow}>
-                <Button big variant="secondary" label={paused ? t('play.resume') : t('play.pause')} onPress={timer.toggle} />
+                <Button
+                  big
+                  variant="secondary"
+                  label={paused ? t('play.resume') : t('play.pause')}
+                  onPress={timer.toggle}
+                />
               </View>
               <View style={styles.grow}>
                 <Button big variant="secondary" label={t('play.skip')} onPress={next} />
@@ -192,8 +227,18 @@ const styles = StyleSheet.create({
   root: { flex: 1 },
   center: { flex: 1, justifyContent: 'center' },
   stretch: { alignSelf: 'stretch' },
+  // Same footprint as the ring's padding, so the card doesn't jump when the timer is off.
+  untimedFrame: { alignSelf: 'stretch', padding: 14 },
   // Fixed height so the layout doesn't jump when the buttons swap at time's up.
   controls: { flexDirection: 'row', minHeight: 64 },
   grow: { flex: 1 },
-  chip: { flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 12, paddingVertical: 7, borderRadius: 999, borderWidth: 3 },
+  chip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+    borderRadius: 999,
+    borderWidth: 3,
+  },
 });

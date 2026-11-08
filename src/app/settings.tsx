@@ -5,8 +5,8 @@ import { Button } from '@/components/Button';
 import { ScreenHeader } from '@/components/ScreenHeader';
 import { ChoiceRow, Divider, SettingSection, ToggleRow } from '@/components/SettingRow';
 import { useTimesUpFeedback } from '@/feedback/useTimesUpFeedback';
-import type { Appearance, LanguagePref } from '@/store/settings';
-import { useSettings } from '@/store/settings';
+import type { Appearance, LanguagePref, TimerSeconds } from '@/store/settings';
+import { TIMER_OPTIONS, useSettings } from '@/store/settings';
 import { useTheme } from '@/theme';
 
 export default function Settings() {
@@ -29,15 +29,41 @@ export default function Settings() {
     { value: 'es', label: 'Español' },
   ];
 
-  const hint = { color: colors.textMuted, fontFamily: fonts.body, fontSize: 14, lineHeight: 19, paddingBottom: spacing.md };
+  const hint = {
+    color: colors.textMuted,
+    fontFamily: fonts.body,
+    fontSize: 14,
+    lineHeight: 19,
+    paddingBottom: spacing.md,
+  };
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
       <ScreenHeader title={t('settings.title')} />
-      <ScrollView contentContainerStyle={{ padding: spacing.lg - 4, gap: spacing.xl, paddingBottom: insets.bottom + spacing.xxl }}>
+      <ScrollView
+        contentContainerStyle={{ padding: spacing.lg - 4, gap: spacing.xl, paddingBottom: insets.bottom + spacing.xxl }}
+      >
         <SettingSection title={t('settings.sectionAppearance')}>
           <ChoiceRow value={s.appearance} onChange={(v) => s.update({ appearance: v })} options={appearances} />
           <Text style={hint}>{t('settings.appearanceHint')}</Text>
+        </SettingSection>
+
+        <SettingSection title={t('settings.sectionTimer')}>
+          <ChoiceRow
+            perRow={3}
+            value={String(s.timerSeconds)}
+            onChange={(v) => s.update({ timerSeconds: Number(v) as TimerSeconds })}
+            options={TIMER_OPTIONS.map((sec) => ({
+              value: String(sec),
+              label:
+                sec === 0
+                  ? t('settings.timerOff')
+                  : sec < 60
+                    ? t('settings.seconds', { count: sec })
+                    : t('settings.minutes', { count: sec / 60 }),
+            }))}
+          />
+          <Text style={hint}>{s.timerSeconds === 0 ? t('settings.timerOffHint') : t('settings.timerHint')}</Text>
         </SettingSection>
 
         <SettingSection title={t('settings.sectionPlay')}>
@@ -65,7 +91,11 @@ export default function Settings() {
               onChange={(v) => s.update({ sound: v })}
             />
             <Divider />
-            <ToggleRow label={t('settings.vibration')} value={s.vibration} onChange={(v) => s.update({ vibration: v })} />
+            <ToggleRow
+              label={t('settings.vibration')}
+              value={s.vibration}
+              onChange={(v) => s.update({ vibration: v })}
+            />
             {s.vibration ? (
               <>
                 <Divider />
@@ -87,8 +117,6 @@ export default function Settings() {
         <SettingSection title={t('settings.sectionLanguage')}>
           <ChoiceRow value={s.language} onChange={(v) => s.update({ language: v })} options={languages} />
         </SettingSection>
-
-        <Text style={{ color: colors.textMuted, fontFamily: fonts.bodySemi, textAlign: 'center' }}>{t('settings.questionTime')}</Text>
       </ScrollView>
     </View>
   );
