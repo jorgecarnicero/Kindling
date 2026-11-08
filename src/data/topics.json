@@ -56,6 +56,230 @@
     }
   },
   {
+    "id": "gtk-005",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What's a hill you'd die on that honestly doesn't matter at all?",
+      "es": "¿Qué opinión defenderías a muerte aunque, la verdad, no importe nada?"
+    },
+    "followUps": {
+      "en": ["Who have you argued with about it?"],
+      "es": ["¿Con quién has discutido por eso?"]
+    }
+  },
+  {
+    "id": "gtk-006",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What's the most \"you\" thing you own?",
+      "es": "¿Cuál es la cosa más \"tú\" que tienes?"
+    },
+    "followUps": {
+      "en": ["Where did it come from?"],
+      "es": ["¿De dónde salió?"]
+    }
+  },
+  {
+    "id": "gtk-007",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If you could download one skill like an app, which would you install first?",
+      "es": "Si pudieras descargar una habilidad como si fuera una app, ¿cuál instalarías primero?"
+    },
+    "followUps": {
+      "en": ["What would you do with it this weekend?"],
+      "es": ["¿Qué harías con ella este fin de semana?"]
+    }
+  },
+  {
+    "id": "gtk-008",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What food did you love as a kid that you'd still secretly eat today?",
+      "es": "¿Qué comida te encantaba en tu infancia y todavía comerías a escondidas?"
+    },
+    "followUps": {
+      "en": ["When did you last have it?"],
+      "es": ["¿Cuándo la comiste por última vez?"]
+    }
+  },
+  {
+    "id": "gtk-009",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What's the best advice you've ever completely ignored?",
+      "es": "¿Cuál es el mejor consejo que ignoraste por completo?"
+    },
+    "followUps": {
+      "en": ["How did that work out?"],
+      "es": ["¿Y cómo te fue?"]
+    }
+  },
+  {
+    "id": "gtk-010",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Walk me through your perfect do-nothing Sunday, hour by hour.",
+      "es": "Descríbeme tu domingo perfecto sin hacer nada, hora por hora."
+    },
+    "followUps": {
+      "en": ["What always ruins it?"],
+      "es": ["¿Qué es lo que siempre lo arruina?"]
+    }
+  },
+  {
+    "id": "gtk-011",
+    "category": "get_to_know",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What are you quietly proud of that nobody ever asks about?",
+      "es": "¿Qué logro tuyo te enorgullece aunque nadie te pregunte por él?"
+    },
+    "followUps": {
+      "en": ["How long did it take you?"],
+      "es": ["¿Cuánto tiempo te llevó?"]
+    }
+  },
+  {
+    "id": "gtk-012",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If your life came with a warning label, what would it say?",
+      "es": "Si tu vida viniera con una etiqueta de advertencia, ¿qué diría?"
+    },
+    "followUps": {
+      "en": ["Who would agree with it most?"],
+      "es": ["¿Quién estaría más de acuerdo?"]
+    }
+  },
+  {
+    "id": "gtk-013",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What's a small, weird habit of yours that you've never admitted to anyone?",
+      "es": "¿Qué pequeña manía rara tienes que nunca le has confesado a nadie?"
+    },
+    "followUps": {
+      "en": ["Any plans to quit?"],
+      "es": ["¿Piensas dejarla algún día?"]
+    }
+  },
+  {
+    "id": "gtk-014",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What's your most useless talent?",
+      "es": "¿Cuál es tu talento más inútil?"
+    },
+    "followUps": {
+      "en": ["Can we see it?"],
+      "es": ["¿Nos lo muestras?"]
+    }
+  },
+  {
+    "id": "gtk-015",
+    "category": "get_to_know",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What makes you trust someone almost instantly?",
+      "es": "¿Qué hace que confíes en alguien casi al instante?"
+    },
+    "followUps": {
+      "en": ["And what makes you lose that trust just as fast?"],
+      "es": ["¿Y qué hace que la pierdas igual de rápido?"]
+    }
+  },
+  {
+    "id": "gtk-016",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Which fictional world would you move to, and what would your job be there?",
+      "es": "¿A qué mundo de ficción te mudarías y en qué trabajarías allí?"
+    },
+    "followUps": {
+      "en": ["Who would you spend your days with?"],
+      "es": ["¿Con quién pasarías los días?"]
+    }
+  },
+  {
+    "id": "gtk-017",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What were you obsessed with when you were ten?",
+      "es": "¿Qué te obsesionaba cuando tenías diez años?"
+    },
+    "followUps": {
+      "en": ["Is any of that still in you?"],
+      "es": ["¿Queda algo de eso en ti?"]
+    }
+  },
+  {
+    "id": "gtk-018",
+    "category": "get_to_know",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What's a question you wish people asked you more often?",
+      "es": "¿Qué pregunta te gustaría que te hicieran con más frecuencia?"
+    },
+    "followUps": {
+      "en": ["Consider it asked. What's the answer?"],
+      "es": ["Considérala hecha. ¿Cuál es la respuesta?"]
+    }
+  },
+  {
+    "id": "gtk-019",
+    "category": "get_to_know",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What do people usually get wrong about you at first?",
+      "es": "¿Qué suele malinterpretar la gente de ti al principio?"
+    },
+    "followUps": {
+      "en": ["Who was the first person to really get you?"],
+      "es": ["¿Quién fue la primera persona que te entendió de verdad?"]
+    }
+  },
+  {
+    "id": "gtk-020",
+    "category": "get_to_know",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What's the best thing you've ever bought that cost almost nothing?",
+      "es": "¿Qué es lo mejor que has comprado por casi nada?"
+    },
+    "followUps": {
+      "en": ["Do you still have it?"],
+      "es": ["¿Todavía lo tienes?"]
+    }
+  },
+  {
     "id": "deep-001",
     "category": "deep_talk",
     "depth": "deep",
@@ -112,6 +336,230 @@
     }
   },
   {
+    "id": "deep-005",
+    "category": "deep_talk",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What small decision ended up changing a lot in your life?",
+      "es": "¿Qué pequeña decisión terminó cambiando mucho tu vida?"
+    },
+    "followUps": {
+      "en": ["Would you make it again?"],
+      "es": ["¿La volverías a tomar?"]
+    }
+  },
+  {
+    "id": "deep-006",
+    "category": "deep_talk",
+    "depth": "deep",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What are you still trying to forgive yourself for?",
+      "es": "¿Por qué cosa todavía intentas perdonarte?"
+    },
+    "followUps": {
+      "en": ["What would you tell a friend in your place?"],
+      "es": ["¿Qué le dirías a una amistad en tu lugar?"]
+    }
+  },
+  {
+    "id": "deep-007",
+    "category": "deep_talk",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What would the you of ten years ago find most surprising about your life today?",
+      "es": "¿Qué es lo que más le sorprendería de tu vida actual a tu yo de hace diez años?"
+    },
+    "followUps": {
+      "en": ["And what would disappoint them?"],
+      "es": ["¿Y qué le decepcionaría?"]
+    }
+  },
+  {
+    "id": "deep-008",
+    "category": "deep_talk",
+    "depth": "deep",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "When did you last cry, and what was it about?",
+      "es": "¿Cuándo lloraste por última vez y por qué?"
+    },
+    "followUps": {
+      "en": ["Did it help?"],
+      "es": ["¿Te ayudó?"]
+    }
+  },
+  {
+    "id": "deep-009",
+    "category": "deep_talk",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What's an idea about how to live that most people around you don't share?",
+      "es": "¿Qué idea sobre cómo vivir tienes que la mayoría de la gente a tu alrededor no comparte?"
+    },
+    "followUps": {
+      "en": ["Where did it come from?"],
+      "es": ["¿De dónde la sacaste?"]
+    }
+  },
+  {
+    "id": "deep-010",
+    "category": "deep_talk",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What does \"home\" mean to you: a place, a person, or a feeling?",
+      "es": "¿Qué significa «hogar» para ti: un lugar, una persona o una sensación?"
+    },
+    "followUps": {
+      "en": ["When did you last feel it?"],
+      "es": ["¿Cuándo lo sentiste por última vez?"]
+    }
+  },
+  {
+    "id": "deep-011",
+    "category": "deep_talk",
+    "depth": "deep",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What are you most afraid of losing?",
+      "es": "¿Qué es lo que más miedo te da perder?"
+    },
+    "followUps": {
+      "en": ["What do you do to protect it?"],
+      "es": ["¿Qué haces para cuidarlo?"]
+    }
+  },
+  {
+    "id": "deep-012",
+    "category": "deep_talk",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What would you do differently if nobody you know would ever find out?",
+      "es": "¿Qué harías diferente si nadie que conoces fuera a enterarse nunca?"
+    },
+    "followUps": {
+      "en": ["What's stopping you now?"],
+      "es": ["¿Qué te frena ahora?"]
+    }
+  },
+  {
+    "id": "deep-013",
+    "category": "deep_talk",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "Who do you owe a thank-you that you've never said?",
+      "es": "¿A quién tendrías que darle las gracias y nunca lo has hecho?"
+    },
+    "followUps": {
+      "en": ["What would you say to them?"],
+      "es": ["¿Qué le dirías?"]
+    }
+  },
+  {
+    "id": "deep-014",
+    "category": "deep_talk",
+    "depth": "deep",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What part of yourself do you hide from most people?",
+      "es": "¿Qué parte de ti escondes de la mayoría de la gente?"
+    },
+    "followUps": {
+      "en": ["Who gets to see it?"],
+      "es": ["¿Quién sí la conoce?"]
+    }
+  },
+  {
+    "id": "deep-015",
+    "category": "deep_talk",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What lesson did you have to learn more than once?",
+      "es": "¿Qué lección tuviste que aprender más de una vez?"
+    },
+    "followUps": {
+      "en": ["Have you finally learned it?"],
+      "es": ["¿Ya la aprendiste del todo?"]
+    }
+  },
+  {
+    "id": "deep-016",
+    "category": "deep_talk",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What do you hope people say about you when you're not in the room?",
+      "es": "¿Qué te gustaría que la gente dijera de ti cuando no estás?"
+    },
+    "followUps": {
+      "en": ["What do you think they actually say?"],
+      "es": ["¿Qué crees que dicen de verdad?"]
+    }
+  },
+  {
+    "id": "deep-017",
+    "category": "deep_talk",
+    "depth": "deep",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "When did you feel most alone, and what got you through it?",
+      "es": "¿En qué momento sentiste más soledad y qué te ayudó a salir adelante?"
+    },
+    "followUps": {
+      "en": ["Who would you call today if it happened again?"],
+      "es": ["¿A quién llamarías hoy si volviera a pasar?"]
+    }
+  },
+  {
+    "id": "deep-018",
+    "category": "deep_talk",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What used to embarrass you that you're proud of now?",
+      "es": "¿Qué te daba vergüenza antes y hoy te enorgullece?"
+    },
+    "followUps": {
+      "en": ["What changed?"],
+      "es": ["¿Qué cambió?"]
+    }
+  },
+  {
+    "id": "deep-019",
+    "category": "deep_talk",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "If one year of your life were a book, which year would it be and what's the title?",
+      "es": "Si un año de tu vida fuera un libro, ¿cuál sería y cómo se titularía?"
+    },
+    "followUps": {
+      "en": ["What's the best chapter?"],
+      "es": ["¿Cuál es el mejor capítulo?"]
+    }
+  },
+  {
+    "id": "deep-020",
+    "category": "deep_talk",
+    "depth": "deep",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What do you want to have figured out by the end of your life?",
+      "es": "¿Qué te gustaría haber entendido al final de tu vida?"
+    },
+    "followUps": {
+      "en": ["Where do you think you'll find the answer?"],
+      "es": ["¿Dónde crees que encontrarás la respuesta?"]
+    }
+  },
+  {
     "id": "fact-001",
     "category": "random_facts",
     "depth": "light",
@@ -151,6 +599,244 @@
     "followUps": {
       "en": ["Be honest: what would you actually do with it?"],
       "es": ["Con total sinceridad: ¿en qué la usarías de verdad?"]
+    }
+  },
+  {
+    "id": "fact-004",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Wombats poop in cubes. If you could change the shape of one everyday thing, what would it be?",
+      "es": "Los wómbats hacen caca en forma de cubo. Si pudieras cambiar la forma de algo cotidiano, ¿qué sería?"
+    },
+    "followUps": {
+      "en": ["What would it look like?"],
+      "es": ["¿Cómo se vería?"]
+    }
+  },
+  {
+    "id": "fact-005",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Botanically, bananas are berries, but strawberries aren't. What did you believe for years that turned out to be wrong?",
+      "es": "Para la botánica, las bananas son bayas, pero las fresas no. ¿Qué creíste durante años que resultó ser falso?"
+    },
+    "followUps": {
+      "en": ["Who told you?"],
+      "es": ["¿Quién te lo dijo?"]
+    }
+  },
+  {
+    "id": "fact-006",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid. If you could ask one person from history a single question, who and what would it be?",
+      "es": "Cleopatra vivió más cerca en el tiempo de la llegada a la Luna que de la construcción de la Gran Pirámide. Si pudieras hacerle una sola pregunta a alguien de la historia, ¿a quién y qué le preguntarías?"
+    },
+    "followUps": {
+      "en": ["What do you think they'd answer?"],
+      "es": ["¿Qué crees que te respondería?"]
+    }
+  },
+  {
+    "id": "fact-007",
+    "category": "random_facts",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "Sea otters hold hands while they sleep so the current doesn't pull them apart. Who's the person who keeps you from drifting?",
+      "es": "Las nutrias marinas se toman de las manos al dormir para que la corriente no las separe. ¿Quién es la persona que evita que te vayas a la deriva?"
+    },
+    "followUps": {
+      "en": ["When did you last tell them?"],
+      "es": ["¿Cuándo se lo dijiste por última vez?"]
+    }
+  },
+  {
+    "id": "fact-008",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "A group of flamingos is called a flamboyance. What should a group of people like you be called?",
+      "es": "En inglés, a un grupo de flamencos se le llama «flamboyance», algo así como «una extravagancia». ¿Cómo debería llamarse un grupo de personas como tú?"
+    },
+    "followUps": {
+      "en": ["And a group of your friends?"],
+      "es": ["¿Y un grupo de tus amistades?"]
+    }
+  },
+  {
+    "id": "fact-009",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Sharks have been around longer than trees. If you could bring back one extinct animal, which would it be?",
+      "es": "Los tiburones existen desde antes que los árboles. Si pudieras traer de vuelta un animal extinto, ¿cuál sería?"
+    },
+    "followUps": {
+      "en": ["Where would it live?"],
+      "es": ["¿Dónde viviría?"]
+    }
+  },
+  {
+    "id": "fact-010",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "The Eiffel Tower grows about 15 cm in summer because the iron expands in the heat. In which season are you the best version of yourself?",
+      "es": "La Torre Eiffel crece unos 15 cm en verano porque el hierro se dilata con el calor. ¿En qué época del año eres tu mejor versión?"
+    },
+    "followUps": {
+      "en": ["What do you do differently then?"],
+      "es": ["¿Qué haces diferente en esa época?"]
+    }
+  },
+  {
+    "id": "fact-011",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Scotland's national animal is the unicorn. If your town picked an official animal, what should it be?",
+      "es": "El animal nacional de Escocia es el unicornio. Si tu ciudad eligiera un animal oficial, ¿cuál debería ser?"
+    },
+    "followUps": {
+      "en": ["What would its motto be?"],
+      "es": ["¿Cuál sería su lema?"]
+    }
+  },
+  {
+    "id": "fact-012",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Oxford University is older than the Aztec Empire. What's the oldest thing you own, and what's its story?",
+      "es": "La Universidad de Oxford es más antigua que el Imperio azteca. ¿Qué es lo más antiguo que tienes y cuál es su historia?"
+    },
+    "followUps": {
+      "en": ["Who would you leave it to?"],
+      "es": ["¿A quién se lo dejarías?"]
+    }
+  },
+  {
+    "id": "fact-013",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Studies suggest cows have best friends and get stressed when they're separated. Which friend do you get grumpy without?",
+      "es": "Algunos estudios sugieren que las vacas tienen mejores amigas y se estresan cuando las separan. ¿Sin qué amistad te pones de mal humor?"
+    },
+    "followUps": {
+      "en": ["How did that friendship start?"],
+      "es": ["¿Cómo empezó esa amistad?"]
+    }
+  },
+  {
+    "id": "fact-014",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "The man who designed the Pringles can asked to be buried in one, and part of his ashes were. What everyday thing are you weirdly loyal to?",
+      "es": "El inventor del tubo de Pringles pidió que lo enterraran en uno, y parte de sus cenizas terminaron allí. ¿A qué cosa cotidiana le eres extrañamente fiel?"
+    },
+    "followUps": {
+      "en": ["Has anyone tried to make you switch?"],
+      "es": ["¿Alguien ha intentado que la cambies?"]
+    }
+  },
+  {
+    "id": "fact-015",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "There are more ways to shuffle a deck of cards than there are atoms on Earth. What's the biggest stroke of luck you've ever had?",
+      "es": "Hay más maneras de mezclar una baraja de cartas que átomos en la Tierra. ¿Cuál ha sido tu mayor golpe de suerte?"
+    },
+    "followUps": {
+      "en": ["Did you see it coming?"],
+      "es": ["¿Lo viste venir?"]
+    }
+  },
+  {
+    "id": "fact-016",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Butterflies taste with their feet. If you could taste with your hands for a day, what would you touch first?",
+      "es": "Las mariposas sienten los sabores con las patas. Si pudieras saborear con las manos por un día, ¿qué tocarías primero?"
+    },
+    "followUps": {
+      "en": ["What would you avoid at all costs?"],
+      "es": ["¿Qué evitarías a toda costa?"]
+    }
+  },
+  {
+    "id": "fact-017",
+    "category": "random_facts",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "An ordinary fluffy cloud can weigh around 500 tonnes. What looked light at first but turned out heavier than you expected?",
+      "es": "Una nube esponjosa común puede pesar unas 500 toneladas. ¿Qué te pareció ligero al principio y resultó pesar más de lo que esperabas?"
+    },
+    "followUps": {
+      "en": ["How did you carry it?"],
+      "es": ["¿Cómo lo llevaste?"]
+    }
+  },
+  {
+    "id": "fact-018",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "The shortest war in history lasted less than an hour. What's the shortest-lived hobby you've ever had?",
+      "es": "La guerra más corta de la historia duró menos de una hora. ¿Cuál es el pasatiempo que menos te duró?"
+    },
+    "followUps": {
+      "en": ["What's left of it in your home?"],
+      "es": ["¿Qué quedó de él en tu casa?"]
+    }
+  },
+  {
+    "id": "fact-019",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "A pineapple takes about two years to grow. What did you wait a long time for that was totally worth it?",
+      "es": "Una piña tarda unos dos años en crecer. ¿Qué esperaste mucho tiempo y valió completamente la pena?"
+    },
+    "followUps": {
+      "en": ["Would you wait that long again?"],
+      "es": ["¿Volverías a esperar tanto?"]
+    }
+  },
+  {
+    "id": "fact-020",
+    "category": "random_facts",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Crows can remember a human face for years, especially one that annoyed them. Be honest: who do you still hold a tiny grudge against?",
+      "es": "Los cuervos pueden recordar una cara humana durante años, sobre todo si los molestó. Con sinceridad: ¿contra quién guardas todavía un pequeño rencor?"
+    },
+    "followUps": {
+      "en": ["What would it take to let it go?"],
+      "es": ["¿Qué haría falta para soltarlo?"]
     }
   },
   {
@@ -210,6 +896,230 @@
     }
   },
   {
+    "id": "story-005",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about the most embarrassing thing that happened to you at school.",
+      "es": "Cuéntame lo más vergonzoso que te pasó en la escuela."
+    },
+    "followUps": {
+      "en": ["Does anyone else still remember it?"],
+      "es": ["¿Alguien más lo recuerda todavía?"]
+    }
+  },
+  {
+    "id": "story-006",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about the worst haircut you've ever had.",
+      "es": "Cuéntame sobre el peor corte de cabello que has tenido."
+    },
+    "followUps": {
+      "en": ["Is there photographic evidence?"],
+      "es": ["¿Hay pruebas fotográficas?"]
+    }
+  },
+  {
+    "id": "story-007",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about a time you laughed so hard you couldn't stop.",
+      "es": "Cuéntame de una vez en que te reíste tanto que no podías parar."
+    },
+    "followUps": {
+      "en": ["Would it still be funny today?"],
+      "es": ["¿Todavía te daría risa hoy?"]
+    }
+  },
+  {
+    "id": "story-008",
+    "category": "stories",
+    "depth": "deep",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "Tell me about a moment that changed the direction of your life.",
+      "es": "Cuéntame de un momento que cambió el rumbo de tu vida."
+    },
+    "followUps": {
+      "en": ["What if it had gone the other way?"],
+      "es": ["¿Y si hubiera salido al revés?"]
+    }
+  },
+  {
+    "id": "story-009",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about the strangest place you've ever fallen asleep.",
+      "es": "Cuéntame sobre el lugar más raro en el que te ha vencido el sueño."
+    },
+    "followUps": {
+      "en": ["How did you wake up?"],
+      "es": ["¿Cómo te despertaste?"]
+    }
+  },
+  {
+    "id": "story-010",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about a time you got completely lost.",
+      "es": "Cuéntame de una vez en que te perdiste por completo."
+    },
+    "followUps": {
+      "en": ["How did you find your way back?"],
+      "es": ["¿Cómo encontraste el camino de vuelta?"]
+    }
+  },
+  {
+    "id": "story-011",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about the best gift anyone has ever given you.",
+      "es": "Cuéntame sobre el mejor regalo que alguien te ha hecho."
+    },
+    "followUps": {
+      "en": ["What made it so special?"],
+      "es": ["¿Qué lo hizo tan especial?"]
+    }
+  },
+  {
+    "id": "story-012",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about a time you pretended to know exactly what you were doing.",
+      "es": "Cuéntame de una vez en que fingiste saber perfectamente lo que hacías."
+    },
+    "followUps": {
+      "en": ["Did anyone catch on?"],
+      "es": ["¿Alguien se dio cuenta?"]
+    }
+  },
+  {
+    "id": "story-013",
+    "category": "stories",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "Tell me about someone who taught you something you still think about.",
+      "es": "Cuéntame sobre alguien que te enseñó algo en lo que todavía piensas."
+    },
+    "followUps": {
+      "en": ["What would you tell them today?"],
+      "es": ["¿Qué le dirías hoy?"]
+    }
+  },
+  {
+    "id": "story-014",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about the most spontaneous thing you've ever done.",
+      "es": "Cuéntame lo más espontáneo que has hecho en tu vida."
+    },
+    "followUps": {
+      "en": ["Would you do it again tomorrow?"],
+      "es": ["¿Lo repetirías mañana?"]
+    }
+  },
+  {
+    "id": "story-015",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about a time you cooked something that went horribly wrong.",
+      "es": "Cuéntame de una vez en que cocinaste algo que salió terriblemente mal."
+    },
+    "followUps": {
+      "en": ["Who had to eat it?"],
+      "es": ["¿Quién tuvo que comérselo?"]
+    }
+  },
+  {
+    "id": "story-016",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about your first concert or big live show.",
+      "es": "Cuéntame sobre tu primer concierto o gran espectáculo en vivo."
+    },
+    "followUps": {
+      "en": ["Who did you go with?"],
+      "es": ["¿Con quién fuiste?"]
+    }
+  },
+  {
+    "id": "story-017",
+    "category": "stories",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "Tell me about a time you were really brave, even if nobody noticed.",
+      "es": "Cuéntame de una vez en que tuviste mucho valor, aunque nadie se diera cuenta."
+    },
+    "followUps": {
+      "en": ["Where did that courage come from?"],
+      "es": ["¿De dónde salió ese valor?"]
+    }
+  },
+  {
+    "id": "story-018",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about the worst job or chore you've ever had to do.",
+      "es": "Cuéntame sobre el peor trabajo o la peor tarea que te ha tocado hacer."
+    },
+    "followUps": {
+      "en": ["Did it teach you anything at all?"],
+      "es": ["¿Te enseñó algo, aunque sea un poco?"]
+    }
+  },
+  {
+    "id": "story-019",
+    "category": "stories",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Tell me about a time you met someone famous... or almost did.",
+      "es": "Cuéntame de una vez en que conociste a una persona famosa... o casi."
+    },
+    "followUps": {
+      "en": ["What did you say?"],
+      "es": ["¿Qué le dijiste?"]
+    }
+  },
+  {
+    "id": "story-020",
+    "category": "stories",
+    "depth": "deep",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "Tell me about a goodbye that stayed with you.",
+      "es": "Cuéntame de una despedida que se te quedó grabada."
+    },
+    "followUps": {
+      "en": ["What do you remember most?"],
+      "es": ["¿Qué es lo que más recuerdas?"]
+    }
+  },
+  {
     "id": "wyr-001",
     "category": "would_you_rather",
     "depth": "light",
@@ -249,6 +1159,244 @@
     "followUps": {
       "en": ["Is there one moment you'd want to know about?"],
       "es": ["¿Hay algún momento que sí querrías saber?"]
+    }
+  },
+  {
+    "id": "wyr-004",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather have to sing everything you say, or dance everywhere you walk?",
+      "es": "¿Preferirías tener que cantar todo lo que dices o ir bailando a todas partes?"
+    },
+    "followUps": {
+      "en": ["Where would it be most embarrassing?"],
+      "es": ["¿Dónde sería más vergonzoso?"]
+    }
+  },
+  {
+    "id": "wyr-005",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather have a rewind button or a pause button for your life?",
+      "es": "¿Preferirías tener un botón de retroceder o uno de pausa para tu vida?"
+    },
+    "followUps": {
+      "en": ["What's the first moment you'd use it on?"],
+      "es": ["¿En qué momento lo usarías primero?"]
+    }
+  },
+  {
+    "id": "wyr-006",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather be world-famous for something embarrassing, or do something amazing that nobody ever finds out about?",
+      "es": "¿Preferirías tener fama mundial por algo vergonzoso o hacer algo increíble sin que nadie lo sepa nunca?"
+    },
+    "followUps": {
+      "en": ["What would the embarrassing thing be?"],
+      "es": ["¿Cuál sería esa cosa vergonzosa?"]
+    }
+  },
+  {
+    "id": "wyr-007",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather have a personal chef or a personal driver for the rest of your life?",
+      "es": "¿Preferirías tener chef personal o conductor personal para el resto de tu vida?"
+    },
+    "followUps": {
+      "en": ["What's the first thing you'd ask for?"],
+      "es": ["¿Qué le pedirías primero?"]
+    }
+  },
+  {
+    "id": "wyr-008",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather be able to fly, but only at walking speed, or turn invisible, but only when nobody's looking?",
+      "es": "¿Preferirías poder volar, pero solo a paso de caminata, o volverte invisible, pero solo cuando nadie te mira?"
+    },
+    "followUps": {
+      "en": ["What would you actually use it for?"],
+      "es": ["¿Para qué lo usarías de verdad?"]
+    }
+  },
+  {
+    "id": "wyr-009",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather fight one horse-sized duck or a hundred duck-sized horses?",
+      "es": "¿Preferirías pelear contra un pato del tamaño de un caballo o contra cien caballos del tamaño de un pato?"
+    },
+    "followUps": {
+      "en": ["Walk us through your strategy."],
+      "es": ["Explícanos tu estrategia."]
+    }
+  },
+  {
+    "id": "wyr-010",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather give up music forever, or movies and series forever?",
+      "es": "¿Preferirías renunciar para siempre a la música o a las películas y series?"
+    },
+    "followUps": {
+      "en": ["Which song or film would you miss most?"],
+      "es": ["¿Qué canción o película te haría más falta?"]
+    }
+  },
+  {
+    "id": "wyr-011",
+    "category": "would_you_rather",
+    "depth": "medium",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather relive your best day once more, or erase your worst day completely?",
+      "es": "¿Preferirías volver a vivir tu mejor día una vez más o borrar por completo tu peor día?"
+    },
+    "followUps": {
+      "en": ["Would you change anything about the best one?"],
+      "es": ["¿Cambiarías algo de ese mejor día?"]
+    }
+  },
+  {
+    "id": "wyr-012",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather say every thought out loud for one day, or not speak at all for a week?",
+      "es": "¿Preferirías decir en voz alta todo lo que piensas durante un día o no hablar nada durante una semana?"
+    },
+    "followUps": {
+      "en": ["Who would you avoid that day?"],
+      "es": ["¿A quién evitarías ese día?"]
+    }
+  },
+  {
+    "id": "wyr-013",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather have a dragon or be a dragon?",
+      "es": "¿Preferirías tener un dragón o ser un dragón?"
+    },
+    "followUps": {
+      "en": ["What would its name be? Or yours?"],
+      "es": ["¿Qué nombre le pondrías? ¿O te pondrías?"]
+    }
+  },
+  {
+    "id": "wyr-014",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather travel 100 years into the past or 100 years into the future, with no way back?",
+      "es": "¿Preferirías viajar 100 años al pasado o 100 años al futuro, sin poder volver?"
+    },
+    "followUps": {
+      "en": ["What one thing would you take with you?"],
+      "es": ["¿Qué cosa llevarías contigo?"]
+    }
+  },
+  {
+    "id": "wyr-015",
+    "category": "would_you_rather",
+    "depth": "medium",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather be the funniest person in the room or the smartest?",
+      "es": "¿Preferirías ser la persona más graciosa del lugar o la más inteligente?"
+    },
+    "followUps": {
+      "en": ["Which one are you right now?"],
+      "es": ["¿Cuál de las dos eres ahora mismo?"]
+    }
+  },
+  {
+    "id": "wyr-016",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather eat only breakfast food forever, or never eat breakfast food again?",
+      "es": "¿Preferirías comer solo cosas de desayuno para siempre o no volver a probarlas nunca?"
+    },
+    "followUps": {
+      "en": ["What's on your forever menu?"],
+      "es": ["¿Qué habría en tu menú para siempre?"]
+    }
+  },
+  {
+    "id": "wyr-017",
+    "category": "would_you_rather",
+    "depth": "medium",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Starting today, would you rather have more time or more money?",
+      "es": "A partir de hoy, ¿preferirías tener más tiempo o más dinero?"
+    },
+    "followUps": {
+      "en": ["What's the first thing you'd do with it?"],
+      "es": ["¿Qué es lo primero que harías?"]
+    }
+  },
+  {
+    "id": "wyr-018",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather your pet could talk, or read your mind?",
+      "es": "¿Preferirías que tu mascota pudiera hablar o leerte la mente?"
+    },
+    "followUps": {
+      "en": ["What would it say about you?"],
+      "es": ["¿Qué diría de ti?"]
+    }
+  },
+  {
+    "id": "wyr-019",
+    "category": "would_you_rather",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Would you rather wake up with a random new talent every morning, or be the best in the world at just one thing?",
+      "es": "¿Preferirías despertar cada mañana con un talento nuevo al azar o ser la mejor persona del mundo en una sola cosa?"
+    },
+    "followUps": {
+      "en": ["Which one thing would you pick?"],
+      "es": ["¿Qué cosa elegirías?"]
+    }
+  },
+  {
+    "id": "wyr-020",
+    "category": "would_you_rather",
+    "depth": "deep",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "Would you rather know what everyone really thinks of you, or never care again?",
+      "es": "¿Preferirías saber lo que todo el mundo piensa realmente de ti o que nunca más te importara?"
+    },
+    "followUps": {
+      "en": ["Whose opinion would make you most nervous?"],
+      "es": ["¿Qué opinión te daría más nervios escuchar?"]
     }
   },
   {
@@ -294,6 +1442,246 @@
     }
   },
   {
+    "id": "debate-004",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Is cereal with milk a soup?",
+      "es": "¿El cereal con leche es una sopa?"
+    },
+    "followUps": {
+      "en": ["So what makes something a soup?"],
+      "es": ["Entonces, ¿qué hace que algo sea una sopa?"]
+    }
+  },
+  {
+    "id": "debate-005",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Pineapple on pizza: genius or crime?",
+      "es": "Piña en la pizza: ¿genialidad o delito?"
+    },
+    "followUps": {
+      "en": ["What's the weirdest topping you'd defend?"],
+      "es": ["¿Qué ingrediente raro defenderías?"]
+    }
+  },
+  {
+    "id": "debate-006",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Shower in the morning or at night: which one is objectively correct?",
+      "es": "Ducharse por la mañana o por la noche: ¿cuál es la opción correcta?"
+    },
+    "followUps": {
+      "en": ["Now defend the other side for 30 seconds."],
+      "es": ["Ahora defiende la otra postura durante 30 segundos."]
+    }
+  },
+  {
+    "id": "debate-007",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Socks with sandals: fashion crime or pure comfort?",
+      "es": "Calcetines con sandalias: ¿crimen de la moda o comodidad pura?"
+    },
+    "followUps": {
+      "en": ["Where do you draw the line?"],
+      "es": ["¿Dónde está el límite?"]
+    }
+  },
+  {
+    "id": "debate-008",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Who makes the better roommate: a cat or a dog?",
+      "es": "¿Quién es mejor compañía en casa: un gato o un perro?"
+    },
+    "followUps": {
+      "en": ["What would each one complain about?"],
+      "es": ["¿De qué se quejaría cada uno?"]
+    }
+  },
+  {
+    "id": "debate-009",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Should people clap when the plane lands?",
+      "es": "¿Hay que aplaudir cuando aterriza el avión?"
+    },
+    "followUps": {
+      "en": ["Where else is clapping fair game?"],
+      "es": ["¿Dónde más está bien aplaudir?"]
+    }
+  },
+  {
+    "id": "debate-010",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Is replying with just \"ok\" rude?",
+      "es": "¿Responder solo «ok» es de mala educación?"
+    },
+    "followUps": {
+      "en": [
+        "What's the most passive-aggressive message you've ever received?"
+      ],
+      "es": ["¿Cuál es el mensaje más pasivo-agresivo que has recibido?"]
+    }
+  },
+  {
+    "id": "debate-011",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Toilet paper: over or under?",
+      "es": "Papel higiénico: ¿hacia afuera o hacia la pared?"
+    },
+    "followUps": {
+      "en": ["What other house rule won't you negotiate on?"],
+      "es": ["¿Qué otra regla de la casa no negocias?"]
+    }
+  },
+  {
+    "id": "debate-012",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Is water wet?",
+      "es": "¿El agua está mojada?"
+    },
+    "followUps": {
+      "en": ["Okay, then is a fish wet?"],
+      "es": ["Entonces, ¿un pez está mojado?"]
+    }
+  },
+  {
+    "id": "debate-013",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Birthdays after 30: throw a big party or quietly ignore them?",
+      "es": "Los cumpleaños después de los 30: ¿gran fiesta o mejor pasarlos por alto?"
+    },
+    "followUps": {
+      "en": ["What would your ideal birthday look like this year?"],
+      "es": ["¿Cómo sería tu cumpleaños ideal este año?"]
+    }
+  },
+  {
+    "id": "debate-014",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Are movies better at the cinema or on the couch?",
+      "es": "¿Las películas se disfrutan más en el cine o en el sofá?"
+    },
+    "followUps": {
+      "en": ["Which snack is non-negotiable?"],
+      "es": ["¿Qué no puede faltar para picar?"]
+    }
+  },
+  {
+    "id": "debate-015",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "How long until spoiling the ending of a series stops being a crime?",
+      "es": "¿Cuánto tiempo tiene que pasar para que contar el final de una serie deje de ser un crimen?"
+    },
+    "followUps": {
+      "en": ["What's the worst spoiler you've ever suffered?"],
+      "es": ["¿Cuál es el peor spoiler que has sufrido?"]
+    }
+  },
+  {
+    "id": "debate-016",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Team arrive early or team arrive exactly on time?",
+      "es": "¿Eres de llegar antes o de llegar justo a la hora?"
+    },
+    "followUps": {
+      "en": ["What's the latest you've ever shown up to something?"],
+      "es": ["¿Qué es lo más tarde que has llegado a algo?"]
+    }
+  },
+  {
+    "id": "debate-017",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Is it acceptable to eat pizza with a knife and fork?",
+      "es": "¿Está bien comer pizza con cuchillo y tenedor?"
+    },
+    "followUps": {
+      "en": ["What food do most people eat the wrong way?"],
+      "es": ["¿Qué comida come mal la mayoría de la gente?"]
+    }
+  },
+  {
+    "id": "debate-018",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Morning people or night owls: who has the better life?",
+      "es": "Gente madrugadora o gente nocturna: ¿quién vive mejor?"
+    },
+    "followUps": {
+      "en": ["What would your ideal daily schedule be?"],
+      "es": ["¿Cómo sería tu horario ideal?"]
+    }
+  },
+  {
+    "id": "debate-019",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Is food better reheated the next day?",
+      "es": "¿La comida está más rica recalentada al día siguiente?"
+    },
+    "followUps": {
+      "en": ["Which dish is best eaten cold?"],
+      "es": ["¿Qué plato está mejor frío?"]
+    }
+  },
+  {
+    "id": "debate-020",
+    "category": "light_debate",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Should you make your bed every single morning?",
+      "es": "¿Hay que hacer la cama todas las mañanas?"
+    },
+    "followUps": {
+      "en": ["What's the one chore you never skip?"],
+      "es": ["¿Qué tarea de la casa nunca te saltas?"]
+    }
+  },
+  {
     "id": "couple-001",
     "category": "couples",
     "depth": "light",
@@ -333,6 +1721,244 @@
     "followUps": {
       "en": ["What's one small step we could take this week?"],
       "es": ["¿Qué pequeño paso podríamos dar esta semana?"]
+    }
+  },
+  {
+    "id": "couple-004",
+    "category": "couples",
+    "depth": "light",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "What was your very first impression of me? Be honest.",
+      "es": "¿Cuál fue tu primera impresión de mí? Con sinceridad."
+    },
+    "followUps": {
+      "en": ["When did it change?"],
+      "es": ["¿Cuándo cambió?"]
+    }
+  },
+  {
+    "id": "couple-005",
+    "category": "couples",
+    "depth": "light",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "What song makes you think of us?",
+      "es": "¿Qué canción te hace pensar en lo nuestro?"
+    },
+    "followUps": {
+      "en": ["When did it become ours?"],
+      "es": ["¿Desde cuándo es nuestra?"]
+    }
+  },
+  {
+    "id": "couple-006",
+    "category": "couples",
+    "depth": "light",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "If we had a reality show, what would it be called?",
+      "es": "Si tuviéramos un reality, ¿cómo se llamaría?"
+    },
+    "followUps": {
+      "en": ["What would the most dramatic episode be about?"],
+      "es": ["¿De qué trataría el episodio más dramático?"]
+    }
+  },
+  {
+    "id": "couple-007",
+    "category": "couples",
+    "depth": "medium",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "What's something small I do that makes you feel loved?",
+      "es": "¿Qué pequeño detalle mío te hace sentir que te quiero?"
+    },
+    "followUps": {
+      "en": ["Is there something I used to do that you miss?"],
+      "es": ["¿Hay algo que hacía antes y que te gustaría recuperar?"]
+    }
+  },
+  {
+    "id": "couple-008",
+    "category": "couples",
+    "depth": "light",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "What's our most ridiculous inside joke, and how did it start?",
+      "es": "¿Cuál es nuestra broma interna más ridícula y cómo empezó?"
+    },
+    "followUps": {
+      "en": ["Could anyone else ever understand it?"],
+      "es": ["¿Alguien más podría entenderla?"]
+    }
+  },
+  {
+    "id": "couple-009",
+    "category": "couples",
+    "depth": "medium",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "Where do you see us in five years, and what will we have done by then?",
+      "es": "¿Dónde nos ves en cinco años y qué habremos hecho para entonces?"
+    },
+    "followUps": {
+      "en": ["What's step one?"],
+      "es": ["¿Cuál es el primer paso?"]
+    }
+  },
+  {
+    "id": "couple-010",
+    "category": "couples",
+    "depth": "light",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "Which of us would survive longer in a zombie apocalypse?",
+      "es": "¿Quién sobreviviría más tiempo en un apocalipsis zombi, tú o yo?"
+    },
+    "followUps": {
+      "en": ["And what would the other one be doing?"],
+      "es": ["¿Y qué estaría haciendo la otra persona?"]
+    }
+  },
+  {
+    "id": "couple-011",
+    "category": "couples",
+    "depth": "medium",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "When did you know this was getting serious?",
+      "es": "¿En qué momento supiste que esto iba en serio?"
+    },
+    "followUps": {
+      "en": ["Did you tell anyone?"],
+      "es": ["¿Se lo contaste a alguien?"]
+    }
+  },
+  {
+    "id": "couple-012",
+    "category": "couples",
+    "depth": "medium",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "What's your favorite memory of us that nobody else knows about?",
+      "es": "¿Cuál es tu recuerdo favorito de lo nuestro que nadie más conoce?"
+    },
+    "followUps": {
+      "en": ["Why that one?"],
+      "es": ["¿Por qué ese?"]
+    }
+  },
+  {
+    "id": "couple-013",
+    "category": "couples",
+    "depth": "light",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "If we could teleport anywhere for one night, where would we go?",
+      "es": "Si pudiéramos teletransportarnos a cualquier lugar por una noche, ¿adónde iríamos?"
+    },
+    "followUps": {
+      "en": ["What would we do first?"],
+      "es": ["¿Qué haríamos primero?"]
+    }
+  },
+  {
+    "id": "couple-014",
+    "category": "couples",
+    "depth": "deep",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "What's something you've never quite found the right moment to tell me?",
+      "es": "¿Qué es algo que nunca encontraste el momento justo para decirme?"
+    },
+    "followUps": {
+      "en": ["Is now a good moment?"],
+      "es": ["¿Es este un buen momento?"]
+    }
+  },
+  {
+    "id": "couple-015",
+    "category": "couples",
+    "depth": "light",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "Which of my habits seemed weird at first but you now secretly love?",
+      "es": "¿Qué costumbre mía te pareció rara al principio y ahora te encanta en secreto?"
+    },
+    "followUps": {
+      "en": ["And which one still drives you a little crazy?"],
+      "es": ["¿Y cuál todavía te saca un poco de quicio?"]
+    }
+  },
+  {
+    "id": "couple-016",
+    "category": "couples",
+    "depth": "medium",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "What's a dream of yours you'd like my help with?",
+      "es": "¿Qué sueño tuyo te gustaría que te ayudara a cumplir?"
+    },
+    "followUps": {
+      "en": ["What could I do this month?"],
+      "es": ["¿Qué podría hacer este mes?"]
+    }
+  },
+  {
+    "id": "couple-017",
+    "category": "couples",
+    "depth": "light",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "If we opened a business together, what would it be, and who'd be the boss?",
+      "es": "Si abriéramos un negocio en pareja, ¿de qué sería y quién mandaría?"
+    },
+    "followUps": {
+      "en": ["How long until we argued?"],
+      "es": ["¿Cuánto tardaríamos en discutir?"]
+    }
+  },
+  {
+    "id": "couple-018",
+    "category": "couples",
+    "depth": "deep",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "When do you feel most understood by me, and when least?",
+      "es": "¿En qué momentos sientes que te entiendo de verdad, y en cuáles no tanto?"
+    },
+    "followUps": {
+      "en": ["What could I do differently?"],
+      "es": ["¿Qué podría hacer diferente?"]
+    }
+  },
+  {
+    "id": "couple-019",
+    "category": "couples",
+    "depth": "light",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "What's a date we've never been on that we absolutely should?",
+      "es": "¿Qué cita nunca hemos tenido y deberíamos tener sí o sí?"
+    },
+    "followUps": {
+      "en": ["Let's pick a day. When?"],
+      "es": ["Pongamos fecha. ¿Cuándo?"]
+    }
+  },
+  {
+    "id": "couple-020",
+    "category": "couples",
+    "depth": "medium",
+    "groupSize": ["pair"],
+    "text": {
+      "en": "What's something we argued about that's funny now?",
+      "es": "¿Por qué discutimos alguna vez que ahora nos da risa?"
+    },
+    "followUps": {
+      "en": ["Who was right?"],
+      "es": ["¿Quién tenía razón?"]
     }
   },
   {
@@ -378,6 +2004,244 @@
     }
   },
   {
+    "id": "family-004",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If you could have a superpower, but only for chores, what would it be?",
+      "es": "Si pudieras tener un superpoder, pero solo para las tareas de la casa, ¿cuál elegirías?"
+    },
+    "followUps": {
+      "en": ["Which chore would you never do again?"],
+      "es": ["¿Qué tarea no volverías a hacer nunca?"]
+    }
+  },
+  {
+    "id": "family-005",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What family tradition would you never give up?",
+      "es": "¿Qué tradición familiar nunca dejarías?"
+    },
+    "followUps": {
+      "en": ["How did it start?"],
+      "es": ["¿Cómo empezó?"]
+    }
+  },
+  {
+    "id": "family-006",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If your family had an official theme song, what would it be?",
+      "es": "Si tu familia tuviera una canción oficial, ¿cuál sería?"
+    },
+    "followUps": {
+      "en": ["Who would sing it the loudest?"],
+      "es": ["¿Quién la cantaría más fuerte?"]
+    }
+  },
+  {
+    "id": "family-007",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If you were in charge of dinner for a whole week, what would be on the menu?",
+      "es": "Si estuvieras a cargo de la cena toda una semana, ¿qué menú pondrías?"
+    },
+    "followUps": {
+      "en": ["Which night would everyone complain?"],
+      "es": ["¿Qué noche se quejaría todo el mundo?"]
+    }
+  },
+  {
+    "id": "family-008",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What's the best thing about being the age you are right now?",
+      "es": "¿Qué es lo mejor de tener la edad que tienes ahora?"
+    },
+    "followUps": {
+      "en": ["And the hardest part?"],
+      "es": ["¿Y lo más difícil?"]
+    }
+  },
+  {
+    "id": "family-009",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If you could invent one new rule for your home, what would it be?",
+      "es": "Si pudieras inventar una regla nueva para tu casa, ¿cuál sería?"
+    },
+    "followUps": {
+      "en": ["And what happens if someone breaks it?"],
+      "es": ["¿Y qué pasa si alguien la rompe?"]
+    }
+  },
+  {
+    "id": "family-010",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If animals could talk, which one would be the rudest?",
+      "es": "Si los animales pudieran hablar, ¿cuál sería el más maleducado?"
+    },
+    "followUps": {
+      "en": ["And the funniest?"],
+      "es": ["¿Y el más gracioso?"]
+    }
+  },
+  {
+    "id": "family-011",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What did an older relative teach you that you still use?",
+      "es": "¿Qué te enseñó alguien mayor de tu familia que todavía usas?"
+    },
+    "followUps": {
+      "en": ["Have you taught it to anyone?"],
+      "es": ["¿Se lo has enseñado a alguien?"]
+    }
+  },
+  {
+    "id": "family-012",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If you could shrink to the size of an ant for a day, what would you explore?",
+      "es": "Si pudieras encogerte al tamaño de una hormiga por un día, ¿qué explorarías?"
+    },
+    "followUps": {
+      "en": ["What would be the scariest part?"],
+      "es": ["¿Qué te daría más miedo?"]
+    }
+  },
+  {
+    "id": "family-013",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If you discovered a new planet, what would you name it?",
+      "es": "Si descubrieras un planeta nuevo, ¿cómo lo llamarías?"
+    },
+    "followUps": {
+      "en": ["Who would live there?"],
+      "es": ["¿Quién viviría allí?"]
+    }
+  },
+  {
+    "id": "family-014",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What's the funniest word you know?",
+      "es": "¿Cuál es la palabra más graciosa que conoces?"
+    },
+    "followUps": {
+      "en": ["Can you use it in a sentence?"],
+      "es": ["¿Puedes usarla en una frase?"]
+    }
+  },
+  {
+    "id": "family-015",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If you could be any age for one week, which age would you pick?",
+      "es": "Si pudieras tener cualquier edad durante una semana, ¿cuál elegirías?"
+    },
+    "followUps": {
+      "en": ["What would you do first?"],
+      "es": ["¿Qué harías primero?"]
+    }
+  },
+  {
+    "id": "family-016",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["small", "party"],
+    "text": {
+      "en": "What story about your family always gets told at get-togethers?",
+      "es": "¿Qué historia de tu familia siempre se cuenta en las reuniones?"
+    },
+    "followUps": {
+      "en": ["Is it actually true?"],
+      "es": ["¿Es verdad del todo?"]
+    }
+  },
+  {
+    "id": "family-017",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If you could invent a new ice cream flavor, what would it be?",
+      "es": "Si pudieras inventar un sabor de helado nuevo, ¿cuál sería?"
+    },
+    "followUps": {
+      "en": ["What would it be called?"],
+      "es": ["¿Cómo se llamaría?"]
+    }
+  },
+  {
+    "id": "family-018",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If you could build a secret room in your home, what would be inside?",
+      "es": "Si pudieras construir una habitación secreta en tu casa, ¿qué habría dentro?"
+    },
+    "followUps": {
+      "en": ["Who would know the password?"],
+      "es": ["¿Quién sabría la contraseña?"]
+    }
+  },
+  {
+    "id": "family-019",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If your family were a kind of weather, what would it be?",
+      "es": "Si tu familia fuera un tipo de clima, ¿cuál sería?"
+    },
+    "followUps": {
+      "en": ["And on a Monday morning?"],
+      "es": ["¿Y un lunes por la mañana?"]
+    }
+  },
+  {
+    "id": "family-020",
+    "category": "family",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What do you want to learn how to do this year?",
+      "es": "¿Qué te gustaría aprender a hacer este año?"
+    },
+    "followUps": {
+      "en": ["Who could teach you?"],
+      "es": ["¿Quién te podría enseñar?"]
+    }
+  },
+  {
     "id": "team-001",
     "category": "team_building",
     "depth": "light",
@@ -417,6 +2281,244 @@
     "followUps": {
       "en": ["What's one thing we could try here?"],
       "es": ["¿Qué podríamos probar aquí?"]
+    }
+  },
+  {
+    "id": "team-004",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["small", "party"],
+    "text": {
+      "en": "What tip would you give someone on their first day here?",
+      "es": "¿Qué consejo le darías a alguien en su primer día aquí?"
+    },
+    "followUps": {
+      "en": ["What do you wish someone had told you?"],
+      "es": ["¿Qué te habría gustado que te dijeran a ti?"]
+    }
+  },
+  {
+    "id": "team-005",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["small", "party"],
+    "text": {
+      "en": "If our team were a band, what would we be called, and who plays what?",
+      "es": "Si nuestro equipo fuera una banda, ¿cómo se llamaría y quién tocaría qué?"
+    },
+    "followUps": {
+      "en": ["What's our first hit song?"],
+      "es": ["¿Cuál sería nuestro primer éxito?"]
+    }
+  },
+  {
+    "id": "team-006",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What small thing makes a workday instantly better?",
+      "es": "¿Qué pequeña cosa mejora al instante un día de trabajo?"
+    },
+    "followUps": {
+      "en": ["How could we get more of it?"],
+      "es": ["¿Cómo podríamos tener más de eso?"]
+    }
+  },
+  {
+    "id": "team-007",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What job did you dream of having as a kid?",
+      "es": "¿Qué trabajo soñabas tener en tu infancia?"
+    },
+    "followUps": {
+      "en": ["Is any of it in what you do now?"],
+      "es": ["¿Queda algo de eso en lo que haces hoy?"]
+    }
+  },
+  {
+    "id": "team-008",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What's the most useful thing you've learned from a colleague?",
+      "es": "¿Qué es lo más útil que aprendiste de alguien del trabajo?"
+    },
+    "followUps": {
+      "en": ["Did you ever tell them?"],
+      "es": ["¿Se lo dijiste alguna vez?"]
+    }
+  },
+  {
+    "id": "team-009",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "If you could add one perk to this job, what would it be?",
+      "es": "Si pudieras añadir un beneficio a este trabajo, ¿cuál sería?"
+    },
+    "followUps": {
+      "en": ["Okay, now a realistic one."],
+      "es": ["Bueno, ahora uno realista."]
+    }
+  },
+  {
+    "id": "team-010",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What's your best trick for focusing, or your favorite way to procrastinate?",
+      "es": "¿Cuál es tu mejor truco para concentrarte, o tu forma favorita de procrastinar?"
+    },
+    "followUps": {
+      "en": ["Which one wins most days?"],
+      "es": ["¿Cuál gana la mayoría de los días?"]
+    }
+  },
+  {
+    "id": "team-011",
+    "category": "team_building",
+    "depth": "medium",
+    "groupSize": ["pair", "small"],
+    "text": {
+      "en": "What kind of feedback helps you most?",
+      "es": "¿Qué tipo de comentarios sobre tu trabajo te ayudan más?"
+    },
+    "followUps": {
+      "en": ["And what kind doesn't work for you?"],
+      "es": ["¿Y cuáles no te funcionan?"]
+    }
+  },
+  {
+    "id": "team-012",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What would your autobiography be called?",
+      "es": "¿Cómo se llamaría tu autobiografía?"
+    },
+    "followUps": {
+      "en": ["What's chapter one about?"],
+      "es": ["¿De qué trata el primer capítulo?"]
+    }
+  },
+  {
+    "id": "team-013",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Which emoji do you use the most, and what does that say about you?",
+      "es": "¿Qué emoji usas más y qué dice eso de ti?"
+    },
+    "followUps": {
+      "en": ["Which one do you never use?"],
+      "es": ["¿Cuál no usas nunca?"]
+    }
+  },
+  {
+    "id": "team-014",
+    "category": "team_building",
+    "depth": "medium",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "Which project are you proudest of, and why?",
+      "es": "¿Qué proyecto te llena más de orgullo y por qué?"
+    },
+    "followUps": {
+      "en": ["Who helped make it happen?"],
+      "es": ["¿Quién ayudó a que saliera bien?"]
+    }
+  },
+  {
+    "id": "team-015",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["small", "party"],
+    "text": {
+      "en": "If you could swap jobs with anyone here for a day, whose would you pick?",
+      "es": "Si pudieras cambiar de trabajo con alguien de aquí por un día, ¿con quién sería?"
+    },
+    "followUps": {
+      "en": ["What would you change first?"],
+      "es": ["¿Qué cambiarías primero?"]
+    }
+  },
+  {
+    "id": "team-016",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What's the best snack for a meeting, and is it okay if it's crunchy?",
+      "es": "¿Qué es lo mejor para picar en una reunión, y está bien si hace ruido?"
+    },
+    "followUps": {
+      "en": ["Which noisy snack would you still defend?"],
+      "es": ["¿Qué comida ruidosa defenderías igual?"]
+    }
+  },
+  {
+    "id": "team-017",
+    "category": "team_building",
+    "depth": "medium",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What are you learning right now, at work or outside it?",
+      "es": "¿Qué estás aprendiendo ahora, en el trabajo o fuera de él?"
+    },
+    "followUps": {
+      "en": ["What's been hardest so far?"],
+      "es": ["¿Qué ha sido lo más difícil hasta ahora?"]
+    }
+  },
+  {
+    "id": "team-018",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What's the strangest thing on your desk or in your work bag?",
+      "es": "¿Qué es lo más raro que tienes en tu escritorio o en tu mochila de trabajo?"
+    },
+    "followUps": {
+      "en": ["What's the story behind it?"],
+      "es": ["¿Cuál es su historia?"]
+    }
+  },
+  {
+    "id": "team-019",
+    "category": "team_building",
+    "depth": "medium",
+    "groupSize": ["pair", "small", "party"],
+    "text": {
+      "en": "What does a really good workday look like for you?",
+      "es": "¿Cómo es un día de trabajo realmente bueno para ti?"
+    },
+    "followUps": {
+      "en": ["What would make that happen more often?"],
+      "es": ["¿Qué haría que pasara con más frecuencia?"]
+    }
+  },
+  {
+    "id": "team-020",
+    "category": "team_building",
+    "depth": "light",
+    "groupSize": ["small", "party"],
+    "text": {
+      "en": "If our team had a mascot, what would it be?",
+      "es": "Si nuestro equipo tuviera una mascota, ¿cuál sería?"
+    },
+    "followUps": {
+      "en": ["What would its catchphrase be?"],
+      "es": ["¿Cuál sería su frase típica?"]
     }
   }
 ]

@@ -42,6 +42,7 @@
     "typecheck": "tsc --noEmit",
     "test": "jest",
     "validate:topics": "uv run scripts/validate_topics.py",
+    "add:topics": "uv run scripts/add_topics.py",
     "make:chime": "uv run scripts/make_chime.py"
   },
   "jest": {
