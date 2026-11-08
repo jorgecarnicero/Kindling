@@ -136,7 +136,11 @@ export default function Play() {
         >
           <TimerRing timer={timer.state} color={pc.ring} trackColor={pc.track}>
             <TopicCard
+              key={topic.id}
               text={topic.text[lang]}
+              spark={topic.starter?.[lang]}
+              sparkLabel={t('play.spark')}
+              sparkColor={catColor}
               followUp={followUpFor(topic, lang, timer.extensions)}
               followUpBg={night ? catColor : mix(catColor, '#FFFFFF', 0.55)}
               dimmed={paused}

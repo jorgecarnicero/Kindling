@@ -57,4 +57,9 @@ describe('translation files', () => {
     const missing = topics.filter((t) => LANGUAGES.some((l) => !t.text[l]?.trim())).map((t) => t.id);
     expect(missing).toEqual([]);
   });
+
+  it('every topic has a spark starter in every supported language', () => {
+    const missing = topics.filter((t) => LANGUAGES.some((l) => !t.starter?.[l]?.trim())).map((t) => t.id);
+    expect(missing).toEqual([]);
+  });
 });

@@ -8,6 +8,10 @@
       "en": "What's a small thing that always makes your day better?",
       "es": "¿Qué pequeña cosa siempre te mejora el día?"
     },
+    "starter": {
+      "en": "Think of this morning: a coffee, a song, a message?",
+      "es": "Piensa en esta mañana: ¿un café, una canción, un mensaje?"
+    },
     "followUps": {
       "en": ["When did it last happen?"],
       "es": ["¿Cuándo fue la última vez?"]
@@ -21,6 +25,10 @@
     "text": {
       "en": "What could you talk about for an hour with zero preparation?",
       "es": "¿De qué tema podrías hablar una hora sin prepararte nada?"
+    },
+    "starter": {
+      "en": "Think of the topic your friends always ask you about.",
+      "es": "Piensa en el tema por el que siempre te preguntan tus amistades."
     },
     "followUps": {
       "en": ["How did you get hooked on it?"],
@@ -36,6 +44,10 @@
       "en": "What's a compliment you got years ago that you still remember?",
       "es": "¿Qué cumplido te hicieron hace años que todavía recuerdas?"
     },
+    "starter": {
+      "en": "It can be tiny, even from a stranger.",
+      "es": "Puede ser algo pequeño, incluso de una persona desconocida."
+    },
     "followUps": {
       "en": ["Who said it, and why do you think it stuck?"],
       "es": ["¿Quién te lo dijo y por qué crees que se te quedó?"]
@@ -49,6 +61,10 @@
     "text": {
       "en": "If this week had a soundtrack, what song would be playing right now?",
       "es": "Si esta semana tuviera banda sonora, ¿qué canción estaría sonando ahora mismo?"
+    },
+    "starter": {
+      "en": "Check the last song you played. No cheating.",
+      "es": "Mira la última canción que escuchaste. Sin trampas."
     },
     "followUps": {
       "en": ["And what would play on a perfect week?"],
@@ -64,6 +80,10 @@
       "en": "What's a hill you'd die on that honestly doesn't matter at all?",
       "es": "¿Qué opinión defenderías a muerte aunque, la verdad, no importe nada?"
     },
+    "starter": {
+      "en": "Think food, spelling, or how to load a dishwasher.",
+      "es": "Piensa en comida, ortografía o cómo cargar el lavavajillas."
+    },
     "followUps": {
       "en": ["Who have you argued with about it?"],
       "es": ["¿Con quién has discutido por eso?"]
@@ -77,6 +97,10 @@
     "text": {
       "en": "What's the most \"you\" thing you own?",
       "es": "¿Cuál es la cosa más \"tú\" que tienes?"
+    },
+    "starter": {
+      "en": "Look around: what would a friend call \"so you\"?",
+      "es": "Mira a tu alrededor: ¿qué diría una amistad que es «muy tú»?"
     },
     "followUps": {
       "en": ["Where did it come from?"],
@@ -92,6 +116,10 @@
       "en": "If you could download one skill like an app, which would you install first?",
       "es": "Si pudieras descargar una habilidad como si fuera una app, ¿cuál instalarías primero?"
     },
+    "starter": {
+      "en": "Think of the last time you said \"I wish I could…\"",
+      "es": "Piensa en la última vez que dijiste «ojalá supiera…»."
+    },
     "followUps": {
       "en": ["What would you do with it this weekend?"],
       "es": ["¿Qué harías con ella este fin de semana?"]
@@ -105,6 +133,10 @@
     "text": {
       "en": "What food did you love as a kid that you'd still secretly eat today?",
       "es": "¿Qué comida te encantaba en tu infancia y todavía comerías a escondidas?"
+    },
+    "starter": {
+      "en": "Picture your childhood kitchen or school lunch.",
+      "es": "Imagina la cocina de tu infancia o la comida del recreo."
     },
     "followUps": {
       "en": ["When did you last have it?"],
@@ -120,6 +152,10 @@
       "en": "What's the best advice you've ever completely ignored?",
       "es": "¿Cuál es el mejor consejo que ignoraste por completo?"
     },
+    "starter": {
+      "en": "Start with who gave it and when.",
+      "es": "Empieza por quién te lo dio y cuándo."
+    },
     "followUps": {
       "en": ["How did that work out?"],
       "es": ["¿Y cómo te fue?"]
@@ -133,6 +169,10 @@
     "text": {
       "en": "Walk me through your perfect do-nothing Sunday, hour by hour.",
       "es": "Descríbeme tu domingo perfecto sin hacer nada, hora por hora."
+    },
+    "starter": {
+      "en": "Start with what time you'd wake up, and where.",
+      "es": "Empieza por a qué hora te despertarías y dónde."
     },
     "followUps": {
       "en": ["What always ruins it?"],
@@ -148,6 +188,10 @@
       "en": "What are you quietly proud of that nobody ever asks about?",
       "es": "¿Qué logro tuyo te enorgullece aunque nadie te pregunte por él?"
     },
+    "starter": {
+      "en": "Something you finished, fixed, learned or got through.",
+      "es": "Algo que terminaste, arreglaste, aprendiste o superaste."
+    },
     "followUps": {
       "en": ["How long did it take you?"],
       "es": ["¿Cuánto tiempo te llevó?"]
@@ -161,6 +205,10 @@
     "text": {
       "en": "If your life came with a warning label, what would it say?",
       "es": "Si tu vida viniera con una etiqueta de advertencia, ¿qué diría?"
+    },
+    "starter": {
+      "en": "Start with \"Caution: may…\" and finish the sentence.",
+      "es": "Empieza con «Precaución: puede…» y termina la frase."
     },
     "followUps": {
       "en": ["Who would agree with it most?"],
@@ -176,6 +224,10 @@
       "en": "What's a small, weird habit of yours that you've never admitted to anyone?",
       "es": "¿Qué pequeña manía rara tienes que nunca le has confesado a nadie?"
     },
+    "starter": {
+      "en": "Think of how you eat, sleep or tidy up.",
+      "es": "Piensa en cómo comes, duermes u ordenas."
+    },
     "followUps": {
       "en": ["Any plans to quit?"],
       "es": ["¿Piensas dejarla algún día?"]
@@ -189,6 +241,10 @@
     "text": {
       "en": "What's your most useless talent?",
       "es": "¿Cuál es tu talento más inútil?"
+    },
+    "starter": {
+      "en": "Tongue tricks, odd sounds, a weird memory: it all counts.",
+      "es": "Trucos con la lengua, sonidos raros, una memoria extraña: todo cuenta."
     },
     "followUps": {
       "en": ["Can we see it?"],
@@ -204,6 +260,10 @@
       "en": "What makes you trust someone almost instantly?",
       "es": "¿Qué hace que confíes en alguien casi al instante?"
     },
+    "starter": {
+      "en": "Think of someone you trusted fast. What did they do?",
+      "es": "Piensa en alguien en quien confiaste rápido. ¿Qué hizo?"
+    },
     "followUps": {
       "en": ["And what makes you lose that trust just as fast?"],
       "es": ["¿Y qué hace que la pierdas igual de rápido?"]
@@ -217,6 +277,10 @@
     "text": {
       "en": "Which fictional world would you move to, and what would your job be there?",
       "es": "¿A qué mundo de ficción te mudarías y en qué trabajarías allí?"
+    },
+    "starter": {
+      "en": "Books, films, games or series: any world works.",
+      "es": "Libros, películas, juegos o series: cualquier mundo vale."
     },
     "followUps": {
       "en": ["Who would you spend your days with?"],
@@ -232,6 +296,10 @@
       "en": "What were you obsessed with when you were ten?",
       "es": "¿Qué te obsesionaba cuando tenías diez años?"
     },
+    "starter": {
+      "en": "Think toys, cartoons, collections or a sport.",
+      "es": "Piensa en juguetes, dibujos animados, colecciones o algún deporte."
+    },
     "followUps": {
       "en": ["Is any of that still in you?"],
       "es": ["¿Queda algo de eso en ti?"]
@@ -245,6 +313,10 @@
     "text": {
       "en": "What's a question you wish people asked you more often?",
       "es": "¿Qué pregunta te gustaría que te hicieran con más frecuencia?"
+    },
+    "starter": {
+      "en": "Think of what lights you up but rarely comes up.",
+      "es": "Piensa en algo que te entusiasma pero casi nunca sale en una conversación."
     },
     "followUps": {
       "en": ["Consider it asked. What's the answer?"],
@@ -260,6 +332,10 @@
       "en": "What do people usually get wrong about you at first?",
       "es": "¿Qué suele malinterpretar la gente de ti al principio?"
     },
+    "starter": {
+      "en": "Start with the first word people use to describe you.",
+      "es": "Empieza por la primera palabra que la gente usa para describirte."
+    },
     "followUps": {
       "en": ["Who was the first person to really get you?"],
       "es": ["¿Quién fue la primera persona que te entendió de verdad?"]
@@ -273,6 +349,10 @@
     "text": {
       "en": "What's the best thing you've ever bought that cost almost nothing?",
       "es": "¿Qué es lo mejor que has comprado por casi nada?"
+    },
+    "starter": {
+      "en": "Think kitchen gadgets, a market find or a book.",
+      "es": "Piensa en un utensilio de cocina, un hallazgo en un mercado o un libro."
     },
     "followUps": {
       "en": ["Do you still have it?"],
@@ -288,6 +368,10 @@
       "en": "What's something you believed strongly five years ago and don't anymore?",
       "es": "¿En qué creías firmemente hace cinco años y ya no?"
     },
+    "starter": {
+      "en": "Think food, money, love or work. Something small counts.",
+      "es": "Piensa en comida, dinero, amor o trabajo. Algo pequeño también cuenta."
+    },
     "followUps": {
       "en": ["What changed your mind?"],
       "es": ["¿Qué te hizo cambiar de opinión?"]
@@ -301,6 +385,10 @@
     "text": {
       "en": "What does a good life look like to you, in one sentence?",
       "es": "¿Cómo es una buena vida para ti, en una sola frase?"
+    },
+    "starter": {
+      "en": "Try finishing: \"A good day for me is when…\"",
+      "es": "Prueba a terminar: «Un buen día para mí es cuando…»"
     },
     "followUps": {
       "en": ["How close are you to it today?"],
@@ -316,6 +404,10 @@
       "en": "What's a fear you've quietly overcome?",
       "es": "¿Qué miedo has superado sin que casi nadie lo sepa?"
     },
+    "starter": {
+      "en": "Small fears count: phone calls, heights, speaking up.",
+      "es": "Los miedos pequeños cuentan: llamar por teléfono, las alturas, hablar en público."
+    },
     "followUps": {
       "en": ["What finally helped?"],
       "es": ["¿Qué te ayudó al final?"]
@@ -329,6 +421,10 @@
     "text": {
       "en": "Who has shaped the person you are today more than anyone else?",
       "es": "¿Quién ha influido más que nadie en la persona que eres hoy?"
+    },
+    "starter": {
+      "en": "It doesn't have to be family. Start with one thing they taught you.",
+      "es": "No tiene que ser de tu familia. Empieza por algo que te enseñó."
     },
     "followUps": {
       "en": ["Do they know it?"],
@@ -344,6 +440,10 @@
       "en": "What small decision ended up changing a lot in your life?",
       "es": "¿Qué pequeña decisión terminó cambiando mucho tu vida?"
     },
+    "starter": {
+      "en": "Think of a \"yes\" to a plan, a class or a message.",
+      "es": "Piensa en un «sí» a un plan, a una clase o a un mensaje."
+    },
     "followUps": {
       "en": ["Would you make it again?"],
       "es": ["¿La volverías a tomar?"]
@@ -357,6 +457,10 @@
     "text": {
       "en": "What are you still trying to forgive yourself for?",
       "es": "¿Por qué cosa todavía intentas perdonarte?"
+    },
+    "starter": {
+      "en": "Share only what feels okay. Something small is enough.",
+      "es": "Comparte solo lo que te resulte cómodo. Algo pequeño basta."
     },
     "followUps": {
       "en": ["What would you tell a friend in your place?"],
@@ -372,6 +476,10 @@
       "en": "What would the you of ten years ago find most surprising about your life today?",
       "es": "¿Qué es lo que más le sorprendería de tu vida actual a tu yo de hace diez años?"
     },
+    "starter": {
+      "en": "Start with where you live, who's around, or what you do.",
+      "es": "Empieza por dónde vives, quién está cerca o a qué te dedicas."
+    },
     "followUps": {
       "en": ["And what would disappoint them?"],
       "es": ["¿Y qué le decepcionaría?"]
@@ -385,6 +493,10 @@
     "text": {
       "en": "When did you last cry, and what was it about?",
       "es": "¿Cuándo lloraste por última vez y por qué?"
+    },
+    "starter": {
+      "en": "Happy tears count too, and so do films.",
+      "es": "Las lágrimas de alegría también cuentan, y las de las películas."
     },
     "followUps": {
       "en": ["Did it help?"],
@@ -400,6 +512,10 @@
       "en": "What's an idea about how to live that most people around you don't share?",
       "es": "¿Qué idea sobre cómo vivir tienes que la mayoría de la gente a tu alrededor no comparte?"
     },
+    "starter": {
+      "en": "Think of a habit or rule you live by that friends find odd.",
+      "es": "Piensa en un hábito o una regla de vida que a tus amistades les parece rara."
+    },
     "followUps": {
       "en": ["Where did it come from?"],
       "es": ["¿De dónde la sacaste?"]
@@ -413,6 +529,10 @@
     "text": {
       "en": "What does \"home\" mean to you: a place, a person, or a feeling?",
       "es": "¿Qué significa «hogar» para ti: un lugar, una persona o una sensación?"
+    },
+    "starter": {
+      "en": "Start with a smell, a sound or a room.",
+      "es": "Empieza por un olor, un sonido o una habitación."
     },
     "followUps": {
       "en": ["When did you last feel it?"],
@@ -428,6 +548,10 @@
       "en": "What are you most afraid of losing?",
       "es": "¿Qué es lo que más miedo te da perder?"
     },
+    "starter": {
+      "en": "It can be a person, a habit, a place or a feeling.",
+      "es": "Puede ser una persona, una costumbre, un lugar o una sensación."
+    },
     "followUps": {
       "en": ["What do you do to protect it?"],
       "es": ["¿Qué haces para cuidarlo?"]
@@ -441,6 +565,10 @@
     "text": {
       "en": "What would you do differently if nobody you know would ever find out?",
       "es": "¿Qué harías diferente si nadie que conoces fuera a enterarse nunca?"
+    },
+    "starter": {
+      "en": "Start small: a hobby, a look, a trip.",
+      "es": "Empieza por algo pequeño: un pasatiempo, un estilo, un viaje."
     },
     "followUps": {
       "en": ["What's stopping you now?"],
@@ -456,6 +584,10 @@
       "en": "Who do you owe a thank-you that you've never said?",
       "es": "¿A quién tendrías que darle las gracias y nunca lo has hecho?"
     },
+    "starter": {
+      "en": "Think of someone from school, the neighborhood or an old friendship.",
+      "es": "Piensa en alguien de la escuela, del barrio o en una vieja amistad."
+    },
     "followUps": {
       "en": ["What would you say to them?"],
       "es": ["¿Qué le dirías?"]
@@ -469,6 +601,10 @@
     "text": {
       "en": "What part of yourself do you hide from most people?",
       "es": "¿Qué parte de ti escondes de la mayoría de la gente?"
+    },
+    "starter": {
+      "en": "You can describe it without giving details.",
+      "es": "Puedes describirla sin dar detalles."
     },
     "followUps": {
       "en": ["Who gets to see it?"],
@@ -484,6 +620,10 @@
       "en": "What lesson did you have to learn more than once?",
       "es": "¿Qué lección tuviste que aprender más de una vez?"
     },
+    "starter": {
+      "en": "Think of a mistake you've made at least twice.",
+      "es": "Piensa en un error que hayas cometido al menos dos veces."
+    },
     "followUps": {
       "en": ["Have you finally learned it?"],
       "es": ["¿Ya la aprendiste del todo?"]
@@ -497,6 +637,10 @@
     "text": {
       "en": "What do you hope people say about you when you're not in the room?",
       "es": "¿Qué te gustaría que la gente dijera de ti cuando no estás?"
+    },
+    "starter": {
+      "en": "Pick three words you'd love to hear.",
+      "es": "Elige tres palabras que te encantaría escuchar."
     },
     "followUps": {
       "en": ["What do you think they actually say?"],
@@ -512,6 +656,10 @@
       "en": "When did you feel most alone, and what got you through it?",
       "es": "¿En qué momento sentiste más soledad y qué te ayudó a salir adelante?"
     },
+    "starter": {
+      "en": "Share only what you want. You can start with what helped.",
+      "es": "Comparte solo lo que quieras. Puedes empezar por lo que te ayudó."
+    },
     "followUps": {
       "en": ["Who would you call today if it happened again?"],
       "es": ["¿A quién llamarías hoy si volviera a pasar?"]
@@ -525,6 +673,10 @@
     "text": {
       "en": "What used to embarrass you that you're proud of now?",
       "es": "¿Qué te daba vergüenza antes y hoy te enorgullece?"
+    },
+    "starter": {
+      "en": "Think of an accent, a hobby, your looks or a family quirk.",
+      "es": "Piensa en un acento, un pasatiempo, tu aspecto o una rareza familiar."
     },
     "followUps": {
       "en": ["What changed?"],
@@ -540,6 +692,10 @@
       "en": "If one year of your life were a book, which year would it be and what's the title?",
       "es": "Si un año de tu vida fuera un libro, ¿cuál sería y cómo se titularía?"
     },
+    "starter": {
+      "en": "Pick the year first. The title can be silly.",
+      "es": "Elige primero el año. El título puede ser gracioso."
+    },
     "followUps": {
       "en": ["What's the best chapter?"],
       "es": ["¿Cuál es el mejor capítulo?"]
@@ -553,6 +709,10 @@
     "text": {
       "en": "What do you want to have figured out by the end of your life?",
       "es": "¿Qué te gustaría haber entendido al final de tu vida?"
+    },
+    "starter": {
+      "en": "It can be a question, a skill or a person.",
+      "es": "Puede ser una pregunta, una habilidad o una persona."
     },
     "followUps": {
       "en": ["Where do you think you'll find the answer?"],
@@ -568,6 +728,10 @@
       "en": "Octopuses have three hearts. Which animal would you want to be for a day?",
       "es": "Los pulpos tienen tres corazones. ¿Qué animal te gustaría ser por un día?"
     },
+    "starter": {
+      "en": "Start with where you'd want to be: sea, sky or jungle?",
+      "es": "Empieza por dónde querrías estar: ¿mar, cielo o selva?"
+    },
     "followUps": {
       "en": ["What's the first thing you'd do?"],
       "es": ["¿Qué es lo primero que harías?"]
@@ -581,6 +745,10 @@
     "text": {
       "en": "Honey never spoils: edible honey has been found in ancient Egyptian tombs. What would you save from today for people 3,000 years from now?",
       "es": "La miel nunca se echa a perder: se ha encontrado miel comestible en tumbas del antiguo Egipto. ¿Qué cosa de hoy guardarías para la gente dentro de 3.000 años?"
+    },
+    "starter": {
+      "en": "Look at what's in your pocket or bag right now.",
+      "es": "Mira lo que llevas ahora en el bolsillo o en la mochila."
     },
     "followUps": {
       "en": ["What would they misunderstand about it?"],
@@ -596,6 +764,10 @@
       "en": "A day on Venus lasts longer than its year. If you got one extra hour every day, what would you do with it?",
       "es": "En Venus, un día dura más que un año. Si tuvieras una hora extra cada día, ¿en qué la usarías?"
     },
+    "starter": {
+      "en": "Start with what you'd do if nobody needed you.",
+      "es": "Empieza por lo que harías si nadie te necesitara."
+    },
     "followUps": {
       "en": ["Be honest: what would you actually do with it?"],
       "es": ["Con total sinceridad: ¿en qué la usarías de verdad?"]
@@ -609,6 +781,10 @@
     "text": {
       "en": "Wombats poop in cubes. If you could change the shape of one everyday thing, what would it be?",
       "es": "Los wómbats hacen caca en forma de cubo. Si pudieras cambiar la forma de algo cotidiano, ¿qué sería?"
+    },
+    "starter": {
+      "en": "Round, square, triangle? Start with something you use daily.",
+      "es": "¿Redondo, cuadrado, triangular? Empieza por algo que usas a diario."
     },
     "followUps": {
       "en": ["What would it look like?"],
@@ -624,6 +800,10 @@
       "en": "Botanically, bananas are berries, but strawberries aren't. What did you believe for years that turned out to be wrong?",
       "es": "Para la botánica, las bananas son bayas, pero las fresas no. ¿Qué creíste durante años que resultó ser falso?"
     },
+    "starter": {
+      "en": "Think of something you were told at home or at school as a kid.",
+      "es": "Piensa en algo que te dijeron en casa o en la escuela en tu infancia."
+    },
     "followUps": {
       "en": ["Who told you?"],
       "es": ["¿Quién te lo dijo?"]
@@ -637,6 +817,10 @@
     "text": {
       "en": "Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid. If you could ask one person from history a single question, who and what would it be?",
       "es": "Cleopatra vivió más cerca en el tiempo de la llegada a la Luna que de la construcción de la Gran Pirámide. Si pudieras hacerle una sola pregunta a alguien de la historia, ¿a quién y qué le preguntarías?"
+    },
+    "starter": {
+      "en": "Start with someone you studied at school.",
+      "es": "Empieza por alguien que estudiaste en la escuela."
     },
     "followUps": {
       "en": ["What do you think they'd answer?"],
@@ -652,6 +836,10 @@
       "en": "Sea otters hold hands while they sleep so the current doesn't pull them apart. Who's the person who keeps you from drifting?",
       "es": "Las nutrias marinas se toman de las manos al dormir para que la corriente no las separe. ¿Quién es la persona que evita que te vayas a la deriva?"
     },
+    "starter": {
+      "en": "It can be a friend, a sibling, a partner or a pet.",
+      "es": "Puede ser una amistad, un hermano o hermana, tu pareja o una mascota."
+    },
     "followUps": {
       "en": ["When did you last tell them?"],
       "es": ["¿Cuándo se lo dijiste por última vez?"]
@@ -665,6 +853,10 @@
     "text": {
       "en": "A group of flamingos is called a flamboyance. What should a group of people like you be called?",
       "es": "En inglés, a un grupo de flamencos se le llama «flamboyance», algo así como «una extravagancia». ¿Cómo debería llamarse un grupo de personas como tú?"
+    },
+    "starter": {
+      "en": "Try \"a ___ of ___\" and see what sticks.",
+      "es": "Prueba con «un ___ de ___» y mira qué sale."
     },
     "followUps": {
       "en": ["And a group of your friends?"],
@@ -680,6 +872,10 @@
       "en": "Sharks have been around longer than trees. If you could bring back one extinct animal, which would it be?",
       "es": "Los tiburones existen desde antes que los árboles. Si pudieras traer de vuelta un animal extinto, ¿cuál sería?"
     },
+    "starter": {
+      "en": "Dinosaurs count. So do giant ground sloths.",
+      "es": "Los dinosaurios cuentan. Y los perezosos gigantes también."
+    },
     "followUps": {
       "en": ["Where would it live?"],
       "es": ["¿Dónde viviría?"]
@@ -693,6 +889,10 @@
     "text": {
       "en": "The Eiffel Tower grows about 15 cm in summer because the iron expands in the heat. In which season are you the best version of yourself?",
       "es": "La Torre Eiffel crece unos 15 cm en verano porque el hierro se dilata con el calor. ¿En qué época del año eres tu mejor versión?"
+    },
+    "starter": {
+      "en": "Think of the month you have the most energy.",
+      "es": "Piensa en el mes en que tienes más energía."
     },
     "followUps": {
       "en": ["What do you do differently then?"],
@@ -708,6 +908,10 @@
       "en": "Scotland's national animal is the unicorn. If your town picked an official animal, what should it be?",
       "es": "El animal nacional de Escocia es el unicornio. Si tu ciudad eligiera un animal oficial, ¿cuál debería ser?"
     },
+    "starter": {
+      "en": "Think of what your town is known for.",
+      "es": "Piensa en aquello por lo que se conoce tu ciudad."
+    },
     "followUps": {
       "en": ["What would its motto be?"],
       "es": ["¿Cuál sería su lema?"]
@@ -721,6 +925,10 @@
     "text": {
       "en": "Oxford University is older than the Aztec Empire. What's the oldest thing you own, and what's its story?",
       "es": "La Universidad de Oxford es más antigua que el Imperio azteca. ¿Qué es lo más antiguo que tienes y cuál es su historia?"
+    },
+    "starter": {
+      "en": "A photo, a jacket, a toy or a recipe counts.",
+      "es": "Vale una foto, una chaqueta, un juguete o una receta."
     },
     "followUps": {
       "en": ["Who would you leave it to?"],
@@ -736,6 +944,10 @@
       "en": "Studies suggest cows have best friends and get stressed when they're separated. Which friend do you get grumpy without?",
       "es": "Algunos estudios sugieren que las vacas tienen mejores amigas y se estresan cuando las separan. ¿Sin qué amistad te pones de mal humor?"
     },
+    "starter": {
+      "en": "Think of who you text first with good news.",
+      "es": "Piensa en a quién le escribes primero cuando tienes buenas noticias."
+    },
     "followUps": {
       "en": ["How did that friendship start?"],
       "es": ["¿Cómo empezó esa amistad?"]
@@ -749,6 +961,10 @@
     "text": {
       "en": "The man who designed the Pringles can asked to be buried in one, and part of his ashes were. What everyday thing are you weirdly loyal to?",
       "es": "El inventor del tubo de Pringles pidió que lo enterraran en uno, y parte de sus cenizas terminaron allí. ¿A qué cosa cotidiana le eres extrañamente fiel?"
+    },
+    "starter": {
+      "en": "Think of a brand, a mug, a pen or a café.",
+      "es": "Piensa en una marca, una taza, un bolígrafo o una cafetería."
     },
     "followUps": {
       "en": ["Has anyone tried to make you switch?"],
@@ -764,6 +980,10 @@
       "en": "There are more ways to shuffle a deck of cards than there are atoms on Earth. What's the biggest stroke of luck you've ever had?",
       "es": "Hay más maneras de mezclar una baraja de cartas que átomos en la Tierra. ¿Cuál ha sido tu mayor golpe de suerte?"
     },
+    "starter": {
+      "en": "Small luck counts: a found coin, the perfect seat.",
+      "es": "La suerte pequeña cuenta: una moneda encontrada, el asiento perfecto."
+    },
     "followUps": {
       "en": ["Did you see it coming?"],
       "es": ["¿Lo viste venir?"]
@@ -777,6 +997,10 @@
     "text": {
       "en": "Butterflies taste with their feet. If you could taste with your hands for a day, what would you touch first?",
       "es": "Las mariposas sienten los sabores con las patas. Si pudieras saborear con las manos por un día, ¿qué tocarías primero?"
+    },
+    "starter": {
+      "en": "Start with your favorite food, then get creative.",
+      "es": "Empieza por tu comida favorita y luego echa a volar la imaginación."
     },
     "followUps": {
       "en": ["What would you avoid at all costs?"],
@@ -792,6 +1016,10 @@
       "en": "An ordinary fluffy cloud can weigh around 500 tonnes. What looked light at first but turned out heavier than you expected?",
       "es": "Una nube esponjosa común puede pesar unas 500 toneladas. ¿Qué te pareció ligero al principio y resultó pesar más de lo que esperabas?"
     },
+    "starter": {
+      "en": "A promise, a job, a move or a simple favor.",
+      "es": "Una promesa, un trabajo, una mudanza o un simple favor."
+    },
     "followUps": {
       "en": ["How did you carry it?"],
       "es": ["¿Cómo lo llevaste?"]
@@ -805,6 +1033,10 @@
     "text": {
       "en": "The shortest war in history lasted less than an hour. What's the shortest-lived hobby you've ever had?",
       "es": "La guerra más corta de la historia duró menos de una hora. ¿Cuál es el pasatiempo que menos te duró?"
+    },
+    "starter": {
+      "en": "Think of gear you bought for a hobby and barely used.",
+      "es": "Piensa en algo que compraste para un pasatiempo y casi no usaste."
     },
     "followUps": {
       "en": ["What's left of it in your home?"],
@@ -820,6 +1052,10 @@
       "en": "A pineapple takes about two years to grow. What did you wait a long time for that was totally worth it?",
       "es": "Una piña tarda unos dos años en crecer. ¿Qué esperaste mucho tiempo y valió completamente la pena?"
     },
+    "starter": {
+      "en": "A trip, a result, a person or a package.",
+      "es": "Un viaje, un resultado, una persona o un paquete."
+    },
     "followUps": {
       "en": ["Would you wait that long again?"],
       "es": ["¿Volverías a esperar tanto?"]
@@ -833,6 +1069,10 @@
     "text": {
       "en": "Crows can remember a human face for years, especially one that annoyed them. Be honest: who do you still hold a tiny grudge against?",
       "es": "Los cuervos pueden recordar una cara humana durante años, sobre todo si los molestó. Con sinceridad: ¿contra quién guardas todavía un pequeño rencor?"
+    },
+    "starter": {
+      "en": "Keep it light: someone who cut in line counts.",
+      "es": "Que sea algo ligero: alguien que se coló en la fila cuenta."
     },
     "followUps": {
       "en": ["What would it take to let it go?"],
@@ -848,6 +1088,10 @@
       "en": "Tell me about the best meal you've ever had.",
       "es": "Cuéntame sobre la mejor comida de tu vida."
     },
+    "starter": {
+      "en": "Start with where you were and what it smelled like.",
+      "es": "Empieza por dónde estabas y a qué olía."
+    },
     "followUps": {
       "en": ["Who were you with?"],
       "es": ["¿Con quién estabas?"]
@@ -861,6 +1105,10 @@
     "text": {
       "en": "Tell me about a time a plan went completely wrong but turned out great.",
       "es": "Cuéntame de una vez en que un plan salió completamente mal, pero terminó siendo genial."
+    },
+    "starter": {
+      "en": "Start with what the plan was supposed to be.",
+      "es": "Empieza por cuál se suponía que era el plan."
     },
     "followUps": {
       "en": ["Would you do it the same way again?"],
@@ -876,6 +1124,10 @@
       "en": "Tell me about the trip you remember most.",
       "es": "Cuéntame sobre el viaje que más recuerdas."
     },
+    "starter": {
+      "en": "Start with how you got there.",
+      "es": "Empieza por cómo llegaste allí."
+    },
     "followUps": {
       "en": ["What's one moment from it you'd relive?"],
       "es": ["¿Qué momento de ese viaje volverías a vivir?"]
@@ -889,6 +1141,10 @@
     "text": {
       "en": "Tell me about a time a stranger was unexpectedly kind to you.",
       "es": "Cuéntame de una vez en que un desconocido fue amable contigo sin esperarlo."
+    },
+    "starter": {
+      "en": "Think small: directions, a seat, a smile.",
+      "es": "Piensa en algo pequeño: una indicación, un asiento, una sonrisa."
     },
     "followUps": {
       "en": ["Have you ever paid it forward?"],
@@ -904,6 +1160,10 @@
       "en": "Tell me about the most embarrassing thing that happened to you at school.",
       "es": "Cuéntame lo más vergonzoso que te pasó en la escuela."
     },
+    "starter": {
+      "en": "Start with how old you were and where it happened.",
+      "es": "Empieza por qué edad tenías y dónde pasó."
+    },
     "followUps": {
       "en": ["Does anyone else still remember it?"],
       "es": ["¿Alguien más lo recuerda todavía?"]
@@ -917,6 +1177,10 @@
     "text": {
       "en": "Tell me about the worst haircut you've ever had.",
       "es": "Cuéntame sobre el peor corte de cabello que has tenido."
+    },
+    "starter": {
+      "en": "Start with who cut it and what you asked for.",
+      "es": "Empieza por quién te lo cortó y qué pediste."
     },
     "followUps": {
       "en": ["Is there photographic evidence?"],
@@ -932,6 +1196,10 @@
       "en": "Tell me about a time you laughed so hard you couldn't stop.",
       "es": "Cuéntame de una vez en que te reíste tanto que no podías parar."
     },
+    "starter": {
+      "en": "Think of a moment that still makes you smile.",
+      "es": "Piensa en un momento que todavía te hace sonreír."
+    },
     "followUps": {
       "en": ["Would it still be funny today?"],
       "es": ["¿Todavía te daría risa hoy?"]
@@ -945,6 +1213,10 @@
     "text": {
       "en": "Tell me about a moment that changed the direction of your life.",
       "es": "Cuéntame de un momento que cambió el rumbo de tu vida."
+    },
+    "starter": {
+      "en": "It can be a chat, a move, a \"yes\" or a \"no\".",
+      "es": "Puede ser una charla, una mudanza, un «sí» o un «no»."
     },
     "followUps": {
       "en": ["What if it had gone the other way?"],
@@ -960,6 +1232,10 @@
       "en": "Tell me about the strangest place you've ever fallen asleep.",
       "es": "Cuéntame sobre el lugar más raro en el que te ha vencido el sueño."
     },
+    "starter": {
+      "en": "Think trains, waiting rooms or a party.",
+      "es": "Piensa en trenes, salas de espera o alguna fiesta."
+    },
     "followUps": {
       "en": ["How did you wake up?"],
       "es": ["¿Cómo te despertaste?"]
@@ -973,6 +1249,10 @@
     "text": {
       "en": "Tell me about a time you got completely lost.",
       "es": "Cuéntame de una vez en que te perdiste por completo."
+    },
+    "starter": {
+      "en": "Start with where you were trying to go.",
+      "es": "Empieza por adónde intentabas llegar."
     },
     "followUps": {
       "en": ["How did you find your way back?"],
@@ -988,6 +1268,10 @@
       "en": "Tell me about the best gift anyone has ever given you.",
       "es": "Cuéntame sobre el mejor regalo que alguien te ha hecho."
     },
+    "starter": {
+      "en": "It doesn't have to be expensive. Start with the moment you opened it.",
+      "es": "No tiene que ser caro. Empieza por el momento en que lo abriste."
+    },
     "followUps": {
       "en": ["What made it so special?"],
       "es": ["¿Qué lo hizo tan especial?"]
@@ -1001,6 +1285,10 @@
     "text": {
       "en": "Tell me about a time you pretended to know exactly what you were doing.",
       "es": "Cuéntame de una vez en que fingiste saber perfectamente lo que hacías."
+    },
+    "starter": {
+      "en": "Think of a first day: new job, new class, new sport.",
+      "es": "Piensa en un primer día: trabajo nuevo, clase nueva, deporte nuevo."
     },
     "followUps": {
       "en": ["Did anyone catch on?"],
@@ -1016,6 +1304,10 @@
       "en": "Tell me about someone who taught you something you still think about.",
       "es": "Cuéntame sobre alguien que te enseñó algo en lo que todavía piensas."
     },
+    "starter": {
+      "en": "Someone from family, school, work, or a stranger.",
+      "es": "Alguien de tu familia, de la escuela, del trabajo o una persona desconocida."
+    },
     "followUps": {
       "en": ["What would you tell them today?"],
       "es": ["¿Qué le dirías hoy?"]
@@ -1029,6 +1321,10 @@
     "text": {
       "en": "Tell me about the most spontaneous thing you've ever done.",
       "es": "Cuéntame lo más espontáneo que has hecho en tu vida."
+    },
+    "starter": {
+      "en": "Start with the moment you decided to do it.",
+      "es": "Empieza por el momento en que decidiste hacerlo."
     },
     "followUps": {
       "en": ["Would you do it again tomorrow?"],
@@ -1044,6 +1340,10 @@
       "en": "Tell me about a time you cooked something that went horribly wrong.",
       "es": "Cuéntame de una vez en que cocinaste algo que salió terriblemente mal."
     },
+    "starter": {
+      "en": "Start with what it was supposed to be.",
+      "es": "Empieza por qué se suponía que iba a ser."
+    },
     "followUps": {
       "en": ["Who had to eat it?"],
       "es": ["¿Quién tuvo que comérselo?"]
@@ -1057,6 +1357,10 @@
     "text": {
       "en": "Tell me about your first concert or big live show.",
       "es": "Cuéntame sobre tu primer concierto o gran espectáculo en vivo."
+    },
+    "starter": {
+      "en": "No concert? A school play or a match counts.",
+      "es": "¿Ningún concierto? Vale una obra escolar o un partido."
     },
     "followUps": {
       "en": ["Who did you go with?"],
@@ -1072,6 +1376,10 @@
       "en": "Tell me about a time you were really brave, even if nobody noticed.",
       "es": "Cuéntame de una vez en que tuviste mucho valor, aunque nadie se diera cuenta."
     },
+    "starter": {
+      "en": "Speaking up, asking for help or saying no all count.",
+      "es": "Hablar claro, pedir ayuda o decir que no: todo cuenta."
+    },
     "followUps": {
       "en": ["Where did that courage come from?"],
       "es": ["¿De dónde salió ese valor?"]
@@ -1085,6 +1393,10 @@
     "text": {
       "en": "Tell me about the worst job or chore you've ever had to do.",
       "es": "Cuéntame sobre el peor trabajo o la peor tarea que te ha tocado hacer."
+    },
+    "starter": {
+      "en": "Start with your very first day there.",
+      "es": "Empieza por tu primer día allí."
     },
     "followUps": {
       "en": ["Did it teach you anything at all?"],
@@ -1100,6 +1412,10 @@
       "en": "Tell me about a time you met someone famous... or almost did.",
       "es": "Cuéntame de una vez en que conociste a una persona famosa... o casi."
     },
+    "starter": {
+      "en": "A local celebrity or someone from TV counts.",
+      "es": "Vale una celebridad local o alguien de la tele."
+    },
     "followUps": {
       "en": ["What did you say?"],
       "es": ["¿Qué le dijiste?"]
@@ -1113,6 +1429,10 @@
     "text": {
       "en": "Tell me about a goodbye that stayed with you.",
       "es": "Cuéntame de una despedida que se te quedó grabada."
+    },
+    "starter": {
+      "en": "It can be a person, a place or a pet.",
+      "es": "Puede ser una persona, un lugar o una mascota."
     },
     "followUps": {
       "en": ["What do you remember most?"],
@@ -1128,6 +1448,10 @@
       "en": "Would you rather live by the sea or in the mountains?",
       "es": "¿Preferirías vivir junto al mar o en la montaña?"
     },
+    "starter": {
+      "en": "Picture waking up there. What do you hear first?",
+      "es": "Imagina que despiertas allí. ¿Qué es lo primero que oyes?"
+    },
     "followUps": {
       "en": ["What would a normal Sunday look like there?"],
       "es": ["¿Cómo sería un domingo normal allí?"]
@@ -1141,6 +1465,10 @@
     "text": {
       "en": "Would you rather talk to animals or speak every human language?",
       "es": "¿Preferirías poder hablar con los animales o hablar todos los idiomas del mundo?"
+    },
+    "starter": {
+      "en": "Think of who you'd most want to understand.",
+      "es": "Piensa en a quién te gustaría entender más."
     },
     "followUps": {
       "en": ["Who's the first one you'd talk to?"],
@@ -1156,6 +1484,10 @@
       "en": "Would you rather know the date of every big moment in your life in advance, or be surprised by all of them?",
       "es": "¿Preferirías saber de antemano la fecha de cada gran momento de tu vida o que todos te tomen por sorpresa?"
     },
+    "starter": {
+      "en": "Think of one big moment you're glad was a surprise.",
+      "es": "Piensa en un gran momento que agradeces que fuera sorpresa."
+    },
     "followUps": {
       "en": ["Is there one moment you'd want to know about?"],
       "es": ["¿Hay algún momento que sí querrías saber?"]
@@ -1169,6 +1501,10 @@
     "text": {
       "en": "Would you rather have to sing everything you say, or dance everywhere you walk?",
       "es": "¿Preferirías tener que cantar todo lo que dices o ir bailando a todas partes?"
+    },
+    "starter": {
+      "en": "Picture doing it at work or in a supermarket.",
+      "es": "Imagínate haciéndolo en el trabajo o en el supermercado."
     },
     "followUps": {
       "en": ["Where would it be most embarrassing?"],
@@ -1184,6 +1520,10 @@
       "en": "Would you rather have a rewind button or a pause button for your life?",
       "es": "¿Preferirías tener un botón de retroceder o uno de pausa para tu vida?"
     },
+    "starter": {
+      "en": "Think of a moment you wanted to last longer.",
+      "es": "Piensa en un momento que te habría gustado que durara más."
+    },
     "followUps": {
       "en": ["What's the first moment you'd use it on?"],
       "es": ["¿En qué momento lo usarías primero?"]
@@ -1197,6 +1537,10 @@
     "text": {
       "en": "Would you rather be world-famous for something embarrassing, or do something amazing that nobody ever finds out about?",
       "es": "¿Preferirías tener fama mundial por algo vergonzoso o hacer algo increíble sin que nadie lo sepa nunca?"
+    },
+    "starter": {
+      "en": "Do you need others to know when you do something great?",
+      "es": "¿Necesitas que los demás sepan cuando haces algo genial?"
     },
     "followUps": {
       "en": ["What would the embarrassing thing be?"],
@@ -1212,6 +1556,10 @@
       "en": "Would you rather have a personal chef or a personal driver for the rest of your life?",
       "es": "¿Preferirías tener chef personal o conductor personal para el resto de tu vida?"
     },
+    "starter": {
+      "en": "Think of the daily chore you like least.",
+      "es": "Piensa en la tarea diaria que menos te gusta."
+    },
     "followUps": {
       "en": ["What's the first thing you'd ask for?"],
       "es": ["¿Qué le pedirías primero?"]
@@ -1225,6 +1573,10 @@
     "text": {
       "en": "Would you rather be able to fly, but only at walking speed, or turn invisible, but only when nobody's looking?",
       "es": "¿Preferirías poder volar, pero solo a paso de caminata, o volverte invisible, pero solo cuando nadie te mira?"
+    },
+    "starter": {
+      "en": "Pick one and describe your first hour with it.",
+      "es": "Elige uno y describe tu primera hora con ese poder."
     },
     "followUps": {
       "en": ["What would you actually use it for?"],
@@ -1240,6 +1592,10 @@
       "en": "Would you rather fight one horse-sized duck or a hundred duck-sized horses?",
       "es": "¿Preferirías pelear contra un pato del tamaño de un caballo o contra cien caballos del tamaño de un pato?"
     },
+    "starter": {
+      "en": "Size up the enemy: speed or strength?",
+      "es": "Analiza al enemigo: ¿velocidad o fuerza?"
+    },
     "followUps": {
       "en": ["Walk us through your strategy."],
       "es": ["Explícanos tu estrategia."]
@@ -1253,6 +1609,10 @@
     "text": {
       "en": "Would you rather give up music forever, or movies and series forever?",
       "es": "¿Preferirías renunciar para siempre a la música o a las películas y series?"
+    },
+    "starter": {
+      "en": "Think of last week: which did you use more?",
+      "es": "Piensa en la semana pasada: ¿qué usaste más?"
     },
     "followUps": {
       "en": ["Which song or film would you miss most?"],
@@ -1268,6 +1628,10 @@
       "en": "Would you rather relive your best day once more, or erase your worst day completely?",
       "es": "¿Preferirías volver a vivir tu mejor día una vez más o borrar por completo tu peor día?"
     },
+    "starter": {
+      "en": "You don't have to share the worst day, only your choice.",
+      "es": "No tienes que contar el peor día, solo tu elección."
+    },
     "followUps": {
       "en": ["Would you change anything about the best one?"],
       "es": ["¿Cambiarías algo de ese mejor día?"]
@@ -1281,6 +1645,10 @@
     "text": {
       "en": "Would you rather say every thought out loud for one day, or not speak at all for a week?",
       "es": "¿Preferirías decir en voz alta todo lo que piensas durante un día o no hablar nada durante una semana?"
+    },
+    "starter": {
+      "en": "Picture a family dinner with each option.",
+      "es": "Imagina una cena familiar con cada opción."
     },
     "followUps": {
       "en": ["Who would you avoid that day?"],
@@ -1296,6 +1664,10 @@
       "en": "Would you rather have a dragon or be a dragon?",
       "es": "¿Preferirías tener un dragón o ser un dragón?"
     },
+    "starter": {
+      "en": "Think size, color, and whether it breathes fire.",
+      "es": "Piensa en tamaño, color y si escupe fuego."
+    },
     "followUps": {
       "en": ["What would its name be? Or yours?"],
       "es": ["¿Qué nombre le pondrías? ¿O te pondrías?"]
@@ -1309,6 +1681,10 @@
     "text": {
       "en": "Would you rather travel 100 years into the past or 100 years into the future, with no way back?",
       "es": "¿Preferirías viajar 100 años al pasado o 100 años al futuro, sin poder volver?"
+    },
+    "starter": {
+      "en": "Pick the first place you'd land.",
+      "es": "Elige el primer lugar al que llegarías."
     },
     "followUps": {
       "en": ["What one thing would you take with you?"],
@@ -1324,6 +1700,10 @@
       "en": "Would you rather be the funniest person in the room or the smartest?",
       "es": "¿Preferirías ser la persona más graciosa del lugar o la más inteligente?"
     },
+    "starter": {
+      "en": "Think of someone you admire: humor or brains?",
+      "es": "Piensa en alguien que admiras: ¿destaca por su humor o por su inteligencia?"
+    },
     "followUps": {
       "en": ["Which one are you right now?"],
       "es": ["¿Cuál de las dos eres ahora mismo?"]
@@ -1337,6 +1717,10 @@
     "text": {
       "en": "Would you rather eat only breakfast food forever, or never eat breakfast food again?",
       "es": "¿Preferirías comer solo cosas de desayuno para siempre o no volver a probarlas nunca?"
+    },
+    "starter": {
+      "en": "Name your top three breakfast foods first.",
+      "es": "Primero di tus tres comidas de desayuno favoritas."
     },
     "followUps": {
       "en": ["What's on your forever menu?"],
@@ -1352,6 +1736,10 @@
       "en": "Starting today, would you rather have more time or more money?",
       "es": "A partir de hoy, ¿preferirías tener más tiempo o más dinero?"
     },
+    "starter": {
+      "en": "Think of last week: what did you run short of?",
+      "es": "Piensa en la semana pasada: ¿qué te faltó más?"
+    },
     "followUps": {
       "en": ["What's the first thing you'd do with it?"],
       "es": ["¿Qué es lo primero que harías?"]
@@ -1365,6 +1753,10 @@
     "text": {
       "en": "Would you rather your pet could talk, or read your mind?",
       "es": "¿Preferirías que tu mascota pudiera hablar o leerte la mente?"
+    },
+    "starter": {
+      "en": "No pet? Pick one you'd love to have.",
+      "es": "¿No tienes mascota? Elige una que te encantaría tener."
     },
     "followUps": {
       "en": ["What would it say about you?"],
@@ -1380,6 +1772,10 @@
       "en": "Would you rather wake up with a random new talent every morning, or be the best in the world at just one thing?",
       "es": "¿Preferirías despertar cada mañana con un talento nuevo al azar o ser la mejor persona del mundo en una sola cosa?"
     },
+    "starter": {
+      "en": "Think of a talent you'd love for just one day.",
+      "es": "Piensa en un talento que te gustaría tener solo por un día."
+    },
     "followUps": {
       "en": ["Which one thing would you pick?"],
       "es": ["¿Qué cosa elegirías?"]
@@ -1393,6 +1789,10 @@
     "text": {
       "en": "Would you rather know what everyone really thinks of you, or never care again?",
       "es": "¿Preferirías saber lo que todo el mundo piensa realmente de ti o que nunca más te importara?"
+    },
+    "starter": {
+      "en": "Think of a time someone's opinion surprised you.",
+      "es": "Piensa en una vez que la opinión de alguien te sorprendió."
     },
     "followUps": {
       "en": ["Whose opinion would make you most nervous?"],
@@ -1408,6 +1808,10 @@
       "en": "Is a hot dog a sandwich?",
       "es": "¿Un hot dog es un sándwich?"
     },
+    "starter": {
+      "en": "Start with what makes a sandwich a sandwich.",
+      "es": "Empieza por qué hace que un sándwich sea un sándwich."
+    },
     "followUps": {
       "en": ["Then what about a taco?"],
       "es": ["¿Y entonces un taco qué es?"]
@@ -1421,6 +1825,10 @@
     "text": {
       "en": "Is it ever okay to recline your seat on a plane?",
       "es": "¿Está bien reclinar el asiento en un avión?"
+    },
+    "starter": {
+      "en": "Put yourself in the seat behind.",
+      "es": "Ponte en el asiento de atrás."
     },
     "followUps": {
       "en": ["What about on a train or bus?"],
@@ -1436,6 +1844,10 @@
       "en": "Is breakfast the best meal of the day or the most overrated?",
       "es": "¿El desayuno es la mejor comida del día o la más sobrevalorada?"
     },
+    "starter": {
+      "en": "Start with what you had this morning.",
+      "es": "Empieza por lo que desayunaste hoy."
+    },
     "followUps": {
       "en": ["Describe your perfect breakfast."],
       "es": ["Describe tu desayuno perfecto."]
@@ -1449,6 +1861,10 @@
     "text": {
       "en": "Is cereal with milk a soup?",
       "es": "¿El cereal con leche es una sopa?"
+    },
+    "starter": {
+      "en": "Define soup in one sentence, then judge.",
+      "es": "Define «sopa» en una frase y luego decide."
     },
     "followUps": {
       "en": ["So what makes something a soup?"],
@@ -1464,6 +1880,10 @@
       "en": "Pineapple on pizza: genius or crime?",
       "es": "Piña en la pizza: ¿genialidad o delito?"
     },
+    "starter": {
+      "en": "Sweet and salty together: yes or no in general?",
+      "es": "Dulce y salado juntos: ¿sí o no en general?"
+    },
     "followUps": {
       "en": ["What's the weirdest topping you'd defend?"],
       "es": ["¿Qué ingrediente raro defenderías?"]
@@ -1477,6 +1897,10 @@
     "text": {
       "en": "Shower in the morning or at night: which one is objectively correct?",
       "es": "Ducharse por la mañana o por la noche: ¿cuál es la opción correcta?"
+    },
+    "starter": {
+      "en": "Start with how you feel when you wake up.",
+      "es": "Empieza por cómo te sientes al despertar."
     },
     "followUps": {
       "en": ["Now defend the other side for 30 seconds."],
@@ -1492,6 +1916,10 @@
       "en": "Socks with sandals: fashion crime or pure comfort?",
       "es": "Calcetines con sandalias: ¿crimen de la moda o comodidad pura?"
     },
+    "starter": {
+      "en": "Picture it at a wedding. Then at a campsite.",
+      "es": "Imagínalo en una boda. Y luego en un campamento."
+    },
     "followUps": {
       "en": ["Where do you draw the line?"],
       "es": ["¿Dónde está el límite?"]
@@ -1505,6 +1933,10 @@
     "text": {
       "en": "Who makes the better roommate: a cat or a dog?",
       "es": "¿Quién es mejor compañía en casa: un gato o un perro?"
+    },
+    "starter": {
+      "en": "Think who'd do the dishes, and who'd make the mess.",
+      "es": "Piensa en quién lavaría los platos y quién haría el desastre."
     },
     "followUps": {
       "en": ["What would each one complain about?"],
@@ -1520,6 +1952,10 @@
       "en": "Should people clap when the plane lands?",
       "es": "¿Hay que aplaudir cuando aterriza el avión?"
     },
+    "starter": {
+      "en": "Is it thanks to the crew, or pure relief?",
+      "es": "¿Es agradecimiento a la tripulación o puro alivio?"
+    },
     "followUps": {
       "en": ["Where else is clapping fair game?"],
       "es": ["¿Dónde más está bien aplaudir?"]
@@ -1533,6 +1969,10 @@
     "text": {
       "en": "Is replying with just \"ok\" rude?",
       "es": "¿Responder solo «ok» es de mala educación?"
+    },
+    "starter": {
+      "en": "Does it depend on who sends it?",
+      "es": "¿Depende de quién lo mande?"
     },
     "followUps": {
       "en": [
@@ -1550,6 +1990,10 @@
       "en": "Toilet paper: over or under?",
       "es": "Papel higiénico: ¿hacia afuera o hacia la pared?"
     },
+    "starter": {
+      "en": "It's on wrong in a friend's bathroom. Do you fix it?",
+      "es": "Está al revés en el baño de una amistad. ¿Lo arreglas?"
+    },
     "followUps": {
       "en": ["What other house rule won't you negotiate on?"],
       "es": ["¿Qué otra regla de la casa no negocias?"]
@@ -1563,6 +2007,10 @@
     "text": {
       "en": "Is water wet?",
       "es": "¿El agua está mojada?"
+    },
+    "starter": {
+      "en": "Is wet something a thing is, or something you feel?",
+      "es": "¿Lo mojado es algo que una cosa es o algo que se siente?"
     },
     "followUps": {
       "en": ["Okay, then is a fish wet?"],
@@ -1578,6 +2026,10 @@
       "en": "Birthdays after 30: throw a big party or quietly ignore them?",
       "es": "Los cumpleaños después de los 30: ¿gran fiesta o mejor pasarlos por alto?"
     },
+    "starter": {
+      "en": "Think of your best birthday so far.",
+      "es": "Piensa en tu mejor cumpleaños hasta ahora."
+    },
     "followUps": {
       "en": ["What would your ideal birthday look like this year?"],
       "es": ["¿Cómo sería tu cumpleaños ideal este año?"]
@@ -1591,6 +2043,10 @@
     "text": {
       "en": "Are movies better at the cinema or on the couch?",
       "es": "¿Las películas se disfrutan más en el cine o en el sofá?"
+    },
+    "starter": {
+      "en": "Think of the last film you loved: where did you watch it?",
+      "es": "Piensa en la última película que te encantó: ¿dónde la viste?"
     },
     "followUps": {
       "en": ["Which snack is non-negotiable?"],
@@ -1606,6 +2062,10 @@
       "en": "How long until spoiling the ending of a series stops being a crime?",
       "es": "¿Cuánto tiempo tiene que pasar para que contar el final de una serie deje de ser un crimen?"
     },
+    "starter": {
+      "en": "Pick a number of days, weeks or years. Defend it.",
+      "es": "Elige un número de días, semanas o años. Y defiéndelo."
+    },
     "followUps": {
       "en": ["What's the worst spoiler you've ever suffered?"],
       "es": ["¿Cuál es el peor spoiler que has sufrido?"]
@@ -1619,6 +2079,10 @@
     "text": {
       "en": "Team arrive early or team arrive exactly on time?",
       "es": "¿Eres de llegar antes o de llegar justo a la hora?"
+    },
+    "starter": {
+      "en": "Start with how you feel when you're the one waiting.",
+      "es": "Empieza por cómo te sientes cuando te toca esperar."
     },
     "followUps": {
       "en": ["What's the latest you've ever shown up to something?"],
@@ -1634,6 +2098,10 @@
       "en": "Is it acceptable to eat pizza with a knife and fork?",
       "es": "¿Está bien comer pizza con cuchillo y tenedor?"
     },
+    "starter": {
+      "en": "Think of pizza in Italy versus pizza at a party.",
+      "es": "Piensa en la pizza en Italia frente a la pizza en una fiesta."
+    },
     "followUps": {
       "en": ["What food do most people eat the wrong way?"],
       "es": ["¿Qué comida come mal la mayoría de la gente?"]
@@ -1647,6 +2115,10 @@
     "text": {
       "en": "Morning people or night owls: who has the better life?",
       "es": "Gente madrugadora o gente nocturna: ¿quién vive mejor?"
+    },
+    "starter": {
+      "en": "Start with the time of day you have the most energy.",
+      "es": "Empieza por el momento del día en que tienes más energía."
     },
     "followUps": {
       "en": ["What would your ideal daily schedule be?"],
@@ -1662,6 +2134,10 @@
       "en": "Is food better reheated the next day?",
       "es": "¿La comida está más rica recalentada al día siguiente?"
     },
+    "starter": {
+      "en": "Think stews, pizza, pasta and curry.",
+      "es": "Piensa en guisos, pizza, pasta y curry."
+    },
     "followUps": {
       "en": ["Which dish is best eaten cold?"],
       "es": ["¿Qué plato está mejor frío?"]
@@ -1675,6 +2151,10 @@
     "text": {
       "en": "Should you make your bed every single morning?",
       "es": "¿Hay que hacer la cama todas las mañanas?"
+    },
+    "starter": {
+      "en": "How long does it actually take? Guess first.",
+      "es": "¿Cuánto tiempo lleva de verdad? Calcula primero."
     },
     "followUps": {
       "en": ["What's the one chore you never skip?"],
@@ -1690,6 +2170,10 @@
       "en": "What's a tradition you'd like us to start?",
       "es": "¿Qué tradición te gustaría que empezáramos?"
     },
+    "starter": {
+      "en": "Think weekly, yearly, or one small silly thing.",
+      "es": "Piensa en algo semanal, anual o en una pequeña tontería."
+    },
     "followUps": {
       "en": ["When could we do it first?"],
       "es": ["¿Cuándo podríamos hacerlo por primera vez?"]
@@ -1703,6 +2187,10 @@
     "text": {
       "en": "What's a moment when you felt really proud of me?",
       "es": "¿Qué momento mío te hizo sentir mucho orgullo?"
+    },
+    "starter": {
+      "en": "Big or tiny: a talk, a fix, a kind gesture.",
+      "es": "Grande o pequeño: una conversación, un arreglo, un gesto amable."
     },
     "followUps": {
       "en": ["Did you tell me back then?"],
@@ -1718,6 +2206,10 @@
       "en": "What's something you'd like us to get better at together?",
       "es": "¿En qué te gustaría que mejoráramos como pareja?"
     },
+    "starter": {
+      "en": "Start with something we already do well.",
+      "es": "Empieza por algo que ya hacemos bien."
+    },
     "followUps": {
       "en": ["What's one small step we could take this week?"],
       "es": ["¿Qué pequeño paso podríamos dar esta semana?"]
@@ -1731,6 +2223,10 @@
     "text": {
       "en": "What was your very first impression of me? Be honest.",
       "es": "¿Cuál fue tu primera impresión de mí? Con sinceridad."
+    },
+    "starter": {
+      "en": "Start with where we were and what I was wearing.",
+      "es": "Empieza por dónde estábamos y qué llevaba puesto."
     },
     "followUps": {
       "en": ["When did it change?"],
@@ -1746,6 +2242,10 @@
       "en": "What song makes you think of us?",
       "es": "¿Qué canción te hace pensar en lo nuestro?"
     },
+    "starter": {
+      "en": "It can be from a road trip, a party or a film.",
+      "es": "Puede ser de un viaje por carretera, una fiesta o una película."
+    },
     "followUps": {
       "en": ["When did it become ours?"],
       "es": ["¿Desde cuándo es nuestra?"]
@@ -1759,6 +2259,10 @@
     "text": {
       "en": "If we had a reality show, what would it be called?",
       "es": "Si tuviéramos un reality, ¿cómo se llamaría?"
+    },
+    "starter": {
+      "en": "Think of what we argue about most… lovingly.",
+      "es": "Piensa en lo que más discutimos… con cariño."
     },
     "followUps": {
       "en": ["What would the most dramatic episode be about?"],
@@ -1774,6 +2278,10 @@
       "en": "What's something small I do that makes you feel loved?",
       "es": "¿Qué pequeño detalle mío te hace sentir que te quiero?"
     },
+    "starter": {
+      "en": "Think of the last week. Something tiny counts.",
+      "es": "Piensa en la última semana. Algo pequeñito cuenta."
+    },
     "followUps": {
       "en": ["Is there something I used to do that you miss?"],
       "es": ["¿Hay algo que hacía antes y que te gustaría recuperar?"]
@@ -1787,6 +2295,10 @@
     "text": {
       "en": "What's our most ridiculous inside joke, and how did it start?",
       "es": "¿Cuál es nuestra broma interna más ridícula y cómo empezó?"
+    },
+    "starter": {
+      "en": "Start with the first time it came up.",
+      "es": "Empieza por la primera vez que salió."
     },
     "followUps": {
       "en": ["Could anyone else ever understand it?"],
@@ -1802,6 +2314,10 @@
       "en": "Where do you see us in five years, and what will we have done by then?",
       "es": "¿Dónde nos ves en cinco años y qué habremos hecho para entonces?"
     },
+    "starter": {
+      "en": "Start with where we'd live and what a normal Sunday looks like.",
+      "es": "Empieza por dónde viviríamos y cómo sería un domingo normal."
+    },
     "followUps": {
       "en": ["What's step one?"],
       "es": ["¿Cuál es el primer paso?"]
@@ -1815,6 +2331,10 @@
     "text": {
       "en": "Which of us would survive longer in a zombie apocalypse?",
       "es": "¿Quién sobreviviría más tiempo en un apocalipsis zombi, tú o yo?"
+    },
+    "starter": {
+      "en": "Think who panics and who makes a plan.",
+      "es": "Piensa en quién entra en pánico y quién hace un plan."
     },
     "followUps": {
       "en": ["And what would the other one be doing?"],
@@ -1830,6 +2350,10 @@
       "en": "When did you know this was getting serious?",
       "es": "¿En qué momento supiste que esto iba en serio?"
     },
+    "starter": {
+      "en": "It can be a small moment, like a text or a dinner.",
+      "es": "Puede ser un momento pequeño, como un mensaje o una cena."
+    },
     "followUps": {
       "en": ["Did you tell anyone?"],
       "es": ["¿Se lo contaste a alguien?"]
@@ -1843,6 +2367,10 @@
     "text": {
       "en": "What's your favorite memory of us that nobody else knows about?",
       "es": "¿Cuál es tu recuerdo favorito de lo nuestro que nadie más conoce?"
+    },
+    "starter": {
+      "en": "Think of an ordinary day that felt special.",
+      "es": "Piensa en un día normal que se sintió especial."
     },
     "followUps": {
       "en": ["Why that one?"],
@@ -1858,6 +2386,10 @@
       "en": "If we could teleport anywhere for one night, where would we go?",
       "es": "Si pudiéramos teletransportarnos a cualquier lugar por una noche, ¿adónde iríamos?"
     },
+    "starter": {
+      "en": "Beach, city, cabin, or somewhere that doesn't exist.",
+      "es": "Playa, ciudad, cabaña o un lugar que no existe."
+    },
     "followUps": {
       "en": ["What would we do first?"],
       "es": ["¿Qué haríamos primero?"]
@@ -1871,6 +2403,10 @@
     "text": {
       "en": "What's something you've never quite found the right moment to tell me?",
       "es": "¿Qué es algo que nunca encontraste el momento justo para decirme?"
+    },
+    "starter": {
+      "en": "It can be something sweet, not only something hard.",
+      "es": "Puede ser algo bonito, no solo algo difícil."
     },
     "followUps": {
       "en": ["Is now a good moment?"],
@@ -1886,6 +2422,10 @@
       "en": "Which of my habits seemed weird at first but you now secretly love?",
       "es": "¿Qué costumbre mía te pareció rara al principio y ahora te encanta en secreto?"
     },
+    "starter": {
+      "en": "Think of my mornings, how I eat, or how I talk.",
+      "es": "Piensa en mis mañanas, en cómo como o en cómo hablo."
+    },
     "followUps": {
       "en": ["And which one still drives you a little crazy?"],
       "es": ["¿Y cuál todavía te saca un poco de quicio?"]
@@ -1899,6 +2439,10 @@
     "text": {
       "en": "What's a dream of yours you'd like my help with?",
       "es": "¿Qué sueño tuyo te gustaría que te ayudara a cumplir?"
+    },
+    "starter": {
+      "en": "Big or small: a trip, a skill, a change.",
+      "es": "Grande o pequeño: un viaje, una habilidad, un cambio."
     },
     "followUps": {
       "en": ["What could I do this month?"],
@@ -1914,6 +2458,10 @@
       "en": "If we opened a business together, what would it be, and who'd be the boss?",
       "es": "Si abriéramos un negocio en pareja, ¿de qué sería y quién mandaría?"
     },
+    "starter": {
+      "en": "A café, a shop, an app? Start with the name.",
+      "es": "¿Un café, una tienda, una app? Empieza por el nombre."
+    },
     "followUps": {
       "en": ["How long until we argued?"],
       "es": ["¿Cuánto tardaríamos en discutir?"]
@@ -1927,6 +2475,10 @@
     "text": {
       "en": "When do you feel most understood by me, and when least?",
       "es": "¿En qué momentos sientes que te entiendo de verdad, y en cuáles no tanto?"
+    },
+    "starter": {
+      "en": "Start with a recent moment that felt good.",
+      "es": "Empieza por un momento reciente que se sintió bien."
     },
     "followUps": {
       "en": ["What could I do differently?"],
@@ -1942,6 +2494,10 @@
       "en": "What's a date we've never been on that we absolutely should?",
       "es": "¿Qué cita nunca hemos tenido y deberíamos tener sí o sí?"
     },
+    "starter": {
+      "en": "Think of something neither of us has tried.",
+      "es": "Piensa en algo que no hayamos probado nunca."
+    },
     "followUps": {
       "en": ["Let's pick a day. When?"],
       "es": ["Pongamos fecha. ¿Cuándo?"]
@@ -1955,6 +2511,10 @@
     "text": {
       "en": "What's something we argued about that's funny now?",
       "es": "¿Por qué discutimos alguna vez que ahora nos da risa?"
+    },
+    "starter": {
+      "en": "Start with how it began. Keep it light.",
+      "es": "Empieza por cómo comenzó. En tono ligero."
     },
     "followUps": {
       "en": ["Who was right?"],
@@ -1970,6 +2530,10 @@
       "en": "If you could invent a holiday, what would it celebrate?",
       "es": "Si pudieras inventar un día festivo, ¿qué celebraría?"
     },
+    "starter": {
+      "en": "Think of something that deserves a party but never gets one.",
+      "es": "Piensa en algo que merece una fiesta y nunca la tiene."
+    },
     "followUps": {
       "en": ["How would everyone celebrate it?"],
       "es": ["¿Cómo lo celebraríamos todos?"]
@@ -1983,6 +2547,10 @@
     "text": {
       "en": "What's the funniest thing that's ever happened in your family?",
       "es": "¿Qué es lo más gracioso que ha pasado en tu familia?"
+    },
+    "starter": {
+      "en": "Think of a holiday, a trip or a pet.",
+      "es": "Piensa en una fiesta, un viaje o una mascota."
     },
     "followUps": {
       "en": ["Who tells that story best?"],
@@ -1998,6 +2566,10 @@
       "en": "If your family were a superhero team, what would each person's power be?",
       "es": "Si tu familia fuera un equipo de superhéroes, ¿qué poder tendría cada persona?"
     },
+    "starter": {
+      "en": "Start with yourself: what's your power?",
+      "es": "Empieza por ti: ¿cuál es tu poder?"
+    },
     "followUps": {
       "en": ["And who would be the villain?"],
       "es": ["¿Y quién sería el villano?"]
@@ -2011,6 +2583,10 @@
     "text": {
       "en": "If you could have a superpower, but only for chores, what would it be?",
       "es": "Si pudieras tener un superpoder, pero solo para las tareas de la casa, ¿cuál elegirías?"
+    },
+    "starter": {
+      "en": "Start with the chore you dislike most.",
+      "es": "Empieza por la tarea que menos te gusta."
     },
     "followUps": {
       "en": ["Which chore would you never do again?"],
@@ -2026,6 +2602,10 @@
       "en": "What family tradition would you never give up?",
       "es": "¿Qué tradición familiar nunca dejarías?"
     },
+    "starter": {
+      "en": "Think of birthdays, holidays or Sunday meals.",
+      "es": "Piensa en cumpleaños, fiestas o comidas de domingo."
+    },
     "followUps": {
       "en": ["How did it start?"],
       "es": ["¿Cómo empezó?"]
@@ -2039,6 +2619,10 @@
     "text": {
       "en": "If your family had an official theme song, what would it be?",
       "es": "Si tu familia tuviera una canción oficial, ¿cuál sería?"
+    },
+    "starter": {
+      "en": "Hum it first, then name it.",
+      "es": "Primero tararéala y luego di cuál es."
     },
     "followUps": {
       "en": ["Who would sing it the loudest?"],
@@ -2054,6 +2638,10 @@
       "en": "If you were in charge of dinner for a whole week, what would be on the menu?",
       "es": "Si estuvieras a cargo de la cena toda una semana, ¿qué menú pondrías?"
     },
+    "starter": {
+      "en": "Start with Monday. What's for dinner?",
+      "es": "Empieza por el lunes. ¿Qué hay de cena?"
+    },
     "followUps": {
       "en": ["Which night would everyone complain?"],
       "es": ["¿Qué noche se quejaría todo el mundo?"]
@@ -2067,6 +2655,10 @@
     "text": {
       "en": "What's the best thing about being the age you are right now?",
       "es": "¿Qué es lo mejor de tener la edad que tienes ahora?"
+    },
+    "starter": {
+      "en": "Think of something you can do now that you couldn't before.",
+      "es": "Piensa en algo que ahora puedes hacer y antes no."
     },
     "followUps": {
       "en": ["And the hardest part?"],
@@ -2082,6 +2674,10 @@
       "en": "If you could invent one new rule for your home, what would it be?",
       "es": "Si pudieras inventar una regla nueva para tu casa, ¿cuál sería?"
     },
+    "starter": {
+      "en": "Think of what bugs you most at home.",
+      "es": "Piensa en lo que más te molesta en casa."
+    },
     "followUps": {
       "en": ["And what happens if someone breaks it?"],
       "es": ["¿Y qué pasa si alguien la rompe?"]
@@ -2095,6 +2691,10 @@
     "text": {
       "en": "If animals could talk, which one would be the rudest?",
       "es": "Si los animales pudieran hablar, ¿cuál sería el más maleducado?"
+    },
+    "starter": {
+      "en": "Picture a cat, a goose or a seagull talking.",
+      "es": "Imagina a un gato, un ganso o una gaviota hablando."
     },
     "followUps": {
       "en": ["And the funniest?"],
@@ -2110,6 +2710,10 @@
       "en": "What did an older relative teach you that you still use?",
       "es": "¿Qué te enseñó alguien mayor de tu familia que todavía usas?"
     },
+    "starter": {
+      "en": "A recipe, a saying, a trick or a game.",
+      "es": "Una receta, un dicho, un truco o un juego."
+    },
     "followUps": {
       "en": ["Have you taught it to anyone?"],
       "es": ["¿Se lo has enseñado a alguien?"]
@@ -2123,6 +2727,10 @@
     "text": {
       "en": "If you could shrink to the size of an ant for a day, what would you explore?",
       "es": "Si pudieras encogerte al tamaño de una hormiga por un día, ¿qué explorarías?"
+    },
+    "starter": {
+      "en": "Start in your own kitchen or garden.",
+      "es": "Empieza por tu propia cocina o jardín."
     },
     "followUps": {
       "en": ["What would be the scariest part?"],
@@ -2138,6 +2746,10 @@
       "en": "If you discovered a new planet, what would you name it?",
       "es": "Si descubrieras un planeta nuevo, ¿cómo lo llamarías?"
     },
+    "starter": {
+      "en": "Mix two words you like, or use a name.",
+      "es": "Mezcla dos palabras que te gusten o usa un nombre."
+    },
     "followUps": {
       "en": ["Who would live there?"],
       "es": ["¿Quién viviría allí?"]
@@ -2151,6 +2763,10 @@
     "text": {
       "en": "What's the funniest word you know?",
       "es": "¿Cuál es la palabra más graciosa que conoces?"
+    },
+    "starter": {
+      "en": "Say it out loud first. Does it make you laugh?",
+      "es": "Dila en voz alta primero. ¿Te da risa?"
     },
     "followUps": {
       "en": ["Can you use it in a sentence?"],
@@ -2166,6 +2782,10 @@
       "en": "If you could be any age for one week, which age would you pick?",
       "es": "Si pudieras tener cualquier edad durante una semana, ¿cuál elegirías?"
     },
+    "starter": {
+      "en": "Younger or older? Start there.",
+      "es": "¿Menos edad o más? Empieza por ahí."
+    },
     "followUps": {
       "en": ["What would you do first?"],
       "es": ["¿Qué harías primero?"]
@@ -2179,6 +2799,10 @@
     "text": {
       "en": "What story about your family always gets told at get-togethers?",
       "es": "¿Qué historia de tu familia siempre se cuenta en las reuniones?"
+    },
+    "starter": {
+      "en": "Start with where everyone was.",
+      "es": "Empieza por dónde estaba todo el mundo."
     },
     "followUps": {
       "en": ["Is it actually true?"],
@@ -2194,6 +2818,10 @@
       "en": "If you could invent a new ice cream flavor, what would it be?",
       "es": "Si pudieras inventar un sabor de helado nuevo, ¿cuál sería?"
     },
+    "starter": {
+      "en": "Combine two foods you love.",
+      "es": "Combina dos comidas que te encanten."
+    },
     "followUps": {
       "en": ["What would it be called?"],
       "es": ["¿Cómo se llamaría?"]
@@ -2207,6 +2835,10 @@
     "text": {
       "en": "If you could build a secret room in your home, what would be inside?",
       "es": "Si pudieras construir una habitación secreta en tu casa, ¿qué habría dentro?"
+    },
+    "starter": {
+      "en": "Start with how you'd get in: a bookcase, a rug?",
+      "es": "Empieza por cómo se entraría: ¿una estantería, una alfombra?"
     },
     "followUps": {
       "en": ["Who would know the password?"],
@@ -2222,6 +2854,10 @@
       "en": "If your family were a kind of weather, what would it be?",
       "es": "Si tu familia fuera un tipo de clima, ¿cuál sería?"
     },
+    "starter": {
+      "en": "Sunny, stormy, foggy or a rainbow?",
+      "es": "¿Soleado, tormentoso, con niebla o con arcoíris?"
+    },
     "followUps": {
       "en": ["And on a Monday morning?"],
       "es": ["¿Y un lunes por la mañana?"]
@@ -2235,6 +2871,10 @@
     "text": {
       "en": "What do you want to learn how to do this year?",
       "es": "¿Qué te gustaría aprender a hacer este año?"
+    },
+    "starter": {
+      "en": "A sport, a recipe, an instrument or a trick.",
+      "es": "Un deporte, una receta, un instrumento o un truco."
     },
     "followUps": {
       "en": ["Who could teach you?"],
@@ -2250,6 +2890,10 @@
       "en": "What's a skill you have that nobody at work knows about?",
       "es": "¿Qué habilidad tienes que nadie en el trabajo conoce?"
     },
+    "starter": {
+      "en": "Think hobbies, languages, cooking or fixing things.",
+      "es": "Piensa en pasatiempos, idiomas, cocina o arreglar cosas."
+    },
     "followUps": {
       "en": ["How did you learn it?"],
       "es": ["¿Cómo la aprendiste?"]
@@ -2263,6 +2907,10 @@
     "text": {
       "en": "What was your very first job, and what did it teach you?",
       "es": "¿Cuál fue tu primer trabajo y qué te enseñó?"
+    },
+    "starter": {
+      "en": "Paid or not: babysitting and running errands count.",
+      "es": "Pagado o no: cuidar niños o hacer recados cuenta."
     },
     "followUps": {
       "en": ["What's the strangest task you had there?"],
@@ -2278,6 +2926,10 @@
       "en": "What makes a team really great to work in?",
       "es": "¿Qué hace que un equipo sea realmente bueno para trabajar?"
     },
+    "starter": {
+      "en": "Think of the best team you've ever been part of.",
+      "es": "Piensa en el mejor equipo del que has formado parte."
+    },
     "followUps": {
       "en": ["What's one thing we could try here?"],
       "es": ["¿Qué podríamos probar aquí?"]
@@ -2291,6 +2943,10 @@
     "text": {
       "en": "What tip would you give someone on their first day here?",
       "es": "¿Qué consejo le darías a alguien en su primer día aquí?"
+    },
+    "starter": {
+      "en": "Think of your own first week here.",
+      "es": "Piensa en tu propia primera semana aquí."
     },
     "followUps": {
       "en": ["What do you wish someone had told you?"],
@@ -2306,6 +2962,10 @@
       "en": "If our team were a band, what would we be called, and who plays what?",
       "es": "Si nuestro equipo fuera una banda, ¿cómo se llamaría y quién tocaría qué?"
     },
+    "starter": {
+      "en": "Pick a music style first.",
+      "es": "Elige primero un estilo de música."
+    },
     "followUps": {
       "en": ["What's our first hit song?"],
       "es": ["¿Cuál sería nuestro primer éxito?"]
@@ -2319,6 +2979,10 @@
     "text": {
       "en": "What small thing makes a workday instantly better?",
       "es": "¿Qué pequeña cosa mejora al instante un día de trabajo?"
+    },
+    "starter": {
+      "en": "Coffee, music, a walk, a good chat?",
+      "es": "¿Un café, música, un paseo, una buena charla?"
     },
     "followUps": {
       "en": ["How could we get more of it?"],
@@ -2334,6 +2998,10 @@
       "en": "What job did you dream of having as a kid?",
       "es": "¿Qué trabajo soñabas tener en tu infancia?"
     },
+    "starter": {
+      "en": "Think of what you played at age seven.",
+      "es": "Piensa en a qué jugabas a los siete años."
+    },
     "followUps": {
       "en": ["Is any of it in what you do now?"],
       "es": ["¿Queda algo de eso en lo que haces hoy?"]
@@ -2347,6 +3015,10 @@
     "text": {
       "en": "What's the most useful thing you've learned from a colleague?",
       "es": "¿Qué es lo más útil que aprendiste de alguien del trabajo?"
+    },
+    "starter": {
+      "en": "A shortcut, a tool, a way of saying no.",
+      "es": "Un atajo, una herramienta, una forma de decir que no."
     },
     "followUps": {
       "en": ["Did you ever tell them?"],
@@ -2362,6 +3034,10 @@
       "en": "If you could add one perk to this job, what would it be?",
       "es": "Si pudieras añadir un beneficio a este trabajo, ¿cuál sería?"
     },
+    "starter": {
+      "en": "Dream big first: nap rooms, office dogs?",
+      "es": "Primero sueña en grande: ¿salas para siestas, perros en la oficina?"
+    },
     "followUps": {
       "en": ["Okay, now a realistic one."],
       "es": ["Bueno, ahora uno realista."]
@@ -2375,6 +3051,10 @@
     "text": {
       "en": "What's your best trick for focusing, or your favorite way to procrastinate?",
       "es": "¿Cuál es tu mejor truco para concentrarte, o tu forma favorita de procrastinar?"
+    },
+    "starter": {
+      "en": "Think of what you were doing right before this.",
+      "es": "Piensa en lo que hacías justo antes de esto."
     },
     "followUps": {
       "en": ["Which one wins most days?"],
@@ -2390,6 +3070,10 @@
       "en": "What kind of feedback helps you most?",
       "es": "¿Qué tipo de comentarios sobre tu trabajo te ayudan más?"
     },
+    "starter": {
+      "en": "Think of a comment that really helped you grow.",
+      "es": "Piensa en un comentario que te ayudó de verdad a crecer."
+    },
     "followUps": {
       "en": ["And what kind doesn't work for you?"],
       "es": ["¿Y cuáles no te funcionan?"]
@@ -2403,6 +3087,10 @@
     "text": {
       "en": "What would your autobiography be called?",
       "es": "¿Cómo se llamaría tu autobiografía?"
+    },
+    "starter": {
+      "en": "Try a famous quote or a film title, with a twist.",
+      "es": "Prueba con una frase célebre o un título de película, con un giro."
     },
     "followUps": {
       "en": ["What's chapter one about?"],
@@ -2418,6 +3106,10 @@
       "en": "Which emoji do you use the most, and what does that say about you?",
       "es": "¿Qué emoji usas más y qué dice eso de ti?"
     },
+    "starter": {
+      "en": "Open your phone and check your recent emojis.",
+      "es": "Abre tu teléfono y mira tus emojis recientes."
+    },
     "followUps": {
       "en": ["Which one do you never use?"],
       "es": ["¿Cuál no usas nunca?"]
@@ -2431,6 +3123,10 @@
     "text": {
       "en": "Which project are you proudest of, and why?",
       "es": "¿Qué proyecto te llena más de orgullo y por qué?"
+    },
+    "starter": {
+      "en": "Big or small, at work or outside it.",
+      "es": "Grande o pequeño, en el trabajo o fuera de él."
     },
     "followUps": {
       "en": ["Who helped make it happen?"],
@@ -2446,6 +3142,10 @@
       "en": "If you could swap jobs with anyone here for a day, whose would you pick?",
       "es": "Si pudieras cambiar de trabajo con alguien de aquí por un día, ¿con quién sería?"
     },
+    "starter": {
+      "en": "Think of a role here you've always been curious about.",
+      "es": "Piensa en un puesto de aquí que siempre te ha dado curiosidad."
+    },
     "followUps": {
       "en": ["What would you change first?"],
       "es": ["¿Qué cambiarías primero?"]
@@ -2459,6 +3159,10 @@
     "text": {
       "en": "What's the best snack for a meeting, and is it okay if it's crunchy?",
       "es": "¿Qué es lo mejor para picar en una reunión, y está bien si hace ruido?"
+    },
+    "starter": {
+      "en": "Rank fruit, cookies, nuts and salty snacks.",
+      "es": "Ordena de mejor a peor: fruta, galletas, frutos secos y snacks salados."
     },
     "followUps": {
       "en": ["Which noisy snack would you still defend?"],
@@ -2474,6 +3178,10 @@
       "en": "What are you learning right now, at work or outside it?",
       "es": "¿Qué estás aprendiendo ahora, en el trabajo o fuera de él?"
     },
+    "starter": {
+      "en": "A language, an app, a recipe, a sport.",
+      "es": "Un idioma, una app, una receta, un deporte."
+    },
     "followUps": {
       "en": ["What's been hardest so far?"],
       "es": ["¿Qué ha sido lo más difícil hasta ahora?"]
@@ -2487,6 +3195,10 @@
     "text": {
       "en": "What's the strangest thing on your desk or in your work bag?",
       "es": "¿Qué es lo más raro que tienes en tu escritorio o en tu mochila de trabajo?"
+    },
+    "starter": {
+      "en": "Open the drawer or bag and pick the oddest thing.",
+      "es": "Abre el cajón o la mochila y elige lo más raro."
     },
     "followUps": {
       "en": ["What's the story behind it?"],
@@ -2502,6 +3214,10 @@
       "en": "What does a really good workday look like for you?",
       "es": "¿Cómo es un día de trabajo realmente bueno para ti?"
     },
+    "starter": {
+      "en": "Start with how it begins: the first hour.",
+      "es": "Empieza por cómo comienza: la primera hora."
+    },
     "followUps": {
       "en": ["What would make that happen more often?"],
       "es": ["¿Qué haría que pasara con más frecuencia?"]
@@ -2515,6 +3231,10 @@
     "text": {
       "en": "If our team had a mascot, what would it be?",
       "es": "Si nuestro equipo tuviera una mascota, ¿cuál sería?"
+    },
+    "starter": {
+      "en": "Pick an animal that fits our vibe.",
+      "es": "Elige un animal que vaya con nuestro estilo."
     },
     "followUps": {
       "en": ["What would its catchphrase be?"],

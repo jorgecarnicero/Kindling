@@ -28,7 +28,7 @@ CATEGORIES = {
 DEPTHS = {"light", "medium", "deep"}
 GROUP_SIZES = {"pair", "small", "party"}
 LANGUAGES = ("en", "es")
-ALLOWED_KEYS = {"id", "category", "depth", "groupSize", "text", "followUps"}
+ALLOWED_KEYS = {"id", "category", "depth", "groupSize", "text", "starter", "followUps"}
 
 DEFAULT_PATH = Path(__file__).resolve().parent.parent / "src" / "data" / "topics.json"
 
@@ -72,6 +72,18 @@ def check_topic(t: object, i: int) -> list[str]:
                 errors.append(f"{where}: text.{lang} is missing or empty")
             elif value != value.strip():
                 errors.append(f"{where}: text.{lang} has leading/trailing spaces")
+
+    starter = t.get("starter")
+    if starter is not None:
+        if not isinstance(starter, dict):
+            errors.append(f"{where}: starter must be an object with {LANGUAGES}")
+        else:
+            for lang in LANGUAGES:
+                value = starter.get(lang)
+                if not isinstance(value, str) or not value.strip():
+                    errors.append(f"{where}: starter.{lang} is missing or empty")
+                elif value != value.strip():
+                    errors.append(f"{where}: starter.{lang} has leading/trailing spaces")
 
     follow = t.get("followUps")
     if follow is not None:
@@ -121,6 +133,8 @@ def main() -> int:
     by_cat = Counter(t["category"] for t in valid)
     by_depth = Counter(t["depth"] for t in valid)
     print(f"OK: {len(data)} topics")
+    with_starter = sum(1 for t in valid if "starter" in t)
+    print(f"  with a spark starter: {with_starter}/{len(valid)}")
     print("  by category: " + ", ".join(f"{c} {by_cat.get(c, 0)}" for c in CATEGORIES))
     print("  by depth:    " + ", ".join(f"{d} {by_depth.get(d, 0)}" for d in ("light", "medium", "deep")))
     return 0

@@ -48,6 +48,7 @@
     "test": "jest",
     "validate:topics": "uv run scripts/validate_topics.py",
     "add:topics": "uv run scripts/add_topics.py",
+    "patch:topics": "uv run scripts/patch_topics.py",
     "make:chime": "uv run scripts/make_chime.py",
     "make:icons": "node scripts/make_icons.mjs"
   },

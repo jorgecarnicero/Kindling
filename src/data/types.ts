@@ -29,6 +29,8 @@ export type Topic = {
   depth: Depth;
   groupSize: GroupSize[];
   text: Localized<string>;
+  /** A concrete way in, revealed by "Need a spark?". */
+  starter?: Localized<string>;
   /** Shown only when someone adds time. */
   followUps?: Localized<string[]>;
 };

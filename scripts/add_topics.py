@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 BANK = Path(__file__).resolve().parent.parent / "src" / "data" / "topics.json"
-KEY_ORDER = ["id", "category", "depth", "groupSize", "text", "followUps"]
+KEY_ORDER = ["id", "category", "depth", "groupSize", "text", "starter", "followUps"]
 
 
 def ordered(topic: dict) -> dict:

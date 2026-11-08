@@ -1,12 +1,19 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
 import { useTheme } from '@/theme';
-import { Sticker } from './Sticker';
+import { FlameIcon } from './icons';
+import { PressableSticker, Sticker } from './Sticker';
 
 type Props = {
   text: string;
   secondary?: string;
+  /** A way in, hidden behind a "Need a spark?" button until tapped. Remount the card (key) per topic. */
+  spark?: string;
+  /** Label for the spark button, e.g. "Need a spark?". */
+  sparkLabel?: string;
+  /** Flame color on the spark button (the category color). */
+  sparkColor?: string;
   /** Shown below the topic after time is added; fades in when it changes. */
   followUp?: string;
   /** Background of the follow-up pill (a soft tint of the category color). */
@@ -18,8 +25,20 @@ type Props = {
 };
 
 /** The one big sticker card in the middle of the screen. */
-export function TopicCard({ text, secondary, followUp, followUpBg, dimmed, corners, children }: Props) {
-  const { colors, fonts, spacing, radius } = useTheme();
+export function TopicCard({
+  text,
+  secondary,
+  spark,
+  sparkLabel,
+  sparkColor,
+  followUp,
+  followUpBg,
+  dimmed,
+  corners,
+  children,
+}: Props) {
+  const { colors, fonts, spacing, radius, sticker } = useTheme();
+  const [sparkOpen, setSparkOpen] = useState(false);
   const long = text.length > 90;
   return (
     <Sticker
@@ -44,6 +63,31 @@ export function TopicCard({ text, secondary, followUp, followUpBg, dimmed, corne
         {secondary ? (
           <Text style={{ color: colors.textMuted, fontFamily: fonts.bodySemi, fontSize: 17, textAlign: 'center' }}>{secondary}</Text>
         ) : null}
+        {spark && !sparkOpen ? (
+          <View style={styles.sparkButton}>
+            <PressableSticker
+              onPress={() => setSparkOpen(true)}
+              accessibilityRole="button"
+              accessibilityLabel={sparkLabel}
+              bg={colors.background}
+              radius={radius.pill}
+              shadow={sticker.shadowSmall}
+              faceStyle={styles.sparkFace}
+              hitSlop={8}
+            >
+              <FlameIcon size={16} color={sparkColor ?? colors.accent} outline={colors.ink} />
+              <Text style={{ color: colors.text, fontFamily: fonts.bodyBold, fontSize: 15 }}>{sparkLabel}</Text>
+            </PressableSticker>
+          </View>
+        ) : null}
+        {spark && sparkOpen ? (
+          <Animated.View entering={FadeIn.duration(400)} style={styles.sparkText} accessibilityLiveRegion="polite">
+            <FlameIcon size={16} color={sparkColor ?? colors.accent} outline={colors.ink} />
+            <Text style={{ flexShrink: 1, color: colors.textMuted, fontFamily: fonts.bodySemi, fontSize: 16, lineHeight: 22, textAlign: 'center' }}>
+              {spark}
+            </Text>
+          </Animated.View>
+        ) : null}
         {followUp ? (
           <Animated.View
             key={followUp}
@@ -65,4 +109,7 @@ export function TopicCard({ text, secondary, followUp, followUpBg, dimmed, corne
 const styles = StyleSheet.create({
   card: { minHeight: 340, justifyContent: 'center' },
   followUp: { alignSelf: 'center', maxWidth: 280, paddingHorizontal: 14, paddingVertical: 10, borderRadius: 12 },
+  sparkButton: { alignSelf: 'center' },
+  sparkFace: { flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 14, minHeight: 40 },
+  sparkText: { flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'center', gap: 8, paddingHorizontal: 4 },
 });
