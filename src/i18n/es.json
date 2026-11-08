@@ -2,8 +2,34 @@
   "home": {
     "tagline": "Elige un ambiente, recibe un tema y mantén viva la conversación.",
     "start": "Empezar",
+    "startCount_one": "Empezar · {{count}} tema",
+    "startCount_other": "Empezar · {{count}} temas",
+    "noTopics": "Todavía no hay temas para esta combinación. Prueba otra profundidad o categoría.",
+    "surprise": "Sorpréndeme",
     "favorites": "Favoritos",
-    "settings": "Ajustes"
+    "settings": "Ajustes",
+    "categories": "¿Qué ambiente buscan?",
+    "categoriesAll": "Si no eliges ninguna, salen todas las categorías.",
+    "categoriesSome_one": "{{count}} categoría elegida",
+    "categoriesSome_other": "{{count}} categorías elegidas",
+    "clear": "Borrar",
+    "depth": "¿Qué tan profundo?"
+  },
+  "categoryHint": {
+    "get_to_know": "Primeras citas, amistades nuevas, colegas nuevos",
+    "deep_talk": "Valores, sueños, miedos",
+    "random_facts": "Un dato sorprendente y luego una pregunta",
+    "stories": "Cuéntame de una vez en que…",
+    "would_you_rather": "Hipótesis y dilemas",
+    "light_debate": "Opiniones divertidas, nunca política",
+    "couples": "La relación y el futuro juntos",
+    "family": "Para todas las edades",
+    "team_building": "Apto para el trabajo e inclusivo"
+  },
+  "depthHint": {
+    "light": "Solo temas ligeros: para cualquiera, en cualquier lugar.",
+    "medium": "Ligeros y medios: algo de confianza personal.",
+    "deep": "Todo, incluidos temas profundos que piden confianza."
   },
   "play": {
     "tapToPause": "Toca la tarjeta para pausar",

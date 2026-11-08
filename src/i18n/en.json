@@ -2,8 +2,34 @@
   "home": {
     "tagline": "Pick a vibe, get a topic, keep the fire going.",
     "start": "Start",
+    "startCount_one": "Start · {{count}} topic",
+    "startCount_other": "Start · {{count}} topics",
+    "noTopics": "No topics match yet. Try another depth or category.",
+    "surprise": "Surprise me",
     "favorites": "Favorites",
-    "settings": "Settings"
+    "settings": "Settings",
+    "categories": "What's the vibe?",
+    "categoriesAll": "Nothing selected plays every category.",
+    "categoriesSome_one": "{{count}} category selected",
+    "categoriesSome_other": "{{count}} categories selected",
+    "clear": "Clear",
+    "depth": "How deep?"
+  },
+  "categoryHint": {
+    "get_to_know": "First dates, new friends, new coworkers",
+    "deep_talk": "Values, dreams, fears",
+    "random_facts": "A surprising fact, then a question",
+    "stories": "Tell me about a time when…",
+    "would_you_rather": "Hypotheticals and dilemmas",
+    "light_debate": "Fun opinions, never politics",
+    "couples": "Your relationship and shared future",
+    "family": "Safe for all ages",
+    "team_building": "Work-safe and inclusive"
+  },
+  "depthHint": {
+    "light": "Light topics only: anyone, anywhere.",
+    "medium": "Light and medium: some personal sharing.",
+    "deep": "Everything, including deep topics that need trust."
   },
   "play": {
     "tapToPause": "Tap the card to pause",

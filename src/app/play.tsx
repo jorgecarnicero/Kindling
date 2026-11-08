@@ -10,6 +10,7 @@ import { QUESTION_DURATION_MS } from '@/config/dev';
 import { topics as allTopics } from '@/data/topics';
 import { favoriteTopics, useFavorites } from '@/store/favorites';
 import { followUpFor } from '@/deck/deck';
+import { parsePlayParams, type PlayParams } from '@/deck/playParams';
 import { useTimesUpFeedback } from '@/feedback/useTimesUpFeedback';
 import { useTimer } from '@/hooks/useTimer';
 import { useTopicDeck } from '@/hooks/useTopicDeck';
@@ -20,19 +21,21 @@ import { useTheme } from '@/theme';
 /** How long auto-advance waits at time's up before drawing the next card. */
 const AUTO_ADVANCE_MS = 5_000;
 
-// `?source=favorites` plays only saved topics (read once when the screen opens).
-// Otherwise draws from every topic until Home gets the category/depth picker.
+// Params come from Home (categories + max depth, or Surprise me) or Favorites; see
+// src/deck/playParams.ts. The setup is read once when the screen opens.
 export default function Play() {
   const { t } = useTranslation();
   const { colors, spacing, fontSize } = useTheme();
   const lang = useAppLanguage();
   const tapToPause = useSettings((s) => s.tapToPause);
   const autoAdvance = useSettings((s) => s.autoAdvance);
-  const { source } = useLocalSearchParams<{ source?: string }>();
-  const [pool] = useState(() =>
-    source === 'favorites' ? favoriteTopics(useFavorites.getState().ids, allTopics) : allTopics,
-  );
-  const deck = useTopicDeck({}, pool);
+  const params = useLocalSearchParams<PlayParams>();
+  const [setup] = useState(() => {
+    const { source, filter } = parsePlayParams(params);
+    const pool = source === 'favorites' ? favoriteTopics(useFavorites.getState().ids, allTopics) : allTopics;
+    return { pool, filter };
+  });
+  const deck = useTopicDeck(setup.filter, setup.pool);
   const timesUp = useTimesUpFeedback();
   const timer = useTimer(QUESTION_DURATION_MS, { onDone: timesUp });
 
