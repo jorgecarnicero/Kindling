@@ -9,7 +9,8 @@ Expo SDK 58 + TypeScript, Expo Router (routes in `src/app/`), npm. Planned: Zust
 - `src/app/` – screens: `index` (welcome), `pick` (categories + depth), `play`, `favorites`, `settings`, `_layout` (Stack, no native headers; loads fonts behind the splash)
 - `src/components/` – shared UI. `Sticker`/`PressableSticker` are the Matchbox building block (outline + solid offset shadow drawn as a real shape, since Android can't do hard colored shadows); `Button`, `ScreenHeader`/`IconButton`, `CategoryTile`, `TopicCard`, `TimerRing` (takes category colors), `CampfireLogo`, `icons`
 - `src/theme/` – `palettes` (day/night), `categoryColor`, `playColors`, `fonts`, `useTheme()` (resolves Auto/Day/Night via the `appearance` setting). A test enforces WCAG AA contrast for text in both modes: keep it passing when changing colors
-- `scripts/make_icons.mjs` – `npm run make:icons` regenerates icon, Android adaptive layers, splash (day/night) and favicon from the campfire SVG (same geometry as `CampfireLogo`)
+- `scripts/make_icons.mjs` – `npm run make:icons` regenerates icon, Android adaptive layers, splash (day/night), favicon and the Play store graphics (`store/`: 512 icon, 1024×500 feature graphic EN/ES) from the campfire SVG (same geometry as `CampfireLogo`). Vector masters of every graphic go to `design/*.svg` (feature graphics embed their fonts); stores/phones need the PNGs
+- `store/listing.md` – Play listing text EN/ES (checked against Play's length limits), data safety and content rating answers, target audience (13+), screenshot plan
 - `src/store/settings.ts` – Zustand + AsyncStorage (`kindling.settings`); add new settings to `DEFAULT_SETTINGS` (the merge fills them in for old saves)
 - `src/i18n/` – i18next; `en.json`/`es.json` must have identical keys (a test enforces it). Every UI string goes through `t()`. `useAppLanguage()` gives the language for topic text.
 - Import with the `@/` alias (maps to `src/`)
