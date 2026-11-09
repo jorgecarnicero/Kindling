@@ -52,10 +52,15 @@ Each category has its own color and its own little flame.
 
 180 topics so far (20 per category), each written in English and in neutral, gender-neutral Spanish, at three depths: light, medium and deep.
 
+## Road trip
+
+For long rides there's a second way to play. Pick one big theme (Friendship, Travel stories, Cringe moments, School days, Childhood, Food, Dream life) and explore it along a road of 8 stops, each a little deeper than the last. Every stop has its own spark. No timer: a passenger taps **Next stop** when the talk fades. Turn on the speaker and the phone reads each stop aloud, so the driver can join in. Finished themes get a check on the list.
+
 ## Little things that matter
 
 - **Day and night.** Bold, playful stickers by day. At night the campfire is lit, with an optional crackling fire in the background.
 - **Your rhythm.** Topics last 30 seconds to 5 minutes, or turn the timer off and just use the cards.
+- **Your own topics.** Write the questions only your group would ask (inside jokes, team classics), with an optional spark and follow-up. They get their own Yours tile and stay on your phone.
 - **Favorites.** Save the topics that worked and play them with your next group, or share one with a friend.
 - **Never stuck.** No repeats in a round. When you've seen them all, shuffle again or mix in another category.
 - **Accessible.** Every gesture has a button, text passes WCAG AA contrast in both themes, and decorative motion stops when Reduce Motion is on (the timer ring keeps moving, since it's how you see the time).
@@ -108,14 +113,15 @@ npm run validate:topics
 
 ```
 src/
-  app/          screens: welcome, pick, play, favorites, settings
+  app/          screens: welcome, pick, play, favorites, settings, yours, topic-editor, trips, trip
   components/   the sticker UI: Sticker, Button, TopicCard, TimerRing, CampfireLogo…
-  data/         topics.json (the topic bank) and its types
+  data/         topics.json (the topic bank), trips.json (Road trip themes) and their types
+  roadtrip/     Road trip rules and the read-aloud voice
   deck/         drawing cards: filters, shuffle, no repeats, follow-ups
   timer/        the countdown, as pure functions of the clock
   feedback/     time's-up vibration and chime, campfire ambience
   i18n/         en.json, es.json
-  store/        settings, favorites, last selection
+  store/        settings, favorites, last selection, your topics, finished trips
   theme/        day and night palettes, category colors
 scripts/        topic tools, sound and icon generators
 assets/         app icon, splash, sounds (generated)

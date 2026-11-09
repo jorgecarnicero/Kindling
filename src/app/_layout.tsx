@@ -56,6 +56,8 @@ export default function RootLayout() {
         <Stack.Screen name="settings" />
         <Stack.Screen name="yours" />
         <Stack.Screen name="topic-editor" />
+        <Stack.Screen name="trips" />
+        <Stack.Screen name="trip" />
       </Stack>
     </ThemeProvider>
   );

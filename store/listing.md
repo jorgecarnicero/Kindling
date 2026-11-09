@@ -38,6 +38,12 @@ Stuck on how to start? Tap "Need a spark?" for a concrete way in. When a topic c
 A TIMER THAT STAYS OUT OF THE WAY
 The timer is a ring that slowly drains around the card, not a ticking clock. Choose 30 seconds to 5 minutes, or turn it off and just use the cards. Time's up is a soft vibration and a gentle chime, never an alarm. Tap the card to pause when the waiter arrives.
 
+ROAD TRIP
+A second way to play for long rides: pick one big theme, like Friendship, Travel stories or Cringe moments, and explore it stop by stop, each a little deeper, each with its own spark. No timer. Turn on read aloud and the driver can join in.
+
+YOUR OWN TOPICS
+Write the questions only your group would ask, with an optional spark and follow-up. They stay on your phone.
+
 DAY AND NIGHT
 Bright, playful stickers by day. At night the campfire is lit, with an optional crackling fire sound in the background.
 
@@ -71,6 +77,12 @@ Nueve categorías, cada una con su color: Romper el hielo, Charla profunda, Dato
 UN TEMPORIZADOR QUE NO ESTORBA
 El tiempo es un anillo que se vacía despacio alrededor de la tarjeta, no un reloj que hace tictac. Elige de 30 segundos a 5 minutos, o desactívalo y usa solo las tarjetas. El fin del tiempo es una vibración suave y un sonido delicado, nunca una alarma. Toca la tarjeta para pausar cuando llega el camarero.
 
+VIAJE
+Otra forma de jugar para trayectos largos: elige un gran tema, como Amistad, Historias de viaje o Momentos de vergüenza, y explóralo parada a parada, cada una un poco más a fondo y con su propia chispa. Sin temporizador. Activa la lectura en voz alta y quien conduce también participa.
+
+TUS TEMAS
+Escribe las preguntas que solo tu grupo haría, con una chispa y una pregunta extra opcionales. Se quedan en tu teléfono.
+
 DE DÍA Y DE NOCHE
 Stickers alegres de día. De noche se enciende la fogata, con un sonido opcional de fuego crepitando de fondo.
 
@@ -99,6 +111,7 @@ Regenerate the icon and feature graphics with `npm run make:icons`.
 4. A topic card with "Need a spark?" opened
 5. Night topic card (deep talk, dusk blue)
 6. Favorites list
+7. Road trip: the theme list with one theme done (check), and a stop with its spark open
 
 ## Data safety form (answers)
 

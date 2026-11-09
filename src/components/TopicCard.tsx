@@ -19,6 +19,8 @@ type Props = {
   /** Background of the follow-up pill (a soft tint of the category color). */
   followUpBg?: string;
   dimmed?: boolean;
+  /** Called when someone opens the spark (road trip reads it aloud). */
+  onSparkOpen?: () => void;
   /** Overlaid on the card's top corners (heart and share); not dimmed when paused. */
   corners?: ReactNode;
   children?: ReactNode;
@@ -34,6 +36,7 @@ export function TopicCard({
   followUp,
   followUpBg,
   dimmed,
+  onSparkOpen,
   corners,
   children,
 }: Props) {
@@ -66,7 +69,10 @@ export function TopicCard({
         {spark && !sparkOpen ? (
           <View style={styles.sparkButton}>
             <PressableSticker
-              onPress={() => setSparkOpen(true)}
+              onPress={() => {
+                setSparkOpen(true);
+                onSparkOpen?.();
+              }}
               accessibilityRole="button"
               accessibilityLabel={sparkLabel}
               bg={colors.background}

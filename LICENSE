@@ -43,6 +43,8 @@ prior written permission:
 
   - The conversation topics, sparks and follow-up questions, in any language
     (src/data/topics.json and any copies or translations of them)
+  - The Road trip themes, stops and sparks, in any language
+    (src/data/trips.json and any copies or translations of them)
   - The app's interface text (src/i18n/*.json)
   - The Kindling logo, app icon, splash images, illustrations and store
     graphics (assets/, design/, store/)

@@ -152,5 +152,27 @@
     "light": "Ligero",
     "medium": "Medio",
     "deep": "Profundo"
+  },
+  "trip": {
+    "title": "Viaje",
+    "subtitle": "Un gran tema para el trayecto. Cada parada va un poco más a fondo.",
+    "welcomeHint": "Elige un tema y explóralo parada a parada",
+    "stops_one": "{{count}} parada",
+    "stops_other": "{{count}} paradas",
+    "surprise": "Elige uno por mí",
+    "stopOf": "Parada {{n}} de {{total}}",
+    "next": "Siguiente parada",
+    "previous": "Atrás",
+    "finish": "Terminar el viaje",
+    "endProgress": "Fin del camino",
+    "endTitle": "Llegaste al final del camino",
+    "endBody": "Exploraste {{theme}} de principio a fin. ¿A dónde ahora?",
+    "another": "Otro tema",
+    "themes": "Todos los temas",
+    "readAloudOn": "Leer las paradas en voz alta",
+    "readAloudOff": "Dejar de leer en voz alta",
+    "readAgain": "Leer otra vez",
+    "sparkLeadIn": "Para arrancar:",
+    "done": "Hecho"
   }
 }

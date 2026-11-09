@@ -152,5 +152,27 @@
     "light": "Light",
     "medium": "Medium",
     "deep": "Deep"
+  },
+  "trip": {
+    "title": "Road trip",
+    "subtitle": "One big theme for the ride. Each stop goes a little deeper.",
+    "welcomeHint": "Pick one theme and explore it, stop by stop",
+    "stops_one": "{{count}} stop",
+    "stops_other": "{{count}} stops",
+    "surprise": "Pick one for us",
+    "stopOf": "Stop {{n}} of {{total}}",
+    "next": "Next stop",
+    "previous": "Back",
+    "finish": "Finish the road",
+    "endProgress": "End of the road",
+    "endTitle": "You made it to the end of the road",
+    "endBody": "You explored {{theme}} all the way. Where to next?",
+    "another": "Another theme",
+    "themes": "All themes",
+    "readAloudOn": "Read stops aloud",
+    "readAloudOff": "Stop reading aloud",
+    "readAgain": "Read it again",
+    "sparkLeadIn": "A way in:",
+    "done": "Done"
   }
 }

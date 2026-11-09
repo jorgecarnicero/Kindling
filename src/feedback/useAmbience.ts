@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { AppState } from 'react-native';
 import { useAudioPlayer } from 'expo-audio';
 import { useTheme } from '@/theme';
+import { useRoadTripActive } from '@/roadtrip/session';
 import { useSettings } from '@/store/settings';
 import { AMBIENCE_LEVEL, ambienceOn } from './ambience';
 import { ensureAudioMode } from './audioMode';
@@ -14,13 +15,14 @@ const FADE_STEPS = 15;
 
 /**
  * Campfire ambience for the whole app. Mount once in the root layout.
- * Fades in/out on changes, pauses in the background, and follows the audio mode
+ * Silent during a road trip round. Fades in/out on changes, pauses in the background, and follows the audio mode
  * (silent on silent/vibrate, mixes with the user's music).
  */
 export function useAmbience() {
   const { mode } = useTheme();
   const pref = useSettings((s) => s.ambience);
   const level = useSettings((s) => s.ambienceVolume);
+  const roadTrip = useRoadTripActive((s) => s.active);
   const player = useAudioPlayer(fire);
   const [foreground, setForeground] = useState(AppState.currentState === 'active');
 
@@ -34,7 +36,8 @@ export function useAmbience() {
     player.loop = true;
   }, [player]);
 
-  const on = ambienceOn(pref, mode) && foreground;
+  // Off during a road trip round: car noise covers it and it would compete with the voice.
+  const on = ambienceOn(pref, mode) && foreground && !roadTrip;
 
   useEffect(() => {
     try {

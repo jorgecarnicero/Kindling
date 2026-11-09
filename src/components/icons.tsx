@@ -94,3 +94,38 @@ export function FlameIcon({ size = 20, color, outline }: IconProps & { outline: 
     </Svg>
   );
 }
+
+/** Speaker; `on` adds sound waves, off adds a cross. */
+export function SpeakerIcon({ size = 22, color, on }: IconProps & { on: boolean }) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round">
+      <Path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill={color} />
+      {on ? (
+        <>
+          <Path d="M15.5 9a4 4 0 0 1 0 6" />
+          <Path d="M18 6.5a7.5 7.5 0 0 1 0 11" />
+        </>
+      ) : (
+        <Path d="M16 9.5l5 5M21 9.5l-5 5" />
+      )}
+    </Svg>
+  );
+}
+
+/** A road running into the distance, for Road trip. */
+export function RoadIcon({ size = 22, color }: IconProps) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={2.2} strokeLinecap="round">
+      <Path d="M9 3L4 21M15 3l5 18" />
+      <Path d="M12 5v2.5M12 11v2.5M12 17v3" />
+    </Svg>
+  );
+}
+
+export function CheckIcon({ size = 22, color }: IconProps) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
+      <Path d="M5 12.5l4.5 4.5L19 7.5" />
+    </Svg>
+  );
+}

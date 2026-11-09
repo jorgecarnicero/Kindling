@@ -1,0 +1,660 @@
+[
+  {
+    "id": "friendship",
+    "color": "#FF8CC6",
+    "title": {
+      "en": "Friendship",
+      "es": "Amistad"
+    },
+    "intro": {
+      "en": "How you found your people, and what keeps them close.",
+      "es": "Cómo encontraste a tu gente y qué te mantiene cerca."
+    },
+    "stops": [
+      {
+        "text": {
+          "en": "How did you meet the oldest friend you still talk to?",
+          "es": "¿Cómo conociste a la amistad más antigua que conservas?"
+        },
+        "spark": {
+          "en": "Where were you, and what was your first impression?",
+          "es": "¿Dónde estaban y cuál fue tu primera impresión?"
+        }
+      },
+      {
+        "text": {
+          "en": "What's the most legendary night (or day) you've had with friends?",
+          "es": "¿Cuál es la noche (o el día) más legendaria que has vivido con amistades?"
+        },
+        "spark": {
+          "en": "Start with how it began: it was supposed to be a normal plan, right?",
+          "es": "Empieza por el principio: se suponía que era un plan normal, ¿verdad?"
+        }
+      },
+      {
+        "text": {
+          "en": "What inside joke still makes you laugh, even if nobody else gets it?",
+          "es": "¿Qué broma interna todavía te hace reír aunque nadie más la entienda?"
+        },
+        "spark": {
+          "en": "Try explaining it. It probably won't work, and that's the fun.",
+          "es": "Intenta explicarla. Seguramente no funcionará, y ahí está la gracia."
+        }
+      },
+      {
+        "text": {
+          "en": "What's the most ridiculous thing you've ever done for a friend?",
+          "es": "¿Qué es lo más ridículo que has hecho por una amistad?"
+        },
+        "spark": {
+          "en": "A drive at 3 a.m., a fake date, a terrible costume…",
+          "es": "Un viaje en coche a las 3 de la mañana, una cita falsa, un disfraz terrible…"
+        }
+      },
+      {
+        "text": {
+          "en": "Tell us about a friendship that started in the most unlikely way.",
+          "es": "Cuenta una amistad que empezó de la forma más improbable."
+        },
+        "spark": {
+          "en": "Someone you didn't like at first, a random seat, a wrong number…",
+          "es": "Alguien que al principio no te caía bien, un asiento al azar, un número equivocado…"
+        }
+      },
+      {
+        "text": {
+          "en": "Which friend has taught you the most, maybe without knowing it?",
+          "es": "¿Qué amistad te ha enseñado más, quizá sin saberlo?"
+        },
+        "spark": {
+          "en": "Think of a habit or a phrase of theirs that you've picked up.",
+          "es": "Piensa en una costumbre o una frase suya que se te pegó."
+        }
+      },
+      {
+        "text": {
+          "en": "What makes a friendship survive distance or long silences?",
+          "es": "¿Qué hace que una amistad sobreviva a la distancia o a los silencios largos?"
+        },
+        "spark": {
+          "en": "Think of a friend you can go months without seeing and pick up right where you left off.",
+          "es": "Piensa en una amistad con la que pasan meses sin verse y retoman como si nada."
+        }
+      },
+      {
+        "text": {
+          "en": "What's something a friend did for you that you've never properly thanked them for?",
+          "es": "¿Qué hizo por ti una amistad que nunca le has agradecido como se merece?"
+        },
+        "spark": {
+          "en": "You don't have to say who. Just tell the moment.",
+          "es": "No hace falta decir quién. Solo cuenta el momento."
+        }
+      }
+    ]
+  },
+  {
+    "id": "travel_stories",
+    "color": "#5BB8FF",
+    "title": {
+      "en": "Travel stories",
+      "es": "Historias de viaje"
+    },
+    "intro": {
+      "en": "The trips that turned into stories.",
+      "es": "Los viajes que se volvieron historias."
+    },
+    "stops": [
+      {
+        "text": {
+          "en": "What's the best thing you've ever eaten on a trip?",
+          "es": "¿Qué es lo más rico que has comido en un viaje?"
+        },
+        "spark": {
+          "en": "Think of a street stall, a gas station or someone's kitchen.",
+          "es": "Piensa en un puesto callejero, una gasolinera o la cocina de alguien."
+        }
+      },
+      {
+        "text": {
+          "en": "What's the worst place you've ever slept while traveling?",
+          "es": "¿Cuál es el peor lugar donde has dormido en un viaje?"
+        },
+        "spark": {
+          "en": "Airports, car seats and dodgy hostels all count.",
+          "es": "Aeropuertos, asientos de coche y hostales dudosos cuentan."
+        }
+      },
+      {
+        "text": {
+          "en": "Tell us about a trip where almost everything went wrong.",
+          "es": "Cuenta un viaje en el que casi todo salió mal."
+        },
+        "spark": {
+          "en": "Start with the moment you realized it was going badly.",
+          "es": "Empieza por el momento en que te diste cuenta de que iba mal."
+        }
+      },
+      {
+        "text": {
+          "en": "Who's the most memorable stranger you've met while traveling?",
+          "es": "¿Quién es la persona desconocida más memorable que conociste viajando?"
+        },
+        "spark": {
+          "en": "What did they say or do that stuck with you?",
+          "es": "¿Qué dijo o hizo que se te quedó grabado?"
+        }
+      },
+      {
+        "text": {
+          "en": "Which place was nothing like you expected?",
+          "es": "¿Qué lugar no se parecía en nada a lo que esperabas?"
+        },
+        "spark": {
+          "en": "Better, worse, or just completely different?",
+          "es": "¿Mejor, peor o simplemente distinto?"
+        }
+      },
+      {
+        "text": {
+          "en": "What's the most spontaneous decision you've ever made on a trip?",
+          "es": "¿Cuál es la decisión más espontánea que has tomado en un viaje?"
+        },
+        "spark": {
+          "en": "A last-minute plan, a wrong turn you kept following, a yes you didn't see coming.",
+          "es": "Un plan de último minuto, un desvío que seguiste, un sí que no tenías previsto."
+        }
+      },
+      {
+        "text": {
+          "en": "Which trip changed how you see something in your everyday life?",
+          "es": "¿Qué viaje cambió tu forma de ver algo de tu vida diaria?"
+        },
+        "spark": {
+          "en": "Food, time, money, family: pick one thing that looked different when you got back.",
+          "es": "Comida, tiempo, dinero, familia: elige una cosa que viste distinta al volver."
+        }
+      },
+      {
+        "text": {
+          "en": "Which trip would you relive exactly as it was, and who would you bring?",
+          "es": "¿Qué viaje volverías a vivir tal cual, y a quién llevarías?"
+        },
+        "spark": {
+          "en": "Or: which trip should this group take next?",
+          "es": "O bien: ¿qué viaje debería hacer este grupo la próxima vez?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cringe",
+    "color": "#FF6B7A",
+    "title": {
+      "en": "Cringe moments",
+      "es": "Momentos de vergüenza"
+    },
+    "intro": {
+      "en": "Laugh now, because it was awful then.",
+      "es": "Ríete ahora, que en su momento fue terrible."
+    },
+    "stops": [
+      {
+        "text": {
+          "en": "What's a word or name you mispronounced for years?",
+          "es": "¿Qué palabra o nombre pronunciaste mal durante años?"
+        },
+        "spark": {
+          "en": "Bonus points if you said it confidently to someone important.",
+          "es": "Puntos extra si lo dijiste con toda seguridad delante de alguien importante."
+        }
+      },
+      {
+        "text": {
+          "en": "What's your version of waving back at someone who wasn't waving at you?",
+          "es": "¿Cuál es tu versión de saludar a alguien que no te estaba saludando?"
+        },
+        "spark": {
+          "en": "Wrong person, wrong chat, wrong door: any small fail counts.",
+          "es": "Persona equivocada, chat equivocado, puerta equivocada: cualquier pequeño fallo vale."
+        }
+      },
+      {
+        "text": {
+          "en": "What's the most embarrassing thing you've done to impress someone?",
+          "es": "¿Qué es lo más vergonzoso que has hecho para impresionar a alguien?"
+        },
+        "spark": {
+          "en": "A crush, someone at work, a new friend's parents…",
+          "es": "Alguien que te gustaba, alguien del trabajo, la familia de una nueva amistad…"
+        }
+      },
+      {
+        "text": {
+          "en": "Tell us about a time you laughed at the worst possible moment.",
+          "es": "Cuenta una vez que te dio la risa en el peor momento posible."
+        },
+        "spark": {
+          "en": "A class, a meeting, a serious speech: where were you?",
+          "es": "Una clase, una reunión, un discurso serio: ¿dónde estabas?"
+        }
+      },
+      {
+        "text": {
+          "en": "What message do you still regret sending?",
+          "es": "¿Qué mensaje todavía te arrepientes de haber enviado?"
+        },
+        "spark": {
+          "en": "You can skip the details; tell us how it felt to hit send.",
+          "es": "Puedes guardarte los detalles; cuenta qué sentiste al darle a enviar."
+        }
+      },
+      {
+        "text": {
+          "en": "What did you think was really cool back then that makes you cringe now?",
+          "es": "¿Qué te parecía lo más genial en su momento y hoy te da vergüenza?"
+        },
+        "spark": {
+          "en": "A haircut, a phase, a catchphrase, an outfit you wore everywhere.",
+          "es": "Un corte de pelo, una etapa, una muletilla, un look que llevabas a todas partes."
+        }
+      },
+      {
+        "text": {
+          "en": "Which embarrassing moment turned into one of your best stories?",
+          "es": "¿Qué momento vergonzoso terminó siendo una de tus mejores anécdotas?"
+        },
+        "spark": {
+          "en": "What changed between wanting to disappear and loving to tell it?",
+          "es": "¿Qué cambió entre querer desaparecer y disfrutar contándolo?"
+        }
+      },
+      {
+        "text": {
+          "en": "When did someone save you from an embarrassing moment, or when did you save someone?",
+          "es": "¿Cuándo alguien te salvó de un momento vergonzoso, o salvaste tú a alguien?"
+        },
+        "spark": {
+          "en": "Small rescues count: a quiet word, a change of subject, a well-timed laugh.",
+          "es": "Los pequeños rescates cuentan: un aviso discreto, un cambio de tema, una risa a tiempo."
+        }
+      }
+    ]
+  },
+  {
+    "id": "school_days",
+    "color": "#2CC7B4",
+    "title": {
+      "en": "School days",
+      "es": "Años de escuela"
+    },
+    "intro": {
+      "en": "Classrooms, break time and the legends of your year.",
+      "es": "Aulas, recreos y las leyendas de tu clase."
+    },
+    "stops": [
+      {
+        "text": {
+          "en": "What was the best and the worst food at your school?",
+          "es": "¿Cuál era la mejor y la peor comida de tu escuela?"
+        },
+        "spark": {
+          "en": "Lunch, the vending machine, the snack someone always shared.",
+          "es": "El comedor, la máquina expendedora, la merienda que alguien siempre compartía."
+        }
+      },
+      {
+        "text": {
+          "en": "Which teacher do you still remember, for good or bad reasons?",
+          "es": "¿Qué docente recuerdas todavía, para bien o para mal?"
+        },
+        "spark": {
+          "en": "Do an impression if you dare.",
+          "es": "Haz una imitación si te atreves."
+        }
+      },
+      {
+        "text": {
+          "en": "What was the wildest rumor that went around your school?",
+          "es": "¿Cuál fue el rumor más loco que corrió por tu escuela?"
+        },
+        "spark": {
+          "en": "Did it turn out to be true?",
+          "es": "¿Resultó ser verdad?"
+        }
+      },
+      {
+        "text": {
+          "en": "Tell us about a time you got in trouble at school (or almost did).",
+          "es": "Cuenta una vez que te metiste en problemas en la escuela (o casi)."
+        },
+        "spark": {
+          "en": "What were you trying to get away with?",
+          "es": "¿Qué intentabas que no se notara?"
+        }
+      },
+      {
+        "text": {
+          "en": "Which school trip or event do you remember best?",
+          "es": "¿Qué excursión o evento escolar recuerdas mejor?"
+        },
+        "spark": {
+          "en": "The bus ride counts: it's often the best part.",
+          "es": "El viaje en autobús cuenta: muchas veces es lo mejor."
+        }
+      },
+      {
+        "text": {
+          "en": "Who were you at school: the quiet one, the joker, the one who organized everything?",
+          "es": "¿Qué papel tenías en clase: quien no hablaba, quien hacía reír, quien lo organizaba todo?"
+        },
+        "spark": {
+          "en": "Would your class describe you the same way?",
+          "es": "¿Tu clase te describiría igual?"
+        }
+      },
+      {
+        "text": {
+          "en": "What did school get completely wrong about what matters in life?",
+          "es": "¿En qué se equivocó por completo la escuela sobre lo que importa en la vida?"
+        },
+        "spark": {
+          "en": "And one thing it got right.",
+          "es": "Y una cosa en la que acertó."
+        }
+      },
+      {
+        "text": {
+          "en": "If you could tell your school-age self one thing, what would it be?",
+          "es": "Si pudieras decirle una cosa a tu yo de la escuela, ¿qué le dirías?"
+        },
+        "spark": {
+          "en": "Pick a specific age first: 8, 13, 17…",
+          "es": "Elige primero una edad concreta: 8, 13, 17…"
+        }
+      }
+    ]
+  },
+  {
+    "id": "childhood",
+    "color": "#6CD47E",
+    "title": {
+      "en": "Childhood",
+      "es": "Infancia"
+    },
+    "intro": {
+      "en": "The kid you were, and what they'd think of you now.",
+      "es": "Quien eras en tu infancia, y qué pensaría de ti hoy."
+    },
+    "stops": [
+      {
+        "text": {
+          "en": "What was your favorite snack or treat as a kid, and is it still good?",
+          "es": "¿Cuál era tu merienda o capricho favorito en la infancia? ¿Sigue estando bueno?"
+        },
+        "spark": {
+          "en": "Describe the packaging: that's often where the memory is.",
+          "es": "Describe el envoltorio: a veces el recuerdo está ahí."
+        }
+      },
+      {
+        "text": {
+          "en": "What game did you play over and over? Explain the rules like we're about to play.",
+          "es": "¿A qué juego jugabas una y otra vez? Explica las reglas como si fuéramos a jugar ahora."
+        },
+        "spark": {
+          "en": "Who always won, and who always cheated?",
+          "es": "¿Quién ganaba siempre y quién hacía trampa?"
+        }
+      },
+      {
+        "text": {
+          "en": "What did you believe as a kid that turned out to be completely wrong?",
+          "es": "¿Qué creías en tu infancia que resultó ser totalmente falso?"
+        },
+        "spark": {
+          "en": "Something an adult told you, or something you made up on your own.",
+          "es": "Algo que te dijo una persona adulta, o algo que inventaste por tu cuenta."
+        }
+      },
+      {
+        "text": {
+          "en": "Which adult did you love visiting, and what made them special?",
+          "es": "¿A qué persona adulta te encantaba visitar y qué la hacía especial?"
+        },
+        "spark": {
+          "en": "What did their house smell or sound like?",
+          "es": "¿A qué olía o cómo sonaba su casa?"
+        }
+      },
+      {
+        "text": {
+          "en": "What were you secretly proud of as a kid, even if nobody noticed?",
+          "es": "¿Qué te llenaba de orgullo en secreto en tu infancia, aunque nadie lo notara?"
+        },
+        "spark": {
+          "en": "A drawing, a trick, a collection, a tiny act of bravery.",
+          "es": "Un dibujo, un truco, una colección, un pequeño acto de valentía."
+        }
+      },
+      {
+        "text": {
+          "en": "Which moment from your childhood would you live again, even for just five minutes?",
+          "es": "¿Qué momento de tu infancia volverías a vivir, aunque fueran solo cinco minutos?"
+        },
+        "spark": {
+          "en": "Pick the season and the time of day first.",
+          "es": "Elige primero la estación del año y la hora del día."
+        }
+      },
+      {
+        "text": {
+          "en": "What did your younger self worry about that you'd love to reassure them about now?",
+          "es": "¿Qué le preocupaba a tu yo de la infancia que hoy te encantaría poder calmar?"
+        },
+        "spark": {
+          "en": "Start with how old you were.",
+          "es": "Empieza por la edad que tenías."
+        }
+      },
+      {
+        "text": {
+          "en": "Which part of the kid you were is still alive in you, and which part do you miss?",
+          "es": "¿Qué parte de quien eras en tu infancia sigue viva en ti, y cuál extrañas?"
+        },
+        "spark": {
+          "en": "Think of something you still do exactly the way you did back then.",
+          "es": "Piensa en algo que sigues haciendo igual que entonces."
+        }
+      }
+    ]
+  },
+  {
+    "id": "food",
+    "color": "#FF8A3D",
+    "title": {
+      "en": "Food",
+      "es": "Comida"
+    },
+    "intro": {
+      "en": "Every plate has a story behind it.",
+      "es": "Cada plato tiene una historia detrás."
+    },
+    "stops": [
+      {
+        "text": {
+          "en": "What food could you eat every week and never get bored of?",
+          "es": "¿Qué comida podrías comer cada semana sin cansarte nunca?"
+        },
+        "spark": {
+          "en": "Your answer can be very fancy or very cheap.",
+          "es": "Tu respuesta puede ser muy elegante o muy barata."
+        }
+      },
+      {
+        "text": {
+          "en": "What's the strangest thing you've ever eaten, and would you eat it again?",
+          "es": "¿Qué es lo más raro que has comido, y lo volverías a comer?"
+        },
+        "spark": {
+          "en": "Where were you, and who talked you into it?",
+          "es": "¿Dónde estabas y quién te convenció?"
+        }
+      },
+      {
+        "text": {
+          "en": "What food did you hate as a kid but love now (or the other way around)?",
+          "es": "¿Qué comida odiabas en tu infancia y ahora te encanta (o al revés)?"
+        },
+        "spark": {
+          "en": "What changed: the recipe or you?",
+          "es": "¿Qué cambió: la receta o tú?"
+        }
+      },
+      {
+        "text": {
+          "en": "Which dish reminds you of one specific person?",
+          "es": "¿Qué plato te recuerda a una persona en concreto?"
+        },
+        "spark": {
+          "en": "Is it how they made it, or when they made it?",
+          "es": "¿Es por cómo lo preparaba o por cuándo lo hacía?"
+        }
+      },
+      {
+        "text": {
+          "en": "What's the best meal of your life, and how much of it was really the company?",
+          "es": "¿Cuál es la mejor comida de tu vida, y cuánto tuvo que ver la compañía?"
+        },
+        "spark": {
+          "en": "Describe the table before the food.",
+          "es": "Describe la mesa antes que la comida."
+        }
+      },
+      {
+        "text": {
+          "en": "If someone in your life could teach you one dish perfectly, who and which dish?",
+          "es": "Si alguien de tu vida pudiera enseñarte un plato a la perfección, ¿quién sería y qué plato?"
+        },
+        "spark": {
+          "en": "What's the secret they'd never write down?",
+          "es": "¿Cuál es el secreto que nunca pondría por escrito?"
+        }
+      },
+      {
+        "text": {
+          "en": "When someone you love is having a hard time, what part does food play?",
+          "es": "Cuando alguien que quieres lo está pasando mal, ¿qué papel juega la comida?"
+        },
+        "spark": {
+          "en": "Think of the last time someone cooked for you because you needed it.",
+          "es": "Piensa en la última vez que alguien cocinó para ti porque lo necesitabas."
+        }
+      },
+      {
+        "text": {
+          "en": "If you could share one more meal with anyone from any time in your life, who would be at the table and what would you eat?",
+          "es": "Si pudieras compartir una comida más con quien quisieras de cualquier momento de tu vida, ¿quién estaría en la mesa y qué comerían?"
+        },
+        "spark": {
+          "en": "Start with the dessert.",
+          "es": "Empieza por el postre."
+        }
+      }
+    ]
+  },
+  {
+    "id": "dream_life",
+    "color": "#7C8BFF",
+    "title": {
+      "en": "Dream life",
+      "es": "Vida soñada"
+    },
+    "intro": {
+      "en": "The life you'd live if nothing held you back.",
+      "es": "La vida que vivirías si nada te frenara."
+    },
+    "stops": [
+      {
+        "text": {
+          "en": "If money didn't matter for a year, what would an ordinary Tuesday look like?",
+          "es": "Si el dinero no importara durante un año, ¿cómo sería un martes cualquiera?"
+        },
+        "spark": {
+          "en": "Walk us through it from the moment you wake up.",
+          "es": "Cuéntalo desde que te despiertas."
+        }
+      },
+      {
+        "text": {
+          "en": "Which city or place would you try living in for six months?",
+          "es": "¿En qué ciudad o lugar probarías a vivir seis meses?"
+        },
+        "spark": {
+          "en": "What kind of place would you live in there: something tiny downtown, a boat, a farm?",
+          "es": "¿En qué tipo de casa vivirías allí: algo diminuto en el centro, un barco, una granja?"
+        }
+      },
+      {
+        "text": {
+          "en": "What skill would you love to learn overnight?",
+          "es": "¿Qué habilidad te encantaría aprender de la noche a la mañana?"
+        },
+        "spark": {
+          "en": "What's the first thing you'd do to show it off?",
+          "es": "¿Qué sería lo primero que harías para lucirte?"
+        }
+      },
+      {
+        "text": {
+          "en": "Which job would you try for one week, just to see what it's like?",
+          "es": "¿Qué trabajo probarías durante una semana, solo para ver cómo es?"
+        },
+        "spark": {
+          "en": "Pick something far from what you do now.",
+          "es": "Elige algo muy lejos de lo que haces ahora."
+        }
+      },
+      {
+        "text": {
+          "en": "Which part of your dream life do you already have today?",
+          "es": "¿Qué parte de tu vida soñada ya tienes hoy?"
+        },
+        "spark": {
+          "en": "Small things count: a routine, a friend, a view.",
+          "es": "Las cosas pequeñas cuentan: una rutina, una amistad, una vista."
+        }
+      },
+      {
+        "text": {
+          "en": "What's a dream you quietly let go of, and how do you feel about it now?",
+          "es": "¿Qué sueño dejaste ir en silencio, y cómo te sientes con eso ahora?"
+        },
+        "spark": {
+          "en": "You can share just the dream, without the why.",
+          "es": "Puedes contar solo el sueño, sin el porqué."
+        }
+      },
+      {
+        "text": {
+          "en": "What's one small step toward the life you want that you could take this year? What's in the way?",
+          "es": "¿Qué pequeño paso hacia la vida que quieres podrías dar este año? ¿Qué te lo impide?"
+        },
+        "spark": {
+          "en": "Make it tiny: something you could do next week.",
+          "es": "Que sea mínimo: algo que podrías hacer la próxima semana."
+        }
+      },
+      {
+        "text": {
+          "en": "When you're very old, what do you hope you'll be glad you did?",
+          "es": "Cuando tengas muchos años, ¿de qué esperas alegrarte de haber hecho?"
+        },
+        "spark": {
+          "en": "Picture yourself telling the story to someone young.",
+          "es": "Imagina que se lo cuentas a alguien joven."
+        }
+      }
+    ]
+  }
+]

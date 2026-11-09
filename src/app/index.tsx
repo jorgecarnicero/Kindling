@@ -12,8 +12,9 @@ import Animated, {
 } from 'react-native-reanimated';
 import { useTranslation } from 'react-i18next';
 import { CampfireLogo } from '@/components/CampfireLogo';
-import { GearIcon, HeartIcon, PencilIcon, PlayIcon } from '@/components/icons';
+import { GearIcon, HeartIcon, PencilIcon, PlayIcon, RoadIcon } from '@/components/icons';
 import { IconButton } from '@/components/ScreenHeader';
+import { PressableSticker } from '@/components/Sticker';
 import { categoryColor, useTheme } from '@/theme';
 
 const PLAY = 184;
@@ -28,10 +29,10 @@ const STARS: [number, number, number][] = [
   [0.4, 200, 2],
 ];
 
-/** Welcome: logo, slogan, Favorites and Settings, and one big pulsing Play. */
+/** Welcome: logo, slogan, Favorites and Settings, one big pulsing Play, and Road trip. */
 export default function Welcome() {
   const { t } = useTranslation();
-  const { colors, fonts, mode, sticker } = useTheme();
+  const { colors, fonts, mode, sticker, radius } = useTheme();
   const insets = useSafeAreaInsets();
   const reduce = useReducedMotion();
   const night = mode === 'night';
@@ -137,6 +138,22 @@ export default function Welcome() {
         </Animated.View>
       </View>
 
+      <View style={styles.roadTrip}>
+        <PressableSticker
+          onPress={() => router.push('/trips')}
+          accessibilityRole="button"
+          accessibilityLabel={t('trip.title')}
+          accessibilityHint={t('trip.welcomeHint')}
+          bg={colors.surface}
+          radius={radius.pill}
+          shadow={sticker.shadowSmall}
+          faceStyle={styles.roadTripFace}
+        >
+          <RoadIcon size={20} color={colors.text} />
+          <Text style={{ color: colors.text, fontFamily: fonts.bodyBold, fontSize: 17 }}>{t('trip.title')}</Text>
+        </PressableSticker>
+      </View>
+
       <Text style={[styles.hint, { color: night ? colors.textMuted : colors.text, fontFamily: fonts.bodySemi }]}>
         {t('welcome.hint')}
       </Text>
@@ -157,4 +174,6 @@ const styles = StyleSheet.create({
   playShadow: { position: 'absolute', left: 8, top: 8, width: PLAY, height: PLAY, borderRadius: PLAY / 2 },
   play: { width: PLAY, height: PLAY, borderRadius: PLAY / 2, alignItems: 'center', justifyContent: 'center' },
   hint: { fontSize: 16, textAlign: 'center' },
+  roadTrip: { alignItems: 'center', marginBottom: 18 },
+  roadTripFace: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingHorizontal: 20, minHeight: 48 },
 });

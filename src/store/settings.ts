@@ -31,6 +31,8 @@ export type Settings = {
   vibrationStrength: VibrationStrength;
   /** At time's up, draw the next card after a few seconds unless someone taps +1 min. */
   autoAdvance: boolean;
+  /** Road trip: read each stop aloud with the phone's voice (the speaker button). */
+  readAloud: boolean;
   language: LanguagePref;
 };
 
@@ -44,6 +46,7 @@ export const DEFAULT_SETTINGS: Settings = {
   vibration: true,
   vibrationStrength: 'soft',
   autoAdvance: false,
+  readAloud: false,
   language: 'system',
 };
 
@@ -75,6 +78,7 @@ export const useSettings = create<SettingsStore>()(
           merged.ambience = DEFAULT_SETTINGS.ambience;
         if (!(AMBIENCE_VOLUMES as readonly string[]).includes(merged.ambienceVolume))
           merged.ambienceVolume = DEFAULT_SETTINGS.ambienceVolume;
+        if (typeof merged.readAloud !== 'boolean') merged.readAloud = DEFAULT_SETTINGS.readAloud;
         return merged;
       },
     },

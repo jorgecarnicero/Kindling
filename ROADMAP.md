@@ -12,9 +12,9 @@ Write your own questions (inside jokes, team questions, family classics), with a
 
 **Fix:** some Spanish category names were cut on narrow phones (single long words). "Conocerse" is now "Romper el hielo" and "¿Qué prefieres?" is now "¿Esto o aquello?", and tiles shrink text slightly instead of cutting.
 
-## 1.2 – Road trip mode
+## 1.2 – Road trip (built, in testing)
 
-Hands-free play: the app reads each topic aloud, with big text and auto-advance, so nobody has to look at the screen.
+A new way to play for long rides: pick one big theme (or let the app pick) and explore it along a road of 8 stops, each a little deeper than the last, and each with its own spark for a concrete way in. A passenger taps "Next stop" when the talk fades; there's no timer. A progress line shows how far you've travelled, and the end of the road offers another theme. An optional speaker button reads each stop aloud with the phone's own voice so the driver can join. The screen stays on and the fire sound rests. First themes, made for friends and full of stories: Friendship, Travel stories, Cringe moments, School days, Childhood, Food, Dream life.
 
 ## Ideas for later
 
