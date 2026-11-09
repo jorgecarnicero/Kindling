@@ -82,7 +82,7 @@ export default function Pick() {
           <Text style={{ color: colors.textMuted, fontFamily: fonts.bodySemi, textAlign: 'center' }}>{t('home.noTopics')}</Text>
         ) : null}
         <View style={[styles.row, { gap: spacing.sm + 2 }]}>
-          <View style={{ flex: 2 }}>
+          <View style={{ flex: 1.6 }}>
             <Button
               big
               label={t('home.startCount', { count })}

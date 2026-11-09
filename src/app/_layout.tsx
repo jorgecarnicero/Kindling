@@ -8,6 +8,7 @@ import {
   BricolageGrotesque_800ExtraBold,
 } from '@expo-google-fonts/bricolage-grotesque';
 import { Figtree_500Medium, Figtree_600SemiBold, Figtree_700Bold, useFonts } from '@expo-google-fonts/figtree';
+import { useAmbience } from '@/feedback/useAmbience';
 import { useSyncI18nLanguage } from '@/i18n';
 import { useTheme } from '@/theme';
 
@@ -17,6 +18,7 @@ SplashScreen.preventAutoHideAsync().catch(() => {});
 export default function RootLayout() {
   const { colors, isDark } = useTheme();
   useSyncI18nLanguage();
+  useAmbience();
   const [fontsLoaded, fontError] = useFonts({
     BricolageGrotesque_600SemiBold,
     BricolageGrotesque_800ExtraBold,

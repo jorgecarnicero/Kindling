@@ -10,7 +10,7 @@ export function followUpFor(topic: Topic, lang: Lang, extensions: number): strin
   return list[(extensions - 1) % list.length];
 }
 
-/** Empty or missing list = no restriction ("Surprise me"). */
+/** Empty or missing list = no restriction (the "Random" button). */
 export type DeckFilter = { categories?: Category[]; depths?: Depth[] };
 
 /**

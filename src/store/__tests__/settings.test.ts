@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { questionDurationMs } from '@/config/dev';
+import { AMBIENCE_LEVEL, ambienceOn } from '@/feedback/ambience';
 import { DEFAULT_SETTINGS, TIMER_OPTIONS, useSettings } from '../settings';
 
 const KEY = 'kindling.settings';
@@ -35,6 +36,28 @@ describe('settings store', () => {
     await AsyncStorage.setItem(KEY, JSON.stringify({ state: { timerSeconds: 0 }, version: 1 }));
     await useSettings.persist.rehydrate();
     expect(useSettings.getState().timerSeconds).toBe(0);
+  });
+
+  it('campfire sound: on at night by default, soft, invalid saves fall back', async () => {
+    expect(DEFAULT_SETTINGS.ambience).toBe('night');
+    expect(DEFAULT_SETTINGS.ambienceVolume).toBe('soft');
+    await AsyncStorage.setItem(
+      KEY,
+      JSON.stringify({ state: { ambience: 'loud-music', ambienceVolume: 11 }, version: 1 }),
+    );
+    await useSettings.persist.rehydrate();
+    expect(useSettings.getState().ambience).toBe('night');
+    expect(useSettings.getState().ambienceVolume).toBe('soft');
+  });
+
+  it('the fire plays only when the setting and mode allow it', () => {
+    expect(ambienceOn('night', 'night')).toBe(true);
+    expect(ambienceOn('night', 'day')).toBe(false);
+    expect(ambienceOn('always', 'day')).toBe(true);
+    expect(ambienceOn('off', 'night')).toBe(false);
+    expect(AMBIENCE_LEVEL.soft).toBeLessThan(AMBIENCE_LEVEL.medium);
+    expect(AMBIENCE_LEVEL.medium).toBeLessThan(AMBIENCE_LEVEL.loud);
+    expect(AMBIENCE_LEVEL.loud).toBeLessThanOrEqual(1);
   });
 
   it('converts the setting to a topic length (0 = off)', () => {

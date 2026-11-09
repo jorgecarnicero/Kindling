@@ -50,6 +50,7 @@
     "add:topics": "uv run scripts/add_topics.py",
     "patch:topics": "uv run scripts/patch_topics.py",
     "make:chime": "uv run scripts/make_chime.py",
+    "make:fire": "uv run scripts/make_fire.py",
     "make:icons": "node scripts/make_icons.mjs"
   },
   "jest": {

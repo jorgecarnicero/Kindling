@@ -24,7 +24,7 @@ import { categoryColor, mix, playColors, useTheme } from '@/theme';
 /** How long auto-advance waits at time's up before drawing the next card. */
 const AUTO_ADVANCE_MS = 5_000;
 
-// Params come from Pick (categories + max depth, or Surprise me) or Favorites; see
+// Params come from Pick (categories + max depth, or Random) or Favorites; see
 // src/deck/playParams.ts. The setup is read once when the screen opens.
 export default function Play() {
   const { t } = useTranslation();

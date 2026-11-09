@@ -12,8 +12,16 @@ export type Appearance = 'auto' | 'day' | 'night';
 export const TIMER_OPTIONS = [30, 60, 120, 180, 300, 0] as const;
 export type TimerSeconds = (typeof TIMER_OPTIONS)[number];
 
+/** Campfire ambience: off, only in night mode (the fire is lit), or always. */
+export const AMBIENCE_OPTIONS = ['off', 'night', 'always'] as const;
+export type Ambience = (typeof AMBIENCE_OPTIONS)[number];
+export const AMBIENCE_VOLUMES = ['soft', 'medium', 'loud'] as const;
+export type AmbienceVolume = (typeof AMBIENCE_VOLUMES)[number];
+
 export type Settings = {
   appearance: Appearance;
+  ambience: Ambience;
+  ambienceVolume: AmbienceVolume;
   /** How long each topic lasts; 0 = no timer. */
   timerSeconds: TimerSeconds;
   /** Tap the card to pause/resume (the Pause button always works). */
@@ -28,6 +36,8 @@ export type Settings = {
 
 export const DEFAULT_SETTINGS: Settings = {
   appearance: 'auto',
+  ambience: 'night',
+  ambienceVolume: 'soft',
   timerSeconds: 60,
   tapToPause: true,
   sound: true,
@@ -61,6 +71,10 @@ export const useSettings = create<SettingsStore>()(
         // Never trust an old or corrupted timer value.
         if (!(TIMER_OPTIONS as readonly number[]).includes(merged.timerSeconds))
           merged.timerSeconds = DEFAULT_SETTINGS.timerSeconds;
+        if (!(AMBIENCE_OPTIONS as readonly string[]).includes(merged.ambience))
+          merged.ambience = DEFAULT_SETTINGS.ambience;
+        if (!(AMBIENCE_VOLUMES as readonly string[]).includes(merged.ambienceVolume))
+          merged.ambienceVolume = DEFAULT_SETTINGS.ambienceVolume;
         return merged;
       },
     },

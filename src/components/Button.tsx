@@ -26,11 +26,18 @@ export function Button({ label, onPress, variant = 'primary', disabled = false, 
       accessibilityHint={accessibilityHint}
       bg={bg}
       radius={radius.md}
-      faceStyle={{ minHeight: big ? 58 : 52, paddingHorizontal: 18, alignItems: 'center', justifyContent: 'center' }}
+      faceStyle={{
+        minHeight: big ? 58 : 52,
+        paddingHorizontal: big ? 10 : 18,
+        paddingVertical: 6,
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
     >
       <Text
         numberOfLines={2}
         adjustsFontSizeToFit
+        minimumFontScale={0.7}
         style={{
           color: fg,
           fontFamily: big || variant !== 'secondary' ? fonts.display : fonts.bodyBold,

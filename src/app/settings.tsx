@@ -6,7 +6,7 @@ import { ScreenHeader } from '@/components/ScreenHeader';
 import { ChoiceRow, Divider, SettingSection, ToggleRow } from '@/components/SettingRow';
 import { useTimesUpFeedback } from '@/feedback/useTimesUpFeedback';
 import type { Appearance, LanguagePref, TimerSeconds } from '@/store/settings';
-import { TIMER_OPTIONS, useSettings } from '@/store/settings';
+import { AMBIENCE_OPTIONS, AMBIENCE_VOLUMES, TIMER_OPTIONS, useSettings } from '@/store/settings';
 import { useTheme } from '@/theme';
 
 export default function Settings() {
@@ -46,6 +46,26 @@ export default function Settings() {
         <SettingSection title={t('settings.sectionAppearance')}>
           <ChoiceRow value={s.appearance} onChange={(v) => s.update({ appearance: v })} options={appearances} />
           <Text style={hint}>{t('settings.appearanceHint')}</Text>
+        </SettingSection>
+
+        <SettingSection title={t('settings.sectionAmbience')}>
+          <ChoiceRow
+            value={s.ambience}
+            onChange={(v) => s.update({ ambience: v })}
+            options={AMBIENCE_OPTIONS.map((a) => ({ value: a, label: t(`settings.ambience_${a}`) }))}
+          />
+          {s.ambience !== 'off' ? (
+            <>
+              <Divider />
+              <ChoiceRow
+                label={t('settings.ambienceVolume')}
+                value={s.ambienceVolume}
+                onChange={(v) => s.update({ ambienceVolume: v })}
+                options={AMBIENCE_VOLUMES.map((v) => ({ value: v, label: t(`settings.volume_${v}`) }))}
+              />
+            </>
+          ) : null}
+          <Text style={hint}>{t('settings.ambienceHint')}</Text>
         </SettingSection>
 
         <SettingSection title={t('settings.sectionTimer')}>
