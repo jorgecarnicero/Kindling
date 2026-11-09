@@ -12,7 +12,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { useTranslation } from 'react-i18next';
 import { CampfireLogo } from '@/components/CampfireLogo';
-import { GearIcon, HeartIcon, PlayIcon } from '@/components/icons';
+import { GearIcon, HeartIcon, PencilIcon, PlayIcon } from '@/components/icons';
 import { IconButton } from '@/components/ScreenHeader';
 import { categoryColor, useTheme } from '@/theme';
 
@@ -42,26 +42,53 @@ export default function Welcome() {
     pulse.value = withRepeat(withTiming(1, { duration: 1200, easing: Easing.inOut(Easing.sin) }), -1, true);
   }, [reduce, pulse]);
   const buttonStyle = useAnimatedStyle(() => ({ transform: [{ scale: 1 + 0.05 * pulse.value }] }));
-  const glowStyle = useAnimatedStyle(() => ({ opacity: 0.5 - 0.38 * pulse.value, transform: [{ scale: 1 + 0.2 * pulse.value }] }));
+  const glowStyle = useAnimatedStyle(() => ({
+    opacity: 0.5 - 0.38 * pulse.value,
+    transform: [{ scale: 1 + 0.2 * pulse.value }],
+  }));
 
   return (
-    <View style={[styles.root, { backgroundColor: colors.welcome, paddingTop: insets.top + 16, paddingBottom: insets.bottom + 28 }]}>
-      <View pointerEvents="none" style={[styles.blob, { left: -60, bottom: -80, width: 300, height: 300, backgroundColor: colors.welcomeBlob }]} />
-      <View pointerEvents="none" style={[styles.blob, { right: -90, top: 300, width: 220, height: 220, backgroundColor: colors.welcomeBlob }]} />
+    <View
+      style={[
+        styles.root,
+        { backgroundColor: colors.welcome, paddingTop: insets.top + 16, paddingBottom: insets.bottom + 28 },
+      ]}
+    >
+      <View
+        pointerEvents="none"
+        style={[styles.blob, { left: -60, bottom: -80, width: 300, height: 300, backgroundColor: colors.welcomeBlob }]}
+      />
+      <View
+        pointerEvents="none"
+        style={[styles.blob, { right: -90, top: 300, width: 220, height: 220, backgroundColor: colors.welcomeBlob }]}
+      />
       {night
         ? STARS.map(([x, y, s], i) => (
             <View
               key={i}
               pointerEvents="none"
-              style={{ position: 'absolute', left: `${x * 100}%`, top: y, width: s, height: s, borderRadius: s, backgroundColor: i === 2 ? colors.sunny : colors.star }}
+              style={{
+                position: 'absolute',
+                left: `${x * 100}%`,
+                top: y,
+                width: s,
+                height: s,
+                borderRadius: s,
+                backgroundColor: i === 2 ? colors.sunny : colors.star,
+              }}
             />
           ))
         : null}
 
       <View style={styles.topBar}>
-        <IconButton label={t('home.favorites')} onPress={() => router.push('/favorites')}>
-          <HeartIcon size={22} color={colors.ink} filled fill={categoryColor.light_debate} />
-        </IconButton>
+        <View style={styles.topLeft}>
+          <IconButton label={t('home.favorites')} onPress={() => router.push('/favorites')}>
+            <HeartIcon size={22} color={colors.ink} filled fill={categoryColor.light_debate} />
+          </IconButton>
+          <IconButton label={t('yours.title')} onPress={() => router.push('/yours')}>
+            <PencilIcon color={colors.text} />
+          </IconButton>
+        </View>
         <IconButton label={t('home.settings')} onPress={() => router.push('/settings')}>
           <GearIcon color={colors.text} />
         </IconButton>
@@ -110,7 +137,9 @@ export default function Welcome() {
         </Animated.View>
       </View>
 
-      <Text style={[styles.hint, { color: night ? colors.textMuted : colors.text, fontFamily: fonts.bodySemi }]}>{t('welcome.hint')}</Text>
+      <Text style={[styles.hint, { color: night ? colors.textMuted : colors.text, fontFamily: fonts.bodySemi }]}>
+        {t('welcome.hint')}
+      </Text>
     </View>
   );
 }
@@ -119,6 +148,7 @@ const styles = StyleSheet.create({
   root: { flex: 1, overflow: 'hidden', paddingHorizontal: 24 },
   blob: { position: 'absolute', borderRadius: 999 },
   topBar: { flexDirection: 'row', justifyContent: 'space-between' },
+  topLeft: { flexDirection: 'row', gap: 10 },
   brand: { alignItems: 'center', marginTop: 28 },
   wordmark: { fontSize: 60, lineHeight: 64, letterSpacing: -1.5, marginTop: 18 },
   slogan: { fontSize: 19, lineHeight: 26, textAlign: 'center', marginTop: 6 },

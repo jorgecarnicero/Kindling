@@ -28,7 +28,8 @@ type Random = () => number;
 export function matches(topic: Topic, filter: DeckFilter): boolean {
   const { categories, depths } = filter;
   if (categories?.length && !categories.includes(topic.category)) return false;
-  if (depths?.length && !depths.includes(topic.depth)) return false;
+  // Your own topics have no depth: they show at any depth setting.
+  if (topic.category !== 'yours' && depths?.length && !depths.includes(topic.depth)) return false;
   return true;
 }
 

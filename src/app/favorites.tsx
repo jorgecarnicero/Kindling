@@ -12,6 +12,7 @@ import { FavoriteButton, ShareButton } from '@/components/TopicActions';
 import { topics } from '@/data/topics';
 import type { Topic } from '@/data/types';
 import { useAppLanguage } from '@/i18n';
+import { useAllTopics, useCustomTopicsHydrated } from '@/store/customTopics';
 import { favoriteTopics, useFavorites, useFavoritesHydrated } from '@/store/favorites';
 import { categoryColor, useTheme } from '@/theme';
 
@@ -21,15 +22,18 @@ export default function Favorites() {
   const insets = useSafeAreaInsets();
   const lang = useAppLanguage();
   const ids = useFavorites((s) => s.ids);
-  const hydrated = useFavoritesHydrated();
+  const all = useAllTopics(topics);
+  const hydrated = useFavoritesHydrated() && useCustomTopicsHydrated();
 
   // Rows are listed from a snapshot taken when the screen opens (once storage has loaded),
   // so un-hearting one by accident doesn't make it vanish; tap the heart again to keep it.
   const [listed, setListed] = useState<Topic[] | null>(null);
   useEffect(() => {
-    if (hydrated) setListed((prev) => prev ?? favoriteTopics(useFavorites.getState().ids, topics));
+    if (hydrated) setListed((prev) => prev ?? favoriteTopics(useFavorites.getState().ids, all));
+    // Snapshot once; `all` is intentionally not a dependency.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hydrated]);
-  const savedCount = favoriteTopics(ids, topics).length;
+  const savedCount = favoriteTopics(ids, all).length;
 
   if (!listed) return <View style={{ flex: 1, backgroundColor: colors.background }} />;
 
@@ -71,7 +75,9 @@ export default function Favorites() {
                     {t(`category.${item.category}`)}
                   </Text>
                 </View>
-                <Text style={{ color: colors.text, fontFamily: fonts.bodySemi, fontSize: 17, lineHeight: 23, marginTop: 4 }}>
+                <Text
+                  style={{ color: colors.text, fontFamily: fonts.bodySemi, fontSize: 17, lineHeight: 23, marginTop: 4 }}
+                >
                   {item.text[lang]}
                 </Text>
                 {saved ? null : (

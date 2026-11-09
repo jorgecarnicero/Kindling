@@ -10,6 +10,7 @@ import { topics } from '@/data/topics';
 import { CATEGORIES, DEPTHS, type Category } from '@/data/types';
 import { matches } from '@/deck/deck';
 import { buildPlayParams, parsePlayParams } from '@/deck/playParams';
+import { useAllTopics, useCustomTopics } from '@/store/customTopics';
 import { useSelection } from '@/store/selection';
 import { useTheme } from '@/theme';
 
@@ -26,10 +27,16 @@ export default function Pick() {
   const { colors, fonts, spacing } = useTheme();
   const insets = useSafeAreaInsets();
   const { categories, maxDepth, toggleCategory, clearCategories, setMaxDepth } = useSelection();
+  const all = useAllTopics(topics);
+  const ownCount = useCustomTopics((s) => s.topics.length);
 
   const params = buildPlayParams(categories, maxDepth);
   const { filter } = parsePlayParams(params);
-  const count = topics.filter((tp) => matches(tp, filter)).length;
+  const count = all.filter((tp) => matches(tp, filter)).length;
+
+  // With no topics of your own yet, the Yours tile opens the place to write one.
+  const onTile = (c: Category) =>
+    c === 'yours' && ownCount === 0 && !categories.includes('yours') ? router.push('/yours') : toggleCategory(c);
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
@@ -39,7 +46,9 @@ export default function Pick() {
         right={
           categories.length ? (
             <Pressable onPress={clearCategories} hitSlop={12} accessibilityRole="button">
-              <Text style={{ color: colors.text, fontFamily: fonts.bodyBold, textDecorationLine: 'underline' }}>{t('home.clear')}</Text>
+              <Text style={{ color: colors.text, fontFamily: fonts.bodyBold, textDecorationLine: 'underline' }}>
+                {t('home.clear')}
+              </Text>
             </Pressable>
           ) : null
         }
@@ -54,9 +63,9 @@ export default function Pick() {
                   key={c}
                   category={c}
                   label={t(`category.${c}`)}
-                  hint={t(`categoryHint.${c}`)}
+                  hint={c === 'yours' && ownCount === 0 ? t('yours.writeFirst') : t(`categoryHint.${c}`)}
                   selected={categories.includes(c)}
-                  onPress={() => toggleCategory(c)}
+                  onPress={() => onTile(c)}
                 />
               ))}
               {row.length === 1 ? <View style={styles.grow} /> : null}
@@ -73,13 +82,24 @@ export default function Pick() {
             onChange={setMaxDepth}
             options={DEPTHS.map((d) => ({ value: d, label: t(`depth.${d}`) }))}
           />
-          <Text style={{ color: colors.textMuted, fontFamily: fonts.bodySemi, fontSize: 14 }}>{t(`depthHint.${maxDepth}`)}</Text>
+          <Text style={{ color: colors.textMuted, fontFamily: fonts.bodySemi, fontSize: 14 }}>
+            {t(`depthHint.${maxDepth}`)}
+          </Text>
         </View>
       </ScrollView>
 
-      <View style={{ paddingHorizontal: spacing.lg - 4, paddingTop: spacing.sm, paddingBottom: insets.bottom + spacing.md, gap: spacing.sm }}>
+      <View
+        style={{
+          paddingHorizontal: spacing.lg - 4,
+          paddingTop: spacing.sm,
+          paddingBottom: insets.bottom + spacing.md,
+          gap: spacing.sm,
+        }}
+      >
         {count === 0 ? (
-          <Text style={{ color: colors.textMuted, fontFamily: fonts.bodySemi, textAlign: 'center' }}>{t('home.noTopics')}</Text>
+          <Text style={{ color: colors.textMuted, fontFamily: fonts.bodySemi, textAlign: 'center' }}>
+            {t('home.noTopics')}
+          </Text>
         ) : null}
         <View style={[styles.row, { gap: spacing.sm + 2 }]}>
           <View style={{ flex: 1.6 }}>

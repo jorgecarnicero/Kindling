@@ -9,8 +9,13 @@ export const CATEGORIES = [
   'couples',
   'family',
   'team_building',
+  // Topics people write themselves (saved on the phone, never in topics.json).
+  'yours',
 ] as const;
 export type Category = (typeof CATEGORIES)[number];
+
+/** Categories that come from the built-in topic bank. */
+export const BANK_CATEGORIES = CATEGORIES.filter((c) => c !== 'yours');
 
 export const DEPTHS = ['light', 'medium', 'deep'] as const;
 export type Depth = (typeof DEPTHS)[number];

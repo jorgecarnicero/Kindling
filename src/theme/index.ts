@@ -73,6 +73,7 @@ export const categoryColor: Record<Category, string> = {
   couples: '#FF8CC6', // rose: affection
   family: '#6CD47E', // leaf: home, growing up
   team_building: '#5BB8FF', // sky: calm, work-friendly
+  yours: '#E3B27D', // kindling wood: the sticks you bring yourself
 };
 
 /** Linear mix of two #RRGGBB colors; t = 0 → a, 1 → b. */

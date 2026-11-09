@@ -26,7 +26,15 @@ export function ShareIcon({ size = 24, color }: IconProps) {
 
 export function GearIcon({ size = 22, color }: IconProps) {
   return (
-    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={2.2} strokeLinecap="round">
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth={2.2}
+      strokeLinecap="round"
+    >
       <Circle cx={12} cy={12} r={3.2} />
       <Path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7" />
     </Svg>
@@ -35,7 +43,16 @@ export function GearIcon({ size = 22, color }: IconProps) {
 
 export function BackIcon({ size = 20, color }: IconProps) {
   return (
-    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round">
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth={2.6}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <Path d="M15 5l-7 7 7 7" />
     </Svg>
   );
@@ -45,6 +62,24 @@ export function PlayIcon({ size = 64, color }: IconProps) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24">
       <Path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill={color} />
+    </Svg>
+  );
+}
+
+export function PencilIcon({ size = 22, color }: IconProps) {
+  return (
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth={2.2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <Path d="M4 20l1-4.5L15.5 5a2.1 2.1 0 0 1 3 3L8 18.5 4 20z" />
+      <Path d="M13.5 7l3 3" />
     </Svg>
   );
 }

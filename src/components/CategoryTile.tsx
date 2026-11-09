@@ -36,7 +36,15 @@ export function CategoryTile({ category, label, hint, selected, onPress }: Props
       >
         <FlameIcon size={20} color={selected || night ? color : '#FFFFFF'} outline={colors.ink} />
       </View>
-      <Text style={[styles.label, { color: selected ? colors.onColor : colors.text, fontFamily: fonts.display }]}>{label}</Text>
+      {/* Labels are short words (a test enforces ≤8 letters); shrink a little rather than cut on very narrow phones. */}
+      <Text
+        numberOfLines={2}
+        adjustsFontSizeToFit
+        minimumFontScale={0.8}
+        style={[styles.label, { color: selected ? colors.onColor : colors.text, fontFamily: fonts.display }]}
+      >
+        {label}
+      </Text>
     </PressableSticker>
   );
 }

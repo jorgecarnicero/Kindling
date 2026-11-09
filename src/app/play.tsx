@@ -17,6 +17,7 @@ import { useTimesUpFeedback } from '@/feedback/useTimesUpFeedback';
 import { useTimer } from '@/hooks/useTimer';
 import { useTopicDeck } from '@/hooks/useTopicDeck';
 import { useAppLanguage } from '@/i18n';
+import { toTopic, useCustomTopics } from '@/store/customTopics';
 import { favoriteTopics, useFavorites } from '@/store/favorites';
 import { useSettings } from '@/store/settings';
 import { categoryColor, mix, playColors, useTheme } from '@/theme';
@@ -41,7 +42,9 @@ export default function Play() {
   const params = useLocalSearchParams<PlayParams>();
   const [setup] = useState(() => {
     const { source, filter } = parsePlayParams(params);
-    const pool = source === 'favorites' ? favoriteTopics(useFavorites.getState().ids, allTopics) : allTopics;
+    // Bank topics plus your own, read once when the screen opens.
+    const everything = [...allTopics, ...useCustomTopics.getState().topics.map(toTopic)];
+    const pool = source === 'favorites' ? favoriteTopics(useFavorites.getState().ids, everything) : everything;
     return { pool, filter };
   });
   const deck = useTopicDeck(setup.filter, setup.pool);

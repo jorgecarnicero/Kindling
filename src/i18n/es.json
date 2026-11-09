@@ -32,7 +32,8 @@
     "light_debate": "Opiniones divertidas, nunca política",
     "couples": "La relación y el futuro juntos",
     "family": "Para todas las edades",
-    "team_building": "Apto para el trabajo e inclusivo"
+    "team_building": "Apto para el trabajo e inclusivo",
+    "yours": "Preguntas que escribiste"
   },
   "depthHint": {
     "light": "Solo temas ligeros: para cualquiera, en cualquier lugar.",
@@ -67,6 +68,31 @@
     "save": "Guardar en favoritos",
     "remove": "Quitar de favoritos",
     "unsavedHint": "Quitado · toca el corazón para conservarlo"
+  },
+  "yours": {
+    "title": "Tus temas",
+    "empty": "Escribe las preguntas que solo tu grupo haría: bromas internas, clásicos del equipo, favoritos de la familia. Se quedan en este teléfono.",
+    "write": "Escribir un tema",
+    "writeFirst": "Escribe el primero",
+    "play": "Jugar tus temas ({{count}})",
+    "editHint": "Abre el tema para editarlo",
+    "hasSpark": "chispa",
+    "hasFollowUp": "pregunta extra",
+    "newTitle": "Tema nuevo",
+    "editTitle": "Editar tema",
+    "question": "Pregunta",
+    "questionPlaceholder": "¿Qué te encantaría preguntarle a todo el mundo aquí?",
+    "spark": "Chispa (opcional)",
+    "sparkHint": "Una forma de arrancar, que aparece al tocar ¿Necesitas una chispa?",
+    "sparkPlaceholder": "Empieza por…",
+    "followUp": "Pregunta extra (opcional)",
+    "followUpHint": "Aparece cuando alguien suma un minuto, para profundizar.",
+    "followUpPlaceholder": "¿Y entonces…?",
+    "save": "Guardar tema",
+    "delete": "Borrar",
+    "cancel": "Cancelar",
+    "deleteTitle": "¿Borrar este tema?",
+    "deleteBody": "Se quitará de tus temas y de tus favoritos."
   },
   "share": {
     "label": "Compartir tema",
@@ -111,15 +137,16 @@
     "timerOffHint": "Sin temporizador, solo tarjetas. Toca Profundizar para una pregunta extra."
   },
   "category": {
-    "get_to_know": "Conocerse",
+    "get_to_know": "Romper el hielo",
     "deep_talk": "Charla profunda",
     "random_facts": "Datos curiosos",
     "stories": "Historias",
-    "would_you_rather": "¿Qué prefieres?",
+    "would_you_rather": "¿Esto o aquello?",
     "light_debate": "Debate ligero",
     "couples": "Parejas",
     "family": "Familia y niños",
-    "team_building": "Trabajo en equipo"
+    "team_building": "Trabajo en equipo",
+    "yours": "Tuyos"
   },
   "depth": {
     "light": "Ligero",

@@ -32,7 +32,8 @@
     "light_debate": "Fun opinions, never politics",
     "couples": "Your relationship and shared future",
     "family": "Safe for all ages",
-    "team_building": "Work-safe and inclusive"
+    "team_building": "Work-safe and inclusive",
+    "yours": "Questions you wrote"
   },
   "depthHint": {
     "light": "Light topics only: anyone, anywhere.",
@@ -67,6 +68,31 @@
     "save": "Save to favorites",
     "remove": "Remove from favorites",
     "unsavedHint": "Removed · tap the heart to keep it"
+  },
+  "yours": {
+    "title": "Your topics",
+    "empty": "Write the questions only your group would ask: inside jokes, team classics, family favorites. They stay on this phone.",
+    "write": "Write a topic",
+    "writeFirst": "Write your own first",
+    "play": "Play your topics ({{count}})",
+    "editHint": "Opens the topic to edit it",
+    "hasSpark": "spark",
+    "hasFollowUp": "follow-up",
+    "newTitle": "New topic",
+    "editTitle": "Edit topic",
+    "question": "Question",
+    "questionPlaceholder": "What would you love to ask everyone here?",
+    "spark": "Spark (optional)",
+    "sparkHint": "A way in, shown when someone taps Need a spark?",
+    "sparkPlaceholder": "Start with…",
+    "followUp": "Follow-up (optional)",
+    "followUpHint": "Shown when someone adds a minute, to go deeper.",
+    "followUpPlaceholder": "And then…?",
+    "save": "Save topic",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "deleteTitle": "Delete this topic?",
+    "deleteBody": "It will be removed from your topics and favorites."
   },
   "share": {
     "label": "Share topic",
@@ -119,7 +145,8 @@
     "light_debate": "Light debate",
     "couples": "Couples",
     "family": "Family and kids",
-    "team_building": "Team building"
+    "team_building": "Team building",
+    "yours": "Yours"
   },
   "depth": {
     "light": "Light",

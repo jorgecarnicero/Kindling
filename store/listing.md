@@ -63,7 +63,7 @@ Toda buena charla empieza pequeña.
 Kindling le da a tu grupo un tema de conversación a la vez, con un temporizador suave, para que la charla nunca se estanque ni se alargue. Elige un ambiente, recibe un tema, conversa hasta que se acabe el tiempo y luego suma un minuto o pasa al siguiente.
 
 ELIGE UN AMBIENTE
-Nueve categorías, cada una con su color: Conocerse, Charla profunda, Datos curiosos, Historias, ¿Qué prefieres?, Debate ligero, Parejas, Familia y niños, y Trabajo en equipo. Combina las que quieras y elige qué tan profundo ir: ligero, medio o profundo.
+Nueve categorías, cada una con su color: Romper el hielo, Charla profunda, Datos curiosos, Historias, ¿Esto o aquello?, Debate ligero, Parejas, Familia y niños, y Trabajo en equipo. Combina las que quieras y elige qué tan profundo ir: ligero, medio o profundo.
 
 ¿NECESITAS UNA CHISPA?
 ¿No sabes cómo empezar? Toca «¿Necesitas una chispa?» y recibe una forma concreta de arrancar. Cuando un tema prende, toca +1 min y una pregunta extra lo lleva más lejos.

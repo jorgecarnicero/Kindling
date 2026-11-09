@@ -19,6 +19,7 @@ Kindling saves a few things **only on your device**, so the app remembers them n
 
 - Your settings (topic time, sound, vibration, appearance, language)
 - The topics you save as favorites
+- The topics you write yourself
 - Your last category and depth choice
 
 This information never leaves your phone. We can't see it, and it isn't shared with anyone. Deleting the app deletes it.
@@ -64,6 +65,7 @@ Kindling guarda algunas cosas **solo en tu dispositivo**, para recordarlas la pr
 
 - Tus ajustes (tiempo por tema, sonido, vibración, aspecto, idioma)
 - Los temas que guardas en favoritos
+- Los temas que escribes tú
 - La última categoría y profundidad que elegiste
 
 Esta información nunca sale de tu teléfono. No podemos verla y no se comparte con nadie. Al borrar la app, se borra también.
