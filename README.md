@@ -174,6 +174,13 @@ npx eas-cli build --platform android --profile preview      # APK to install dir
 npx eas-cli build --platform android --profile production   # .aab for Google Play
 ```
 
+## License
+
+Kindling uses two licenses (details in [LICENSE](LICENSE)):
+
+- **The code is open (MIT).** Learn from it, reuse it, build your own thing with it.
+- **The content is not.** The topics, interface text, logo, artwork, sounds and the Kindling name are all rights reserved. Please don't publish copies of the app or its topics. If you build something with the code, give it your own name and content.
+
 ## Credits
 
 - Fonts: [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) and [Figtree](https://fonts.google.com/specimen/Figtree), both under the SIL Open Font License.

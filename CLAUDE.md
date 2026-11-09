@@ -31,6 +31,9 @@ Chosen redesign (Jorge, 2026-11-08; mockups: https://claude.ai/artifact/SvZrWUet
 - `npm run patch:topics -- patch.json` – sets fields (e.g. `starter`) on existing topics by id; refuses unknown ids and id/category changes
 - `npm run make:chime` – regenerates the time's-up chime (Python via uv)
 
+## License
+Two-part `LICENSE`: code (src/, scripts/, config, tests) is MIT; content and brand are all rights reserved (topics.json, i18n text, logo/icons/art in assets/ design/ store/, sounds, store listing and docs/ text, the Kindling name and slogan). Keep new content files in the reserved list.
+
 ## Git
 Branch per step: `feat/...` for features, `fix/...` for bugs, merged into `main`. Jorge commits; don't commit unless asked.
 

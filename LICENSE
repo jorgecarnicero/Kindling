@@ -1,0 +1,74 @@
+Kindling is licensed in two parts: the source code is open under the MIT License,
+and the app's content and brand are not.
+
+
+PART 1 – SOURCE CODE (MIT License)
+==================================
+
+Applies to everything in this repository except the items listed in Part 2,
+including the source code in src/ and scripts/, the configuration files and the
+tests.
+
+MIT License
+
+Copyright (c) 2026 Jorge Carnicero
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+PART 2 – CONTENT AND BRAND (All rights reserved)
+================================================
+
+Copyright (c) 2026 Jorge Carnicero. All rights reserved.
+
+The following are NOT covered by the MIT License and may not be copied,
+modified, redistributed or used in other apps, products or services without
+prior written permission:
+
+  - The conversation topics, sparks and follow-up questions, in any language
+    (src/data/topics.json and any copies or translations of them)
+  - The app's interface text (src/i18n/*.json)
+  - The Kindling logo, app icon, splash images, illustrations and store
+    graphics (assets/, design/, store/)
+  - The sounds (assets/sounds/), including the chime and campfire ambience
+  - The store listing text and website content (store/, docs/)
+  - The name "Kindling" and the slogan "Every good talk starts small." /
+    "Toda buena charla empieza pequeña." as used for this app
+
+You may view these files on GitHub, and you may run the app built from this
+repository for your own personal, non-commercial use. You may not publish the
+app or any app containing this content (as is or modified) on any store or
+website.
+
+The scripts that generate the sounds and graphics (scripts/) are code and are
+covered by the MIT License in Part 1. The particular files they produce for
+Kindling, and the design choices they encode for the Kindling brand, are covered
+by Part 2.
+
+If you build something with the code, please give it your own name, content
+and artwork.
+
+For permissions, contact: jorgecarniceroprincipe@gmail.com
+
+
+THIRD-PARTY COMPONENTS
+======================
+
+The fonts Bricolage Grotesque and Figtree are used under the SIL Open Font
+License 1.1. Dependencies installed through npm keep their own licenses.
