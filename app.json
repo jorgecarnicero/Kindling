@@ -13,7 +13,6 @@
     },
     "android": {
       "package": "com.jorgecarnicero.kindling",
-      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#FFD23F",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -64,6 +63,12 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d6644cbc-c426-4f32-b8ae-e77042a35551"
+      }
+    },
+    "owner": "jcarnicero"
   }
 }
