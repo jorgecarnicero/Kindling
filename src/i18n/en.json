@@ -174,5 +174,47 @@
     "readAgain": "Read it again",
     "sparkLeadIn": "A way in:",
     "done": "Done"
+  },
+  "me": {
+    "title": "Your character",
+    "open": "Your character",
+    "openHint": "Dress up your character and see what you've found",
+    "found": "{{found}} of {{total}} items found",
+    "scene": "Your character by the fire",
+    "slot": {
+      "skin": "Skin",
+      "hair": "Hair",
+      "hairColor": "Hair color",
+      "hoodie": "Hoodie",
+      "hat": "Hats",
+      "glasses": "Glasses",
+      "hold": "Hold"
+    },
+    "wearing": "Wearing",
+    "tapToWear": "Tap to wear",
+    "new": "New",
+    "newItems": "new items",
+    "locked": "Locked",
+    "unlock": {
+      "trip": "Finish {{theme}}",
+      "trips_one": "Finish {{count}} trip",
+      "trips_other": "Finish {{count}} trips",
+      "days_one": "Play on {{count}} day",
+      "days_other": "Play on {{count}} days"
+    },
+    "reveal": {
+      "scene": "Your character by the fire, wearing {{items}}",
+      "title": "You found something!",
+      "wear_one": "Wear it",
+      "wear_other": "Wear them",
+      "backpack": "See all"
+    },
+    "newHint": "You have new items",
+    "random": "Random look",
+    "make": {
+      "title": "Make your character",
+      "subtitle": "You can change it any time",
+      "done": "Done"
+    }
   }
 }

@@ -122,10 +122,33 @@ export function RoadIcon({ size = 22, color }: IconProps) {
   );
 }
 
+export function LockIcon({ size = 22, color }: IconProps) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={2.4} strokeLinecap="round">
+      <Path d="M6.5 11h11a1.5 1.5 0 0 1 1.5 1.5v6A2.5 2.5 0 0 1 16.5 21h-9A2.5 2.5 0 0 1 5 18.5v-6A1.5 1.5 0 0 1 6.5 11z" />
+      <Path d="M8 11V8a4 4 0 0 1 8 0v3" />
+    </Svg>
+  );
+}
+
 export function CheckIcon({ size = 22, color }: IconProps) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
       <Path d="M5 12.5l4.5 4.5L19 7.5" />
+    </Svg>
+  );
+}
+
+/** A die showing five: "random". */
+export function DiceIcon({ size = 22, color }: IconProps) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={2.4} strokeLinejoin="round">
+      <Path d="M7 3.5h10A3.5 3.5 0 0 1 20.5 7v10a3.5 3.5 0 0 1-3.5 3.5H7A3.5 3.5 0 0 1 3.5 17V7A3.5 3.5 0 0 1 7 3.5z" />
+      <Circle cx={8.5} cy={8.5} r={1.4} fill={color} stroke="none" />
+      <Circle cx={15.5} cy={8.5} r={1.4} fill={color} stroke="none" />
+      <Circle cx={12} cy={12} r={1.4} fill={color} stroke="none" />
+      <Circle cx={8.5} cy={15.5} r={1.4} fill={color} stroke="none" />
+      <Circle cx={15.5} cy={15.5} r={1.4} fill={color} stroke="none" />
     </Svg>
   );
 }

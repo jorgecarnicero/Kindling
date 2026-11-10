@@ -174,5 +174,47 @@
     "readAgain": "Leer otra vez",
     "sparkLeadIn": "Para arrancar:",
     "done": "Hecho"
+  },
+  "me": {
+    "title": "Tu personaje",
+    "open": "Tu personaje",
+    "openHint": "Viste a tu personaje y mira lo que has encontrado",
+    "found": "{{found}} de {{total}} objetos encontrados",
+    "scene": "Tu personaje junto al fuego",
+    "slot": {
+      "skin": "Piel",
+      "hair": "Pelo",
+      "hairColor": "Color de pelo",
+      "hoodie": "Sudadera",
+      "hat": "Gorros",
+      "glasses": "Gafas",
+      "hold": "En la mano"
+    },
+    "wearing": "Puesto",
+    "tapToWear": "Toca para ponértelo",
+    "new": "Nuevo",
+    "newItems": "objetos nuevos",
+    "locked": "Bloqueado",
+    "unlock": {
+      "trip": "Termina {{theme}}",
+      "trips_one": "Termina {{count}} viaje",
+      "trips_other": "Termina {{count}} viajes",
+      "days_one": "Juega {{count}} día",
+      "days_other": "Juega {{count}} días distintos"
+    },
+    "reveal": {
+      "scene": "Tu personaje junto al fuego, con {{items}}",
+      "title": "¡Encontraste algo!",
+      "wear_one": "Póntelo",
+      "wear_other": "Póntelos",
+      "backpack": "Ver todo"
+    },
+    "newHint": "Tienes objetos nuevos",
+    "random": "Aspecto al azar",
+    "make": {
+      "title": "Crea tu personaje",
+      "subtitle": "Puedes cambiarlo cuando quieras",
+      "done": "Listo"
+    }
   }
 }

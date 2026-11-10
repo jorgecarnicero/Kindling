@@ -19,6 +19,7 @@ import { useTopicDeck } from '@/hooks/useTopicDeck';
 import { useAppLanguage } from '@/i18n';
 import { toTopic, useCustomTopics } from '@/store/customTopics';
 import { favoriteTopics, useFavorites } from '@/store/favorites';
+import { recordPlayDay } from '@/store/profile';
 import { useSettings } from '@/store/settings';
 import { categoryColor, mix, playColors, useTheme } from '@/theme';
 
@@ -49,6 +50,10 @@ export default function Play() {
   });
   const deck = useTopicDeck(setup.filter, setup.pool);
   const timesUp = useTimesUpFeedback();
+  // Playing today counts as a day played (unlocks some character items).
+  useEffect(() => {
+    recordPlayDay();
+  }, []);
   const timer = useTimer(questionDurationMs(timerSeconds), { onDone: timesUp, enabled: !untimed });
 
   const next = () => {

@@ -58,6 +58,8 @@ export default function RootLayout() {
         <Stack.Screen name="topic-editor" />
         <Stack.Screen name="trips" />
         <Stack.Screen name="trip" />
+        <Stack.Screen name="backpack" />
+        <Stack.Screen name="make-character" />
       </Stack>
     </ThemeProvider>
   );

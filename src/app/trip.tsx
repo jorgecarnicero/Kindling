@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useKeepAwake } from 'expo-keep-awake';
+import Animated, { ZoomIn } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
+import { Character } from '@/characters/Character';
+import type { Item } from '@/characters/catalog';
+import { FoundCard } from '@/characters/FoundCard';
+import { unlockedBetween } from '@/characters/unlocks';
 import { Button } from '@/components/Button';
 import { SpeakerIcon } from '@/components/icons';
 import { IconButton, ScreenHeader } from '@/components/ScreenHeader';
@@ -12,6 +17,7 @@ import { useAppLanguage } from '@/i18n';
 import { clampStop, isEndOfRoad, randomTrip, sparkScript, stopScript, tripById, trips } from '@/roadtrip/roadTrip';
 import { useRoadTripActive } from '@/roadtrip/session';
 import { useSpeech } from '@/roadtrip/useSpeech';
+import { recordPlayDay, useLook, useProfile } from '@/store/profile';
 import { useSettings } from '@/store/settings';
 import { useTrips } from '@/store/trips';
 import { mix, useTheme } from '@/theme';
@@ -28,11 +34,19 @@ export default function TripScreen() {
   const lang = useAppLanguage();
   const { id } = useLocalSearchParams<{ id?: string }>();
   const trip = tripById(id) ?? trips[0];
-  const [stop, setStop] = useState(0);
+  // The stop belongs to a theme: when "Another theme" swaps the theme, the stop is 0 right
+  // away (a stale end-of-road stop would mark the new theme done before it's played).
+  const [at, setAt] = useState({ trip: trip.id, stop: 0 });
+  const stop = at.trip === trip.id ? at.stop : 0;
   const readAloud = useSettings((s) => s.readAloud);
   const update = useSettings((s) => s.update);
   const speech = useSpeech(lang);
+  const look = useLook();
   useKeepAwake();
+  // A day on the road counts as a day played (unlocks some character items).
+  useEffect(() => {
+    recordPlayDay();
+  }, []);
 
   const setRoadTripActive = useRoadTripActive((s) => s.setActive);
   useEffect(() => {
@@ -40,16 +54,27 @@ export default function TripScreen() {
     return () => setRoadTripActive(false);
   }, [setRoadTripActive]);
 
-  // A new theme (Another theme) starts at the first stop.
-  useEffect(() => setStop(0), [trip.id]);
+  // Items found at the end of this theme (cleared when another theme starts).
+  const [found, setFound] = useState<Item[]>([]);
+  useEffect(() => {
+    setFound([]);
+  }, [trip.id]);
 
   const end = isEndOfRoad(trip, stop);
   const total = trip.stops.length;
+  /** The dot your character stands on: the current stop, or the last one at the end. */
+  const here = Math.min(stop, total - 1);
 
-  // Reaching the end of the road marks the theme as done on the theme list.
+  // Reaching the end of the road marks the theme as done on the theme list, and shows
+  // any character items that finishing it just unlocked.
   const markCompleted = useTrips((s) => s.markCompleted);
   useEffect(() => {
-    if (end) markCompleted(trip.id);
+    if (!end) return;
+    const daysPlayed = useProfile.getState().daysPlayed;
+    const before = useTrips.getState().completed;
+    markCompleted(trip.id);
+    const after = useTrips.getState().completed;
+    setFound(unlockedBetween({ completedTrips: before, daysPlayed }, { completedTrips: after, daysPlayed }));
   }, [end, trip.id, markCompleted]);
 
   const read = () =>
@@ -62,7 +87,7 @@ export default function TripScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [readAloud, stop, trip.id, lang]);
 
-  const go = (to: number) => setStop(clampStop(trip, to));
+  const go = (to: number) => setAt({ trip: trip.id, stop: clampStop(trip, to) });
   const night = mode === 'night';
   const screen = night ? mix(trip.color, colors.background, 0.8) : trip.color;
   /** Progress line color: ink by day, cream at night (ink would vanish on the dark screen). */
@@ -88,16 +113,24 @@ export default function TripScreen() {
               {i > 0 ? (
                 <View style={[styles.line, { backgroundColor: i <= stop ? fg : mix(fg, screen, 0.6) }]} />
               ) : null}
-              <View
-                style={[
-                  styles.dot,
-                  {
-                    borderColor: fg,
-                    backgroundColor: i < stop || end ? fg : i === stop ? colors.sunny : colors.surface,
-                    transform: [{ scale: i === stop && !end ? 1.35 : 1 }],
-                  },
-                ]}
-              />
+              <View>
+                <View
+                  style={[
+                    styles.dot,
+                    {
+                      borderColor: fg,
+                      backgroundColor: i < stop || end ? fg : i === stop ? colors.sunny : colors.surface,
+                      transform: [{ scale: i === stop && !end ? 1.35 : 1 }],
+                    },
+                  ]}
+                />
+                {i === here ? (
+                  // Your character walks the road with you, one hop per stop.
+                  <Animated.View key={`${trip.id}-${stop}`} entering={ZoomIn.springify().damping(12)} style={styles.rider}>
+                    <Character look={look} size={HEAD} crop="head" ink={colors.ink} />
+                  </Animated.View>
+                ) : null}
+              </View>
             </View>
           ))}
         </View>
@@ -110,7 +143,12 @@ export default function TripScreen() {
       </View>
 
       <View style={[styles.center, { paddingHorizontal: spacing.lg - 4 }]}>
-        {end ? (
+        {end && found.length ? (
+          // Scrolls only if it still doesn't fit (very short screens, large text).
+          <ScrollView contentContainerStyle={styles.foundScroll} showsVerticalScrollIndicator={false}>
+            <FoundCard items={found} />
+          </ScrollView>
+        ) : end ? (
           <TopicCard text={t('trip.endTitle')} secondary={t('trip.endBody', { theme: trip.title[lang] })} />
         ) : (
           <TopicCard
@@ -174,10 +212,16 @@ export default function TripScreen() {
   );
 }
 
+/** Height of your character's head over the progress dots. */
+const HEAD = 30;
+const HEAD_W = (HEAD * 112) / 118;
+
 const styles = StyleSheet.create({
   root: { flex: 1 },
   center: { flex: 1, justifyContent: 'center' },
-  progress: { paddingTop: 12 },
+  foundScroll: { flexGrow: 1, justifyContent: 'center', paddingVertical: 12 },
+  progress: { paddingTop: 12 + HEAD + 4 },
+  rider: { position: 'absolute', bottom: 18, left: (14 - HEAD_W) / 2 },
   dots: { flexDirection: 'row', alignItems: 'center' },
   dotCell: { flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end' },
   firstDot: { flex: 0 },

@@ -11,13 +11,18 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import { useTranslation } from 'react-i18next';
+import { Character } from '@/characters/Character';
 import { CampfireLogo } from '@/components/CampfireLogo';
 import { GearIcon, HeartIcon, PencilIcon, PlayIcon, RoadIcon } from '@/components/icons';
 import { IconButton } from '@/components/ScreenHeader';
 import { PressableSticker } from '@/components/Sticker';
+import { newItems } from '@/characters/unlocks';
+import { useLook, useProfile, useProgress } from '@/store/profile';
 import { categoryColor, useTheme } from '@/theme';
 
 const PLAY = 184;
+/** The character portrait button, same size as the other top buttons. */
+const AVATAR = 46;
 
 /** A few fixed stars for the night sky (x, y, size), in a 390-wide frame. */
 const STARS: [number, number, number][] = [
@@ -36,6 +41,13 @@ export default function Welcome() {
   const insets = useSafeAreaInsets();
   const reduce = useReducedMotion();
   const night = mode === 'night';
+  const look = useLook();
+  const seen = useProfile((s) => s.seen);
+  const progress = useProgress();
+  const created = useProfile((s) => s.created);
+  const hasNew = newItems(progress, seen).length > 0;
+  // Until the character is made, the head button opens "Make your character" and shows a dot.
+  const dot = !created || hasNew;
 
   const pulse = useSharedValue(0);
   useEffect(() => {
@@ -90,9 +102,30 @@ export default function Welcome() {
             <PencilIcon color={colors.text} />
           </IconButton>
         </View>
-        <IconButton label={t('home.settings')} onPress={() => router.push('/settings')}>
-          <GearIcon color={colors.text} />
-        </IconButton>
+        <View style={styles.topLeft}>
+          <View>
+            <PressableSticker
+              onPress={() => router.push(created ? '/backpack' : '/make-character')}
+              accessibilityRole="button"
+              accessibilityLabel={!created ? t('me.make.title') : hasNew ? `${t('me.open')}, ${t('me.newHint')}` : t('me.open')}
+              // A sky behind your character: light blue by day, indigo at night.
+              bg={night ? colors.surface : colors.background}
+              radius={radius.md}
+              shadow={sticker.shadowSmall}
+              faceStyle={styles.avatar}
+              hitSlop={6}
+            >
+              {/* Fills the space inside the outline; the shoulders run off the bottom edge. */}
+              <Character look={look} size={AVATAR - 2 * sticker.border + 2} crop="portrait" ink={colors.ink} />
+            </PressableSticker>
+            {dot ? (
+              <View pointerEvents="none" style={[styles.newDot, { backgroundColor: colors.accent, borderColor: colors.ink }]} />
+            ) : null}
+          </View>
+          <IconButton label={t('home.settings')} onPress={() => router.push('/settings')}>
+            <GearIcon color={colors.text} />
+          </IconButton>
+        </View>
       </View>
 
       <View style={styles.brand}>
@@ -166,6 +199,8 @@ const styles = StyleSheet.create({
   blob: { position: 'absolute', borderRadius: 999 },
   topBar: { flexDirection: 'row', justifyContent: 'space-between' },
   topLeft: { flexDirection: 'row', gap: 10 },
+  avatar: { width: AVATAR, height: AVATAR, overflow: 'hidden', alignItems: 'center', justifyContent: 'flex-end' },
+  newDot: { position: 'absolute', top: -4, right: -4, width: 16, height: 16, borderRadius: 8, borderWidth: 2.5 },
   brand: { alignItems: 'center', marginTop: 28 },
   wordmark: { fontSize: 60, lineHeight: 64, letterSpacing: -1.5, marginTop: 18 },
   slogan: { fontSize: 19, lineHeight: 26, textAlign: 'center', marginTop: 6 },
