@@ -79,7 +79,7 @@ html[data-lang="en"] .l-es, html[data-lang="es"] .l-en { display: none !importan
 .q { font-family: var(--display); font-size: clamp(25px, 2.8vw, 33px); line-height: 1.12; margin-top: 4px; }
 .follow { color: #C2410C; font-weight: 700; font-size: 19px; line-height: 1.35; opacity: 0; transform: translateY(6px); transition: opacity .5s, transform .5s; }
 .follow.on { opacity: 1; transform: none; }
-.spark { margin-top: auto; align-self: flex-start; display: grid; gap: 8px; }
+.spark { margin-top: auto; align-self: center; display: grid; justify-items: center; gap: 8px; text-align: center; }
 .spark button { border: 3px solid var(--ink); border-radius: 999px; background: var(--paper); padding: 4px 14px; font-weight: 700; font-size: 14px; box-shadow: 3px 3px 0 var(--ink); }
 .spark p { font-size: 16px; font-weight: 600; color: var(--ink-soft); max-width: 40ch; }
 .paused { position: absolute; top: 22px; right: 22px; font-weight: 700; font-size: 14px; background: var(--ink); color: var(--paper); border-radius: 999px; padding: 2px 12px; }
@@ -456,7 +456,7 @@ footer .fine { margin-top: 18px; font-size: 14px; }
   const qEl = document.getElementById('q'), fEl = document.getElementById('follow'), chip = document.getElementById('chip');
   const sparkBtn = document.getElementById('sparkbtn'), sparkEl = document.getElementById('spark');
   const controls = document.getElementById('controls'), pausedEl = document.getElementById('paused');
-  let i = 0, elapsed = 0, last = 0, running = false, done = false, deeper = false, raf = 0;
+  let i = Math.floor(Math.random() * TOPICS.length), elapsed = 0, last = 0, running = false, done = false, deeper = false, raf = 0;
 
   function sizeRing() {
     const w = ring.clientWidth, h = ring.clientHeight;
