@@ -1,0 +1,565 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<style>
+/* site bar: back to the Kindling website */
+.sitebar { background: #1E1B3A; color: #FFF4E6; font: 700 15px "Figtree", system-ui, sans-serif; }
+.sitebar .in { max-width: 1120px; margin: 0 auto; padding: 10px max(16px, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: center; }
+.sitebar a { color: #FFF4E6; text-decoration: none; }
+.sitebar a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.sitebar .home { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; font-size: 18px; margin-right: auto; }
+.cta .dl { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 18px; }
+.cta .dl a, .cta .dl span { display: inline-flex; align-items: center; min-height: 52px; padding: 10px 22px; border: 4px solid #0D0C22; border-radius: 16px; box-shadow: 5px 5px 0 #0D0C22; background: #FFD23F; color: #1E1B3A; font: 700 17px "Figtree", system-ui, sans-serif; text-decoration: none; }
+.cta .dl span { background: transparent; color: #C3BEE6; border: 4px dashed #C3BEE6; box-shadow: none; }
+.cta .dl a:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 #0D0C22; }
+</style></head><body>
+<title>Kindling 1.0</title>
+<meta name="description" content="What’s new in Kindling 1.0: 180 topics in nine vibes, a gentle timer ring, sparks and follow-ups.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M24 96L92 80M96 96L28 80' stroke='%231E1B3A' stroke-width='17' stroke-linecap='round'/%3E%3Cpath d='M24 96L92 80M96 96L28 80' stroke='%23A86B3C' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M60 14c11 14 24 23 24 42 0 15-11 26-24 26S36 71 36 56c0-11 8-17 12-26 2 8 6 12 11 12 0-10-4-18 1-28z' fill='%23FF6B35' stroke='%231E1B3A' stroke-width='4.5' stroke-linejoin='round'/%3E%3Cpath d='M60 52c5 6 10 10 10 17 0 7-5 11-10 11s-10-4-10-11c0-7 5-11 10-17z' fill='%23FFD23F' stroke='%231E1B3A' stroke-width='3.5'/%3E%3C/svg%3E">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@500;600;700&display=swap">
+<style>
+/* Layout: the page runs like the app on Auto. It opens on the flame-orange welcome screen with a working card,
+   spends the day on sky (the nine vibes, the flow, the film), and the rest of the update sits at night, where the fire is lit. */
+:root {
+  --sky: #DCEBFF; --ink: #1E1B3A; --flame: #FF6B35; --sunny: #FFD23F; --paper: #FFFFFF;
+  --night: #1B1A3A; --night-card: #2E2C5E; --night-ink: #0D0C22; --cream: #FFF4E6;
+  --ember: #FF8A3D; --gold: #FFC857; --lav: #C3BEE6; --ink-soft: #4A4670;
+  --display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+.hero .wrap > div, .film > div { min-width: 0; }
+body { margin: 0; background: var(--sky); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; font-weight: 500; }
+h1, h2, h3 { font-family: var(--display); font-weight: 800; text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.sticker { border: 4px solid var(--ink); border-radius: 22px; box-shadow: 6px 6px 0 var(--ink); background: var(--paper); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+button { font: inherit; color: inherit; cursor: pointer; }
+
+/* ---------- hero (the welcome screen) ---------- */
+.hero { background: var(--flame); padding-block: 56px 80px; border-bottom: 5px solid var(--ink); }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 26px; }
+.brand .logo { width: 64px; height: 64px; background: var(--sunny); border: 4px solid var(--ink); border-radius: 20px; box-shadow: 4px 4px 0 var(--ink); display: grid; place-items: center; }
+.brand .logo svg { width: 50px; height: 50px; }
+.ver { display: inline-flex; align-items: center; background: var(--paper); border: 3px solid var(--ink); border-radius: 999px; padding: 4px 14px; font-weight: 700; font-size: 15px; box-shadow: 3px 3px 0 var(--ink); transform: rotate(-2deg); }
+.hero h1 { font-size: clamp(72px, 12.5vw, 160px); line-height: 0.88; color: var(--paper); -webkit-text-stroke: 5px var(--ink); paint-order: stroke fill; text-shadow: 7px 7px 0 var(--ink); letter-spacing: -0.035em; }
+.hero .slogan { font-family: var(--display); font-size: clamp(26px, 3.4vw, 36px); line-height: 1.1; margin-top: 22px; }
+.hero .lede { font-size: 20px; line-height: 1.45; max-width: 34ch; margin-top: 16px; font-weight: 600; }
+.hero .lede-es { font-size: 16px; margin-top: 10px; max-width: 44ch; color: #3A2016; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.facts span { background: var(--paper); border: 3px solid var(--ink); border-radius: 12px; padding: 5px 12px; font-weight: 700; font-size: 14px; box-shadow: 3px 3px 0 var(--ink); }
+
+/* phone */
+.phone { width: 310px; max-width: 100%; aspect-ratio: 9 / 19; border: 5px solid var(--ink); border-radius: 44px; background: var(--ink); padding: 9px; box-shadow: 10px 10px 0 var(--ink); position: relative; margin-inline: auto; }
+.screen { border-radius: 34px; height: 100%; overflow: hidden; display: flex; flex-direction: column; padding: 30px 16px 18px; gap: 12px; position: relative; transition: background-color .35s ease; }
+.ibtn { width: 34px; height: 34px; border-radius: 10px; border: 3px solid var(--ink); background: var(--paper); box-shadow: 2px 2px 0 var(--ink); display: grid; place-items: center; flex: none; }
+.ibtn.round { border-radius: 50%; }
+.ibtn svg { width: 16px; height: 16px; }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 5px; background: var(--paper); border: 2.5px solid var(--ink); border-radius: 999px; padding: 3px 10px 3px 7px; font-weight: 700; font-size: 12px; white-space: nowrap; }
+.chip svg { width: 13px; height: 13px; }
+.btn { border: 3px solid var(--ink); border-radius: 14px; box-shadow: 3px 3px 0 var(--ink); text-align: center; font-weight: 700; font-size: 14px; padding: 9px 8px; background: var(--paper); line-height: 1.2; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.hint { text-align: center; font-size: 12px; font-weight: 600; min-height: 1.3em; }
+
+/* the working card with its ring */
+.stage { flex: 1; display: grid; align-content: center; }
+.ringwrap { position: relative; padding: 9px; }
+.ringwrap svg.ring { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.card { position: relative; background: var(--paper); border: 3.5px solid var(--ink); border-radius: 18px; box-shadow: 5px 5px 0 var(--ink); padding: 14px 14px 16px; min-height: 236px; display: flex; flex-direction: column; gap: 10px; cursor: pointer; text-align: left; width: 100%; }
+.card .corner { display: flex; justify-content: space-between; }
+.card .corner svg { width: 18px; height: 18px; }
+.card .q { font-family: var(--display); font-size: 21px; line-height: 1.12; text-align: center; margin-block: auto; }
+.card .follow { font-family: var(--display); font-size: 15px; line-height: 1.2; text-align: center; padding: 7px 10px; border-radius: 12px; }
+.card .spark { font-size: 12px; line-height: 1.35; font-weight: 600; border: 2.5px solid var(--ink); border-radius: 12px; padding: 7px 9px; background: #FFF7E0; }
+.sparkbtn { align-self: center; border: 2.5px solid var(--ink); border-radius: 999px; background: var(--paper); padding: 4px 12px; font-weight: 700; font-size: 12px; box-shadow: 2px 2px 0 var(--ink); }
+.paused-tag { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--ink); color: var(--cream); border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 13px; }
+.screen .btn:active, .sparkbtn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+.screen .btn.big { font-family: var(--display); font-size: 18px; padding: 12px 8px; }
+.demo-note { text-align: center; font-size: 14px; font-weight: 600; margin-top: 18px; color: #3A2016; }
+
+/* ---------- day sections ---------- */
+.sec { padding-block: 80px; }
+.sec-head { max-width: 680px; margin-bottom: 40px; }
+.sec-head h2 { font-size: clamp(34px, 5vw, 54px); line-height: 1.04; }
+.sec-head p { margin-top: 14px; font-size: 18px; color: var(--ink-soft); }
+
+/* nine vibes */
+.vibes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.vibe { display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; }
+.vibe .ic { width: 46px; height: 46px; border-radius: 13px; border: 3.5px solid var(--ink); background: var(--c); display: grid; place-items: center; flex: none; }
+.vibe .ic svg { width: 24px; height: 24px; }
+.vibe b { font-family: var(--display); font-size: 21px; line-height: 1.1; display: block; }
+.vibe span { font-size: 15px; color: var(--ink-soft); line-height: 1.35; display: block; margin-top: 4px; }
+.vibe small { display: block; margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--ink); opacity: .7; }
+.depths { margin-top: 44px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 32px; align-items: center; }
+.depths h3 { font-size: 30px; line-height: 1.1; }
+.depths p { margin-top: 10px; color: var(--ink-soft); }
+.mix { padding: 20px 22px; display: grid; gap: 14px; }
+.mixbar { display: flex; height: 42px; border: 3.5px solid var(--ink); border-radius: 12px; overflow: hidden; }
+.mixbar i { display: grid; place-items: center; font-style: normal; font-weight: 700; font-size: 14px; font-variant-numeric: tabular-nums; border-right: 3px solid var(--ink); }
+.mixbar i:last-child { border-right: 0; }
+.mixkey { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; font-size: 14px; }
+.mixkey b { display: block; font-family: var(--display); font-size: 18px; }
+.mixkey span { color: var(--ink-soft); line-height: 1.35; display: block; }
+
+/* flow */
+.flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.flow figure { margin: 0; display: grid; gap: 18px; justify-items: center; align-content: start; }
+.flow .phone { width: 260px; }
+.flow figcaption { text-align: center; max-width: 30ch; color: var(--ink-soft); font-size: 15px; }
+.flow figcaption b { display: block; color: var(--ink); font-family: var(--display); font-size: 20px; margin-bottom: 4px; }
+.welcome { background: var(--flame); align-items: center; text-align: center; }
+.welcome .logo { width: 92px; height: 92px; background: var(--sunny); border: 3.5px solid var(--ink); border-radius: 26px; box-shadow: 4px 4px 0 var(--ink); display: grid; place-items: center; margin-top: 18px; }
+.welcome .logo svg { width: 72px; height: 72px; }
+.welcome .word { font-family: var(--display); font-size: 38px; line-height: 1; color: var(--paper); -webkit-text-stroke: 2px var(--ink); paint-order: stroke fill; text-shadow: 3px 3px 0 var(--ink); }
+.welcome .sl { font-weight: 700; font-size: 13px; }
+.welcome .play { width: 96px; height: 96px; border-radius: 50%; background: var(--sunny); border: 4px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); display: grid; place-items: center; margin-top: auto; }
+.welcome .wh { font-size: 11px; font-weight: 600; }
+.welcome .icons { display: flex; gap: 10px; margin-top: 4px; margin-bottom: 6px; }
+.pick { background: var(--sky); gap: 9px; }
+.pick .t { font-family: var(--display); font-size: 21px; line-height: 1.05; }
+.pick .s { font-size: 10.5px; color: var(--ink-soft); margin-top: -4px; }
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.tile { display: flex; align-items: center; gap: 6px; border: 2.5px solid var(--ink); border-radius: 10px; background: var(--paper); box-shadow: 2px 2px 0 var(--ink); padding: 5px 6px; font-weight: 700; font-size: 10.5px; line-height: 1.1; }
+.tile i { width: 18px; height: 18px; border-radius: 6px; border: 2px solid var(--ink); background: var(--c); flex: none; }
+.tile.on { background: #FFF1E2; outline: 2.5px solid var(--ink); }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.seg span { border: 2.5px solid var(--ink); border-radius: 10px; text-align: center; font-weight: 700; font-size: 11px; padding: 5px 0; background: var(--paper); }
+.seg span.on { background: var(--ink); color: var(--cream); }
+.startrow { display: grid; grid-template-columns: 1.6fr 1fr; gap: 7px; margin-top: auto; }
+.startrow .btn { font-size: 11.5px; padding: 8px 4px; border-radius: 12px; }
+.tu { background: var(--ember); }
+.tu .card { min-height: 0; flex: 1; cursor: default; }
+.tu .q { font-size: 18px; }
+.tu .follow { background: #FFE2CC; }
+
+/* the film */
+.film { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 48px; align-items: center; }
+.film video { width: 100%; aspect-ratio: 9 / 16; display: block; border: 5px solid var(--ink); border-radius: 26px; box-shadow: 10px 10px 0 var(--ink); background: var(--ember); object-fit: cover; }
+.beats { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
+.beats li { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 14px; align-items: baseline; }
+.beats li b { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 14px; background: var(--paper); border: 2.5px solid var(--ink); border-radius: 8px; text-align: center; padding: 1px 0; }
+.beats li span { color: var(--ink-soft); }
+.filmmeta { margin-top: 18px; font-size: 14px; color: var(--ink-soft); }
+
+/* ---------- night ---------- */
+.night { background: var(--night); color: var(--cream); }
+.night .sec-head p { color: var(--lav); }
+.night .sticker { background: var(--night-card); border-color: var(--night-ink); box-shadow: 6px 6px 0 var(--night-ink); color: var(--cream); }
+.dusk { height: 120px; background: linear-gradient(180deg, var(--sky), #F5A27A 40%, #6A4C86 72%, var(--night)); }
+
+/* posts */
+.posts { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.post { margin: 0; display: grid; gap: 12px; }
+.post figcaption { font-size: 14px; color: var(--lav); }
+.art { border: 4px solid var(--night-ink); border-radius: 18px; overflow: hidden; position: relative; box-shadow: 6px 6px 0 var(--night-ink); container-type: inline-size; }
+.art.story { aspect-ratio: 9 / 16; background: var(--flame); color: var(--ink); }
+.art.square { aspect-ratio: 1; }
+.story .in { position: absolute; inset: 0; padding: 8cqw; display: flex; flex-direction: column; gap: 4cqw; }
+.story .kicker { font-weight: 700; font-size: 5.2cqw; }
+.story h3 { font-size: 15cqw; line-height: .92; color: var(--paper); -webkit-text-stroke: .7cqw var(--ink); paint-order: stroke fill; text-shadow: 1.3cqw 1.3cqw 0 var(--ink); }
+.story .mini { margin-top: auto; position: relative; padding: 2cqw; border: 1.8cqw solid rgba(255,255,255,.5); border-top-color: var(--ink); border-right-color: var(--ink); border-radius: 7.5cqw; }
+.story .mini .c { position: relative; background: var(--paper); border: .9cqw solid var(--ink); border-radius: 4.5cqw; box-shadow: 1.6cqw 1.6cqw 0 var(--ink); padding: 7cqw 5cqw; }
+.story .mini small { font-weight: 700; font-size: 4cqw; display: block; margin-bottom: 2cqw; color: var(--ink-soft); text-align: center; }
+.story .mini p { font-family: var(--display); font-size: 7.6cqw; line-height: 1.08; text-align: center; }
+.story .foot { font-weight: 700; font-size: 4.6cqw; display: flex; align-items: center; gap: 2cqw; }
+.square .in { position: absolute; inset: 0; padding: 7cqw; display: flex; flex-direction: column; gap: 4cqw; }
+.square .pchip { align-self: flex-start; display: inline-flex; align-items: center; gap: 1.6cqw; border: .8cqw solid currentColor; border-radius: 99px; padding: 1cqw 3.4cqw 1cqw 2.4cqw; font-weight: 700; font-size: 4cqw; }
+.square .pchip i { width: 3.6cqw; height: 3.6cqw; border-radius: 1cqw; background: var(--c); border: .6cqw solid currentColor; }
+.square h3 { font-size: 10cqw; line-height: 1.02; margin-top: 2cqw; }
+.square .s { font-size: 4.4cqw; font-weight: 600; line-height: 1.35; }
+.square .brandline { margin-top: auto; display: flex; align-items: center; gap: 2.4cqw; font-family: var(--display); font-size: 5cqw; }
+.square .brandline svg { width: 9cqw; height: 9cqw; }
+.square.day { background: var(--c); color: var(--ink); }
+.square.nightart { background: var(--night); color: var(--cream); }
+.square.nightart .s { color: var(--lav); }
+.copy { margin-top: 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.copy .sticker { padding: 22px 24px; }
+.copy h3 { font-size: 20px; margin-bottom: 4px; }
+.copy .meta { font-size: 13px; color: var(--lav); margin-bottom: 12px; }
+.copy pre { white-space: pre-wrap; font-family: var(--body); font-size: 15px; line-height: 1.5; margin: 0; color: var(--cream); }
+.copybtn { margin-top: 14px; font: 700 14px var(--body); color: var(--ink); background: var(--gold); border: 3px solid var(--night-ink); border-radius: 999px; padding: 6px 16px; box-shadow: 3px 3px 0 var(--night-ink); }
+.copybtn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--night-ink); }
+.night :focus-visible { outline-color: var(--gold); }
+
+/* rest of the update */
+.plan { border-top: 4px dashed var(--night-card); }
+.brief { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 48px; align-items: start; }
+.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); display: grid; gap: 4px; font-size: 15px; }
+.toc a { text-decoration: none; color: var(--lav); padding: 4px 0; display: flex; gap: 10px; }
+.toc a span { color: var(--gold); font-weight: 700; width: 1.6em; font-variant-numeric: tabular-nums; }
+.toc a:hover { color: var(--cream); }
+.block { padding-block: 0 56px; display: grid; gap: 16px; max-width: 760px; }
+.block h3 { font-size: 30px; display: flex; gap: 14px; align-items: baseline; }
+.block h3 .num { font-size: 18px; color: var(--gold); font-variant-numeric: tabular-nums; }
+.block h4 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; color: var(--gold); }
+.block p, .block li { color: #E9E3F7; }
+.block ul, .block ol { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.block strong { color: var(--cream); }
+.block code { font-size: 14px; background: var(--night-ink); border-radius: 6px; padding: 1px 6px; color: var(--gold); }
+.core { font-family: var(--display); font-size: clamp(24px, 3.4vw, 34px); line-height: 1.15; color: var(--cream); padding: 22px 26px; }
+.assume { padding: 18px 22px; font-size: 15px; }
+.assume b { color: var(--gold); }
+.tablebox { overflow-x: auto; border: 3px solid var(--night-ink); border-radius: 16px; background: var(--night-card); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 620px; }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 2px solid var(--night); }
+th { font-weight: 700; color: var(--gold); background: #26244F; }
+tr:last-child td { border-bottom: 0; }
+td:first-child { white-space: nowrap; font-weight: 700; color: var(--cream); }
+.pri { display: inline-block; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 1px 9px; border: 2px solid var(--night-ink); }
+.pri.must { background: var(--ember); color: var(--ink); }
+.pri.nice { background: transparent; color: var(--lav); border-color: var(--lav); }
+.pri.done { background: var(--gold); color: var(--ink); }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.kpi { padding: 16px 18px; }
+.kpi b { display: block; font-family: var(--display); font-size: 28px; color: var(--gold); line-height: 1.1; }
+.kpi span { font-size: 14px; color: var(--lav); line-height: 1.4; display: block; margin-top: 6px; }
+.kpi.primary { border-color: var(--ember); box-shadow: 6px 6px 0 var(--ember); }
+.next { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.next .sticker { padding: 16px 18px; }
+.next b { font-family: var(--display); font-size: 22px; display: block; }
+.next small { color: var(--gold); font-weight: 700; font-size: 13px; display: block; margin-bottom: 4px; }
+.next span { font-size: 14px; color: var(--lav); display: block; margin-top: 6px; line-height: 1.4; }
+.endnote { text-align: center; padding-block: 24px 64px; color: var(--lav); font-size: 15px; }
+.endnote svg { width: 56px; height: 56px; display: block; margin: 0 auto 10px; }
+
+@media (max-width: 900px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .vibes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .depths { grid-template-columns: 1fr; }
+  .flow { grid-template-columns: 1fr; }
+  .film { grid-template-columns: 1fr; }
+  .film video { max-width: 300px; margin-inline: auto; }
+  .posts { grid-template-columns: 1fr 1fr; }
+  .posts .post:first-child { grid-column: 1 / -1; max-width: 340px; }
+  .brief { grid-template-columns: 1fr; }
+  .toc { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .copy { grid-template-columns: 1fr; }
+  .next { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .vibes { grid-template-columns: 1fr; }
+  .posts { grid-template-columns: 1fr; }
+  .posts .post { max-width: 360px; }
+  .mixkey { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .screen { transition: none; } }
+.feats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.feat { padding: 20px 22px; }
+.feat b { font-family: var(--display); font-size: 22px; line-height: 1.15; display: block; margin-bottom: 8px; }
+.feat p { color: var(--lav); font-size: 16px; }
+.cta { text-align: center; margin-top: 72px; display: grid; justify-items: center; gap: 6px; }
+.cta svg { width: 96px; height: 96px; }
+.cta h2 { font-size: clamp(40px, 6vw, 64px); color: var(--cream); }
+.cta p { font-size: 20px; font-weight: 700; color: var(--gold); }
+.cta p.es { font-size: 16px; font-weight: 600; color: var(--lav); }
+@media (max-width: 900px) { .feats { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .feats { grid-template-columns: 1fr; } }
+</style>
+
+<nav class="sitebar" aria-label="Kindling website"><div class="in"><a class="home" href="../../">Kindling</a><a href="../../#releases">All releases</a><a href="../../#install">Install</a></div></nav>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="fire" viewBox="0 0 120 120">
+      <path d="M24 96L92 80M96 96L28 80" stroke="#1E1B3A" stroke-width="17" stroke-linecap="round" fill="none"/>
+      <path d="M24 96L92 80M96 96L28 80" stroke="#A86B3C" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <circle cx="24" cy="32" r="4" fill="#FF6B35"/><circle cx="96" cy="24" r="3" fill="#FF6B35"/>
+      <path d="M60 14c11 14 24 23 24 42 0 15-11 26-24 26S36 71 36 56c0-11 8-17 12-26 2 8 6 12 11 12 0-10-4-18 1-28z" fill="#FF6B35" stroke="#1E1B3A" stroke-width="4.5" stroke-linejoin="round"/>
+      <path d="M60 52c5 6 10 10 10 17 0 7-5 11-10 11s-10-4-10-11c0-7 5-11 10-17z" fill="#FFD23F" stroke="#1E1B3A" stroke-width="3.5" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="flame" viewBox="0 0 24 24">
+      <path d="M12 2.5c2.4 3 5.3 5.1 5.3 9.5 0 3.6-2.5 6.5-5.3 6.5S6.7 15.6 6.7 12c0-2.6 1.8-4 2.7-6 .4 1.8 1.4 2.7 2.4 2.7 0-2.3-.8-4 .2-6.2z" fill="#FFFFFF" stroke="#1E1B3A" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="#1E1B3A" stroke-width="2.4" stroke-linejoin="round"/></symbol>
+    <symbol id="share" viewBox="0 0 24 24"><path d="M12 15V4M8 8l4-4 4 4M6 12v7h12v-7" fill="none" stroke="#1E1B3A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" stroke="#1E1B3A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="brand"><span class="logo"><svg aria-hidden="true"><use href="#fire"/></svg></span><span class="ver">Version 1.0</span></div>
+      <h1>Kindling</h1>
+      <p class="slogan">Every good talk starts small.</p>
+      <p class="lede">One conversation topic at a time, with a gentle timer, so a talk never stalls and never drags.</p>
+      <p class="lede-es">Toda buena charla empieza pequeña. Un tema a la vez y un temporizador suave: charlas que nunca se estancan.</p>
+      <div class="facts"><span>180 topics</span><span>9 vibes</span><span>English and Spanish</span><span>No accounts, no ads</span></div>
+    </div>
+    <div>
+      <div class="phone">
+        <div class="screen" id="demo" style="background:#FF8A3D" aria-label="A working Kindling card">
+          <div class="bar"><span class="ibtn" aria-hidden="true"><svg><use href="#back"/></svg></span><span class="chip" id="d-chip"><svg aria-hidden="true"><use href="#flame"/></svg><span id="d-cat">Stories</span></span></div>
+          <div class="stage">
+            <div class="ringwrap" id="d-ringwrap">
+              <svg class="ring" id="d-ring" aria-hidden="true"><rect id="d-track" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="7"/><rect id="d-arc" fill="none" stroke="#1E1B3A" stroke-width="7" stroke-linecap="round" pathLength="100"/></svg>
+              <div class="card" id="d-card" role="button" tabindex="0" aria-label="Tap the card to pause or resume">
+                <div class="corner" aria-hidden="true"><svg><use href="#heart"/></svg><svg><use href="#share"/></svg></div>
+                <div class="q" id="d-q" aria-live="polite">Tell me about the worst haircut you've ever had.</div>
+                <div class="follow" id="d-follow" hidden></div>
+                <div class="spark" id="d-spark" hidden></div>
+                <button class="sparkbtn" id="d-sparkbtn" type="button">Need a spark?</button>
+                <span class="paused-tag" id="d-paused" hidden>Paused</span>
+              </div>
+            </div>
+          </div>
+          <div class="hint" id="d-hint">Tap the card to pause</div>
+          <div class="row2" id="d-run"><button class="btn" id="d-pause" type="button">Pause</button><button class="btn" id="d-skip" type="button">Skip</button></div>
+          <div class="row2" id="d-up" hidden><button class="btn big" id="d-more" type="button" style="background:#FFD23F">+1 min</button><button class="btn big" id="d-next" type="button">Next</button></div>
+        </div>
+      </div>
+      <p class="demo-note">Try it. The demo minute runs in 15 seconds.</p>
+    </div>
+  </div>
+</header>
+
+<section class="sec" aria-labelledby="vibes-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="vibes-h">Nine vibes, twenty topics each</h2>
+      <p>Pick as many as you like, or none for all of them. Every topic has a spark behind "Need a spark?" and a follow-up behind +1 min.</p>
+    </div>
+    <div class="vibes">
+      <div class="sticker vibe" style="--c:#FFC53D"><span class="ic"><svg aria-hidden="true"><use href="#flame"/></svg></span><div><b>Get to know you</b><span>First dates, new friends, new coworkers</span><small>Conocerse</small></div></div>
+      <div class="sticker vibe" style="--c:#7C8BFF"><span class="ic"><svg aria-hidden="true"><use href="#flame"/></svg></span><div><b>Deep talk</b><span>Values, dreams, fears</span><small>Charla profunda</small></div></div>
+      <div class="sticker vibe" style="--c:#2CC7B4"><span class="ic"><svg aria-hidden="true"><use href="#flame"/></svg></span><div><b>Random facts</b><span>A surprising fact, then a question</span><small>Datos curiosos</small></div></div>
+      <div class="sticker vibe" style="--c:#FF8A3D"><span class="ic"><svg aria-hidden="true"><use href="#flame"/></svg></span><div><b>Stories</b><span>Tell me about a time when…</span><small>Historias</small></div></div>
+      <div class="sticker vibe" style="--c:#B18CFF"><span class="ic"><svg aria-hidden="true"><use href="#flame"/></svg></span><div><b>Would you rather</b><span>Hypotheticals and dilemmas</span><small>¿Qué prefieres?</small></div></div>
+      <div class="sticker vibe" style="--c:#FF6B7A"><span class="ic"><svg aria-hidden="true"><use href="#flame"/></svg></span><div><b>Light debate</b><span>Fun opinions, never politics</span><small>Debate ligero</small></div></div>
+      <div class="sticker vibe" style="--c:#FF8CC6"><span class="ic"><svg aria-hidden="true"><use href="#flame"/></svg></span><div><b>Couples</b><span>Your relationship and shared future</span><small>Parejas</small></div></div>
+      <div class="sticker vibe" style="--c:#6CD47E"><span class="ic"><svg aria-hidden="true"><use href="#flame"/></svg></span><div><b>Family and kids</b><span>Safe for all ages</span><small>Familia y niños</small></div></div>
+      <div class="sticker vibe" style="--c:#5BB8FF"><span class="ic"><svg aria-hidden="true"><use href="#flame"/></svg></span><div><b>Team building</b><span>Work-safe and inclusive</span><small>Trabajo en equipo</small></div></div>
+    </div>
+    <div class="depths">
+      <div>
+        <h3>How deep? You choose.</h3>
+        <p>Depth works as "up to": Medium plays light and medium topics. Deep talk has no light topics on purpose.</p>
+      </div>
+      <div class="sticker mix">
+        <div class="mixbar" role="img" aria-label="Of 180 topics, 127 are light, 39 medium and 14 deep">
+          <i style="flex:127;background:#FFD23F">127</i><i style="flex:39;background:#FF8A3D">39</i><i style="flex:14;min-width:38px;background:#1E1B3A;color:#FFF4E6">14</i>
+        </div>
+        <div class="mixkey">
+          <div><b>Light</b><span>Anyone, anywhere.</span></div>
+          <div><b>Medium</b><span>Some personal sharing.</span></div>
+          <div><b>Deep</b><span>Topics that need trust.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="flow-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="flow-h">Tap play, pick a vibe, start talking</h2>
+      <p>When time runs out, the card stays. The group decides: one more minute, or a fresh card.</p>
+    </div>
+    <div class="flow">
+      <figure>
+        <div class="phone" role="img" aria-label="Welcome screen: logo, slogan and a big Play button">
+          <div class="screen welcome">
+            <div class="logo"><svg aria-hidden="true"><use href="#fire"/></svg></div>
+            <div class="word">Kindling</div>
+            <div class="sl">Every good talk starts small.</div>
+            <div class="play"><svg width="42" height="42" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="#1E1B3A"/></svg></div>
+            <div class="wh">Tap play, pick a vibe, start talking.</div>
+            <div class="icons"><span class="ibtn round"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="#FF6B7A" stroke="#1E1B3A" stroke-width="2.5" stroke-linejoin="round"/></svg></span><span class="ibtn round"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5" fill="none" stroke="#1E1B3A" stroke-width="2.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke="#1E1B3A" stroke-width="2.5" stroke-linecap="round"/></svg></span></div>
+          </div>
+        </div>
+        <figcaption><b>Tap play</b>Favorites and Settings sit underneath. Nothing else to learn.</figcaption>
+      </figure>
+      <figure>
+        <div class="phone" role="img" aria-label="Pick a vibe: nine category tiles, Stories selected, depth Light, Start with 14 topics">
+          <div class="screen pick">
+            <div class="bar" style="justify-content:flex-start"><span class="ibtn" aria-hidden="true"><svg><use href="#back"/></svg></span><span class="t">What's the vibe?</span></div>
+            <div class="s">Nothing selected plays every category.</div>
+            <div class="tiles">
+              <div class="tile" style="--c:#FFC53D"><i></i>Get to know you</div>
+              <div class="tile" style="--c:#7C8BFF"><i></i>Deep talk</div>
+              <div class="tile" style="--c:#2CC7B4"><i></i>Random facts</div>
+              <div class="tile on" style="--c:#FF8A3D"><i></i>Stories</div>
+              <div class="tile" style="--c:#B18CFF"><i></i>Would you rather</div>
+              <div class="tile" style="--c:#FF6B7A"><i></i>Light debate</div>
+              <div class="tile" style="--c:#FF8CC6"><i></i>Couples</div>
+              <div class="tile" style="--c:#6CD47E"><i></i>Family and kids</div>
+              <div class="tile" style="--c:#5BB8FF"><i></i>Team building</div>
+            </div>
+            <div class="t" style="font-size:16px;margin-top:4px">How deep?</div>
+            <div class="seg"><span class="on">Light</span><span>Medium</span><span>Deep</span></div>
+            <div class="startrow"><div class="btn" style="background:#FF6B35">Start with 14 topics</div><div class="btn" style="background:#FFD23F">Random topic</div></div>
+          </div>
+        </div>
+        <figcaption><b>Pick a vibe</b>Mix categories and pick a depth, or tap Random topic.</figcaption>
+      </figure>
+      <figure>
+        <div class="phone" role="img" aria-label="Time's up: the card stays with its follow-up, and two big buttons, +1 min and Next">
+          <div class="screen tu">
+            <div class="bar"><span class="ibtn" aria-hidden="true"><svg><use href="#back"/></svg></span><span class="chip"><svg aria-hidden="true"><use href="#flame"/></svg>Stories</span></div>
+            <div class="card">
+              <div class="corner" aria-hidden="true"><svg><use href="#heart"/></svg><svg><use href="#share"/></svg></div>
+              <div class="q">Tell me about the worst haircut you've ever had.</div>
+              <div class="follow">Is there photographic evidence?</div>
+            </div>
+            <div class="hint">Time's up</div>
+            <div class="row2"><div class="btn big" style="background:#FFD23F">+1 min</div><div class="btn big">Next</div></div>
+          </div>
+        </div>
+        <figcaption><b>+1 min or Next</b>A soft chime and vibration, never an alarm. +1 min adds a follow-up that goes deeper.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="film-h" style="padding-top:0">
+  <div class="wrap film">
+    <video controls playsinline preload="none" poster="media/poster.jpg" aria-label="Kindling film, 29 seconds">
+      <source src="media/kindling-film.mp4" type="video/mp4">
+    </video>
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <h2 id="film-h">See it in action</h2>
+        <p>Thirty seconds of what a night with Kindling looks like: a quiet table, a vibe, a card, and the talk taking off.</p>
+      </div>
+      <ol class="beats">
+        <li><b>0–3.6 s</b><span>A table goes quiet. The flame dives into the welcome screen.</span></li>
+        <li><b>3.6–7.2</b><span>What's the vibe? Stories, Light, Start with 14 topics.</span></li>
+        <li><b>7.2–12</b><span>"One topic. One minute." The ring starts to drain.</span></li>
+        <li><b>12–24</b><span>Time's up, +1 min, the follow-up; then Next and a fresh card.</span></li>
+        <li><b>24–28.8</b><span>The fire takes. Every good talk starts small.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<div class="dusk" aria-hidden="true"></div>
+
+<section class="night sec" aria-labelledby="more-h" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="more-h">Small things that keep the fire going</h2>
+      <p>Everything else in 1.0, in English and Spanish.</p>
+    </div>
+    <div class="feats">
+      <div class="sticker feat"><b>A timer that stays out of the way</b><p>A ring that slowly drains around the card, never a ticking clock. Choose 30 seconds to 5 minutes, or turn it off and just use the cards. Tap the card to pause when the waiter arrives.</p></div>
+      <div class="sticker feat"><b>Day and night</b><p>Bright, playful stickers by day. At night the campfire is lit, with an optional crackling fire sound in the background.</p></div>
+      <div class="sticker feat"><b>Favorites</b><p>Tap the heart to save a topic, then play your favorites with another group. Or share one with a friend.</p></div>
+      <div class="sticker feat"><b>No repeats</b><p>Every card in a session is new. When you've covered them all, shuffle again or mix in another vibe.</p></div>
+      <div class="sticker feat"><b>For real moments</b><p>First dates, dinners with friends, family evenings, road trips and team events.</p></div>
+      <div class="sticker feat"><b>Private by design</b><p>No accounts, no ads, no tracking. Everything stays on your phone, and it works offline.</p></div>
+    </div>
+    <div class="cta">
+      <svg aria-hidden="true"><use href="#fire"/></svg>
+      <h2>Kindling 1.0</h2>
+      <p>Free, in English and Spanish.</p>
+      <p class="es">Gratis, en español e inglés.</p>
+      <div class="dl"><a href="https://github.com/jorgecarnicero/Kindling/releases/tag/v1.0.0">Download 1.0 for Android (APK)</a><span>Google Play: coming soon</span></div>
+    </div>
+  </div>
+  <div class="endnote">Every good talk starts small.</div>
+</section>
+
+<script>
+(function () {
+  // A working Kindling card with real 1.0 topics. The demo minute runs in 15 s.
+  const TOPICS = [
+    { cat: 'Stories', c: '#FF8A3D', f: '#FFE2CC', q: "Tell me about the worst haircut you've ever had.", s: 'Start with who cut it and what you asked for.', u: 'Is there photographic evidence?' },
+    { cat: 'Light debate', c: '#FF6B7A', f: '#FFE0E3', q: 'Is a hot dog a sandwich?', s: 'Start with what makes a sandwich a sandwich.', u: 'Then what about a taco?' },
+    { cat: 'Random facts', c: '#2CC7B4', f: '#D5F5F0', q: 'Octopuses have three hearts. Which animal would you want to be for a day?', s: "Start with where you'd want to be: sea, sky or jungle?", u: "What's the first thing you'd do?" },
+    { cat: 'Get to know you', c: '#FFC53D', f: '#FFF0C7', q: "What could you talk about for an hour with zero preparation?", s: 'Think of the topic your friends always ask you about.', u: 'How did you get hooked on it?' },
+    { cat: 'Would you rather', c: '#B18CFF', f: '#EDE3FF', q: 'Would you rather talk to animals or speak every human language?', s: "Think of who you'd most want to understand.", u: "Who's the first one you'd talk to?" },
+    { cat: 'Family and kids', c: '#6CD47E', f: '#DDF5E1', q: "What's the funniest thing that's ever happened in your family?", s: 'Think of a holiday, a trip or a pet.', u: 'Who tells that story best?' },
+    { cat: 'Team building', c: '#5BB8FF', f: '#DDF0FF', q: "What's a skill you have that nobody at work knows about?", s: 'Think hobbies, languages, cooking or fixing things.', u: 'How did you learn it?' },
+    { cat: 'Deep talk', c: '#7C8BFF', f: '#E3E6FF', q: "What's something you believed strongly five years ago and don't anymore?", s: 'Think food, money, love or work. Something small counts.', u: 'What changed your mind?' },
+    { cat: 'Couples', c: '#FF8CC6', f: '#FFE1F0', q: "What's a tradition you'd like us to start?", s: 'Think weekly, yearly, or one small silly thing.', u: 'When could we do it first?' }
+  ];
+  const MINUTE = 15000;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = id => document.getElementById(id);
+  const screen = $('demo'), wrap = $('d-ringwrap'), ring = $('d-ring'), track = $('d-track'), arc = $('d-arc');
+  let i = 0, total = MINUTE, left = MINUTE, last = 0, running = false, paused = false, timesUp = false, raf = 0;
+
+  function layout() {
+    const w = wrap.clientWidth, h = wrap.clientHeight;
+    ring.setAttribute('viewBox', `0 0 ${w} ${h}`);
+    [track, arc].forEach(r => { r.setAttribute('x', 3.5); r.setAttribute('y', 3.5); r.setAttribute('width', w - 7); r.setAttribute('height', h - 7); r.setAttribute('rx', 24); });
+    paint();
+  }
+  function paint() {
+    const frac = Math.max(0, left / total) * 100;
+    arc.setAttribute('stroke-dasharray', `${frac} 100`);
+    arc.setAttribute('stroke-dashoffset', `${-(100 - frac)}`);
+    arc.style.opacity = frac > 0 ? 1 : 0;
+  }
+  function show(k) {
+    const t = TOPICS[k];
+    screen.style.background = t.c;
+    $('d-cat').textContent = t.cat;
+    $('d-q').textContent = t.q;
+    $('d-spark').textContent = t.s; $('d-spark').hidden = true;
+    $('d-sparkbtn').hidden = false;
+    $('d-follow').textContent = t.u; $('d-follow').hidden = true; $('d-follow').style.background = t.f;
+    total = left = MINUTE; timesUp = false; paused = false;
+    setButtons(); paint(); start();
+  }
+  function setButtons() {
+    $('d-run').hidden = timesUp; $('d-up').hidden = !timesUp;
+    $('d-paused').hidden = !paused;
+    $('d-pause').textContent = paused ? 'Resume' : 'Pause';
+    $('d-hint').textContent = timesUp ? "Time's up" : paused ? 'Paused · tap the card to resume' : 'Tap the card to pause';
+  }
+  function tick(now) {
+    raf = 0;
+    if (!running || paused || timesUp) return;
+    left -= now - last; last = now;
+    if (left <= 0) { left = 0; timesUp = true; running = false; setButtons(); }
+    paint();
+    if (running) raf = requestAnimationFrame(tick);
+  }
+  function start() {
+    if (reduce) { running = false; return; }
+    running = true; last = performance.now();
+    if (!raf) raf = requestAnimationFrame(tick);
+  }
+  function togglePause() {
+    if (timesUp) return;
+    if (!running && !paused && reduce) { running = true; last = performance.now(); raf = requestAnimationFrame(tick); return; }
+    paused = !paused;
+    if (!paused) { last = performance.now(); if (!raf) raf = requestAnimationFrame(tick); }
+    setButtons();
+  }
+  $('d-card').addEventListener('click', e => { if (e.target.closest('button')) return; togglePause(); });
+  $('d-card').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); togglePause(); } });
+  $('d-pause').addEventListener('click', togglePause);
+  $('d-skip').addEventListener('click', () => { i = (i + 1) % TOPICS.length; show(i); });
+  $('d-next').addEventListener('click', () => { i = (i + 1) % TOPICS.length; show(i); });
+  $('d-more').addEventListener('click', () => {
+    $('d-follow').hidden = false; $('d-sparkbtn').hidden = true; $('d-spark').hidden = true;
+    total = left = MINUTE; timesUp = false; paused = false; setButtons(); paint(); start();
+  });
+  $('d-sparkbtn').addEventListener('click', () => { $('d-spark').hidden = false; $('d-sparkbtn').hidden = true; });
+
+  window.addEventListener('resize', layout);
+  if (window.ResizeObserver) new ResizeObserver(layout).observe(wrap);
+  layout();
+  show(0);
+
+  document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => {
+    const el = document.getElementById(b.dataset.copy);
+    const label = b.textContent;
+    const done = () => { b.textContent = b.dataset.copy.endsWith('es') ? 'Copiado' : 'Copied'; setTimeout(() => b.textContent = label, 1600); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    try { navigator.clipboard.writeText(el.textContent).then(done, fallback); } catch (e) { fallback(); }
+  }));
+})();
+</script>
+
+</body></html>

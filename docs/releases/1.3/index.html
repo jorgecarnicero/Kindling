@@ -1,0 +1,599 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<style>
+/* site bar: back to the Kindling website */
+.sitebar { background: #1E1B3A; color: #FFF4E6; font: 700 15px "Figtree", system-ui, sans-serif; }
+.sitebar .in { max-width: 1120px; margin: 0 auto; padding: 10px max(16px, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: center; }
+.sitebar a { color: #FFF4E6; text-decoration: none; }
+.sitebar a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.sitebar .home { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; font-size: 18px; margin-right: auto; }
+.cta .dl { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 18px; }
+.cta .dl a, .cta .dl span { display: inline-flex; align-items: center; min-height: 52px; padding: 10px 22px; border: 4px solid #0D0C22; border-radius: 16px; box-shadow: 5px 5px 0 #0D0C22; background: #FFD23F; color: #1E1B3A; font: 700 17px "Figtree", system-ui, sans-serif; text-decoration: none; }
+.cta .dl span { background: transparent; color: #C3BEE6; border: 4px dashed #C3BEE6; box-shadow: none; }
+.cta .dl a:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 #0D0C22; }
+</style></head><body>
+<title>Kindling 1.3 Characters</title>
+<meta name="description" content="What’s new in Kindling 1.3: make your character and find new things to wear by playing.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M24 96L92 80M96 96L28 80' stroke='%231E1B3A' stroke-width='17' stroke-linecap='round'/%3E%3Cpath d='M24 96L92 80M96 96L28 80' stroke='%23A86B3C' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M60 14c11 14 24 23 24 42 0 15-11 26-24 26S36 71 36 56c0-11 8-17 12-26 2 8 6 12 11 12 0-10-4-18 1-28z' fill='%23FF6B35' stroke='%231E1B3A' stroke-width='4.5' stroke-linejoin='round'/%3E%3Cpath d='M60 52c5 6 10 10 10 17 0 7-5 11-10 11s-10-4-10-11c0-7 5-11 10-17z' fill='%23FFD23F' stroke='%231E1B3A' stroke-width='3.5'/%3E%3C/svg%3E">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@500;600;700&display=swap">
+<style>
+/* Layout: the page sits at the fire. It opens at night with your character on a log (and a working wardrobe),
+   moves to daylight for what there is to find (a trail of milestones, seven trips with seven finds),
+   and returns to night for the rest of the update. Characters are drawn from the app's own shapes. */
+:root {
+  --sky: #DCEBFF; --ink: #1E1B3A; --flame: #FF6B35; --sunny: #FFD23F; --paper: #FFFFFF;
+  --night: #1B1A3A; --night-card: #2E2C5E; --night-ink: #0D0C22; --cream: #FFF4E6;
+  --ember: #FF8A3D; --gold: #FFC857; --lav: #C3BEE6; --ink-soft: #4A4670; --log: #A0643C;
+  --display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--sky); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; font-weight: 500; }
+h1, h2, h3 { font-family: var(--display); font-weight: 800; text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; }
+button { font: inherit; color: inherit; cursor: pointer; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.sticker { border: 4px solid var(--ink); border-radius: 22px; box-shadow: 6px 6px 0 var(--ink); background: var(--paper); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+svg.ch { display: block; overflow: visible; }
+
+/* ---------- hero at the fire ---------- */
+.hero { background: var(--night); color: var(--cream); padding-block: 52px 76px; position: relative; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; position: relative; }
+.stars i { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: var(--lav); opacity: .7; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 22px; margin-bottom: 24px; }
+.brand svg { width: 40px; height: 40px; }
+.new { display: inline-flex; background: var(--gold); color: var(--ink); border: 3px solid var(--night-ink); border-radius: 999px; padding: 4px 14px; font-weight: 700; font-size: 15px; box-shadow: 3px 3px 0 var(--night-ink); margin-bottom: 22px; transform: rotate(-2deg); }
+.hero h1 { font-size: clamp(56px, 8.2vw, 112px); line-height: 0.9; color: var(--cream); -webkit-text-stroke: 5px var(--night-ink); paint-order: stroke fill; text-shadow: 7px 7px 0 var(--ember); letter-spacing: -0.035em; }
+.hero h1 span { display: block; }
+.hero h1 span + span { margin-left: 0.4em; }
+.hero .lede { font-size: 21px; line-height: 1.42; max-width: 32ch; margin-top: 28px; font-weight: 600; }
+.hero .lede-es { color: var(--lav); font-size: 16px; margin-top: 10px; max-width: 42ch; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.facts span { background: var(--night-card); border: 3px solid var(--night-ink); border-radius: 12px; padding: 5px 12px; font-weight: 700; font-size: 14px; box-shadow: 3px 3px 0 var(--night-ink); }
+.facts b { color: var(--gold); }
+
+/* fire scene (FireScene in the app) */
+.scene { position: relative; background: var(--night); border: 4px solid var(--night-ink); border-radius: 30px; overflow: hidden; display: flex; justify-content: center; align-items: flex-end; }
+.scene .glow { position: absolute; left: 50%; border-radius: 50%; background: var(--ember); opacity: .28; transform: translateX(-50%); }
+.scene .logp { position: absolute; left: 50%; transform: translateX(-50%); border: 4px solid var(--night-ink); background: var(--log); border-radius: 999px; }
+.scene .chwrap { position: relative; z-index: 1; animation: bob 2.8s ease-in-out infinite alternate; }
+.scene .sp { position: absolute; bottom: 14%; left: 50%; background: var(--gold); border-radius: 1px; opacity: 0; animation: rise 2.2s ease-out infinite; z-index: 2; }
+@keyframes bob { from { transform: translateY(0); } to { transform: translateY(-4px); } }
+@keyframes rise { 0% { opacity: 0; transform: translate(var(--x), 0) rotate(45deg); } 10% { opacity: 1; } 100% { opacity: 0; transform: translate(calc(var(--x) + var(--d)), -260px) rotate(45deg); } }
+
+.dress { display: grid; gap: 16px; }
+.dress .scene { height: 360px; box-shadow: 10px 10px 0 var(--night-ink); }
+.ward { background: var(--night-card); border: 4px solid var(--night-ink); border-radius: 22px; box-shadow: 6px 6px 0 var(--night-ink); padding: 14px; display: grid; gap: 12px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tabs button { border: 2.5px solid var(--night-ink); background: var(--night); color: var(--cream); border-radius: 999px; padding: 4px 12px; font-weight: 700; font-size: 13px; }
+.tabs button[aria-pressed="true"] { background: var(--gold); color: var(--ink); }
+.opts { display: grid; grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 8px; min-height: 96px; }
+.opt { position: relative; border: 3px solid var(--night-ink); border-radius: 14px; background: var(--sky); padding: 4px 2px 3px; display: grid; justify-items: center; gap: 2px; font-size: 10.5px; font-weight: 700; color: var(--ink); line-height: 1.15; text-align: center; }
+.opt[aria-pressed="true"] { background: var(--gold); box-shadow: 0 0 0 3px var(--cream); }
+.opt .sw { width: 34px; height: 34px; border-radius: 50%; border: 3px solid var(--ink); margin: 6px 0 2px; }
+.opt .pic { width: 54px; height: 54px; border-radius: 10px; overflow: hidden; display: grid; place-items: end center; background: #FFFFFF; border: 2.5px solid var(--ink); margin-top: 2px; }
+.opt .pic svg.ch { width: 50px; height: 50px; overflow: hidden; }
+.opt .nm { display: block; min-height: 2.3em; padding: 0 2px; }
+.opt .lk { position: absolute; top: -8px; right: -6px; background: var(--ember); border: 2.5px solid var(--night-ink); border-radius: 999px; font-size: 9.5px; padding: 0 6px; line-height: 16px; }
+.wardrow { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.wardrow p { font-size: 14px; color: var(--lav); min-width: 0; flex: 1 1 200px; }
+.wardrow p b { color: var(--gold); }
+.rbtn { border: 3px solid var(--night-ink); background: var(--sunny); color: var(--ink); border-radius: 14px; padding: 7px 14px; font-weight: 700; font-size: 14px; box-shadow: 3px 3px 0 var(--night-ink); }
+.rbtn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--night-ink); }
+
+/* ---------- day: what there is to find ---------- */
+.sec { padding-block: 80px; }
+.sec-head { max-width: 680px; margin-bottom: 40px; }
+.sec-head h2 { font-size: clamp(34px, 5vw, 54px); line-height: 1.04; }
+.sec-head p { margin-top: 14px; font-size: 18px; color: var(--ink-soft); }
+
+.finds { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.find { position: relative; border: 4px solid var(--ink); border-radius: 22px; box-shadow: 6px 6px 0 var(--ink); background: var(--c); overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
+.find .pic { overflow: hidden; height: 150px; display: flex; justify-content: center; align-items: flex-end; border-bottom: 4px solid var(--ink); background: var(--paper); position: relative; }
+.find .pic::before { content: ""; position: absolute; left: 50%; bottom: -30px; width: 150px; height: 150px; border-radius: 50%; background: var(--c); opacity: .35; transform: translateX(-50%); }
+.find .pic svg.ch { position: relative; height: 140px; width: auto; }
+.find .tx { padding: 12px 16px 16px; }
+.find small { display: block; font-weight: 700; font-size: 14px; }
+.find b { font-family: var(--display); font-size: 23px; line-height: 1.1; display: block; margin-top: 2px; }
+.find span { display: block; font-size: 13px; font-weight: 600; opacity: .8; margin-top: 4px; }
+.find.all { background: var(--night); color: var(--cream); border-color: var(--ink); }
+.find.all .pic { background: var(--night-card); }
+.find.all .pic::before { background: var(--ember); }
+
+.trails { margin-top: 56px; display: grid; gap: 28px; }
+.trail { padding: 22px 24px 18px; }
+.trail h3 { font-size: 24px; }
+.trail > p { color: var(--ink-soft); margin-top: 4px; font-size: 15px; }
+.tline { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+.tline::before { content: ""; position: absolute; left: 12%; right: 12%; top: 34px; height: 8px; background: var(--ink); border-radius: 4px; }
+.ms { position: relative; display: grid; justify-items: center; text-align: center; gap: 6px; }
+.ms .dot { width: 76px; height: 76px; border-radius: 50%; border: 4px solid var(--ink); background: var(--sky); display: grid; place-items: end center; overflow: hidden; box-shadow: 3px 3px 0 var(--ink); }
+.ms .dot svg.ch { width: 60px; height: 62px; overflow: hidden; }
+.ms .dot .sw { width: 40px; height: 40px; border-radius: 50%; border: 3.5px solid var(--ink); }
+.ms .n { font-family: var(--display); font-size: 20px; line-height: 1; font-variant-numeric: tabular-nums; }
+.ms .i { font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+
+/* flow phones */
+.flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.flow figure { margin: 0; display: grid; gap: 18px; justify-items: center; align-content: start; }
+.flow figcaption { text-align: center; max-width: 30ch; color: var(--ink-soft); font-size: 15px; }
+.flow figcaption b { display: block; color: var(--ink); font-family: var(--display); font-size: 20px; margin-bottom: 4px; }
+.phone { width: 268px; max-width: 100%; aspect-ratio: 9 / 19; border: 5px solid var(--ink); border-radius: 44px; background: var(--ink); padding: 9px; box-shadow: 10px 10px 0 var(--ink); }
+.screen { border-radius: 34px; height: 100%; overflow: hidden; display: flex; flex-direction: column; padding: 28px 14px 16px; gap: 10px; position: relative; color: var(--ink); }
+.ibtn { width: 32px; height: 32px; border-radius: 50%; border: 3px solid var(--ink); background: var(--paper); box-shadow: 2px 2px 0 var(--ink); display: grid; place-items: center; flex: none; }
+.ibtn svg { width: 15px; height: 15px; }
+.bar { display: flex; align-items: center; gap: 8px; font-family: var(--display); font-size: 17px; line-height: 1.05; }
+.btn { border: 3px solid var(--ink); border-radius: 13px; box-shadow: 3px 3px 0 var(--ink); text-align: center; font-weight: 700; font-size: 13px; padding: 8px 6px; background: var(--paper); line-height: 1.2; }
+.row2 { display: grid; grid-template-columns: 1fr 1.3fr; gap: 8px; }
+.mk .sub { font-size: 11px; color: var(--ink-soft); margin-top: -6px; }
+.mk .scene { height: 150px; border-radius: 18px; border-width: 3px; }
+.mk .lab { font-weight: 700; font-size: 11px; margin-bottom: -5px; }
+.swrow { display: flex; gap: 5px; flex-wrap: wrap; }
+.swrow i { width: 22px; height: 22px; border-radius: 50%; border: 2.5px solid var(--ink); }
+.swrow i.on { box-shadow: 0 0 0 2.5px var(--paper), 0 0 0 5px var(--ink); }
+.headrow { display: flex; gap: 4px; }
+.headrow span { width: 38px; height: 38px; border: 2.5px solid var(--ink); border-radius: 10px; background: var(--paper); display: grid; place-items: end center; overflow: hidden; }
+.headrow span.on { background: var(--sunny); }
+.headrow svg.ch { width: 34px; height: 34px; }
+.road { background: #5BB8FF; }
+.prog { position: relative; display: flex; align-items: center; padding: 36px 4px 0; }
+.prog i { flex: 1; height: 3px; background: var(--ink); opacity: .35; }
+.prog i.f { opacity: 1; }
+.prog b { width: 12px; height: 12px; border: 2.5px solid var(--ink); border-radius: 50%; background: var(--paper); flex: none; }
+.prog b.f { background: var(--ink); }
+.prog b.on { background: var(--sunny); transform: scale(1.35); }
+.prog .rider { position: absolute; top: 0; width: 30px; height: 32px; transform: translateX(-50%); }
+.prog .rider svg.ch { width: 30px; height: 32px; }
+.stopof { text-align: center; font-weight: 700; font-size: 11px; }
+.road .card { flex: 1; background: var(--paper); border: 3.5px solid var(--ink); border-radius: 18px; box-shadow: 5px 5px 0 var(--ink); padding: 14px; display: grid; align-content: center; gap: 10px; }
+.road .q { font-family: var(--display); font-size: 19px; line-height: 1.12; text-align: center; }
+.road .pill { justify-self: center; border: 2.5px solid var(--ink); border-radius: 999px; padding: 3px 10px; font-weight: 700; font-size: 11px; box-shadow: 2px 2px 0 var(--ink); }
+.found { background: #283A61; color: var(--cream); justify-content: center; }
+.found .fcard { background: var(--night-card); border: 3.5px solid var(--night-ink); border-radius: 22px; box-shadow: 5px 5px 0 var(--night-ink); padding: 10px; display: grid; gap: 10px; }
+.found .scene { height: 170px; border-radius: 16px; border-width: 3px; }
+.found h4 { margin: 0; font-family: var(--display); font-size: 21px; text-align: center; line-height: 1.1; }
+.found .nm { text-align: center; font-weight: 700; font-size: 14px; margin-top: -6px; }
+.found .btn { color: var(--ink); border-color: var(--night-ink); box-shadow: 3px 3px 0 var(--night-ink); }
+
+/* ---------- night: posts, copy, plan ---------- */
+.dusk { height: 120px; background: linear-gradient(180deg, var(--sky), #F5A27A 40%, #6A4C86 72%, var(--night)); }
+.night { background: var(--night); color: var(--cream); }
+.night .sec-head p { color: var(--lav); }
+.night .sticker { background: var(--night-card); border-color: var(--night-ink); box-shadow: 6px 6px 0 var(--night-ink); color: var(--cream); }
+
+.posts { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.post { margin: 0; display: grid; gap: 12px; }
+.post figcaption { font-size: 14px; color: var(--lav); }
+.art { border: 4px solid var(--night-ink); border-radius: 18px; overflow: hidden; position: relative; box-shadow: 6px 6px 0 var(--night-ink); container-type: inline-size; }
+.art.story { aspect-ratio: 9 / 16; background: var(--night); color: var(--cream); }
+.art.square { aspect-ratio: 1; }
+.art .in { position: absolute; inset: 0; padding: 8cqw; display: flex; flex-direction: column; gap: 3.5cqw; }
+.story .kicker { font-weight: 700; font-size: 5cqw; color: var(--gold); }
+.story h3 { font-size: 15.5cqw; line-height: .92; color: var(--cream); -webkit-text-stroke: .7cqw var(--night-ink); paint-order: stroke fill; text-shadow: 1.3cqw 1.3cqw 0 var(--ember); }
+.story .scene { margin-top: auto; height: 74cqw; border-radius: 6cqw; border-width: .9cqw; }
+.story .foot { font-weight: 700; font-size: 4.6cqw; display: flex; align-items: center; gap: 2cqw; }
+.story .foot svg { width: 8cqw; height: 8cqw; }
+.square h3 { font-size: 8.6cqw; line-height: 1.04; }
+.square .s { font-size: 4.2cqw; font-weight: 600; line-height: 1.35; }
+.square .pic { position: absolute; right: -2cqw; bottom: -1cqw; width: 52cqw; }
+.square .pic svg.ch { width: 100%; height: auto; }
+.square .brandline { margin-top: auto; display: flex; align-items: center; gap: 2.4cqw; font-family: var(--display); font-size: 4.6cqw; position: relative; z-index: 1; }
+.square .brandline svg { width: 8cqw; height: 8cqw; }
+.square.day { background: #5BB8FF; color: var(--ink); }
+.square.nightart { background: var(--night-card); color: var(--cream); }
+.square.nightart .s { color: var(--lav); }
+.square .tx { max-width: 60%; display: grid; gap: 3cqw; position: relative; z-index: 1; }
+
+.copy { margin-top: 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.copy .sticker { padding: 22px 24px; }
+.copy h3 { font-size: 20px; margin-bottom: 4px; }
+.copy .meta { font-size: 13px; color: var(--lav); margin-bottom: 12px; }
+.copy pre { white-space: pre-wrap; font-family: var(--body); font-size: 15px; line-height: 1.5; margin: 0; color: var(--cream); }
+.copybtn { margin-top: 14px; font: 700 14px var(--body); color: var(--ink); background: var(--gold); border: 3px solid var(--night-ink); border-radius: 999px; padding: 6px 16px; box-shadow: 3px 3px 0 var(--night-ink); }
+.copybtn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--night-ink); }
+
+.plan { border-top: 4px dashed var(--night-card); }
+.brief { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 48px; align-items: start; }
+.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); display: grid; gap: 4px; font-size: 15px; }
+.toc a { text-decoration: none; color: var(--lav); padding: 4px 0; display: flex; gap: 10px; }
+.toc a span { color: var(--gold); font-weight: 700; width: 1.6em; font-variant-numeric: tabular-nums; }
+.toc a:hover { color: var(--cream); }
+.block { padding-block: 0 56px; display: grid; gap: 16px; max-width: 760px; }
+.block h3 { font-size: 30px; display: flex; gap: 14px; align-items: baseline; }
+.block h3 .num { font-size: 18px; color: var(--gold); font-variant-numeric: tabular-nums; }
+.block h4 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; color: var(--gold); }
+.block p, .block li { color: #E9E3F7; }
+.block ul { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.block strong { color: var(--cream); }
+.core { font-family: var(--display); font-size: clamp(24px, 3.4vw, 34px); line-height: 1.15; color: var(--cream); padding: 22px 26px; }
+.assume { padding: 18px 22px; font-size: 15px; }
+.assume b { color: var(--gold); }
+.tablebox { overflow-x: auto; border: 3px solid var(--night-ink); border-radius: 16px; background: var(--night-card); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 620px; }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 2px solid var(--night); }
+th { font-weight: 700; color: var(--gold); background: #26244F; }
+tr:last-child td { border-bottom: 0; }
+td:first-child { white-space: nowrap; font-weight: 700; color: var(--cream); }
+.pri { display: inline-block; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 1px 9px; border: 2px solid var(--night-ink); }
+.pri.must { background: var(--ember); color: var(--ink); }
+.pri.nice { background: transparent; color: var(--lav); border-color: var(--lav); }
+.pri.done { background: var(--gold); color: var(--ink); }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.kpi { padding: 16px 18px; }
+.kpi b { display: block; font-family: var(--display); font-size: 28px; color: var(--gold); line-height: 1.1; }
+.kpi span { font-size: 14px; color: var(--lav); line-height: 1.4; display: block; margin-top: 6px; }
+.kpi.primary { border-color: var(--ember); box-shadow: 6px 6px 0 var(--ember); }
+.next { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.next .sticker { padding: 16px 18px; }
+.next b { font-family: var(--display); font-size: 22px; display: block; }
+.next small { color: var(--gold); font-weight: 700; font-size: 13px; display: block; margin-bottom: 4px; }
+.next span { font-size: 14px; color: var(--lav); display: block; margin-top: 6px; line-height: 1.4; }
+.endnote { text-align: center; padding-block: 24px 64px; color: var(--lav); font-size: 15px; }
+.endnote svg { width: 56px; height: 56px; display: block; margin: 0 auto 10px; }
+
+@media (max-width: 960px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .finds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .flow { grid-template-columns: 1fr; }
+  .posts { grid-template-columns: 1fr 1fr; }
+  .posts .post:first-child { grid-column: 1 / -1; max-width: 340px; }
+  .brief { grid-template-columns: 1fr; }
+  .toc { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .copy { grid-template-columns: 1fr; }
+  .next { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .finds { grid-template-columns: 1fr; }
+  .posts { grid-template-columns: 1fr; }
+  .posts .post { max-width: 360px; }
+  .dress .scene { height: 300px; }
+  .ms .dot { width: 60px; height: 60px; }
+  .tline::before { top: 26px; }
+  .ms .dot svg.ch { width: 48px; height: 50px; }
+}
+@media (prefers-reduced-motion: reduce) { .scene .chwrap, .scene .sp { animation: none; } .scene .sp { display: none; } }
+.film { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 48px; align-items: center; }
+.film > div { min-width: 0; }
+.film video { width: 100%; aspect-ratio: 9 / 16; display: block; border: 5px solid var(--ink); border-radius: 26px; box-shadow: 10px 10px 0 var(--ink); background: var(--night); object-fit: cover; }
+.also { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.feat { padding: 20px 22px; }
+.feat b { font-family: var(--display); font-size: 22px; line-height: 1.15; display: block; margin-bottom: 8px; }
+.feat p { color: var(--lav); font-size: 16px; }
+.cta { text-align: center; margin-top: 72px; display: grid; justify-items: center; gap: 6px; }
+.cta svg { width: 96px; height: 96px; }
+.cta h2 { font-size: clamp(40px, 6vw, 64px); color: var(--cream); }
+.cta p { font-size: 20px; font-weight: 700; color: var(--gold); }
+.cta p.es { font-size: 16px; font-weight: 600; color: var(--lav); }
+@media (max-width: 960px) { .film, .also { grid-template-columns: 1fr; } .film video { max-width: 300px; margin-inline: auto; } }
+</style>
+
+<nav class="sitebar" aria-label="Kindling website"><div class="in"><a class="home" href="../../">Kindling</a><a href="../../#releases">All releases</a><a href="../../#install">Install</a></div></nav>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="fire" viewBox="0 0 120 120">
+      <path d="M24 96L92 80M96 96L28 80" stroke="#1E1B3A" stroke-width="17" stroke-linecap="round" fill="none"/>
+      <path d="M24 96L92 80M96 96L28 80" stroke="#A86B3C" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <circle cx="24" cy="32" r="4" fill="#FF6B35"/><circle cx="96" cy="24" r="3" fill="#FF6B35"/>
+      <path d="M60 14c11 14 24 23 24 42 0 15-11 26-24 26S36 71 36 56c0-11 8-17 12-26 2 8 6 12 11 12 0-10-4-18 1-28z" fill="#FF6B35" stroke="#1E1B3A" stroke-width="4.5" stroke-linejoin="round"/>
+      <path d="M60 52c5 6 10 10 10 17 0 7-5 11-10 11s-10-4-10-11c0-7 5-11 10-17z" fill="#FFD23F" stroke="#1E1B3A" stroke-width="3.5" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" stroke="#1E1B3A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="hero">
+  <div class="stars" aria-hidden="true"><i style="left:6%;top:12%"></i><i style="left:44%;top:7%;background:#FFC857"></i><i style="left:30%;top:88%"></i><i style="left:92%;top:16%"></i><i style="left:58%;top:94%;width:5px;height:5px"></i><i style="left:3%;top:70%;width:5px;height:5px"></i></div>
+  <div class="wrap">
+    <div>
+      <div class="brand"><svg aria-hidden="true"><use href="#fire"/></svg>Kindling</div>
+      <div class="new">New in 1.3</div>
+      <h1><span>Your</span><span>character</span></h1>
+      <p class="lede">Make a little person for the fire. Every Road trip you finish leaves something new to wear.</p>
+      <p class="lede-es">Tu personaje: crea a alguien para sentarse junto al fuego. Cada Viaje que terminas deja algo nuevo para ponerte.</p>
+      <div class="facts"><span><b>41</b> items</span><span><b>26</b> free from the start</span><span><b>15</b> to find</span><span>Nothing to buy</span></div>
+    </div>
+    <div class="dress">
+      <div class="scene" id="hero-scene" role="img" aria-label="Your character sitting on a log by the fire"></div>
+      <div class="ward">
+        <div class="tabs" id="tabs" role="group" aria-label="What to change"></div>
+        <div class="opts" id="opts" role="group" aria-label="Options"></div>
+        <div class="wardrow"><p id="ward-note">Try anything here. In the app, the ones with a tag are found by playing.</p><button class="rbtn" id="rand" type="button">Random look</button></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="sec" aria-labelledby="finds-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="finds-h">Seven trips, seven things to find</h2>
+      <p>Finish a Road trip theme and the fire gives you something for it. You see it straight away on the last card: "You found something!"</p>
+    </div>
+    <div class="finds" id="finds"></div>
+
+    <div class="trails">
+      <div class="sticker trail">
+        <h3>For finishing trips</h3>
+        <p>Any theme counts, in any order.</p>
+        <div class="tline" id="trail-trips"></div>
+      </div>
+      <div class="sticker trail">
+        <h3>For coming back</h3>
+        <p>Days you play, not days in a row. Miss a week and nothing is lost.</p>
+        <div class="tline" id="trail-days"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="flow-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="flow-h">From your first look to your first find</h2>
+      <p>Your face sits next to Settings on the welcome screen. A dot appears there when something new is waiting.</p>
+    </div>
+    <div class="flow">
+      <figure>
+        <div class="phone" role="img" aria-label="Make your character: skin, hair and hair color choices, with Random look and Done">
+          <div class="screen mk" style="background:var(--sky)">
+            <div class="bar">Make your character</div>
+            <div class="sub">You can change it any time</div>
+            <div class="scene fs" data-look='{"skin":"skin_2","hair":"hair_curly","hairColor":"hc_auburn","hoodie":"hd_green"}'></div>
+            <div class="lab">Skin</div>
+            <div class="swrow"><i style="background:#F9DCC4"></i><i class="on" style="background:#F1C29B"></i><i style="background:#E0A578"></i><i style="background:#C68A5E"></i><i style="background:#8D5A3B"></i><i style="background:#5E3A26"></i></div>
+            <div class="lab">Hair</div>
+            <div class="headrow" id="hairrow"></div>
+            <div class="lab">Hoodie</div>
+            <div class="swrow"><i style="background:#FF8A3D"></i><i style="background:#FFC53D"></i><i class="on" style="background:#6CD47E"></i><i style="background:#5BB8FF"></i><i style="background:#B18CFF"></i><i style="background:#FF8CC6"></i></div>
+            <div class="row2" style="margin-top:auto"><div class="btn">Random look</div><div class="btn" style="background:var(--sunny)">Done</div></div>
+          </div>
+        </div>
+        <figcaption><b>Make your character</b>The first time you tap your face. Skin tones and hair styles are all free.</figcaption>
+      </figure>
+      <figure>
+        <div class="phone" role="img" aria-label="Travel stories, stop 3 of 8, with your character's head riding above the third progress dot">
+          <div class="screen road">
+            <div class="bar"><span class="ibtn"><svg><use href="#back"/></svg></span>Travel stories</div>
+            <div class="prog" id="prog"></div>
+            <div class="stopof">Stop 3 of 8</div>
+            <div class="card">
+              <div class="q">Tell us about a trip where almost everything went wrong.</div>
+              <div class="pill">Need a spark?</div>
+            </div>
+            <div class="row2"><div class="btn">Back</div><div class="btn" style="background:var(--ink);color:var(--cream)">Next stop</div></div>
+          </div>
+        </div>
+        <figcaption><b>Ride along</b>On every trip, your head moves along the line, stop by stop.</figcaption>
+      </figure>
+      <figure>
+        <div class="phone" role="img" aria-label="You found something! Your character by the fire wearing the explorer hat, with Wear it and See all">
+          <div class="screen found">
+            <div class="fcard">
+              <div class="scene fs" data-sparks="1" data-look='{"skin":"skin_2","hair":"hair_curly","hairColor":"hc_auburn","hoodie":"hd_green","hat":"hat_explorer"}'></div>
+              <h4>You found something!</h4>
+              <div class="nm">Explorer hat</div>
+              <div class="row2" style="grid-template-columns:1.3fr 1fr"><div class="btn" style="background:var(--sunny)">Wear it</div><div class="btn">See all</div></div>
+            </div>
+          </div>
+        </div>
+        <figcaption><b>You found something!</b>Finish Travel stories and the last card shows you already wearing your find, with sparks and a soft buzz.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="film-h" style="padding-top:0">
+  <div class="wrap film">
+    <video controls playsinline preload="none" poster="media/poster.jpg" aria-label="Your character film, 26 seconds">
+      <source src="media/kindling-characters.mp4" type="video/mp4">
+    </video>
+    <div class="sec-head" style="margin-bottom:0">
+      <h2 id="film-h">See it in action</h2>
+      <p>An empty seat by the fire, a character made in four taps, a trip with your head riding along, and the first find.</p>
+    </div>
+  </div>
+</section>
+
+<div class="dusk" aria-hidden="true"></div>
+
+<section class="night sec" aria-labelledby="also-h" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="also-h">Also in this update</h2>
+    </div>
+    <div class="also">
+      <div class="sticker feat"><b>Nothing to buy</b><p>There's no shop and no coins, and there are no ads. Every find comes from playing.</p></div>
+      <div class="sticker feat"><b>Stays on your phone</b><p>Your character is saved on your phone, like everything else in Kindling. No account needed.</p></div>
+      <div class="sticker feat"><b>Fixed</b><p>"Another theme" at the end of a road trip no longer marks the next theme as done before you've played it.</p></div>
+    </div>
+    <div class="cta">
+      <svg aria-hidden="true"><use href="#fire"/></svg>
+      <h2>Kindling 1.3</h2>
+      <p>Free, in English and Spanish.</p>
+      <p class="es">Gratis, en español e inglés.</p>
+      <div class="dl"><span>Coming soon</span><a href="https://github.com/jorgecarnicero/Kindling/releases/latest">Get the latest version</a></div>
+    </div>
+  </div>
+  <div class="endnote">Every good talk starts small.</div>
+</section>
+
+<script>
+(function () {
+  // ---- catalog (src/characters/catalog.ts) ----
+  const T = { friendship: 'Friendship', travel_stories: 'Travel stories', cringe: 'Cringe moments', school_days: 'School days', childhood: 'Childhood', food: 'Food', dream_life: 'Dream life' };
+  const TC = { friendship: '#FF8CC6', travel_stories: '#5BB8FF', cringe: '#FF6B7A', school_days: '#2CC7B4', childhood: '#6CD47E', food: '#FF8A3D', dream_life: '#7C8BFF' };
+  const F = null;
+  const I = (id, slot, name, color, unlock) => ({ id, slot, name, color, unlock });
+  const ITEMS = [
+    I('skin_1','skin','Tone 1','#F9DCC4',F), I('skin_2','skin','Tone 2','#F1C29B',F), I('skin_3','skin','Tone 3','#E0A578',F),
+    I('skin_4','skin','Tone 4','#C68A5E',F), I('skin_5','skin','Tone 5','#8D5A3B',F), I('skin_6','skin','Tone 6','#5E3A26',F),
+    I('hair_short','hair','Short',0,F), I('hair_long','hair','Long',0,F), I('hair_curly','hair','Curly',0,F), I('hair_buns','hair','Buns',0,F), I('hair_buzz','hair','Buzz cut',0,F),
+    I('hc_black','hairColor','Black','#2A1A14',F), I('hc_brown','hairColor','Brown','#5A3520',F), I('hc_auburn','hairColor','Auburn','#8E3B1E',F),
+    I('hc_blond','hairColor','Blond','#E3A63B',F), I('hc_gray','hairColor','Gray','#B8B4C8',F),
+    I('hc_pink','hairColor','Pink','#FF8CC6',['days',7]), I('hc_green','hairColor','Green','#6CD47E',['trips',3]), I('hc_blue','hairColor','Blue','#5BB8FF',['days',30]),
+    I('hd_orange','hoodie','Orange','#FF8A3D',F), I('hd_yellow','hoodie','Yellow','#FFC53D',F), I('hd_green','hoodie','Green','#6CD47E',F),
+    I('hd_blue','hoodie','Blue','#5BB8FF',F), I('hd_purple','hoodie','Purple','#B18CFF',F), I('hd_pink','hoodie','Pink','#FF8CC6',F),
+    I('hd_stripes','hoodie','Stripes','#FF6B7A',['days',3]), I('hd_flannel','hoodie','Flannel','#D9534F',['trips',5]),
+    I('none','hat','No hat',0,F), I('hat_beanie','hat','Beanie',0,F), I('hat_cap','hat','Cap',0,F), I('hat_bucket','hat','Bucket hat',0,['trips',1]),
+    I('hat_explorer','hat','Explorer hat',0,['trip','travel_stories']), I('hat_crown','hat','Paper crown',0,['trip','childhood']), I('hat_party','hat','Party hat',0,['days',14]),
+    I('none','glasses','No glasses',0,F), I('gl_round','glasses','Round',0,F), I('gl_sun','glasses','Sunglasses',0,['trip','cringe']),
+    I('gl_heart','glasses','Heart glasses',0,['trip','friendship']), I('gl_star','glasses','Star glasses',0,['trip','dream_life']),
+    I('none','hold','Nothing',0,F), I('hold_mug','hold','Mug',0,F), I('hold_mallow','hold','Marshmallow',0,['trip','food']),
+    I('hold_guitar','hold','Guitar',0,['trip','school_days']), I('hold_lantern','hold','Lantern',0,['trips',7])
+  ];
+  const DEFAULT = { skin: 'skin_3', hair: 'hair_short', hairColor: 'hc_brown', hoodie: 'hd_orange', hat: 'none', glasses: 'none', hold: 'none' };
+  const colorOf = (slot, id) => (ITEMS.find(i => i.slot === slot && i.id === id) || ITEMS.find(i => i.slot === slot && i.id === DEFAULT[slot])).color;
+  const howTo = u => !u ? '' : u[0] === 'trip' ? 'Finish ' + T[u[1]] : u[0] === 'trips' ? `Finish ${u[1]} trip${u[1] > 1 ? 's' : ''}` : `Play on ${u[1]} days`;
+
+  // ---- drawing (src/characters/Character.tsx), 140×200 box ----
+  const VB = { full: '-12 0 164 200', bust: '-12 10 164 170', head: '14 10 112 118', portrait: '5 20 130 130' };
+  const CREAM = '#FFF4E6', BLUSH = '#FF8CC6', WOOD = '#A0643C';
+  function heart(cx, cy) { return `M${cx} ${cy + 9} C${cx - 15} ${cy} ${cx - 9} ${cy - 11} ${cx} ${cy - 4} C${cx + 9} ${cy - 11} ${cx + 15} ${cy} ${cx} ${cy + 9} Z`; }
+  function star(cx, cy, r) { const p = []; for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * 0.48 : r; p.push(`${(cx + rr * Math.cos(a)).toFixed(1)} ${(cy + rr * Math.sin(a)).toFixed(1)}`); } return `M${p.join(' L')} Z`; }
+  function charSVG(look, o) {
+    o = o || {}; look = Object.assign({}, DEFAULT, look);
+    const ink = o.ink || '#1E1B3A', crop = o.crop || 'full', dx = (o.facing || 0) * 4;
+    const L = `stroke="${ink}" stroke-width="4" stroke-linejoin="round"`;
+    const skin = colorOf('skin', look.skin), hair = colorOf('hairColor', look.hairColor), hood = colorOf('hoodie', look.hoodie);
+    const eL = 56 + dx, eR = 84 + dx;
+    let s = '';
+    // back hair
+    if (look.hair === 'hair_long') s += `<path d="M28 92 Q24 38 70 38 Q116 38 112 92 L114 150 L26 150 Z" fill="${hair}" ${L}/>`;
+    if (look.hair === 'hair_curly') s += `<path d="M22 84 Q14 60 30 46 Q30 24 54 22 Q70 10 86 22 Q110 24 110 46 Q126 60 118 84 Q120 104 104 110 L36 110 Q20 104 22 84 Z" fill="${hair}" ${L}/>`;
+    if (look.hair === 'hair_buns') s += `<circle cx="36" cy="48" r="16" fill="${hair}" ${L}/><circle cx="104" cy="48" r="16" fill="${hair}" ${L}/>`;
+    // hoodie
+    s += `<path d="M30 200 L30 158 Q30 126 70 126 Q110 126 110 158 L110 200 Z" fill="${hood}" ${L}/>`;
+    if (look.hoodie === 'hd_stripes') s += `<path d="M31 160 L109 160 M30 176 L110 176 M30 192 L110 192" stroke="${CREAM}" stroke-width="6"/>`;
+    if (look.hoodie === 'hd_flannel') s += `<path d="M50 132 L50 200 M70 126 L70 200 M90 132 L90 200 M30 156 L110 156 M30 178 L110 178" stroke="#7A2730" stroke-width="5" opacity="0.7"/>`;
+    s += `<path d="M56 128 Q70 142 84 128" fill="none" stroke="${ink}" stroke-width="3.5" stroke-linecap="round"/>`;
+    // hold
+    const HL = `stroke="${ink}" stroke-width="3.5" stroke-linejoin="round"`;
+    if (look.hold === 'hold_mug') s += `<path d="M104 156 Q116 156 116 164 Q116 172 104 172" fill="none" stroke="${ink}" stroke-width="3.5"/><rect x="82" y="150" width="24" height="26" rx="5" fill="${CREAM}" ${HL}/><path d="M88 144 Q86 138 90 134 M98 144 Q96 138 100 134" fill="none" stroke="${CREAM}" stroke-width="3" stroke-linecap="round"/>`;
+    if (look.hold === 'hold_mallow') s += `<path d="M40 176 L6 110" stroke="${WOOD}" stroke-width="5" stroke-linecap="round"/><rect x="-4" y="88" width="20" height="24" rx="8" fill="${CREAM}" ${HL} transform="rotate(-28 6 100)"/>`;
+    if (look.hold === 'hold_guitar') s += `<path d="M56 160 L122 112" stroke="#5A3520" stroke-width="8" stroke-linecap="round"/><circle cx="36" cy="176" r="20" fill="#C9874A" ${HL}/><circle cx="54" cy="160" r="14" fill="#C9874A" ${HL}/><circle cx="42" cy="170" r="5" fill="${ink}"/>`;
+    if (look.hold === 'hold_lantern') s += `<path d="M112 140 Q122 128 132 140" fill="none" stroke="${ink}" stroke-width="3.5"/><rect x="110" y="140" width="24" height="8" rx="3" fill="${ink}"/><rect x="112" y="148" width="20" height="26" rx="6" fill="#FFC857" ${HL}/><rect x="110" y="172" width="24" height="7" rx="3" fill="${ink}"/>`;
+    // head
+    s += `<circle cx="70" cy="84" r="38" fill="${skin}" ${L}/>`;
+    // front hair
+    const fh = {
+      hair_long: `<path d="M32 82 Q34 44 70 44 Q106 44 108 82 Q96 62 76 60 Q60 72 32 82 Z" fill="${hair}" ${L}/>`,
+      hair_curly: `<path d="M36 76 Q40 54 58 54 Q66 62 76 54 Q98 52 104 76 Q90 66 70 68 Q50 66 36 76 Z" fill="${hair}"/>`,
+      hair_buns: `<path d="M32 84 Q32 42 70 42 Q108 42 108 84 Q94 58 70 58 Q46 58 32 84 Z" fill="${hair}" ${L}/>`,
+      hair_buzz: `<path d="M34 76 Q36 46 70 46 Q104 46 106 76 Q90 62 70 62 Q50 62 34 76 Z" fill="${hair}" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/>`,
+      hair_short: `<path d="M34 86 Q30 52 50 46 Q70 36 92 46 Q110 54 106 86 Q96 70 82 66 Q66 74 50 68 Q40 74 34 86 Z" fill="${hair}" ${L}/>`
+    };
+    s += fh[look.hair] || fh.hair_short;
+    // face
+    s += `<ellipse cx="${eL}" cy="90" rx="4.5" ry="6" fill="${ink}"/><ellipse cx="${eR}" cy="90" rx="4.5" ry="6" fill="${ink}"/>`;
+    s += `<circle cx="${46 + dx}" cy="104" r="5" fill="${BLUSH}" opacity="0.75"/><circle cx="${94 + dx}" cy="104" r="5" fill="${BLUSH}" opacity="0.75"/>`;
+    s += `<path d="M${62 + dx} 106 Q${70 + dx} 113 ${78 + dx} 106" fill="none" stroke="${ink}" stroke-width="3.5" stroke-linecap="round"/>`;
+    // glasses
+    const mid = (eL + eR) / 2, br = `<path d="M${eL + 10} 90 L${eR - 10} 90" stroke="${ink}" stroke-width="3"/>`;
+    if (look.glasses === 'gl_round') s += `<circle cx="${eL}" cy="90" r="11" fill="none" stroke="${ink}" stroke-width="3"/><circle cx="${eR}" cy="90" r="11" fill="none" stroke="${ink}" stroke-width="3"/>${br}`;
+    if (look.glasses === 'gl_sun') s += `<rect x="${eL - 12}" y="82" width="24" height="16" rx="6" fill="${ink}"/><rect x="${eR - 12}" y="82" width="24" height="16" rx="6" fill="${ink}"/><path d="M${eL + 10} 88 L${eR - 10} 88" stroke="${ink}" stroke-width="3"/><path d="M${eL - 7} 86 L${eL - 2} 86" stroke="${CREAM}" stroke-width="2" stroke-linecap="round"/>`;
+    if (look.glasses === 'gl_heart') s += `<path d="${heart(eL, 89)}" fill="#FF6B7A" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/><path d="${heart(eR, 89)}" fill="#FF6B7A" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/><path d="M${eL + 9} 88 L${eR - 9} 88" stroke="${ink}" stroke-width="3"/>`;
+    if (look.glasses === 'gl_star') s += `<path d="${star(eL, 90, 13)}" fill="#FFD23F" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/><path d="${star(eR, 90, 13)}" fill="#FFD23F" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/><path d="M${mid - 3} 90 L${mid + 3} 90" stroke="${ink}" stroke-width="3"/>`;
+    // hat
+    const hats = {
+      hat_beanie: `<path d="M32 70 Q34 34 70 34 Q106 34 108 70 Z" fill="#7C8BFF" ${L}/><rect x="28" y="64" width="84" height="12" rx="6" fill="${CREAM}" stroke="${ink}" stroke-width="3"/><circle cx="70" cy="30" r="8" fill="${CREAM}" stroke="${ink}" stroke-width="3"/>`,
+      hat_cap: `<path d="M32 70 Q32 36 70 36 Q108 36 108 70 Z" fill="#FF6B7A" ${L}/><path d="M96 66 L132 64 Q136 72 128 74 L96 74 Z" fill="#FF6B7A" ${L}/>`,
+      hat_bucket: `<path d="M40 66 Q40 32 70 32 Q100 32 100 66 Z" fill="#2CC7B4" ${L}/><path d="M20 70 Q70 56 120 70 L114 80 Q70 70 26 80 Z" fill="#2CC7B4" ${L}/>`,
+      hat_explorer: `<path d="M40 64 Q42 26 70 26 Q98 26 100 64 Z" fill="#E3B27D" ${L}/><rect x="40" y="52" width="60" height="12" fill="${WOOD}" stroke="${ink}" stroke-width="3"/><ellipse cx="70" cy="66" rx="52" ry="10" fill="#E3B27D" ${L}/>`,
+      hat_crown: `<path d="M36 68 L36 38 L50 52 L62 30 L70 48 L78 30 L90 52 L104 38 L104 68 Z" fill="#FFD23F" ${L}/>`,
+      hat_party: `<path d="M48 60 L70 10 L92 60 Z" fill="#FF6B7A" ${L}/><path d="M56 44 L84 44 M62 30 L78 30" stroke="${CREAM}" stroke-width="4"/><circle cx="70" cy="10" r="7" fill="${CREAM}" stroke="${ink}" stroke-width="3"/>`
+    };
+    s += hats[look.hat] || '';
+    return `<svg class="ch" viewBox="${VB[crop]}" aria-hidden="true">${s}</svg>`;
+  }
+
+  // ---- fire scene (FireScene.tsx) ----
+  const SPARKS = [[-70, 0, 7, 12], [55, 350, 6, -10], [-30, 800, 5, -8], [85, 1150, 7, 6], [10, 1500, 6, 14], [-95, 1900, 5, -6]];
+  function scene(el, look, sparks) {
+    const h = el.clientHeight || 300;
+    const glow = h * 0.74;
+    const sp = sparks ? SPARKS.map(([x, d, s, dr]) => `<i class="sp" style="width:${s}px;height:${s}px;margin-left:${-s / 2}px;--x:${x}px;--d:${dr}px;animation-delay:${d}ms"></i>`).join('') : '';
+    el.innerHTML = `<div class="glow" style="width:${glow}px;height:${glow}px;bottom:${h * 0.13}px"></div>${sp}<div class="chwrap" style="height:${h * 0.82}px">${charSVG(look, { ink: '#0D0C22' }).replace('class="ch"', `class="ch" style="height:${h * 0.82}px;width:${h * 0.82 * 164 / 200}px"`)}</div><div class="logp" style="bottom:-16px;width:${Math.min(230, h * 0.9)}px;height:44px"></div>`;
+  }
+  const allScenes = [];
+  document.querySelectorAll('.scene.fs').forEach(el => allScenes.push([el, () => scene(el, JSON.parse(el.dataset.look), !!el.dataset.sparks)]));
+  document.querySelectorAll('.ch1').forEach(el => { el.innerHTML = charSVG(JSON.parse(el.dataset.look), { crop: el.dataset.crop, ink: el.dataset.ink }); });
+
+  // ---- hero: dress your character ----
+  const SLOTS = [['skin', 'Skin'], ['hair', 'Hair'], ['hairColor', 'Hair color'], ['hoodie', 'Hoodie'], ['hat', 'Hats'], ['glasses', 'Glasses'], ['hold', 'Hold']];
+  let look = { skin: 'skin_3', hair: 'hair_curly', hairColor: 'hc_auburn', hoodie: 'hd_green', hat: 'hat_explorer', glasses: 'none', hold: 'hold_mug' };
+  let slot = 'hat';
+  const heroScene = document.getElementById('hero-scene');
+  const tabs = document.getElementById('tabs'), opts = document.getElementById('opts'), note = document.getElementById('ward-note');
+  allScenes.push([heroScene, () => scene(heroScene, look, true)]);
+  function drawTabs() {
+    tabs.innerHTML = SLOTS.map(([k, n]) => `<button type="button" data-slot="${k}" aria-pressed="${k === slot}">${n}</button>`).join('');
+  }
+  function drawOpts() {
+    opts.innerHTML = ITEMS.filter(i => i.slot === slot).map(i => {
+      const pic = i.color ? `<span class="sw" style="background:${i.color}"></span>` : `<span class="pic">${charSVG(Object.assign({}, look, { [slot]: i.id }, slot === 'hold' ? {} : { hold: 'none' }), { crop: slot === 'hold' ? 'bust' : 'head' })}</span>`;
+      const tag = i.unlock ? '<span class="lk">Find</span>' : '';
+      return `<button class="opt" type="button" data-id="${i.id}" aria-pressed="${look[slot] === i.id}" aria-label="${i.name}${i.unlock ? ', ' + howTo(i.unlock) : ''}">${tag}${pic}<span class="nm">${i.name}</span></button>`;
+    }).join('');
+  }
+  function setNote(item) {
+    note.innerHTML = item && item.unlock ? `<b>${item.name}:</b> ${howTo(item.unlock)} to find it in the app.` : 'Try anything here. In the app, the ones with a tag are found by playing.';
+  }
+  tabs.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; slot = b.dataset.slot; drawTabs(); drawOpts(); setNote(); });
+  opts.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    look[slot] = b.dataset.id; scene(heroScene, look, true); drawOpts(); setNote(ITEMS.find(i => i.slot === slot && i.id === look[slot]));
+  });
+  document.getElementById('rand').addEventListener('click', () => {
+    SLOTS.forEach(([k]) => { const c = ITEMS.filter(i => i.slot === k); look[k] = c[Math.floor(Math.random() * c.length)].id; });
+    scene(heroScene, look, true); drawOpts(); setNote();
+  });
+  drawTabs(); drawOpts(); setNote(ITEMS.find(i => i.id === 'hat_explorer'));
+
+  // ---- seven finds ----
+  const base = { skin: 'skin_3', hair: 'hair_short', hairColor: 'hc_brown', hoodie: 'hd_blue' };
+  const finds = ITEMS.filter(i => i.unlock && i.unlock[0] === 'trip');
+  const order = ['friendship', 'travel_stories', 'cringe', 'school_days', 'childhood', 'food', 'dream_life'];
+  const looks = { friendship: { skin: 'skin_1', hair: 'hair_long', hairColor: 'hc_blond', hoodie: 'hd_pink' }, travel_stories: { skin: 'skin_5', hair: 'hair_short', hairColor: 'hc_black', hoodie: 'hd_orange' }, cringe: { skin: 'skin_2', hair: 'hair_buzz', hairColor: 'hc_brown', hoodie: 'hd_purple' }, school_days: { skin: 'skin_4', hair: 'hair_curly', hairColor: 'hc_black', hoodie: 'hd_yellow' }, childhood: { skin: 'skin_3', hair: 'hair_buns', hairColor: 'hc_auburn', hoodie: 'hd_green' }, food: { skin: 'skin_6', hair: 'hair_short', hairColor: 'hc_black', hoodie: 'hd_blue' }, dream_life: { skin: 'skin_2', hair: 'hair_long', hairColor: 'hc_gray', hoodie: 'hd_purple' } };
+  const fEl = document.getElementById('finds');
+  fEl.innerHTML = order.map(t => {
+    const it = finds.find(i => i.unlock[1] === t);
+    const lk = Object.assign({}, looks[t], { [it.slot]: it.id });
+    return `<div class="find" style="--c:${TC[t]}"><div class="pic">${charSVG(lk, { crop: 'bust' })}</div><div class="tx"><small>Finish ${T[t]}</small><b>${it.name}</b></div></div>`;
+  }).join('') + `<div class="find all" style="--c:#FF8A3D"><div class="pic">${charSVG({ skin: 'skin_4', hair: 'hair_buns', hairColor: 'hc_green', hoodie: 'hd_flannel', hat: 'hat_party', hold: 'hold_lantern' }, { crop: 'bust', ink: '#0D0C22' })}</div><div class="tx"><small>And 8 more</small><b>For trips and days</b><span>Below, on two trails.</span></div></div>`;
+
+  function trail(el, list) {
+    el.innerHTML = list.map(([id, slot, n]) => {
+      const it = ITEMS.find(i => i.id === id && i.slot === slot);
+      const pic = slot === 'hoodie' || slot === 'hairColor' ? charSVG(Object.assign({}, base, { [slot]: id }, slot === 'hairColor' ? { hair: 'hair_curly' } : {}), { crop: 'bust' }) : charSVG(Object.assign({}, base, { [slot]: id }), { crop: slot === 'hold' ? 'bust' : 'head' });
+      return `<div class="ms"><span class="dot">${pic}</span><span class="n">${n}</span><span class="i">${it.name}</span></div>`;
+    }).join('');
+  }
+  trail(document.getElementById('trail-trips'), [['hat_bucket', 'hat', '1 trip'], ['hc_green', 'hairColor', '3 trips'], ['hd_flannel', 'hoodie', '5 trips'], ['hold_lantern', 'hold', '7 trips']]);
+  trail(document.getElementById('trail-days'), [['hd_stripes', 'hoodie', '3 days'], ['hc_pink', 'hairColor', '7 days'], ['hat_party', 'hat', '14 days'], ['hc_blue', 'hairColor', '30 days']]);
+
+  // ---- phones ----
+  const me = { skin: 'skin_2', hair: 'hair_curly', hairColor: 'hc_auburn', hoodie: 'hd_green' };
+  document.getElementById('hairrow').innerHTML = ['hair_short', 'hair_long', 'hair_curly', 'hair_buns', 'hair_buzz'].map(h => `<span class="${h === 'hair_curly' ? 'on' : ''}">${charSVG(Object.assign({}, me, { hair: h }), { crop: 'head' })}</span>`).join('');
+  const prog = document.getElementById('prog');
+  let ph = '';
+  for (let k = 0; k < 8; k++) { ph += `<b class="${k < 2 ? 'f' : k === 2 ? 'on' : ''}"></b>`; if (k < 7) ph += `<i class="${k < 2 ? 'f' : ''}"></i>`; }
+  prog.innerHTML = ph + `<span class="rider">${charSVG(me, { crop: 'head' })}</span>`;
+  requestAnimationFrame(() => { const dot = prog.querySelectorAll('b')[2]; const r = prog.getBoundingClientRect(), d = dot.getBoundingClientRect(); prog.querySelector('.rider').style.left = (d.left - r.left + d.width / 2) + 'px'; });
+
+  const drawScenes = () => allScenes.forEach(([, f]) => f());
+  drawScenes();
+  let rt = 0;
+  window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { drawScenes(); const dot = prog.querySelectorAll('b')[2]; const r = prog.getBoundingClientRect(), d = dot.getBoundingClientRect(); prog.querySelector('.rider').style.left = (d.left - r.left + d.width / 2) + 'px'; }, 120); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawScenes);
+
+})();
+</script>
+
+</body></html>

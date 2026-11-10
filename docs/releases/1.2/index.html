@@ -1,0 +1,524 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<style>
+/* site bar: back to the Kindling website */
+.sitebar { background: #1E1B3A; color: #FFF4E6; font: 700 15px "Figtree", system-ui, sans-serif; }
+.sitebar .in { max-width: 1120px; margin: 0 auto; padding: 10px max(16px, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: center; }
+.sitebar a { color: #FFF4E6; text-decoration: none; }
+.sitebar a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.sitebar .home { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; font-size: 18px; margin-right: auto; }
+.cta .dl { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 18px; }
+.cta .dl a, .cta .dl span { display: inline-flex; align-items: center; min-height: 52px; padding: 10px 22px; border: 4px solid #0D0C22; border-radius: 16px; box-shadow: 5px 5px 0 #0D0C22; background: #FFD23F; color: #1E1B3A; font: 700 17px "Figtree", system-ui, sans-serif; text-decoration: none; }
+.cta .dl span { background: transparent; color: #C3BEE6; border: 4px dashed #C3BEE6; box-shadow: none; }
+.cta .dl a:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 #0D0C22; }
+</style></head><body>
+<title>Kindling 1.2 Road Trip</title>
+<meta name="description" content="What’s new in Kindling 1.2: Road trip, one big theme for the ride, eight stops from light to deep.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M24 96L92 80M96 96L28 80' stroke='%231E1B3A' stroke-width='17' stroke-linecap='round'/%3E%3Cpath d='M24 96L92 80M96 96L28 80' stroke='%23A86B3C' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M60 14c11 14 24 23 24 42 0 15-11 26-24 26S36 71 36 56c0-11 8-17 12-26 2 8 6 12 11 12 0-10-4-18 1-28z' fill='%23FF6B35' stroke='%231E1B3A' stroke-width='4.5' stroke-linejoin='round'/%3E%3Cpath d='M60 52c5 6 10 10 10 17 0 7-5 11-10 11s-10-4-10-11c0-7 5-11 10-17z' fill='%23FFD23F' stroke='%231E1B3A' stroke-width='3.5'/%3E%3C/svg%3E">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@500;600;700&display=swap">
+<style>
+/* Layout: the page is the drive. Day sky at the top, a winding road with the 8 real stops,
+   dusk in the middle, and the rest of the update at night, where the fire is lit. Matchbox stickers throughout. */
+:root {
+  --sky: #DCEBFF; --ink: #1E1B3A; --flame: #FF6B35; --sunny: #FFD23F; --paper: #FFFFFF;
+  --night: #1B1A3A; --night-card: #2E2C5E; --night-ink: #0D0C22; --cream: #FFF4E6;
+  --ember: #FF8A3D; --gold: #FFC857; --lav: #C3BEE6; --ink-soft: #4A4670;
+  --asphalt: #3A3760;
+  --display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sky); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; font-weight: 500; }
+h1, h2, h3 { font-family: var(--display); font-weight: 800; text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.sticker { border: 4px solid var(--ink); border-radius: 22px; box-shadow: 6px 6px 0 var(--ink); background: var(--paper); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--flame); outline-offset: 3px; }
+
+/* ---------- hero ---------- */
+.hero { padding-block: 56px 72px; }
+.hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 22px; margin-bottom: 28px; }
+.brand svg { width: 40px; height: 40px; }
+.new { display: inline-flex; align-items: center; gap: 8px; background: var(--sunny); border: 3px solid var(--ink); border-radius: 999px; padding: 4px 14px; font-weight: 700; font-size: 15px; box-shadow: 3px 3px 0 var(--ink); margin-bottom: 22px; transform: rotate(-2deg); }
+.hero h1 { font-size: clamp(76px, 13vw, 168px); line-height: 0.86; color: var(--flame); -webkit-text-stroke: 5px var(--ink); paint-order: stroke fill; text-shadow: 7px 7px 0 var(--ink); letter-spacing: -0.035em; }
+.hero h1 span { display: block; }
+.hero h1 span + span { margin-left: 0.5em; }
+.hero .lede { font-size: 22px; line-height: 1.4; max-width: 30ch; margin-top: 30px; font-weight: 600; }
+.hero .lede-es { color: var(--ink-soft); font-size: 17px; margin-top: 10px; max-width: 40ch; }
+
+/* phone */
+.phone { width: 300px; max-width: 100%; aspect-ratio: 9 / 19; border: 5px solid var(--ink); border-radius: 44px; background: var(--ink); padding: 9px; box-shadow: 10px 10px 0 var(--ink); position: relative; margin-inline: auto; }
+.screen { border-radius: 34px; height: 100%; overflow: hidden; display: flex; flex-direction: column; padding: 34px 16px 18px; gap: 12px; position: relative; }
+.screen .bar { display: flex; align-items: center; justify-content: space-between; font-family: var(--display); font-size: 18px; }
+.ibtn { width: 34px; height: 34px; border-radius: 50%; border: 3px solid var(--ink); background: var(--paper); box-shadow: 2px 2px 0 var(--ink); display: grid; place-items: center; }
+.ibtn svg { width: 16px; height: 16px; }
+.dots { display: flex; align-items: center; padding-inline: 4px; }
+.dots i { flex: 1; height: 3px; background: currentColor; opacity: .35; }
+.dots b { width: 12px; height: 12px; border: 2.5px solid currentColor; border-radius: 50%; background: var(--paper); flex: none; }
+.dots b.on { background: var(--sunny); transform: scale(1.35); }
+.dots b.past { background: currentColor; }
+.stopof { text-align: center; font-weight: 700; font-size: 12px; }
+.card { flex: 1; border: 3.5px solid var(--ink); border-radius: 20px; background: var(--paper); box-shadow: 5px 5px 0 var(--ink); padding: 16px 14px; display: flex; flex-direction: column; gap: 10px; justify-content: center; }
+.card .q { font-family: var(--display); font-size: 21px; line-height: 1.12; }
+.card .sub { font-size: 12px; color: var(--ink-soft); line-height: 1.35; }
+.spark { border: 2.5px solid var(--ink); border-radius: 14px; padding: 8px 10px; font-size: 12px; line-height: 1.35; font-weight: 600; }
+.btn { border: 3px solid var(--ink); border-radius: 999px; box-shadow: 3px 3px 0 var(--ink); text-align: center; font-weight: 700; font-size: 14px; padding: 9px 10px; background: var(--paper); }
+.btn.primary { background: var(--ink); color: var(--cream); }
+.row2 { display: grid; grid-template-columns: 1fr 1.4fr; gap: 10px; }
+
+.hero-phone { position: relative; }
+.hero-phone .tag { position: absolute; right: -6px; top: 46%; transform: rotate(6deg); background: var(--paper); border: 3px solid var(--ink); border-radius: 12px; padding: 8px 12px; font-weight: 700; font-size: 14px; box-shadow: 4px 4px 0 var(--ink); max-width: 150px; line-height: 1.3; }
+
+/* ---------- the road ---------- */
+.road { position: relative; padding-block: 40px 120px;
+  background: linear-gradient(180deg, var(--sky) 0%, var(--sky) 28%, #FFD9B8 46%, #F5A27A 54%, #6A4C86 66%, var(--night) 80%, var(--night) 100%); }
+.road-head { text-align: center; max-width: 640px; margin: 0 auto 36px; }
+.road-head h2 { font-size: clamp(36px, 5.5vw, 60px); line-height: 1.02; }
+.road-head p { margin-top: 14px; font-size: 18px; color: var(--ink-soft); }
+.route { position: relative; max-width: 940px; margin: 0 auto; }
+.route svg.path { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.stops { list-style: none; margin: 0; padding: 0; display: grid; gap: 64px; position: relative; }
+.stop { display: grid; grid-template-columns: 1fr 76px 1fr; align-items: center; gap: 18px; }
+.marker { grid-column: 2; width: 76px; height: 76px; border-radius: 50%; border: 4px solid var(--ink); background: var(--sunny); display: grid; place-items: center; font-family: var(--display); font-size: 30px; box-shadow: 4px 4px 0 var(--ink); position: relative; z-index: 2; }
+.stop .sticker { padding: 18px 20px; grid-row: 1; position: relative; z-index: 2; }
+.stop:nth-child(odd) .sticker { grid-column: 1; transform: rotate(-1deg); }
+.stop:nth-child(even) .sticker { grid-column: 3; transform: rotate(1deg); }
+.stop .sticker h3 { font-size: 23px; line-height: 1.15; }
+.stop .sticker p { font-size: 15px; margin-top: 10px; color: var(--ink-soft); }
+.stop .sticker p b { color: var(--ink); }
+.stop.dark .sticker { background: var(--night-card); color: var(--cream); border-color: var(--night-ink); box-shadow: 6px 6px 0 var(--night-ink); }
+.stop.dark .sticker p { color: var(--lav); }
+.stop.dark .sticker p b { color: var(--gold); }
+.stop.dark .marker { background: var(--ember); border-color: var(--night-ink); box-shadow: 4px 4px 0 var(--night-ink); }
+.depth { display: flex; justify-content: center; margin: 0 auto 28px; }
+.depth span { font-weight: 700; border: 3px solid var(--ink); border-radius: 999px; padding: 4px 16px; background: var(--paper); box-shadow: 3px 3px 0 var(--ink); }
+.depth.deep { margin: 34px auto 0; }
+.depth.deep span { background: var(--night-card); color: var(--cream); border-color: var(--night-ink); box-shadow: 3px 3px 0 var(--night-ink); }
+.car { position: absolute; width: 58px; height: 58px; left: 0; top: 0; z-index: 3; pointer-events: none; will-change: transform; }
+
+/* ---------- night sections ---------- */
+.night { background: var(--night); color: var(--cream); }
+.night .screen { color: var(--ink); }
+.night .sticker { background: var(--night-card); border-color: var(--night-ink); box-shadow: 6px 6px 0 var(--night-ink); color: var(--cream); }
+.sec { padding-block: 80px; }
+.sec-head { max-width: 680px; margin-bottom: 40px; }
+.sec-head h2 { font-size: clamp(34px, 5vw, 54px); line-height: 1.04; }
+.sec-head p { margin-top: 14px; font-size: 18px; color: var(--lav); }
+
+/* flow screens */
+.flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.flow figure { margin: 0; display: grid; gap: 18px; justify-items: center; }
+.flow .phone { width: 260px; border-color: var(--night-ink); background: var(--night-ink); box-shadow: 8px 8px 0 var(--night-ink); }
+.flow figcaption { text-align: center; max-width: 30ch; color: var(--lav); font-size: 15px; }
+.flow figcaption b { display: block; color: var(--cream); font-family: var(--display); font-size: 20px; margin-bottom: 4px; }
+.welcome { background: var(--flame); align-items: center; text-align: center; }
+.welcome .logo { width: 96px; height: 96px; background: var(--sunny); border: 3.5px solid var(--ink); border-radius: 28px; box-shadow: 4px 4px 0 var(--ink); display: grid; place-items: center; margin-top: 14px; }
+.welcome .logo svg { width: 76px; height: 76px; }
+.welcome .word { font-family: var(--display); font-size: 40px; line-height: 1; color: var(--paper); -webkit-text-stroke: 2px var(--ink); paint-order: stroke fill; text-shadow: 3px 3px 0 var(--ink); }
+.welcome .slogan { font-weight: 700; font-size: 13px; color: var(--ink); }
+.welcome .play { width: 92px; height: 92px; border-radius: 50%; background: var(--sunny); border: 4px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); display: grid; place-items: center; margin-top: 8px; }
+.welcome .pill { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; background: var(--paper); border: 3px solid var(--ink); border-radius: 999px; padding: 7px 16px; font-weight: 700; font-size: 14px; box-shadow: 3px 3px 0 var(--ink); position: relative; }
+.welcome .pill::after { content: ""; position: absolute; inset: -9px; border: 3px dashed var(--sunny); border-radius: 999px; }
+.welcome .icons { display: flex; gap: 10px; margin-top: 10px; }
+.themes { background: var(--sky); color: var(--ink); }
+.themes .hint { font-size: 12px; color: var(--ink-soft); line-height: 1.35; }
+.trow { display: flex; align-items: center; gap: 10px; border: 3px solid var(--ink); border-radius: 14px; background: var(--paper); box-shadow: 3px 3px 0 var(--ink); padding: 7px 10px; }
+.trow .sw { width: 26px; height: 26px; border-radius: 50%; border: 2.5px solid var(--ink); flex: none; background: var(--paper); }
+.trow .t { font-weight: 700; font-size: 13px; line-height: 1.2; }
+.trow .n { font-size: 11px; color: var(--ink-soft); }
+.trow .done { margin-left: auto; width: 20px; height: 20px; border-radius: 50%; background: var(--ink); display: grid; place-items: center; flex: none; }
+
+/* themes as luggage tags */
+.tags { display: flex; flex-wrap: wrap; gap: 22px 18px; }
+.ltag { position: relative; display: grid; gap: 4px; padding: 16px 20px 16px 38px; border: 4px solid var(--night-ink); border-radius: 10px 22px 22px 10px; background: var(--c); color: var(--ink); box-shadow: 5px 5px 0 var(--night-ink); max-width: 330px; flex: 1 1 250px; }
+.ltag::before { content: ""; position: absolute; left: 12px; top: 50%; width: 14px; height: 14px; margin-top: -7px; border-radius: 50%; background: var(--night); border: 3px solid var(--night-ink); }
+.ltag:nth-child(odd) { transform: rotate(-1.2deg); }
+.ltag:nth-child(even) { transform: rotate(1deg); }
+.ltag b { font-family: var(--display); font-size: 22px; line-height: 1.1; }
+.ltag span { font-size: 15px; font-weight: 600; line-height: 1.35; }
+.ltag small { font-size: 13px; font-weight: 600; opacity: .8; }
+
+/* social posts */
+.posts { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.post { margin: 0; display: grid; gap: 12px; }
+.post figcaption { font-size: 14px; color: var(--lav); }
+.art { border: 4px solid var(--night-ink); border-radius: 18px; overflow: hidden; position: relative; box-shadow: 6px 6px 0 var(--night-ink); container-type: inline-size; }
+.art.story { aspect-ratio: 9 / 16; background: var(--flame); }
+.art.square { aspect-ratio: 1; }
+.story .in { position: absolute; inset: 0; padding: 8cqw 8cqw; display: flex; flex-direction: column; gap: 4cqw; }
+.story .kicker { font-weight: 700; font-size: 5.2cqw; color: var(--ink); }
+.story h3 { font-size: 17cqw; line-height: .9; color: var(--paper); -webkit-text-stroke: .7cqw var(--ink); paint-order: stroke fill; text-shadow: 1.3cqw 1.3cqw 0 var(--ink); }
+.story .mini { margin-top: auto; background: var(--paper); border: .9cqw solid var(--ink); border-radius: 5cqw; box-shadow: 1.6cqw 1.6cqw 0 var(--ink); padding: 5cqw; color: var(--ink); }
+.story .mini small { font-weight: 700; font-size: 4cqw; display: block; margin-bottom: 2cqw; color: var(--ink-soft); }
+.story .mini p { font-family: var(--display); font-size: 7.4cqw; line-height: 1.08; }
+.story .foot { font-weight: 700; font-size: 4.6cqw; color: var(--ink); display: flex; align-items: center; gap: 2cqw; }
+.square.day { background: var(--sky); }
+.square.nightart { background: var(--night); }
+.square .in { position: absolute; inset: 0; padding: 7cqw; display: flex; flex-direction: column; }
+.square .miniroad { display: flex; align-items: center; margin-block: 4cqw 6cqw; }
+.square .miniroad i { flex: 1; height: 1cqw; background: currentColor; }
+.square .miniroad b { width: 5cqw; height: 5cqw; border-radius: 50%; border: 1cqw solid currentColor; flex: none; }
+.square .miniroad b.f { background: currentColor; }
+.square .miniroad b.on { background: var(--sunny); width: 7cqw; height: 7cqw; }
+.square h3 { font-size: 9.5cqw; line-height: 1.02; }
+.square .s { font-size: 4.4cqw; font-weight: 600; margin-top: 4cqw; line-height: 1.35; }
+.square .brandline { margin-top: auto; display: flex; align-items: center; gap: 2.4cqw; font-family: var(--display); font-size: 5cqw; }
+.square .brandline svg { width: 9cqw; height: 9cqw; }
+.square.day { color: var(--ink); }
+.square.day .s { color: var(--ink-soft); }
+.square.nightart { color: var(--cream); }
+.square.nightart .s { color: var(--lav); }
+.copy { margin-top: 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.copy .sticker { padding: 22px 24px; }
+.copy h3 { font-size: 20px; margin-bottom: 4px; }
+.copy .meta { font-size: 13px; color: var(--lav); margin-bottom: 12px; }
+.copy pre { white-space: pre-wrap; font-family: var(--body); font-size: 15px; line-height: 1.5; margin: 0; color: var(--cream); }
+.copybtn { margin-top: 14px; font: 700 14px var(--body); color: var(--ink); background: var(--gold); border: 3px solid var(--night-ink); border-radius: 999px; padding: 6px 16px; box-shadow: 3px 3px 0 var(--night-ink); cursor: pointer; }
+.copybtn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--night-ink); }
+
+/* ---------- rest of the update ---------- */
+.plan { border-top: 4px dashed var(--night-card); }
+.brief { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 48px; align-items: start; }
+.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); display: grid; gap: 4px; font-size: 15px; }
+.toc a { text-decoration: none; color: var(--lav); padding: 4px 0; display: flex; gap: 10px; }
+.toc a span { color: var(--gold); font-weight: 700; width: 1.6em; font-variant-numeric: tabular-nums; }
+.toc a:hover { color: var(--cream); }
+.block { padding-block: 0 56px; display: grid; gap: 16px; max-width: 760px; }
+.block h3 { font-size: 30px; display: flex; gap: 14px; align-items: baseline; }
+.block h3 .num { font-size: 18px; color: var(--gold); font-variant-numeric: tabular-nums; }
+.block h4 { font-family: var(--display); font-size: 20px; margin: 10px 0 0; color: var(--gold); }
+.block p, .block li { color: #E9E3F7; }
+.block ul { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.block strong { color: var(--cream); }
+.core { font-family: var(--display); font-size: clamp(24px, 3.4vw, 34px); line-height: 1.15; color: var(--cream); padding: 22px 26px; }
+.assume { padding: 18px 22px; font-size: 15px; }
+.assume b { color: var(--gold); }
+.tablebox { overflow-x: auto; border: 3px solid var(--night-ink); border-radius: 16px; background: var(--night-card); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 620px; }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 2px solid var(--night); }
+th { font-weight: 700; color: var(--gold); background: #26244F; }
+tr:last-child td { border-bottom: 0; }
+td:first-child { white-space: nowrap; font-weight: 700; color: var(--cream); }
+.pri { display: inline-block; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 1px 9px; border: 2px solid var(--night-ink); }
+.pri.must { background: var(--ember); color: var(--ink); }
+.pri.nice { background: transparent; color: var(--lav); border-color: var(--lav); }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.kpi { padding: 16px 18px; }
+.kpi b { display: block; font-family: var(--display); font-size: 28px; color: var(--gold); line-height: 1.1; }
+.kpi span { font-size: 14px; color: var(--lav); line-height: 1.4; display: block; margin-top: 6px; }
+.kpi.primary { border-color: var(--ember); box-shadow: 6px 6px 0 var(--ember); }
+.endnote { text-align: center; padding-block: 24px 64px; color: var(--lav); font-size: 15px; }
+.endnote svg { width: 56px; height: 56px; display: block; margin: 0 auto 10px; }
+
+@media (max-width: 900px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero-phone .tag { right: 0; }
+  .flow { grid-template-columns: 1fr; }
+  .posts { grid-template-columns: 1fr 1fr; }
+  .posts .post:first-child { grid-column: 1 / -1; max-width: 340px; }
+  .brief { grid-template-columns: 1fr; }
+  .toc { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .copy { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .stop { grid-template-columns: 56px minmax(0, 1fr); gap: 14px; }
+  .marker { grid-column: 1; width: 56px; height: 56px; font-size: 24px; }
+  .stop:nth-child(odd) .sticker, .stop:nth-child(even) .sticker { grid-column: 2; transform: none; }
+  .stops { gap: 36px; }
+  .depth { justify-content: flex-start; }
+  .posts { grid-template-columns: 1fr; }
+  .posts .post { max-width: 360px; }
+  .hero .lede { font-size: 19px; }
+}
+@media (prefers-reduced-motion: reduce) { .car { display: none; } }
+.film { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 48px; align-items: center; }
+.film video { width: 100%; aspect-ratio: 9 / 16; display: block; border: 5px solid var(--night-ink); border-radius: 26px; box-shadow: 10px 10px 0 var(--night-ink); background: var(--night-card); object-fit: cover; }
+.also { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.feat { padding: 22px 24px; display: grid; gap: 10px; }
+.feat b { font-family: var(--display); font-size: 26px; line-height: 1.1; }
+.feat p { color: var(--lav); }
+.feat p strong { color: var(--gold); }
+.mini-ed { display: grid; gap: 4px; margin-top: 6px; background: var(--sky); color: var(--ink); border: 3px solid var(--night-ink); border-radius: 16px; padding: 14px 16px; font-size: 13px; }
+.mini-ed span { font-weight: 700; margin-top: 6px; }
+.mini-ed span:first-child { margin-top: 0; }
+.mini-ed i { font-style: normal; background: var(--paper); border: 2.5px solid var(--ink); border-radius: 10px; padding: 6px 10px; color: var(--ink-soft); }
+.ren { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 10px; }
+.ren li { font-family: var(--display); font-size: 21px; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; color: var(--cream); }
+.ren s { font-family: var(--body); font-weight: 600; font-size: 16px; color: var(--lav); }
+.cta { text-align: center; margin-top: 72px; display: grid; justify-items: center; gap: 6px; }
+.cta svg { width: 96px; height: 96px; }
+.cta h2 { font-size: clamp(40px, 6vw, 64px); color: var(--cream); }
+.cta p { font-size: 20px; font-weight: 700; color: var(--gold); }
+.cta p.es { font-size: 16px; font-weight: 600; color: var(--lav); }
+.film > div { min-width: 0; }
+@media (max-width: 900px) { .film, .also { grid-template-columns: 1fr; } .film video { max-width: 300px; margin-inline: auto; } }
+</style>
+
+<nav class="sitebar" aria-label="Kindling website"><div class="in"><a class="home" href="../../">Kindling</a><a href="../../#releases">All releases</a><a href="../../#install">Install</a></div></nav>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="fire" viewBox="0 0 120 120">
+      <path d="M24 96L92 80M96 96L28 80" stroke="#1E1B3A" stroke-width="17" stroke-linecap="round" fill="none"/>
+      <path d="M24 96L92 80M96 96L28 80" stroke="#A86B3C" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <circle cx="24" cy="32" r="4" fill="#FF6B35"/><circle cx="96" cy="24" r="3" fill="#FF6B35"/>
+      <path d="M60 14c11 14 24 23 24 42 0 15-11 26-24 26S36 71 36 56c0-11 8-17 12-26 2 8 6 12 11 12 0-10-4-18 1-28z" fill="#FF6B35" stroke="#1E1B3A" stroke-width="4.5" stroke-linejoin="round"/>
+      <path d="M60 52c5 6 10 10 10 17 0 7-5 11-10 11s-10-4-10-11c0-7 5-11 10-17z" fill="#FFD23F" stroke="#1E1B3A" stroke-width="3.5" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="van" viewBox="0 0 64 64">
+      <rect x="6" y="18" width="50" height="28" rx="9" fill="#FFD23F" stroke="#1E1B3A" stroke-width="4"/>
+      <path d="M38 20h9a7 7 0 0 1 7 7v4H38z" fill="#DCEBFF" stroke="#1E1B3A" stroke-width="3.5" stroke-linejoin="round"/>
+      <rect x="12" y="23" width="20" height="9" rx="3" fill="#DCEBFF" stroke="#1E1B3A" stroke-width="3.5"/>
+      <circle cx="18" cy="47" r="6" fill="#1E1B3A"/><circle cx="44" cy="47" r="6" fill="#1E1B3A"/>
+      <circle cx="18" cy="47" r="2" fill="#FFF4E6"/><circle cx="44" cy="47" r="2" fill="#FFF4E6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="brand"><svg aria-hidden="true"><use href="#fire"/></svg>Kindling</div>
+      <div class="new">New in 1.2</div>
+      <h1><span>Road</span><span>trip</span></h1>
+      <p class="lede">One big theme for the ride. Each stop goes a little deeper.</p>
+      <p class="lede-es">Viaje: un gran tema para el trayecto. Cada parada va un poco más a fondo.</p>
+    </div>
+    <div class="hero-phone">
+      <div class="phone" role="img" aria-label="The Road trip screen: Travel stories, stop 1 of 8, with a Need a spark? hint open">
+        <div class="screen" style="background:#5BB8FF">
+          <div class="bar"><span class="ibtn"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" stroke="#1E1B3A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Travel stories<span class="ibtn"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6" stroke="#1E1B3A" stroke-width="2.5" fill="#1E1B3A" stroke-linejoin="round"/></svg></span></div>
+          <div class="dots" style="color:#1E1B3A"><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b></b></div>
+          <div class="stopof">Stop 1 of 8</div>
+          <div class="card">
+            <div class="q">What's the best thing you've ever eaten on a trip?</div>
+            <div class="sub">The trips that turned into stories.</div>
+            <div class="spark" style="background:#DDF0FF">Think of a street stall, a gas station or someone's kitchen.</div>
+          </div>
+          <div class="row2"><div class="btn">Back</div><div class="btn primary">Next stop</div></div>
+        </div>
+      </div>
+      <div class="tag">Read aloud, so the driver can play too</div>
+    </div>
+  </div>
+</header>
+
+<section class="road" aria-labelledby="road-h">
+  <div class="wrap">
+    <div class="road-head">
+      <h2 id="road-h">Eight stops, light to deep</h2>
+      <p>The real Travel stories route, as it plays in the app. Every stop has a spark: a concrete way in if nobody knows where to start.</p>
+    </div>
+    <div class="depth"><span>Starts light</span></div>
+    <div class="route" id="route">
+      <svg class="path" id="roadsvg" aria-hidden="true"></svg>
+      <svg class="car" id="car" aria-hidden="true"><use href="#van"/></svg>
+      <ol class="stops" id="stops">
+        <li class="stop"><div class="marker">1</div><div class="sticker"><h3>What's the best thing you've ever eaten on a trip?</h3><p><b>Spark:</b> Think of a street stall, a gas station or someone's kitchen.</p></div></li>
+        <li class="stop"><div class="marker">2</div><div class="sticker"><h3>What's the worst place you've ever slept while traveling?</h3><p><b>Spark:</b> Airports, car seats and dodgy hostels all count.</p></div></li>
+        <li class="stop"><div class="marker">3</div><div class="sticker"><h3>Tell us about a trip where almost everything went wrong.</h3><p><b>Spark:</b> Start with the moment you realized it was going badly.</p></div></li>
+        <li class="stop"><div class="marker">4</div><div class="sticker"><h3>Who's the most memorable stranger you've met while traveling?</h3><p><b>Spark:</b> What did they say or do that stuck with you?</p></div></li>
+        <li class="stop dark"><div class="marker">5</div><div class="sticker"><h3>Which place was nothing like you expected?</h3><p><b>Spark:</b> Better, worse, or just completely different?</p></div></li>
+        <li class="stop dark"><div class="marker">6</div><div class="sticker"><h3>What's the most spontaneous decision you've ever made on a trip?</h3><p><b>Spark:</b> A last-minute plan, a wrong turn you kept following, a yes you didn't see coming.</p></div></li>
+        <li class="stop dark"><div class="marker">7</div><div class="sticker"><h3>Which trip changed how you see something in your everyday life?</h3><p><b>Spark:</b> Food, time, money, family: pick one thing that looked different when you got back.</p></div></li>
+        <li class="stop dark"><div class="marker">8</div><div class="sticker"><h3>Which trip would you relive exactly as it was, and who would you bring?</h3><p><b>Spark:</b> Or: which trip should this group take next?</p></div></li>
+      </ol>
+    </div>
+    <div class="depth deep"><span>Ends deep</span></div>
+  </div>
+</section>
+
+<section class="night sec" aria-labelledby="flow-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="flow-h">From the welcome screen to the first stop</h2>
+      <p>Three taps. No timer on the road: the group moves on when it's ready.</p>
+    </div>
+    <div class="flow">
+      <figure>
+        <div class="phone" role="img" aria-label="Welcome screen with the new Road trip pill under Play">
+          <div class="screen welcome">
+            <div class="logo"><svg aria-hidden="true"><use href="#fire"/></svg></div>
+            <div class="word">Kindling</div>
+            <div class="slogan">Every good talk starts small.</div>
+            <div class="play"><svg width="40" height="40" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="#1E1B3A"/></svg></div>
+            <div class="pill"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E1B3A" stroke-width="2.4" stroke-linecap="round"><path d="M9 3L4 21M15 3l5 18"/><path d="M12 5v2.5M12 11v2.5M12 17v3"/></svg>Road trip</div>
+            <div class="icons"><span class="ibtn"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="#FF6B7A" stroke="#1E1B3A" stroke-width="2.5" stroke-linejoin="round"/></svg></span><span class="ibtn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5" fill="none" stroke="#1E1B3A" stroke-width="2.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke="#1E1B3A" stroke-width="2.5" stroke-linecap="round"/></svg></span></div>
+          </div>
+        </div>
+        <figcaption><b>Tap Road trip</b>A new pill on the welcome screen, right under Play.</figcaption>
+      </figure>
+      <figure>
+        <div class="phone" role="img" aria-label="Theme list with seven themes; Friendship is marked done">
+          <div class="screen themes">
+            <div class="bar"><span class="ibtn"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" stroke="#1E1B3A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Road trip<span style="width:34px"></span></div>
+            <div class="hint">One big theme for the ride. Each stop goes a little deeper.</div>
+            <div class="trow" style="background:#FF8CC6"><span class="sw"></span><div><div class="t">Friendship</div><div class="n">Done</div></div></div>
+            <div class="trow" style="background:#5BB8FF"><span class="sw"></span><div><div class="t">Travel stories</div><div class="n">8 stops</div></div></div>
+            <div class="trow" style="background:#FF6B7A"><span class="sw"></span><div><div class="t">Cringe moments</div><div class="n">8 stops</div></div></div>
+            <div class="trow" style="background:#2CC7B4"><span class="sw"></span><div><div class="t">School days</div><div class="n">8 stops</div></div></div>
+            <div class="trow" style="background:#6CD47E"><span class="sw"></span><div><div class="t">Childhood</div><div class="n">8 stops</div></div></div>
+            <div class="btn primary" style="margin-top:auto">Pick one for us</div>
+          </div>
+        </div>
+        <figcaption><b>Pick a theme</b>Seven themes, or let the app choose. Finished ones get a check.</figcaption>
+      </figure>
+      <figure>
+        <div class="phone" role="img" aria-label="Cringe moments, stop 3 of 8">
+          <div class="screen" style="background:#FF6B7A">
+            <div class="bar"><span class="ibtn"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" stroke="#1E1B3A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Cringe moments<span class="ibtn"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6" stroke="#1E1B3A" stroke-width="2.5" fill="#1E1B3A" stroke-linejoin="round"/></svg></span></div>
+            <div class="dots" style="color:#1E1B3A"><b class="past"></b><i style="opacity:1"></i><b class="past"></b><i style="opacity:1"></i><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b></b></div>
+            <div class="stopof">Stop 3 of 8</div>
+            <div class="card">
+              <div class="q">What's the most embarrassing thing you've done to impress someone?</div>
+              <div class="btn" style="align-self:flex-start;font-size:12px;padding:5px 12px">Need a spark?</div>
+            </div>
+            <div class="row2"><div class="btn">Back</div><div class="btn primary">Next stop</div></div>
+          </div>
+        </div>
+        <figcaption><b>Talk, then Next stop</b>Back and Next stop, a spark when you need one, and the speaker reads each stop aloud.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="night sec" aria-labelledby="themes-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="themes-h">Seven themes to start</h2>
+      <p>Story-driven and made for friends: fun first, deeper by the last stop.</p>
+    </div>
+    <div class="tags">
+      <div class="ltag" style="--c:#FF8CC6"><b>Friendship</b><span>How you found your people, and what keeps them close.</span><small>Amistad</small></div>
+      <div class="ltag" style="--c:#5BB8FF"><b>Travel stories</b><span>The trips that turned into stories.</span><small>Historias de viaje</small></div>
+      <div class="ltag" style="--c:#FF6B7A"><b>Cringe moments</b><span>Laugh now, because it was awful then.</span><small>Momentos de vergüenza</small></div>
+      <div class="ltag" style="--c:#2CC7B4"><b>School days</b><span>Classrooms, break time and the legends of your year.</span><small>Años de escuela</small></div>
+      <div class="ltag" style="--c:#6CD47E"><b>Childhood</b><span>The kid you were, and what they'd think of you now.</span><small>Infancia</small></div>
+      <div class="ltag" style="--c:#FF8A3D"><b>Food</b><span>Every plate has a story behind it.</span><small>Comida</small></div>
+      <div class="ltag" style="--c:#7C8BFF"><b>Dream life</b><span>The life you'd live if nothing held you back.</span><small>Vida soñada</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="night sec" aria-labelledby="film-h" style="padding-top:0">
+  <div class="wrap film">
+    <video controls playsinline preload="none" poster="media/poster.jpg" aria-label="Road trip film, 26 seconds">
+      <source src="media/kindling-roadtrip.mp4" type="video/mp4">
+    </video>
+    <div class="sec-head" style="margin-bottom:0">
+      <h2 id="film-h">Four hours in the car, and nobody's talking</h2>
+      <p>Until someone taps Road trip. Watch a ride from the first stop to the last, from day into night.</p>
+    </div>
+  </div>
+</section>
+
+<section class="night sec" aria-labelledby="also-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="also-h">Also in this update</h2>
+    </div>
+    <div class="also">
+      <div class="sticker feat">
+        <b>Your own topics</b>
+        <p>Write the questions only your group would ask: inside jokes, team classics, family favorites. Add a spark and a follow-up if you like. They show up as <strong>Yours</strong> when you pick a vibe, and they stay on your phone.</p>
+        <div class="mini-ed" aria-hidden="true">
+          <span>Question</span><i>What would you love to ask everyone here?</i>
+          <span>Spark (optional)</span><i>Start with…</i>
+          <span>Follow-up (optional)</span><i>And then…?</i>
+        </div>
+      </div>
+      <div class="sticker feat">
+        <b>Clearer names in Spanish</b>
+        <p>Two categories have new Spanish names that say what they are.</p>
+        <ul class="ren">
+          <li><s>Conocerse</s> Romper el hielo</li>
+          <li><s>¿Qué prefieres?</s> ¿Esto o aquello?</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cta">
+      <svg aria-hidden="true"><use href="#fire"/></svg>
+      <h2>Kindling 1.2</h2>
+      <p>Free, in English and Spanish.</p>
+      <p class="es">Gratis, en español e inglés.</p>
+      <div class="dl"><a href="https://github.com/jorgecarnicero/Kindling/releases/tag/v1.2.0">Download 1.2 for Android (APK)</a><span>Google Play: coming soon</span></div>
+    </div>
+  </div>
+  <div class="endnote">Every good talk starts small.</div>
+</section>
+
+<script>
+(function () {
+  const route = document.getElementById('route');
+  const svg = document.getElementById('roadsvg');
+  const car = document.getElementById('car');
+  const NS = 'http://www.w3.org/2000/svg';
+  let path = null, len = 0;
+
+  function draw() {
+    const box = route.getBoundingClientRect();
+    const pts = [...route.querySelectorAll('.marker')].map(m => {
+      const r = m.getBoundingClientRect();
+      return [r.left - box.left + r.width / 2, r.top - box.top + r.height / 2];
+    });
+    if (!pts.length) return;
+    const first = [pts[0][0], pts[0][1] - 90], last = [pts[pts.length - 1][0], pts[pts.length - 1][1] + 90];
+    const all = [first, ...pts, last];
+    const narrow = window.innerWidth <= 640;
+    let d = `M${all[0][0]} ${all[0][1]}`;
+    for (let i = 1; i < all.length; i++) {
+      const [x0, y0] = all[i - 1], [x1, y1] = all[i];
+      const sway = narrow ? 0 : (i % 2 ? 1 : -1) * Math.min(160, box.width * 0.17);
+      const my = (y0 + y1) / 2;
+      d += ` C${x0 + sway} ${my} ${x1 + sway} ${my} ${x1} ${y1}`;
+    }
+    svg.setAttribute('viewBox', `0 0 ${box.width} ${box.height}`);
+    svg.innerHTML = '';
+    const w = narrow ? 34 : 54;
+    [[w + 10, '#1E1B3A', ''], [w, '#3A3760', ''], [4, '#FFF4E6', '14 16']].forEach(([sw, c, dash]) => {
+      const p = document.createElementNS(NS, 'path');
+      p.setAttribute('d', d); p.setAttribute('fill', 'none'); p.setAttribute('stroke', c);
+      p.setAttribute('stroke-width', sw); p.setAttribute('stroke-linecap', 'round'); p.setAttribute('stroke-linejoin', 'round');
+      if (dash) p.setAttribute('stroke-dasharray', dash);
+      svg.appendChild(p);
+      path = p;
+    });
+    len = path.getTotalLength();
+    move();
+  }
+
+  function move() {
+    if (!path) return;
+    const box = route.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const t = Math.min(1, Math.max(0, (vh * 0.55 - box.top) / box.height));
+    const at = len * t;
+    const p = path.getPointAtLength(at), q = path.getPointAtLength(Math.min(len, at + 2));
+    let ang = Math.atan2(q.y - p.y, q.x - p.x) * 180 / Math.PI;
+    const flip = Math.abs(ang) > 90;
+    if (flip) ang += 180;
+    car.style.transform = `translate(${p.x - 29}px, ${p.y - 34}px) rotate(${ang}deg) scaleX(${flip ? -1 : 1})`;
+  }
+
+  let raf = 0;
+  window.addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; move(); }); }, { passive: true });
+  window.addEventListener('resize', draw);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+  draw();
+
+  document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => {
+    const el = document.getElementById(b.dataset.copy);
+    const label = b.textContent;
+    const done = () => { b.textContent = b.dataset.copy.endsWith('es') ? 'Copiado' : 'Copied'; setTimeout(() => b.textContent = label, 1600); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    try { navigator.clipboard.writeText(el.textContent).then(done, fallback); } catch (e) { fallback(); }
+  }));
+})();
+</script>
+
+</body></html>
